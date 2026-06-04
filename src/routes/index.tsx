@@ -176,12 +176,14 @@ function Home() {
       </section>
 
       {/* FAMILIAR QUOTES */}
-      <section className="container-prose py-24">
-        <SectionHeading
-          eyebrow="Do any of these sound familiar?"
-          title="You've been dismissed. You deserve better."
-          intro="If you're a professional woman in your 40s or 50s who's been told your labs are 'fine' while you're barely making it through the day  I was that woman too. You're not imagining it. And you're not alone."
-        />
+      <section className="py-24 overflow-hidden">
+        <div className="container-prose">
+          <SectionHeading
+            eyebrow="Do any of these sound familiar?"
+            title="You've been dismissed. You deserve better."
+            intro="If you're a professional woman in your 40s or 50s who's been told your labs are 'fine' while you're barely making it through the day  I was that woman too. You're not imagining it. And you're not alone."
+          />
+        </div>
         <Carousel
           opts={{ loop: true, align: "start", watchDrag: false }}
           plugins={[
@@ -259,13 +261,15 @@ function Home() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="container-prose py-24">
-        <SectionHeading
-          eyebrow="What our clients say"
-          title="Real women. Real results."
-          intro="You don't have to take our word for it  here's what clients are saying about their experience with Novaleo."
-          align="center"
-        />
+      <section className="py-24 overflow-hidden">
+        <div className="container-prose">
+          <SectionHeading
+            eyebrow="What our clients say"
+            title="Real women. Real results."
+            intro="You don't have to take our word for it  here's what clients are saying about their experience with Novaleo."
+            align="center"
+          />
+        </div>
         <Carousel
           opts={{ loop: true, align: "start", watchDrag: false }}
           plugins={[
