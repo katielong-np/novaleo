@@ -53,5 +53,5 @@ npm run build
 ## Features
 
 - **Responsive Layout**: Optimised for mobile, tablet, and desktop viewports.
-- **Dynamic Elements**: Auto-scrolling full-width reviews and quotes carousel powered by Embla Carousel.
+- **Dynamic Elements**: Auto-scrolling reviews and quotes carousel powered by Embla Carousel, seamlessly bleeding to screen edges for a modern feel.
 - **Telehealth Focus**: Clear call-to-actions (CTAs) for discovery calls, intake forms, and service information.
