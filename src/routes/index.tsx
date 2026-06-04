@@ -104,7 +104,7 @@ function Home() {
         <div className="container-prose pt-8 pb-20 md:pt-8 md:pb-28 grid lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7">
             <div className="eyebrow mb-5">Finally, someone who listens.</div>
-            <h1 className="text-5xl md:text-[62px] leading-[1.25]">
+            <h1 className="text-5xl md:text-[62px] leading-[65px]">
               You're exhausted. Your labs are{" "}
               <em className="not-italic text-secondary bg-primary px-3 py-1 rounded-md inline-block my-1 leading-tight">
                 "normal."
