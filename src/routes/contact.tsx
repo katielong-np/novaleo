@@ -4,9 +4,16 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Book a Free Discovery Call  Novaleo Weight & Wellness" },
-      { name: "description", content: "Book a free 15-minute Google Meet discovery call with Kathryn Long, NP-C. Telehealth functional medicine for women in Michigan & Wisconsin." },
+      {
+        name: "description",
+        content:
+          "Book a free 15-minute Google Meet discovery call with Kathryn Long, NP-C. Telehealth functional medicine for women in Michigan & Wisconsin.",
+      },
       { property: "og:title", content: "Contact Novaleo Weight & Wellness" },
-      { property: "og:description", content: "Free 15-minute discovery call. No cost, no commitment." },
+      {
+        property: "og:description",
+        content: "Free 15-minute discovery call. No cost, no commitment.",
+      },
     ],
   }),
   component: Contact,
@@ -23,7 +30,7 @@ function Contact() {
           </h1>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
             Not sure if functional medicine is right for you? Let's talk. This call is designed to
-            answer your questions  not to sell you anything. A relaxed, judgment-free Google Meet
+            answer your questions not to sell you anything. A relaxed, judgment-free Google Meet
             conversation with Kathryn.
           </p>
 
@@ -55,18 +62,32 @@ function Contact() {
               "Hear pricing and what to expect",
               "Decide together if this is the right fit",
             ].map((p) => (
-              <li key={p} className="flex gap-2"><span className="text-secondary">→</span>{p}</li>
+              <li key={p} className="flex gap-2">
+                <span className="text-secondary">→</span>
+                {p}
+              </li>
             ))}
           </ul>
 
           <dl className="mt-10 grid sm:grid-cols-2 gap-6 text-sm">
             <div>
               <dt className="eyebrow mb-1">Call or text</dt>
-              <dd><a href="tel:16168014648" className="text-primary hover:text-secondary font-medium">1-616-801-4648</a></dd>
+              <dd>
+                <a href="tel:16168014648" className="text-primary hover:text-secondary font-medium">
+                  1-616-801-4648
+                </a>
+              </dd>
             </div>
             <div>
               <dt className="eyebrow mb-1">Email</dt>
-              <dd><a href="mailto:katie@novaweightandwellness.com" className="text-primary hover:text-secondary font-medium">katie@novaweightandwellness.com</a></dd>
+              <dd>
+                <a
+                  href="mailto:katie@novaweightandwellness.com"
+                  className="text-primary hover:text-secondary font-medium"
+                >
+                  katie@novaweightandwellness.com
+                </a>
+              </dd>
             </div>
             <div>
               <dt className="eyebrow mb-1">Care areas</dt>
@@ -79,7 +100,8 @@ function Contact() {
           </dl>
 
           <p className="mt-8 text-xs text-muted-foreground italic">
-            This is an informational, non-clinical conversation. No medical advice is given on this call.
+            This is an informational, non-clinical conversation. No medical advice is given on this
+            call.
           </p>
         </div>
       </section>
@@ -132,9 +154,7 @@ function Contact() {
               <div key={f.q}>
                 <h3 className="font-display text-xl text-primary leading-snug">{f.q}</h3>
                 <div className="mt-3 text-foreground/80 leading-relaxed text-sm space-y-2">
-                  {Array.isArray(f.a)
-                    ? f.a.map((para, i) => <p key={i}>{para}</p>)
-                    : <p>{f.a}</p>}
+                  {Array.isArray(f.a) ? f.a.map((para, i) => <p key={i}>{para}</p>) : <p>{f.a}</p>}
                 </div>
               </div>
             ))}

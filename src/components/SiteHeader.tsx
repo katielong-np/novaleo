@@ -4,7 +4,6 @@ import logo from "@/assets/novaleo-logo.png";
 import { Menu, X, Phone } from "lucide-react";
 
 const nav = [
-  
   { to: "/about", label: "About" },
   { to: "/approach", label: "Our Approach" },
   { to: "/services", label: "Services" },
@@ -41,7 +40,9 @@ export function SiteHeader() {
             <Phone className="h-4 w-4" />
             1-616-801-4648
           </a>
-          <Link to="/contact" className="btn-gold text-sm">Book Discovery Call</Link>
+          <Link to="/contact" className="btn-gold text-sm">
+            Book Discovery Call
+          </Link>
         </div>
         <button
           aria-label="Toggle menu"
@@ -55,11 +56,20 @@ export function SiteHeader() {
         <div className="lg:hidden border-t border-border bg-background">
           <div className="container-prose py-4 flex flex-col gap-4">
             {nav.map((n) => (
-              <Link key={n.to} to={n.to} onClick={() => setOpen(false)} className="text-base text-foreground">
+              <Link
+                key={n.to}
+                to={n.to}
+                onClick={() => setOpen(false)}
+                className="text-base text-foreground"
+              >
                 {n.label}
               </Link>
             ))}
-            <a href="tel:+116168014648" onClick={() => setOpen(false)} className="inline-flex items-center gap-2 text-base font-semibold text-primary">
+            <a
+              href="tel:+116168014648"
+              onClick={() => setOpen(false)}
+              className="inline-flex items-center gap-2 text-base font-semibold text-primary"
+            >
               <Phone className="h-4 w-4" /> 1-616-801-4648
             </a>
             <Link to="/contact" onClick={() => setOpen(false)} className="btn-gold text-sm w-fit">

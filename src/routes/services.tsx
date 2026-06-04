@@ -6,9 +6,16 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services & Pricing  Novaleo Weight & Wellness" },
-      { name: "description", content: "Root Cause Discovery Call, Root Cause Lab Panel, Executive Longevity Partnership, and follow-up care  functional medicine telehealth for women in MI & WI." },
+      {
+        name: "description",
+        content:
+          "Root Cause Discovery Call, Root Cause Lab Panel, Executive Longevity Partnership, and follow-up care  functional medicine telehealth for women in MI & WI.",
+      },
       { property: "og:title", content: "Services | Novaleo Weight & Wellness" },
-      { property: "og:description", content: "Personalized functional medicine programs with Kathryn Long, NP-C." },
+      {
+        property: "og:description",
+        content: "Personalized functional medicine programs with Kathryn Long, NP-C.",
+      },
     ],
   }),
   component: Services,
@@ -93,17 +100,21 @@ function Services() {
       <section className="container-prose pt-8 pb-12">
         <div className="eyebrow mb-5">Services & Pricing</div>
         <h1 className="text-5xl md:text-7xl max-w-3xl leading-[1.02]">
-          Personalized care paths  from <em className="text-secondary not-italic">free</em> to fully partnered.
+          Personalized care paths from <em className="text-secondary not-italic">free</em> to fully
+          partnered.
         </h1>
         <p className="mt-6 text-lg text-muted-foreground max-w-2xl leading-relaxed">
           Talk first, test deeply, or partner long-term. Every option is built around finding the
-          root cause  not chasing symptoms. Michigan and Wisconsin only.
+          root cause not chasing symptoms. Michigan and Wisconsin only.
         </p>
       </section>
 
       <section className="container-prose pb-24 grid md:grid-cols-2 gap-6">
         {programs.map((p) => (
-          <article key={p.name} className="rounded-2xl bg-card border border-border p-8 flex flex-col">
+          <article
+            key={p.name}
+            className="rounded-2xl bg-card border border-border p-8 flex flex-col"
+          >
             <div>
               <div className="eyebrow mb-2">{p.tag}</div>
               <h2 className="text-3xl leading-tight">{p.name}</h2>
@@ -125,7 +136,9 @@ function Services() {
                 {p.note}
               </p>
             )}
-            <Link to="/contact" className="btn-gold mt-8 self-start text-sm">{p.cta}</Link>
+            <Link to="/contact" className="btn-gold mt-8 self-start text-sm">
+              {p.cta}
+            </Link>
           </article>
         ))}
       </section>
@@ -134,25 +147,33 @@ function Services() {
       <section className="bg-primary text-primary-foreground">
         <div className="container-prose py-24 grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
-            <div className="eyebrow text-secondary mb-3" style={{ opacity: 1 }}>Program spotlight</div>
+            <div className="eyebrow text-secondary mb-3" style={{ opacity: 1 }}>
+              Program spotlight
+            </div>
             <h2 className="text-4xl md:text-5xl text-primary-foreground leading-tight">
               The Executive Longevity Partnership.
             </h2>
             <p className="mt-5 text-primary-foreground/75 leading-relaxed">
               A six-month executive-level collaboration for high-performing women who are tired of
-              feeling foggy, fatigued, bloated, hormonally off, or metabolically stuck  and want a
+              feeling foggy, fatigued, bloated, hormonally off, or metabolically stuck and want a
               deeper, data-informed strategy instead of another generic plan.
             </p>
             <p className="mt-5 text-primary-foreground/75 leading-relaxed">
-              Intentionally limited to <span className="text-secondary font-semibold">four clients
-              at a time</span> so each one receives the level of attention, review, and strategy
-              required for true personalization.
+              Intentionally limited to{" "}
+              <span className="text-secondary font-semibold">four clients at a time</span> so each
+              one receives the level of attention, review, and strategy required for true
+              personalization.
             </p>
-            <Link to="/contact" className="btn-gold mt-8 inline-flex">Apply for the partnership</Link>
+            <Link to="/contact" className="btn-gold mt-8 inline-flex">
+              Apply for the partnership
+            </Link>
           </div>
           <div className="lg:col-span-7 grid sm:grid-cols-2 gap-5">
             {objectives.map((o) => (
-              <div key={o.t} className="rounded-2xl bg-primary-foreground/[0.04] border border-primary-foreground/10 p-6">
+              <div
+                key={o.t}
+                className="rounded-2xl bg-primary-foreground/[0.04] border border-primary-foreground/10 p-6"
+              >
                 <div className="h-1 w-8 bg-secondary rounded-full mb-4" />
                 <h3 className="text-xl text-primary-foreground">{o.t}</h3>
                 <p className="mt-2 text-sm text-primary-foreground/75 leading-relaxed">{o.d}</p>
@@ -166,10 +187,7 @@ function Services() {
       <section className="container-prose py-20">
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-5">
-            <SectionHeading
-              eyebrow="Ideal for"
-              title="Women who want strategy, not a script."
-            />
+            <SectionHeading eyebrow="Ideal for" title="Women who want strategy, not a script." />
           </div>
           <div className="lg:col-span-7 space-y-4">
             {[
@@ -178,7 +196,10 @@ function Services() {
               "Individuals seeking bespoke health strategy  not standard care",
               "Anyone tired of feeling foggy, fatigued, bloated, or metabolically stuck",
             ].map((p) => (
-              <div key={p} className="flex gap-3 text-lg text-foreground/85 border-l-2 border-secondary pl-4">
+              <div
+                key={p}
+                className="flex gap-3 text-lg text-foreground/85 border-l-2 border-secondary pl-4"
+              >
                 {p}
               </div>
             ))}
@@ -195,7 +216,9 @@ function Services() {
             intro="A relaxed 15-minute conversation to help you decide what makes sense  even if it isn't with us. Michigan and Wisconsin only."
           />
           <div className="mt-8 flex justify-center">
-            <Link to="/contact" className="btn-gold">Book a free discovery call</Link>
+            <Link to="/contact" className="btn-gold">
+              Book a free discovery call
+            </Link>
           </div>
         </div>
       </section>

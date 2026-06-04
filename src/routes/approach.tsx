@@ -6,9 +6,16 @@ export const Route = createFileRoute("/approach")({
   head: () => ({
     meta: [
       { title: "Our Approach  From Exhausted to Energized | Novaleo" },
-      { name: "description", content: "How we move you from exhausted to energized: free discovery call, $97 root-cause intake, personalized plan, and care that finally listens." },
+      {
+        name: "description",
+        content:
+          "How we move you from exhausted to energized: free discovery call, $97 root-cause intake, personalized plan, and care that finally listens.",
+      },
       { property: "og:title", content: "Our Approach | Novaleo Weight & Wellness" },
-      { property: "og:description", content: "The simple 4-step path from feeling dismissed to feeling like yourself again." },
+      {
+        property: "og:description",
+        content: "The simple 4-step path from feeling dismissed to feeling like yourself again.",
+      },
     ],
   }),
   component: Approach,
@@ -47,21 +54,25 @@ function Approach() {
         </h1>
         <p className="mt-6 text-lg text-muted-foreground max-w-2xl leading-relaxed">
           Conventional medicine is designed to diagnose and treat disease. Functional medicine is
-          designed to find and fix the root cause before it becomes disease  by looking at patterns,
-          connections, and the full picture of your hormones, metabolism, nutrition, stress, and sleep.
+          designed to find and fix the root cause before it becomes disease by looking at patterns,
+          connections, and the full picture of your hormones, metabolism, nutrition, stress, and
+          sleep.
         </p>
       </section>
 
       <section className="container-prose pb-24">
-        <img src={labs} alt="Lab analysis" width={1400} height={1000} loading="lazy"
-             className="w-full rounded-2xl shadow-xl aspect-[16/7] object-cover" />
+        <img
+          src={labs}
+          alt="Lab analysis"
+          width={1400}
+          height={1000}
+          loading="lazy"
+          className="w-full rounded-2xl shadow-xl aspect-[16/7] object-cover"
+        />
       </section>
 
       <section className="container-prose pb-24">
-        <SectionHeading
-          eyebrow="The process"
-          title="Four simple steps. One personalized path."
-        />
+        <SectionHeading eyebrow="The process" title="Four simple steps. One personalized path." />
         <div className="mt-14 grid gap-px bg-border rounded-2xl overflow-hidden border border-border">
           {steps.map((s) => (
             <div key={s.n} className="bg-background p-8 md:p-10 grid md:grid-cols-12 gap-6">
@@ -84,10 +95,16 @@ function Approach() {
           />
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             {[
-              { t: "Nutrition", d: "Personalized, anti-inflammatory, sustainable  not another rigid plan." },
+              {
+                t: "Nutrition",
+                d: "Personalized, anti-inflammatory, sustainable  not another rigid plan.",
+              },
               { t: "Sleep", d: "The foundation of hormones, metabolism, and recovery." },
               { t: "Movement", d: "The right kind, at the right dose, for your physiology." },
-              { t: "Stress & nervous system", d: "Regulation strategies that actually fit your day." },
+              {
+                t: "Stress & nervous system",
+                d: "Regulation strategies that actually fit your day.",
+              },
               { t: "Hormones & metabolism", d: "Mapped and treated as one connected system." },
             ].map((p) => (
               <div key={p.t} className="rounded-xl bg-background border border-border p-6">
@@ -105,7 +122,9 @@ function Approach() {
         <p className="mt-5 text-muted-foreground max-w-xl mx-auto">
           The process begins with a single 15-minute conversation. No cost. No commitment.
         </p>
-        <Link to="/contact" className="btn-gold mt-8 inline-flex">Book discovery call</Link>
+        <Link to="/contact" className="btn-gold mt-8 inline-flex">
+          Book discovery call
+        </Link>
       </section>
     </>
   );

@@ -12,7 +12,7 @@ export default defineConfig({
     output: {
       dir: ".netlify",
       serverDir: ".netlify/server",
-      publicDir: "dist/client"
-    }
-  }
+      publicDir: "dist/client",
+    },
+  },
 });

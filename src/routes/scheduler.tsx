@@ -42,8 +42,8 @@ const services: Service[] = [
     description: (
       <>
         <p>
-          A short no-cost consult  a space to ask questions, get clarity, and determine
-          your next step, whether you're a new or current client.
+          A short no-cost consult a space to ask questions, get clarity, and determine your next
+          step, whether you're a new or current client.
         </p>
         <p className="mt-3 font-medium text-foreground">What's included:</p>
         <ul className="mt-2 list-disc pl-5 space-y-1">
@@ -53,8 +53,8 @@ const services: Service[] = [
           <li>Answers to your questions</li>
         </ul>
         <p className="mt-3 italic">
-          Or skip the Discovery Call and schedule the Root Cause Intake to start feeling
-          like yourself again.
+          Or skip the Discovery Call and schedule the Root Cause Intake to start feeling like
+          yourself again.
         </p>
       </>
     ),
@@ -69,10 +69,9 @@ const services: Service[] = [
     description: (
       <>
         <p>
-          A comprehensive clinical assessment where we go deep  full health history,
-          current symptoms, lifestyle, nutrition, stress, sleep patterns, and any prior
-          labs. You'll leave with clarity on what's driving your symptoms and a
-          personalized starting plan.
+          A comprehensive clinical assessment where we go deep full health history, current
+          symptoms, lifestyle, nutrition, stress, sleep patterns, and any prior labs. You'll leave
+          with clarity on what's driving your symptoms and a personalized starting plan.
         </p>
       </>
     ),
@@ -96,9 +95,8 @@ const services: Service[] = [
           <li>Inflammation: hs-CRP, Homocysteine</li>
         </ul>
         <p className="mt-3 text-xs italic">
-          Labs ordered through Rupa. Requires overnight fasting. Results typically ready
-          ~2 weeks post-draw. Credit toward The Executive Longevity Partnership if enrolled
-          within 30 days.
+          Labs ordered through Rupa. Requires overnight fasting. Results typically ready ~2 weeks
+          post-draw. Credit toward The Executive Longevity Partnership if enrolled within 30 days.
         </p>
       </>
     ),
@@ -113,8 +111,8 @@ const services: Service[] = [
     description: (
       <>
         <p>
-          A six-month executive-level collaboration for high-performing women in their 40s
-          and 50s who feel tired, foggy, inflamed, hormonally off, or metabolically stuck.
+          A six-month executive-level collaboration for high-performing women in their 40s and 50s
+          who feel tired, foggy, inflamed, hormonally off, or metabolically stuck.
         </p>
         <p className="mt-3 font-medium text-foreground">Includes:</p>
         <ul className="mt-2 list-disc pl-5 space-y-1">
@@ -125,8 +123,7 @@ const services: Service[] = [
           <li>Supplement recommendations and nutrition guidance</li>
         </ul>
         <p className="mt-3 text-xs italic">
-          Intentionally limited to four clients at a time. Renew with a 25% loyalty
-          discount.
+          Intentionally limited to four clients at a time. Renew with a 25% loyalty discount.
         </p>
       </>
     ),
@@ -143,15 +140,14 @@ const services: Service[] = [
           For enrolled clients only
         </p>
         <p className="mt-2">
-          Follow-up visit focused on progress review, symptom changes, lab interpretation,
-          treatment plan adjustments, supplement and nutrition review, and next-step
-          root-cause strategy.
+          Follow-up visit focused on progress review, symptom changes, lab interpretation, treatment
+          plan adjustments, supplement and nutrition review, and next-step root-cause strategy.
         </p>
         <p className="mt-3 font-medium text-foreground">Duration:</p>
         <ul className="mt-2 list-disc pl-5 space-y-1">
-          <li>30 min  standard follow-up</li>
-          <li>45 min  complex labs/supplements</li>
-          <li>60 min  comprehensive reassessment</li>
+          <li>30 min standard follow-up</li>
+          <li>45 min complex labs/supplements</li>
+          <li>60 min comprehensive reassessment</li>
         </ul>
       </>
     ),
@@ -166,13 +162,11 @@ function SchedulerPage() {
         <div className="max-w-3xl">
           <div className="eyebrow mb-5">Scheduler · Book online</div>
           <h1 className="text-5xl md:text-6xl leading-[1.05]">
-            Book your visit with{" "}
-            <em className="text-secondary not-italic">Novaleo</em>.
+            Book your visit with <em className="text-secondary not-italic">Novaleo</em>.
           </h1>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            Select the reason that fits your needs  weight, hormones, metabolism, energy,
-            or a full root-cause workup. Each option opens our secure Optimantra booking
-            page in a new tab.
+            Select the reason that fits your needs weight, hormones, metabolism, energy, or a full
+            root-cause workup. Each option opens our secure Optimantra booking page in a new tab.
           </p>
         </div>
       </section>
@@ -187,9 +181,7 @@ function SchedulerPage() {
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center gap-2">
-                    {s.highlight && (
-                      <span className="eyebrow text-secondary">{s.highlight}</span>
-                    )}
+                    {s.highlight && <span className="eyebrow text-secondary">{s.highlight}</span>}
                   </div>
                   <h2 className="mt-1 font-display text-2xl md:text-3xl text-primary leading-snug">
                     {s.name}
@@ -220,9 +212,8 @@ function SchedulerPage() {
         </div>
 
         <p className="mt-10 text-xs text-muted-foreground italic max-w-2xl">
-          Booking is handled securely through Optimantra. Telehealth services are available
-          across Michigan and Wisconsin. No insurance  we accept FSA/HSA, credit, and
-          debit card.
+          Booking is handled securely through Optimantra. Telehealth services are available across
+          Michigan and Wisconsin. No insurance we accept FSA/HSA, credit, and debit card.
         </p>
       </section>
     </>

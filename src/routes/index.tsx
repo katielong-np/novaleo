@@ -3,7 +3,16 @@ import hero from "@/assets/hero-kathryn.jpg";
 import labs from "@/assets/approach-labs.jpg";
 import telehealth from "@/assets/telehealth.jpg";
 import { SectionHeading } from "@/components/SectionHeading";
-import { ArrowRight, Battery, Brain, Flame, Scale, Sparkles, Star, Stethoscope } from "lucide-react";
+import {
+  ArrowRight,
+  Battery,
+  Brain,
+  Flame,
+  Scale,
+  Sparkles,
+  Star,
+  Stethoscope,
+} from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import AutoScroll from "embla-carousel-auto-scroll";
 
@@ -17,7 +26,10 @@ export const Route = createFileRoute("/")({
           "Exhausted but your labs are 'normal'? Kathryn Long, NP-C helps professional women in MI & WI uncover the root cause of fatigue, brain fog, hormones & weight resistance. Free 15-min discovery call.",
       },
       { property: "og:title", content: "Novaleo Weight & Wellness" },
-      { property: "og:description", content: "Root-cause functional medicine via telehealth for women in their 40s & 50s." },
+      {
+        property: "og:description",
+        content: "Root-cause functional medicine via telehealth for women in their 40s & 50s.",
+      },
     ],
   }),
   component: Home,
@@ -33,10 +45,22 @@ const symptoms = [
 ];
 
 const familiar = [
-  { q: "I'm exhausted all the time but my doctor says everything looks normal.", a: " Sound familiar?" },
-  { q: "I have brain fog so bad I can't focus at work. I used to be sharp.", a: " You're not losing your mind." },
-  { q: "I'm gaining weight despite doing everything right. No one can explain why.", a: " It's not willpower. It's hormones." },
-  { q: "I feel like something is off but no one is listening or digging deeper.", a: " I will listen. And dig deeper." },
+  {
+    q: "I'm exhausted all the time but my doctor says everything looks normal.",
+    a: " Sound familiar?",
+  },
+  {
+    q: "I have brain fog so bad I can't focus at work. I used to be sharp.",
+    a: " You're not losing your mind.",
+  },
+  {
+    q: "I'm gaining weight despite doing everything right. No one can explain why.",
+    a: " It's not willpower. It's hormones.",
+  },
+  {
+    q: "I feel like something is off but no one is listening or digging deeper.",
+    a: " I will listen. And dig deeper.",
+  },
 ];
 
 const testimonials = [
@@ -82,19 +106,24 @@ function Home() {
             <div className="eyebrow mb-5">Finally, someone who listens.</div>
             <h1 className="text-5xl md:text-7xl leading-[1.25]">
               You're exhausted. Your labs are{" "}
-              <em className="not-italic text-secondary bg-primary px-3 py-1 rounded-md inline-block my-1 leading-tight">"normal."</em>
-              <br />But something is still wrong?
+              <em className="not-italic text-secondary bg-primary px-3 py-1 rounded-md inline-block my-1 leading-tight">
+                "normal."
+              </em>
+              <br />
+              But something is still wrong?
             </h1>
             <p className="mt-7 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
               We help professional women in their 40s &amp; 50s break free from chronic fatigue,
-              brain fog, and hormonal chaos using functional medicine that actually finds the
-              root cause.
+              brain fog, and hormonal chaos using functional medicine that actually finds the root
+              cause.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Link to="/contact" className="btn-gold">
                 Book my free 15-min call <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
-              <Link to="/approach" className="btn-ghost">How it works</Link>
+              <Link to="/approach" className="btn-ghost">
+                How it works
+              </Link>
             </div>
             <ul className="mt-10 grid sm:grid-cols-2 gap-x-6 gap-y-3 text-sm text-foreground/80">
               {[
@@ -103,7 +132,10 @@ function Home() {
                 "Specializing in metabolic health, hormones & weight resistance",
                 "You'll feel heard from the very first call",
               ].map((p) => (
-                <li key={p} className="flex gap-2"><span className="text-secondary">✓</span>{p}</li>
+                <li key={p} className="flex gap-2">
+                  <span className="text-secondary">✓</span>
+                  {p}
+                </li>
               ))}
             </ul>
           </div>
@@ -118,7 +150,9 @@ function Home() {
             />
             <div className="absolute -bottom-6 -right-4 bg-card border border-border rounded-2xl shadow-xl p-5 max-w-[16rem]">
               <div className="text-3xl font-display text-primary">15 min</div>
-              <p className="text-sm text-muted-foreground mt-1">Free Google Meet call. Zero cost, zero pressure.</p>
+              <p className="text-sm text-muted-foreground mt-1">
+                Free Google Meet call. Zero cost, zero pressure.
+              </p>
             </div>
           </div>
         </div>
@@ -150,15 +184,28 @@ function Home() {
         />
         <Carousel
           opts={{ loop: true, align: "start", watchDrag: false }}
-          plugins={[AutoScroll({ speed: 1, startDelay: 0, stopOnInteraction: false, stopOnMouseEnter: true, direction: "backward" })]}
+          plugins={[
+            AutoScroll({
+              speed: 1,
+              startDelay: 0,
+              stopOnInteraction: false,
+              stopOnMouseEnter: true,
+              direction: "backward",
+            }),
+          ]}
           className="mt-12"
         >
           <CarouselContent className="-ml-4">
             {[...familiar, ...familiar].map((f, i) => (
-              <CarouselItem key={`${f.q}-${i}`} className="pl-4 basis-[85%] md:basis-1/2 lg:basis-1/4">
+              <CarouselItem
+                key={`${f.q}-${i}`}
+                className="pl-4 basis-[85%] md:basis-1/2 lg:basis-1/4"
+              >
                 <div className="rounded-2xl border border-border bg-card p-7 h-full">
                   <p className="font-display text-xl text-primary italic leading-snug">"{f.q}"</p>
-                  <p className="mt-4 text-sm font-semibold tracking-wide text-secondary uppercase">{f.a}</p>
+                  <p className="mt-4 text-sm font-semibold tracking-wide text-secondary uppercase">
+                    {f.a}
+                  </p>
                 </div>
               </CarouselItem>
             ))}
@@ -169,13 +216,24 @@ function Home() {
       {/* WHAT IS FUNCTIONAL MEDICINE */}
       <section className="container-prose pb-24 grid lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-6 order-2 lg:order-1">
-          <img src={labs} alt="Holistic wellness  whole foods, herbs, and mindful living" width={1400} height={1000} loading="lazy"
-               className="rounded-2xl shadow-xl aspect-[4/3] object-cover w-full" />
+          <img
+            src={labs}
+            alt="Holistic wellness  whole foods, herbs, and mindful living"
+            width={1400}
+            height={1000}
+            loading="lazy"
+            className="rounded-2xl shadow-xl aspect-[4/3] object-cover w-full"
+          />
         </div>
         <div className="lg:col-span-6 order-1 lg:order-2">
           <SectionHeading
             eyebrow="A different kind of medicine"
-            title={<>We look for the <em className="text-secondary not-italic">why</em>, not just the what.</>}
+            title={
+              <>
+                We look for the <em className="text-secondary not-italic">why</em>, not just the
+                what.
+              </>
+            }
             intro="Conventional care often stops at a prescription pad. Functional medicine treats the whole person  uncovering the biological, hormonal, and lifestyle drivers behind your symptoms  so the root cause is addressed, not just the surface."
           />
           <ul className="mt-8 space-y-4">
@@ -191,7 +249,10 @@ function Home() {
               </li>
             ))}
           </ul>
-          <Link to="/approach" className="mt-8 inline-flex items-center gap-2 text-primary font-semibold hover:text-secondary">
+          <Link
+            to="/approach"
+            className="mt-8 inline-flex items-center gap-2 text-primary font-semibold hover:text-secondary"
+          >
             See how we work <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
@@ -207,20 +268,36 @@ function Home() {
         />
         <Carousel
           opts={{ loop: true, align: "start", watchDrag: false }}
-          plugins={[AutoScroll({ speed: 0.8, startDelay: 0, stopOnInteraction: false, stopOnMouseEnter: true, direction: "backward" })]}
+          plugins={[
+            AutoScroll({
+              speed: 0.8,
+              startDelay: 0,
+              stopOnInteraction: false,
+              stopOnMouseEnter: true,
+              direction: "backward",
+            }),
+          ]}
           className="mt-12"
         >
           <CarouselContent className="-ml-4">
             {[...testimonials, ...testimonials].map((t, i) => (
-              <CarouselItem key={`${t.name}-${i}`} className="pl-4 basis-[90%] md:basis-1/2 lg:basis-1/3">
+              <CarouselItem
+                key={`${t.name}-${i}`}
+                className="pl-4 basis-[90%] md:basis-1/2 lg:basis-1/3"
+              >
                 <div className="rounded-2xl border border-border bg-card p-7 h-full flex flex-col">
                   <div className="flex gap-1">
                     {Array.from({ length: t.rating }).map((_, j) => (
                       <Star key={j} className="h-4 w-4 fill-secondary text-secondary" />
                     ))}
                   </div>
-                  <p className="mt-4 text-foreground/85 leading-relaxed text-sm flex-1">"{t.text}"</p>
-                  <p className="mt-5 text-sm font-semibold tracking-wide text-primary uppercase"> {t.name}</p>
+                  <p className="mt-4 text-foreground/85 leading-relaxed text-sm flex-1">
+                    "{t.text}"
+                  </p>
+                  <p className="mt-5 text-sm font-semibold tracking-wide text-primary uppercase">
+                    {" "}
+                    {t.name}
+                  </p>
                 </div>
               </CarouselItem>
             ))}
@@ -233,19 +310,44 @@ function Home() {
         <div className="container-prose py-24">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
-              <div className="eyebrow text-secondary mb-3" style={{ opacity: 1 }}>Simple next steps</div>
-              <h2 className="text-4xl md:text-5xl text-primary-foreground">How we get you from exhausted to energized.</h2>
-              <p className="mt-4 text-primary-foreground/75 text-lg">Four simple steps. One personalized path.</p>
+              <div className="eyebrow text-secondary mb-3" style={{ opacity: 1 }}>
+                Simple next steps
+              </div>
+              <h2 className="text-4xl md:text-5xl text-primary-foreground">
+                How we get you from exhausted to energized.
+              </h2>
+              <p className="mt-4 text-primary-foreground/75 text-lg">
+                Four simple steps. One personalized path.
+              </p>
             </div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { n: "01", t: "Choose your starting point", d: "Not everyone needs the same first step. You can book a free discovery call, start with a Root-Cause Intake, or apply directly for one of our personalized programs." },
-              { n: "02", t: "Root-Cause Review", d: "We review your symptoms, health history, lifestyle, and available labs to understand what may be driving fatigue, brain fog, weight resistance, hormone shifts, or metabolic changes." },
-              { n: "03", t: "Build your personalized plan", d: "We look at your symptoms, labs, lifestyle, stress, sleep, nutrition, hormones, metabolism, and real-life demands to identify the best starting point." },
-              { n: "04", t: "Guided Support", d: "Whether your plan begins with foundational work or a deeper program, you'll have a structured roadmap designed around your body. For clients enrolled in a program, we continue with structured support, education, adjustments, and accountability so your plan can evolve with you." },
+              {
+                n: "01",
+                t: "Choose your starting point",
+                d: "Not everyone needs the same first step. You can book a free discovery call, start with a Root-Cause Intake, or apply directly for one of our personalized programs.",
+              },
+              {
+                n: "02",
+                t: "Root-Cause Review",
+                d: "We review your symptoms, health history, lifestyle, and available labs to understand what may be driving fatigue, brain fog, weight resistance, hormone shifts, or metabolic changes.",
+              },
+              {
+                n: "03",
+                t: "Build your personalized plan",
+                d: "We look at your symptoms, labs, lifestyle, stress, sleep, nutrition, hormones, metabolism, and real-life demands to identify the best starting point.",
+              },
+              {
+                n: "04",
+                t: "Guided Support",
+                d: "Whether your plan begins with foundational work or a deeper program, you'll have a structured roadmap designed around your body. For clients enrolled in a program, we continue with structured support, education, adjustments, and accountability so your plan can evolve with you.",
+              },
             ].map((s) => (
-              <div key={s.t} className="rounded-2xl bg-primary-foreground/[0.04] border border-primary-foreground/10 p-7 hover:border-secondary/60 transition-colors">
+              <div
+                key={s.t}
+                className="rounded-2xl bg-primary-foreground/[0.04] border border-primary-foreground/10 p-7 hover:border-secondary/60 transition-colors"
+              >
                 <div className="font-display text-3xl text-secondary mb-3">{s.n}</div>
                 <h3 className="text-xl text-primary-foreground leading-tight">{s.t}</h3>
                 <p className="mt-3 text-sm text-primary-foreground/75 leading-relaxed">{s.d}</p>
@@ -253,15 +355,23 @@ function Home() {
             ))}
           </div>
           <div className="mt-12 flex flex-wrap gap-3">
-            <Link to="/contact" className="btn-gold">Book my free 15-min call</Link>
+            <Link to="/contact" className="btn-gold">
+              Book my free 15-min call
+            </Link>
           </div>
         </div>
       </section>
 
       {/* TELEHEALTH */}
       <section className="container-prose py-24 grid lg:grid-cols-2 gap-12 items-center">
-        <img src={telehealth} alt="Telehealth consultation from home" width={1400} height={1000} loading="lazy"
-             className="rounded-2xl shadow-xl aspect-[4/3] object-cover w-full" />
+        <img
+          src={telehealth}
+          alt="Telehealth consultation from home"
+          width={1400}
+          height={1000}
+          loading="lazy"
+          className="rounded-2xl shadow-xl aspect-[4/3] object-cover w-full"
+        />
         <div>
           <SectionHeading
             eyebrow="Telehealth across MI & WI"
@@ -276,7 +386,9 @@ function Home() {
             ].map((s) => (
               <div key={s.v} className="rounded-xl border border-border bg-card py-5">
                 <div className="text-2xl font-display text-primary">{s.k}</div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{s.v}</div>
+                <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">
+                  {s.v}
+                </div>
               </div>
             ))}
           </div>
@@ -292,7 +404,10 @@ function Home() {
           </div>
           <div className="mt-10 flex flex-wrap justify-center gap-3 md:gap-5">
             {["Honesty", "Respect", "Patient First", "Integrity", "Excellence"].map((v) => (
-              <span key={v} className="px-5 py-2 rounded-full bg-background border border-primary/15 text-primary font-display text-lg">
+              <span
+                key={v}
+                className="px-5 py-2 rounded-full bg-background border border-primary/15 text-primary font-display text-lg"
+              >
                 {v}
               </span>
             ))}
@@ -301,16 +416,22 @@ function Home() {
       </section>
 
       {/* CTA */}
-      <section className="container-prose py-12 pb-0 text-center">
+      <section className="container-prose py-24 text-center">
         <div className="eyebrow mb-4">Your next chapter starts here</div>
-        <h2 className="text-4xl md:text-5xl max-w-2xl mx-auto">Ready to finally feel like yourself again?</h2>
+        <h2 className="text-4xl md:text-5xl max-w-2xl mx-auto">
+          Ready to finally feel like yourself again?
+        </h2>
         <p className="mt-5 text-lg text-muted-foreground max-w-xl mx-auto">
-          You've been pushing through on empty long enough. Choose your starting point  whether
-          you want to talk first or dive straight in, I'm here for you.
+          You've been pushing through on empty long enough. Choose your starting point whether you
+          want to talk first or dive straight in, I'm here for you.
         </p>
         <div className="mt-8 flex justify-center gap-3 flex-wrap">
-          <Link to="/contact" className="btn-gold">Book free 15-min call</Link>
-          <Link to="/services" className="btn-ghost">Book $97 intake</Link>
+          <Link to="/contact" className="btn-gold">
+            Book free 15-min call
+          </Link>
+          <Link to="/services" className="btn-ghost">
+            Book $97 intake
+          </Link>
         </div>
       </section>
     </>
