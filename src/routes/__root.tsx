@@ -4,13 +4,33 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
+import * as React from "react";
+import NProgress from "nprogress";
+import "nprogress/nprogress.css";
 
 import appCss from "../styles.css?url";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+
+NProgress.configure({ showSpinner: false });
+
+function RouterSpinner() {
+  const isLoading = useRouterState({ select: (s) => s.status === "pending" });
+
+  React.useEffect(() => {
+    if (isLoading) {
+      NProgress.start();
+    } else {
+      NProgress.done();
+    }
+  }, [isLoading]);
+
+  return null;
+}
 
 function NotFoundComponent() {
   return (
@@ -144,6 +164,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="flex min-h-screen flex-col">
+        <RouterSpinner />
         <SiteHeader />
         <main className="flex-1">
           <Outlet />
