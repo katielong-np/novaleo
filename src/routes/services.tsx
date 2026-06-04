@@ -33,7 +33,7 @@ const programs = [
       "Program guidance and next steps",
       "Answers to your questions",
     ],
-    cta: "Book my free call",
+    cta: "Book Discovery Call",
     note: "Or skip the discovery call and schedule the Root Cause Intake to start feeling like yourself again.",
   },
   {
@@ -164,9 +164,9 @@ function Services() {
               one receives the level of attention, review, and strategy required for true
               personalization.
             </p>
-            <Link to="/contact" className="btn-gold mt-8 inline-flex">
+            <a href="https://www.optimantra.com/optimus/patient/patientaccess/practsNslots?pid=ZW1nazRycGdvZWxwQjA2eEpiOE5kQT09&lid=UlNxTzY0a0dyR1hJNGJsSkR2NDF5UT09&sid=dE11cnIweUNZVlh3TlFiaXVnVjJSdz09" target="_blank" rel="noopener noreferrer" className="btn-gold mt-8 inline-flex">
               Apply for the partnership
-            </Link>
+            </a>
           </div>
           <div className="lg:col-span-7 grid sm:grid-cols-2 gap-5">
             {objectives.map((o) => (
@@ -217,7 +217,7 @@ function Services() {
           />
           <div className="mt-8 flex justify-center">
             <Link to="/contact" className="btn-gold">
-              Book a free discovery call
+              Book Discovery Call
             </Link>
           </div>
         </div>

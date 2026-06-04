@@ -119,7 +119,7 @@ function Home() {
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Link to="/contact" className="btn-gold">
-                Book my free 15-min call <ArrowRight className="ml-2 h-4 w-4" />
+                Book Discovery Call <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
               <Link to="/approach" className="btn-ghost">
                 How it works
@@ -360,7 +360,7 @@ function Home() {
           </div>
           <div className="mt-12 flex flex-wrap gap-3">
             <Link to="/contact" className="btn-gold">
-              Book my free 15-min call
+              Book Discovery Call
             </Link>
           </div>
         </div>
@@ -380,7 +380,7 @@ function Home() {
           <SectionHeading
             eyebrow="Telehealth across MI & WI"
             title="Expert care without leaving your day."
-            intro="Visits happen securely from your laptop or phone. Labs are drawn locally. A relaxed, judgment-free Google Meet conversation with Kathryn  built for the schedule of a working professional."
+            intro="Visits happen securely from your laptop or phone. Labs are drawn locally near you. A relaxed, judgment-free Google Meet conversation with Kathryn  built for the schedule of a working professional."
           />
           <div className="mt-8 grid grid-cols-3 gap-4 text-center">
             {[
@@ -431,10 +431,10 @@ function Home() {
         </p>
         <div className="mt-8 flex justify-center gap-3 flex-wrap">
           <Link to="/contact" className="btn-gold">
-            Book free 15-min call
+            Book Discovery Call
           </Link>
-          <Link to="/services" className="btn-ghost">
-            Book $97 intake
+          <Link to="/scheduler" className="btn-ghost">
+            Book $97 Root-Cause Intake
           </Link>
         </div>
       </section>

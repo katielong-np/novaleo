@@ -148,7 +148,7 @@ function About() {
             pressure.
           </p>
           <Link to="/contact" className="btn-gold mt-7 inline-flex">
-            Reserve my free call
+            Book Discovery Call
           </Link>
         </div>
       </section>

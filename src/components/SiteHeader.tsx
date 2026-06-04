@@ -3,14 +3,16 @@ import { useState } from "react";
 import logo from "@/assets/novaleo-logo.png";
 import { Menu, X, Phone } from "lucide-react";
 
-const nav = [
+type NavItem = { to: string; hash?: string; label: string };
+
+const nav: NavItem[] = [
   { to: "/about", label: "About" },
   { to: "/approach", label: "Our Approach" },
-  { to: "/services", label: "Services" },
+  { to: "/scheduler", label: "Services" },
   { to: "/conditions", label: "What We Treat" },
-  { to: "/scheduler", label: "Book" },
+  { to: "/contact", hash: "faq", label: "FAQ" },
   { to: "/contact", label: "Contact" },
-] as const;
+];
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -23,8 +25,9 @@ export function SiteHeader() {
         <nav className="hidden lg:flex items-center gap-8">
           {nav.map((n) => (
             <Link
-              key={n.to}
-              to={n.to}
+              key={n.label}
+              to={n.to as any}
+              hash={n.hash}
               className="text-sm font-medium text-foreground/75 hover:text-primary transition-colors"
               activeProps={{ className: "text-primary font-semibold" }}
             >
@@ -57,8 +60,9 @@ export function SiteHeader() {
           <div className="container-prose py-4 flex flex-col gap-4">
             {nav.map((n) => (
               <Link
-                key={n.to}
-                to={n.to}
+                key={n.label}
+                to={n.to as any}
+                hash={n.hash}
                 onClick={() => setOpen(false)}
                 className="text-base text-foreground"
               >
