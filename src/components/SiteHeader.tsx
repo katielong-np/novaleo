@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import logo from "@/assets/novaleo-logo.png";
 import { Menu, X, Phone } from "lucide-react";
+import { useBookingModal } from "./BookingModalContext";
 
 type NavItem = { to: string; hash?: string; label: string };
 
@@ -16,6 +17,7 @@ const nav: NavItem[] = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const { open: openBooking } = useBookingModal();
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur">
       <div className="container-prose flex items-center justify-between py-4">
@@ -43,9 +45,9 @@ export function SiteHeader() {
             <Phone className="h-4 w-4" />
             1-616-801-4648
           </a>
-          <Link to="/contact" className="btn-gold text-sm">
+          <button onClick={openBooking} className="btn-gold text-sm">
             Book Discovery Call
-          </Link>
+          </button>
         </div>
         <button
           aria-label="Toggle menu"
@@ -76,9 +78,9 @@ export function SiteHeader() {
             >
               <Phone className="h-4 w-4" /> 1-616-801-4648
             </a>
-            <Link to="/contact" onClick={() => setOpen(false)} className="btn-gold text-sm w-fit">
+            <button onClick={() => { setOpen(false); openBooking(); }} className="btn-gold text-sm w-fit">
               Book Discovery Call
-            </Link>
+            </button>
           </div>
         </div>
       )}

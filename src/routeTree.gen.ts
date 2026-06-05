@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SchedulerRouteImport } from './routes/scheduler'
+import { Route as DiscoveryRouteImport } from './routes/discovery'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ConditionsRouteImport } from './routes/conditions'
 import { Route as ApproachRouteImport } from './routes/approach'
@@ -31,6 +32,11 @@ const ServicesRoute = ServicesRouteImport.update({
 const SchedulerRoute = SchedulerRouteImport.update({
   id: '/scheduler',
   path: '/scheduler',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DiscoveryRoute = DiscoveryRouteImport.update({
+  id: '/discovery',
+  path: '/discovery',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -65,6 +71,7 @@ export interface FileRoutesByFullPath {
   '/approach': typeof ApproachRoute
   '/conditions': typeof ConditionsRoute
   '/contact': typeof ContactRoute
+  '/discovery': typeof DiscoveryRoute
   '/scheduler': typeof SchedulerRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByTo {
   '/approach': typeof ApproachRoute
   '/conditions': typeof ConditionsRoute
   '/contact': typeof ContactRoute
+  '/discovery': typeof DiscoveryRoute
   '/scheduler': typeof SchedulerRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -86,6 +94,7 @@ export interface FileRoutesById {
   '/approach': typeof ApproachRoute
   '/conditions': typeof ConditionsRoute
   '/contact': typeof ContactRoute
+  '/discovery': typeof DiscoveryRoute
   '/scheduler': typeof SchedulerRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -98,6 +107,7 @@ export interface FileRouteTypes {
     | '/approach'
     | '/conditions'
     | '/contact'
+    | '/discovery'
     | '/scheduler'
     | '/services'
     | '/sitemap.xml'
@@ -108,6 +118,7 @@ export interface FileRouteTypes {
     | '/approach'
     | '/conditions'
     | '/contact'
+    | '/discovery'
     | '/scheduler'
     | '/services'
     | '/sitemap.xml'
@@ -118,6 +129,7 @@ export interface FileRouteTypes {
     | '/approach'
     | '/conditions'
     | '/contact'
+    | '/discovery'
     | '/scheduler'
     | '/services'
     | '/sitemap.xml'
@@ -129,6 +141,7 @@ export interface RootRouteChildren {
   ApproachRoute: typeof ApproachRoute
   ConditionsRoute: typeof ConditionsRoute
   ContactRoute: typeof ContactRoute
+  DiscoveryRoute: typeof DiscoveryRoute
   SchedulerRoute: typeof SchedulerRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -155,6 +168,13 @@ declare module '@tanstack/react-router' {
       path: '/scheduler'
       fullPath: '/scheduler'
       preLoaderRoute: typeof SchedulerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/discovery': {
+      id: '/discovery'
+      path: '/discovery'
+      fullPath: '/discovery'
+      preLoaderRoute: typeof DiscoveryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -201,6 +221,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApproachRoute: ApproachRoute,
   ConditionsRoute: ConditionsRoute,
   ContactRoute: ContactRoute,
+  DiscoveryRoute: DiscoveryRoute,
   SchedulerRoute: SchedulerRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,

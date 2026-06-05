@@ -15,6 +15,8 @@ import "nprogress/nprogress.css";
 import appCss from "../styles.css?url";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { BookingModalProvider } from "@/components/BookingModalContext";
+import { BookingModal } from "@/components/BookingModal";
 
 NProgress.configure({ showSpinner: false });
 
@@ -161,14 +163,17 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex min-h-screen flex-col">
-        <RouterSpinner />
-        <SiteHeader />
-        <main className="flex-1">
-          <Outlet />
-        </main>
-        <SiteFooter />
-      </div>
+      <BookingModalProvider>
+        <div className="flex min-h-screen flex-col">
+          <RouterSpinner />
+          <SiteHeader />
+          <main className="flex-1">
+            <Outlet />
+          </main>
+          <SiteFooter />
+        </div>
+        <BookingModal />
+      </BookingModalProvider>
     </QueryClientProvider>
   );
 }

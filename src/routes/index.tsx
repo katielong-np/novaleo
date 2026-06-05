@@ -3,6 +3,7 @@ import hero from "@/assets/hero-kathryn.jpg";
 import labs from "@/assets/approach-labs.jpg";
 import telehealth from "@/assets/telehealth.jpg";
 import { SectionHeading } from "@/components/SectionHeading";
+import { useBookingModal } from "@/components/BookingModalContext";
 import {
   ArrowRight,
   Battery,
@@ -97,6 +98,8 @@ const testimonials = [
 ];
 
 function Home() {
+  const { open: openBooking } = useBookingModal();
+
   return (
     <>
       {/* HERO */}
@@ -106,7 +109,7 @@ function Home() {
             <div className="eyebrow mb-5">Finally, someone who listens.</div>
             <h1 className="text-5xl md:text-[62px] leading-[65px]">
               You're exhausted. Your labs are{" "}
-              <em className="not-italic text-secondary bg-primary px-3 py-1 rounded-md inline-block my-1 leading-tight">
+              <em className="not-italic text-secondary bg-primary px-4 py-1 rounded-full inline-block my-1 leading-tight">
                 "normal."
               </em>
               <br />
@@ -118,9 +121,9 @@ function Home() {
               cause.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <Link to="/contact" className="btn-gold">
+              <button onClick={openBooking} className="btn-gold">
                 Book Discovery Call <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </button>
               <Link to="/approach" className="btn-ghost">
                 How it works
               </Link>
@@ -307,6 +310,11 @@ function Home() {
             ))}
           </CarouselContent>
         </Carousel>
+        <div className="mt-12 flex justify-center">
+          <button onClick={openBooking} className="btn-primary">
+            Book Discovery Call
+          </button>
+        </div>
       </section>
 
       {/* SIMPLE NEXT STEPS */}
@@ -359,9 +367,9 @@ function Home() {
             ))}
           </div>
           <div className="mt-12 flex flex-wrap gap-3">
-            <Link to="/contact" className="btn-gold">
+            <button onClick={openBooking} className="btn-gold">
               Book Discovery Call
-            </Link>
+            </button>
           </div>
         </div>
       </section>
@@ -430,9 +438,9 @@ function Home() {
           want to talk first or dive straight in, I'm here for you.
         </p>
         <div className="mt-8 flex justify-center gap-3 flex-wrap">
-          <Link to="/contact" className="btn-gold">
+          <button onClick={openBooking} className="btn-gold">
             Book Discovery Call
-          </Link>
+          </button>
           <Link to="/scheduler" className="btn-ghost">
             Book $97 Root-Cause Intake
           </Link>

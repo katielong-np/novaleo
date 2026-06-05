@@ -55,3 +55,5 @@ npm run build
 - **Responsive Layout**: Optimised for mobile, tablet, and desktop viewports.
 - **Dynamic Elements**: Auto-scrolling reviews and quotes carousel powered by Embla Carousel, seamlessly bleeding to screen edges for a modern feel.
 - **Telehealth Focus**: Clear call-to-actions (CTAs) for discovery calls, intake forms, and service information.
+- **Global Booking Modal**: A seamless unified pop-up experience for discovery calls across all pages.
+- **UI Enhancements**: Consistent pointer interactions across interactive elements and standardized branding colours.

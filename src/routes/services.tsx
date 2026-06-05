@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
+import { useBookingModal } from "@/components/BookingModalContext";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -95,6 +96,8 @@ const objectives = [
 ];
 
 function Services() {
+  const { open: openBooking } = useBookingModal();
+
   return (
     <>
       <section className="container-prose pt-8 pb-12">
@@ -136,9 +139,15 @@ function Services() {
                 {p.note}
               </p>
             )}
-            <Link to="/contact" className="btn-gold mt-8 self-start text-sm">
-              {p.cta}
-            </Link>
+            {p.cta === "Book Discovery Call" ? (
+              <button onClick={openBooking} className="btn-gold mt-8 self-start text-sm">
+                {p.cta}
+              </button>
+            ) : (
+              <Link to="/contact" className="btn-gold mt-8 self-start text-sm">
+                {p.cta}
+              </Link>
+            )}
           </article>
         ))}
       </section>
@@ -216,9 +225,9 @@ function Services() {
             intro="A relaxed 15-minute conversation to help you decide what makes sense  even if it isn't with us. Michigan and Wisconsin only."
           />
           <div className="mt-8 flex justify-center">
-            <Link to="/contact" className="btn-gold">
+            <button onClick={openBooking} className="btn-gold">
               Book Discovery Call
-            </Link>
+            </button>
           </div>
         </div>
       </section>

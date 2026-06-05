@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import labs from "@/assets/approach-labs.jpg";
 import { SectionHeading } from "@/components/SectionHeading";
+import { useBookingModal } from "@/components/BookingModalContext";
 
 export const Route = createFileRoute("/approach")({
   head: () => ({
@@ -45,6 +46,8 @@ const steps = [
 ];
 
 function Approach() {
+  const { open: openBooking } = useBookingModal();
+
   return (
     <>
       <section className="container-prose pt-8 pb-12">
@@ -122,9 +125,9 @@ function Approach() {
         <p className="mt-5 text-muted-foreground max-w-xl mx-auto">
           The process begins with a single 15-minute conversation. No cost. No commitment.
         </p>
-        <Link to="/contact" className="btn-gold mt-8 inline-flex">
+        <button onClick={openBooking} className="btn-gold mt-8 inline-flex">
           Book discovery call
-        </Link>
+        </button>
       </section>
     </>
   );

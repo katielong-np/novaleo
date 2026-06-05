@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import clinician from "@/assets/clinician.jpg";
 import { SectionHeading } from "@/components/SectionHeading";
+import { useBookingModal } from "@/components/BookingModalContext";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -23,6 +24,8 @@ export const Route = createFileRoute("/about")({
 });
 
 function About() {
+  const { open: openBooking } = useBookingModal();
+
   return (
     <>
       <section className="container-prose pt-8 pb-12">
@@ -147,9 +150,9 @@ function About() {
             A relaxed, judgment-free 15-minute Google Meet call with Kathryn. Zero cost, zero
             pressure.
           </p>
-          <Link to="/contact" className="btn-gold mt-7 inline-flex">
+          <button onClick={openBooking} className="btn-gold mt-7 inline-flex">
             Book Discovery Call
-          </Link>
+          </button>
         </div>
       </section>
     </>

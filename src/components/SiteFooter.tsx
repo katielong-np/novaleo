@@ -1,7 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import logo from "@/assets/novaleo-logo.png";
+import { useBookingModal } from "@/components/BookingModalContext";
 
 export function SiteFooter() {
+  const { open: openBooking } = useBookingModal();
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container-prose py-16 grid gap-12 md:grid-cols-4">
@@ -121,9 +123,9 @@ export function SiteFooter() {
             <li>Mon – Fri · 7 AM – 6 PM</li>
 
             <li>
-              <Link to="/contact" className="hover:text-gold">
+              <button onClick={openBooking} className="hover:text-gold text-left">
                 Book a free discovery call
-              </Link>
+              </button>
             </li>
           </ul>
         </div>

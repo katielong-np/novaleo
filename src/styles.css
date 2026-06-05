@@ -45,7 +45,7 @@
 
   /* Brand */
   --ink: oklch(0.27 0.06 255); /* deep navy from logo */
-  --gold: oklch(0.83 0.15 85); /* warm yellow from logo */
+  --gold: #E5AE00; /* warm yellow from logo */
   --gold-soft: oklch(0.93 0.08 90);
   --cream: oklch(0.985 0.012 85);
 
@@ -60,7 +60,7 @@
   --primary: oklch(0.27 0.06 255); /* navy */
   --primary-foreground: oklch(0.985 0.012 85);
 
-  --secondary: oklch(0.83 0.15 85); /* gold */
+  --secondary: #E5AE00; /* gold */
   --secondary-foreground: oklch(0.27 0.06 255);
 
   --muted: oklch(0.95 0.012 85);
@@ -74,7 +74,7 @@
 
   --border: oklch(0.88 0.02 85);
   --input: oklch(0.88 0.02 85);
-  --ring: oklch(0.83 0.15 85);
+  --ring: #E5AE00;
 }
 
 @layer base {
@@ -88,6 +88,9 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
+  }
+  a, button, [role="button"], [role="menuitem"] {
+    cursor: pointer;
   }
   h1,
   h2,

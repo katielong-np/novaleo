@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useBookingModal } from "@/components/BookingModalContext";
 
 export const Route = createFileRoute("/conditions")({
   head: () => ({
@@ -71,6 +72,8 @@ const conditions = [
 ];
 
 function Conditions() {
+  const { open: openBooking } = useBookingModal();
+
   return (
     <>
       <section className="container-prose pt-8 pb-12">
@@ -121,9 +124,9 @@ function Conditions() {
           <p className="mt-4 text-primary/80 max-w-xl mx-auto">
             We'll tell you honestly whether functional medicine is the right path for your case.
           </p>
-          <Link to="/contact" className="btn-primary mt-7 inline-flex">
-            Book discovery call
-          </Link>
+          <button onClick={openBooking} className="btn-primary mt-7 inline-flex">
+            Book Discovery Call
+          </button>
         </div>
       </section>
     </>
