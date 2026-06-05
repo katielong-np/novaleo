@@ -134,11 +134,14 @@
     font-weight: 500;
     transition:
       transform 0.2s ease,
-      background 0.2s ease;
+      background 0.2s ease,
+      box-shadow 0.2s ease;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.08);
   }
   .btn-primary:hover {
     background: oklch(0.22 0.06 255);
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.12);
   }
   .btn-gold {
     display: inline-flex;
@@ -151,11 +154,14 @@
     font-weight: 600;
     transition:
       transform 0.2s ease,
-      background 0.2s ease;
+      background 0.2s ease,
+      box-shadow 0.2s ease;
+    box-shadow: 0 4px 14px 0 rgba(229, 174, 0, 0.25);
   }
   .btn-gold:hover {
     background: oklch(0.78 0.16 85);
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px 0 rgba(229, 174, 0, 0.4);
   }
   .btn-ghost {
     display: inline-flex;
@@ -166,10 +172,18 @@
     padding: 0.8rem 1.5rem;
     border-radius: 999px;
     font-weight: 500;
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease,
+      color 0.2s ease,
+      box-shadow 0.2s ease;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
   }
   .btn-ghost:hover {
     background: var(--color-primary);
     color: var(--color-primary-foreground);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
   }
 }
 

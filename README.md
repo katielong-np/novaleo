@@ -59,5 +59,6 @@ npm run build
   - Features instantaneous scheduling powered by a hidden preloaded **Cal.com** embed.
   - Optimised mobile layout hides the decorative panel entirely and scales the modal to take up the full screen across all pages, maximizing space for the form and scheduling widget.
 - **UI Enhancements**: Consistent pointer interactions, standardized branding colours, and a personalized clinician avatar with active availability indicators.
+  - Buttons across the site feature subtle, elegant box shadows and smooth lift animations on hover.
   - Social media links in the footer have been updated to reflect the `katielong.np` handles across TikTok, Facebook, and Instagram.
   - Mobile-first refinements ensure the primary "Book Discovery Call" button stays visible above the fold on the homepage hero section.
