@@ -53,7 +53,7 @@ export default function BookingVariantA({
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({"namespace":"15min"});
-      cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+      cal("ui", {"theme":"light","hideEventTypeDetails":false,"layout":"month_view"});
     })();
   }, []);
 
@@ -324,17 +324,19 @@ export default function BookingVariantA({
                 </div>
               )}
 
-              {/* Cal.com Embed - always mounted to preload, hidden until step >= 1 */}
+              {/* Cal.com Embed - always mounted to preload, visible at 1px when hidden so browser loads iframe eagerly */}
               <div 
-                className={`w-full transition-opacity duration-500 ${
-                  step >= 1 ? 'opacity-100 relative z-10 flex-1 min-h-0 flex flex-col' : 'opacity-0 absolute inset-0 -z-10 pointer-events-none'
+                className={`transition-all duration-300 ${
+                  step >= 1
+                    ? 'w-full flex-1 min-h-0 flex flex-col relative z-10 opacity-100'
+                    : 'w-[1px] h-[1px] overflow-hidden opacity-0 absolute'
                 }`}
               >
                 <Cal 
                   namespace="15min"
                   calLink="katie-long-np/15min"
                   style={{width:"100%",height:"100%",overflow:"scroll"}}
-                  config={{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}}
+                  config={{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"}}
                 />
               </div>
             </div>
