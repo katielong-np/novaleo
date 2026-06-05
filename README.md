@@ -64,3 +64,4 @@ npm run build
   - Buttons across the site feature subtle, elegant box shadows and smooth lift animations on hover.
   - Social media links in the footer have been updated to reflect the `katielong.np` handles across TikTok, Facebook, and Instagram.
   - Mobile-first refinements ensure the primary "Book Discovery Call" button stays visible above the fold on the homepage hero section.
+  - All site images and assets have been optimized by converting them to the WebP format for faster page load times and improved performance.

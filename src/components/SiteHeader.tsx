@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import logo from "@/assets/novaleo-logo.png";
+import logo from "@/assets/novaleo-logo.webp";
 import { Menu, X, Phone } from "lucide-react";
 import { useBookingModal } from "./BookingModalContext";
 

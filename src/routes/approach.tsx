@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import labs from "@/assets/approach-labs.jpg";
+import labs from "@/assets/approach-labs.webp";
 import { SectionHeading } from "@/components/SectionHeading";
 import { useBookingModal } from "@/components/BookingModalContext";
 

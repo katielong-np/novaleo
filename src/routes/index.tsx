@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import hero from "@/assets/hero-kathryn.jpg";
-import labs from "@/assets/approach-labs.jpg";
-import telehealth from "@/assets/telehealth.jpg";
+import hero from "@/assets/hero-kathryn.webp";
+import labs from "@/assets/approach-labs.webp";
+import telehealth from "@/assets/telehealth.webp";
 import { SectionHeading } from "@/components/SectionHeading";
 import { useBookingModal } from "@/components/BookingModalContext";
 import {

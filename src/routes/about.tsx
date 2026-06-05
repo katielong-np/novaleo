@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import clinician from "@/assets/clinician.jpg";
+import clinician from "@/assets/clinician.webp";
 import { SectionHeading } from "@/components/SectionHeading";
 import { useBookingModal } from "@/components/BookingModalContext";
 

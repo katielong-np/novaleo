@@ -120,15 +120,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         property: "og:image",
-        content: "/og-image.jpg",
+        content: "/og-image.webp",
       },
       {
         name: "twitter:image",
-        content: "/og-image.jpg",
+        content: "/og-image.webp",
       },
     ],
     links: [
-      { rel: "icon", type: "image/png", href: "/favicon.png" },
+      { rel: "icon", type: "image/webp", href: "/favicon.webp" },
       { rel: "shortcut icon", href: "/favicon.ico" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },

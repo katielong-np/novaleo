@@ -5,7 +5,7 @@ import {
   ChevronLeft,
 } from 'lucide-react';
 import Cal, { getCalApi } from "@calcom/embed-react";
-import kathrynImage from '@/assets/hero-kathryn.jpg';
+import kathrynImage from '@/assets/hero-kathryn.webp';
 import { useRouterState } from '@tanstack/react-router';
 
 interface BookingWidgetProps {

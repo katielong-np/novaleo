@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/novaleo-logo.png";
+import logo from "@/assets/novaleo-logo.webp";
 import { useBookingModal } from "@/components/BookingModalContext";
 
 export function SiteFooter() {
