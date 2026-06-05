@@ -285,7 +285,7 @@ export default function BookingVariantA({
                     <div className="spa-animate-in rounded-2xl bg-amber-50/80 border border-amber-200/60 p-5 mb-4" style={{ opacity: 0 }}>
                       <div className="w-full">
                         {!waitlistSubmitted ? (
-                          <div className="flex gap-2 w-full">
+                          <div className="flex flex-col sm:flex-row gap-2 w-full">
                             <input 
                               type="email" 
                               value={waitlistEmail}
@@ -297,7 +297,7 @@ export default function BookingVariantA({
                               onClick={() => {
                                 if(waitlistEmail) setWaitlistSubmitted(true);
                               }}
-                              className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-medium rounded-lg transition-colors font-sans whitespace-nowrap"
+                              className="w-full sm:w-auto px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-medium rounded-lg transition-colors font-sans whitespace-nowrap"
                             >
                               Notify Me
                             </button>
