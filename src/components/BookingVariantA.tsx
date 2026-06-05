@@ -53,7 +53,18 @@ export default function BookingVariantA({
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({"namespace":"15min"});
-      cal("ui", {"theme":"light","hideEventTypeDetails":false,"layout":"month_view"});
+      cal("ui", {
+        "theme":"light",
+        "hideEventTypeDetails":false,
+        "layout":"month_view",
+        "cssVarsPerTheme": {
+          "light": {
+            "cal-bg": "#ffffff",
+            "cal-bg-muted": "#ffffff",
+            "cal-bg-emphasis": "#ffffff"
+          }
+        }
+      });
     })();
   }, []);
 
@@ -217,15 +228,17 @@ export default function BookingVariantA({
           </div>
 
           {/* Right booking form panel */}
-          <div className={`flex-1 min-h-0 bg-white/60 backdrop-blur-xl relative overflow-hidden flex flex-col ${step === 0 ? 'px-6 py-8 md:px-10 md:py-10 lg:px-12' : 'p-0'}`}>
-            {/* Subtle glass texture */}
-            <div
-              className="absolute inset-0 opacity-30"
-              style={{
-                background:
-                  'linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.4) 100%)',
-              }}
-            />
+          <div className={`flex-1 min-h-0 relative overflow-hidden flex flex-col ${step === 0 ? 'bg-white/60 backdrop-blur-xl px-6 py-8 md:px-10 md:py-10 lg:px-12' : 'bg-white p-0'}`}>
+            {/* Subtle glass texture - only on state gate step */}
+            {step === 0 && (
+              <div
+                className="absolute inset-0 opacity-30"
+                style={{
+                  background:
+                    'linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.4) 100%)',
+                }}
+              />
+            )}
 
             <div className="relative z-10 flex flex-col flex-1 min-h-0 h-full">
 

@@ -74,13 +74,13 @@ export function BookingModal() {
       <div
         className={`absolute inset-0 bg-primary/40 backdrop-blur-sm transition-opacity duration-300 ${
           visible ? 'opacity-100' : 'opacity-0'
-        }`}
+        } ${isDiscoveryPage ? 'hidden md:block' : ''}`}
         onClick={isDiscoveryPage ? undefined : close}
       />
 
       {/* Modal container */}
       <div
-        className={`relative w-full max-w-4xl overflow-y-auto transition-all duration-500 h-[100dvh] max-h-[100dvh] md:h-auto md:max-h-[90vh] rounded-none md:rounded-3xl ${
+        className={`relative w-full max-w-4xl overflow-y-auto transition-all duration-500 h-[100dvh] max-h-[100dvh] md:h-auto md:max-h-[90vh] rounded-none md:rounded-3xl bg-white md:bg-transparent ${
           visible
             ? 'opacity-100 scale-100 translate-y-0'
             : 'opacity-0 scale-95 translate-y-4'
