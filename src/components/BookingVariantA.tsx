@@ -262,21 +262,20 @@ export default function BookingVariantA({
                     ))}
                   </div>
 
-                  {/* Dropdown for other states */}
+                  {/* Different state button */}
                   <div className="relative mb-6">
-                    <select
-                      value={selectedState && !allowedStates.includes(selectedState) ? selectedState : ''}
-                      onChange={(e) => {
-                        if (e.target.value) handleStateSelect(e.target.value);
+                    <button
+                      onClick={() => {
+                        setSelectedState('another state');
+                        setShowIneligible(true);
+                        setWaitlistSubmitted(false);
+                        setWaitlistEmail('');
                       }}
-                      className="w-full appearance-none px-4 py-3 bg-white/70 border border-primary/[0.06] rounded-xl text-sm text-primary/60 focus:outline-none focus:border-primary/20 transition-all cursor-pointer font-sans"
+                      className={`w-full px-4 py-3 bg-white/70 border rounded-xl text-sm transition-all font-sans text-left
+                        ${showIneligible ? 'border-primary/20 text-primary shadow-sm' : 'border-primary/[0.06] text-primary/60 hover:text-primary hover:border-primary/20'}`}
                     >
-                      <option value="">I'm in a different state...</option>
-                      {allStates.filter(s => !allowedStates.includes(s)).map((state) => (
-                        <option key={state} value={state}>{state}</option>
-                      ))}
-                    </select>
-                    <ChevronLeft size={16} className="absolute right-3 top-1/2 -translate-y-1/2 -rotate-90 text-primary/30 pointer-events-none" />
+                      I'm in a different state...
+                    </button>
                   </div>
 
                   {/* Ineligible message */}
@@ -286,7 +285,7 @@ export default function BookingVariantA({
                         <AlertCircle size={20} className="text-amber-500 shrink-0 mt-0.5" />
                         <div className="w-full">
                           <p className="text-sm font-semibold text-amber-800 mb-1 font-sans">
-                            We're not available in {selectedState} yet
+                            We're not available in your state yet
                           </p>
                           {!waitlistSubmitted ? (
                             <>
@@ -313,7 +312,7 @@ export default function BookingVariantA({
                             </>
                           ) : (
                             <p className="text-xs text-amber-700/80 leading-relaxed font-sans mt-1">
-                              Thanks! We've added <strong>{waitlistEmail}</strong> to our waitlist. We'll be in touch as soon as we're available in {selectedState}.
+                              Thanks! We've added <strong>{waitlistEmail}</strong> to our waitlist. We'll be in touch as soon as we expand to your area.
                             </p>
                           )}
                         </div>
