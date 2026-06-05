@@ -57,6 +57,6 @@ npm run build
 - **Telehealth Focus**: Clear call-to-actions (CTAs) for discovery calls, intake forms, and service information.
 - **Global Booking Modal**: A seamless unified pop-up experience for discovery calls across all pages.
   - Features instantaneous scheduling powered by a hidden preloaded **Cal.com** embed.
-  - Optimised mobile layout hides the decorative panel entirely and scales the modal to take up the full screen on the discovery page, maximizing space for the form and scheduling widget.
+  - Optimised mobile layout hides the decorative panel entirely and scales the modal to take up the full screen across all pages, maximizing space for the form and scheduling widget.
 - **UI Enhancements**: Consistent pointer interactions, standardized branding colours, and a personalized clinician avatar with active availability indicators.
   - Mobile-first refinements ensure the primary "Book Discovery Call" button stays visible above the fold on the homepage hero section.
