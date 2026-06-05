@@ -124,18 +124,6 @@ export default function BookingVariantA({
         }`}
         style={{ animation: mounted ? 'spa-pulse-glow 6s ease-in-out infinite' : 'none' }}
       >
-        {/* Progress bar */}
-        <div className="absolute top-0 left-0 right-0 z-30 h-1 bg-white/10">
-          <div
-            className="h-full transition-all duration-700 ease-out"
-            style={{
-              width: `${progress}%`,
-              background: 'linear-gradient(90deg, #D4AF37, #F0D060, #D4AF37)',
-              backgroundSize: '200% auto',
-              animation: 'spa-shimmer 3s linear infinite',
-            }}
-          />
-        </div>
 
         <div className="flex flex-col lg:flex-row min-h-[520px]">
           {/* Left decorative panel */}
@@ -173,7 +161,7 @@ export default function BookingVariantA({
             />
 
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.08] border border-white/[0.1] mb-6 backdrop-blur-sm">
+              <div className="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.08] border border-white/[0.1] mb-6 backdrop-blur-sm">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-60" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary" />
