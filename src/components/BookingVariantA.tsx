@@ -217,7 +217,7 @@ export default function BookingVariantA({
           </div>
 
           {/* Right booking form panel */}
-          <div className={`flex-1 bg-white/60 backdrop-blur-xl relative overflow-hidden ${step === 0 ? 'px-6 py-8 md:px-10 md:py-10 lg:px-12' : 'p-0'}`}>
+          <div className={`flex-1 bg-white/60 backdrop-blur-xl relative overflow-hidden flex flex-col ${step === 0 ? 'px-6 py-8 md:px-10 md:py-10 lg:px-12' : 'p-0'}`}>
             {/* Subtle glass texture */}
             <div
               className="absolute inset-0 opacity-30"
@@ -227,7 +227,7 @@ export default function BookingVariantA({
               }}
             />
 
-            <div className="relative z-10 h-full">
+            <div className="relative z-10 flex flex-col flex-1 h-full">
 
               {/* STEP 0: State Gate */}
               {step === 0 && (
@@ -324,8 +324,8 @@ export default function BookingVariantA({
 
               {/* Cal.com Embed - always mounted to preload, hidden until step >= 1 */}
               <div 
-                className={`h-full min-h-[500px] w-full transition-opacity duration-500 ${
-                  step >= 1 ? 'opacity-100 relative z-10' : 'opacity-0 absolute inset-0 -z-10 pointer-events-none'
+                className={`w-full transition-opacity duration-500 ${
+                  step >= 1 ? 'opacity-100 relative z-10 flex-1' : 'opacity-0 absolute inset-0 -z-10 pointer-events-none'
                 }`}
               >
                 <Cal 
