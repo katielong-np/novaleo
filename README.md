@@ -57,4 +57,5 @@ npm run build
 - **Telehealth Focus**: Clear call-to-actions (CTAs) for discovery calls, intake forms, and service information.
 - **Global Booking Modal**: A seamless unified pop-up experience for discovery calls across all pages.
   - Features instantaneous scheduling powered by a hidden preloaded **Cal.com** embed.
+  - Optimised mobile layout prioritizes the scheduling widget after state selection.
 - **UI Enhancements**: Consistent pointer interactions across interactive elements and standardized branding colours.
