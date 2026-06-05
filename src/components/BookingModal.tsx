@@ -69,7 +69,7 @@ export function BookingModal() {
   };
 
   return (
-    <div className={`fixed inset-0 z-50 flex items-center justify-center ${isDiscoveryPage ? 'p-0 md:p-6 bg-white' : 'p-4 md:p-6'}`}>
+    <div className={`fixed inset-0 z-50 flex items-center justify-center p-0 md:p-6 ${isDiscoveryPage ? 'bg-white' : ''}`}>
       {/* Backdrop */}
       <div
         className={`absolute inset-0 bg-primary/40 backdrop-blur-sm transition-opacity duration-300 ${
@@ -80,11 +80,7 @@ export function BookingModal() {
 
       {/* Modal container */}
       <div
-        className={`relative w-full max-w-4xl overflow-y-auto transition-all duration-500 ${
-          isDiscoveryPage 
-            ? 'h-[100dvh] max-h-[100dvh] md:h-auto md:max-h-[90vh] rounded-none md:rounded-3xl' 
-            : 'max-h-[90vh] rounded-3xl'
-        } ${
+        className={`relative w-full max-w-4xl overflow-y-auto transition-all duration-500 h-[100dvh] max-h-[100dvh] md:h-auto md:max-h-[90vh] rounded-none md:rounded-3xl ${
           visible
             ? 'opacity-100 scale-100 translate-y-0'
             : 'opacity-0 scale-95 translate-y-4'

@@ -122,15 +122,13 @@ export default function BookingVariantA({
       `}</style>
 
       <div
-        className={`relative overflow-hidden shadow-2xl transition-all duration-700 ${
-          isDiscoveryPage ? 'h-full min-h-[100dvh] md:min-h-0 rounded-none md:rounded-3xl' : 'rounded-3xl'
-        } ${
+        className={`relative overflow-hidden shadow-2xl transition-all duration-700 h-full min-h-[100dvh] md:min-h-0 rounded-none md:rounded-3xl ${
           mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
         }`}
         style={{ animation: mounted ? 'spa-pulse-glow 6s ease-in-out infinite' : 'none' }}
       >
 
-        <div className={`flex flex-col lg:flex-row ${isDiscoveryPage ? 'h-full min-h-[100dvh] md:min-h-[520px]' : 'min-h-[520px]'}`}>
+        <div className="flex flex-col lg:flex-row h-full min-h-[100dvh] md:min-h-[520px]">
           {/* Left decorative panel */}
           <div className="relative lg:w-[42%] overflow-hidden bg-gradient-to-br from-primary via-[oklch(0.25_0.08_230)] to-[oklch(0.22_0.07_200)] px-8 py-10 lg:py-14 flex-col justify-center hidden lg:flex">
             {/* Organic shapes */}
