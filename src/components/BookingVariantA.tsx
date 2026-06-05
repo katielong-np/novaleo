@@ -324,12 +324,12 @@ export default function BookingVariantA({
                 </div>
               )}
 
-              {/* Cal.com Embed - always mounted to preload, visible at 1px when hidden so browser loads iframe eagerly */}
+              {/* Cal.com Embed - always mounted at full size; opacity-only transition eliminates flicker */}
               <div 
-                className={`transition-all duration-300 ${
+                className={`transition-opacity duration-300 ${
                   step >= 1
-                    ? 'w-full flex-1 min-h-0 flex flex-col relative z-10 opacity-100'
-                    : 'w-[1px] h-[1px] overflow-hidden opacity-0 absolute'
+                    ? 'relative z-10 flex-1 min-h-0 flex flex-col w-full opacity-100'
+                    : 'absolute inset-0 z-0 opacity-0 pointer-events-none'
                 }`}
               >
                 <Cal 
