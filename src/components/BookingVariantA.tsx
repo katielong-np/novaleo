@@ -124,13 +124,13 @@ export default function BookingVariantA({
       `}</style>
 
       <div
-        className={`relative overflow-hidden shadow-2xl transition-all duration-700 h-full min-h-[100dvh] md:min-h-0 rounded-none md:rounded-3xl ${
+        className={`relative overflow-hidden shadow-2xl transition-all duration-700 h-full min-h-[100dvh] md:min-h-0 rounded-none md:rounded-3xl flex flex-col ${
           mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
         }`}
         style={{ animation: mounted ? 'spa-pulse-glow 6s ease-in-out infinite' : 'none' }}
       >
 
-        <div className="flex flex-col lg:flex-row h-full min-h-[100dvh] md:min-h-[520px]">
+        <div className="flex flex-col lg:flex-row flex-1 min-h-0 md:min-h-[520px]">
           {/* Left decorative panel */}
           <div className="relative lg:w-[42%] overflow-hidden bg-gradient-to-br from-primary via-[oklch(0.25_0.08_230)] to-[oklch(0.22_0.07_200)] px-8 py-10 lg:py-14 flex-col justify-center hidden lg:flex">
             {/* Organic shapes */}
@@ -217,7 +217,7 @@ export default function BookingVariantA({
           </div>
 
           {/* Right booking form panel */}
-          <div className={`flex-1 bg-white/60 backdrop-blur-xl relative overflow-hidden flex flex-col ${step === 0 ? 'px-6 py-8 md:px-10 md:py-10 lg:px-12' : 'p-0'}`}>
+          <div className={`flex-1 min-h-0 bg-white/60 backdrop-blur-xl relative overflow-hidden flex flex-col ${step === 0 ? 'px-6 py-8 md:px-10 md:py-10 lg:px-12' : 'p-0'}`}>
             {/* Subtle glass texture */}
             <div
               className="absolute inset-0 opacity-30"
@@ -227,7 +227,7 @@ export default function BookingVariantA({
               }}
             />
 
-            <div className="relative z-10 flex flex-col flex-1 h-full">
+            <div className="relative z-10 flex flex-col flex-1 min-h-0 h-full">
 
               {/* STEP 0: State Gate */}
               {step === 0 && (
@@ -325,13 +325,13 @@ export default function BookingVariantA({
               {/* Cal.com Embed - always mounted to preload, hidden until step >= 1 */}
               <div 
                 className={`w-full transition-opacity duration-500 ${
-                  step >= 1 ? 'opacity-100 relative z-10 flex-1' : 'opacity-0 absolute inset-0 -z-10 pointer-events-none'
+                  step >= 1 ? 'opacity-100 relative z-10 flex-1 min-h-0 flex flex-col' : 'opacity-0 absolute inset-0 -z-10 pointer-events-none'
                 }`}
               >
                 <Cal 
                   namespace="15min"
                   calLink="katie-long-np/15min"
-                  style={{width:"100%",height:"100%",overflow:"scroll",borderRadius:"0px"}}
+                  style={{width:"100%",height:"100%",minHeight:0,flex:1,overflow:"scroll",borderRadius:"0px"}}
                   config={{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"}}
                 />
               </div>

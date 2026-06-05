@@ -57,7 +57,7 @@ npm run build
 - **Telehealth Focus**: Clear call-to-actions (CTAs) for discovery calls, intake forms, and service information.
 - **Global Booking Modal**: A seamless unified pop-up experience for discovery calls across all pages.
   - Features instantaneous scheduling powered by a hidden preloaded **Cal.com** embed.
-  - Optimised mobile layout hides the decorative panel entirely and scales the modal to take up the full screen across all pages, maximizing space for the form and scheduling widget.
+  - Optimised mobile layout hides the decorative panel entirely and scales the modal to take up the full screen across all pages, maximizing space for the form and scheduling widget. The Cal.com embed fills the entire popup viewport on mobile with no residual top/bottom spacing, achieved via proper flex hierarchy with `min-h-0` propagation.
   - Simplified location step with quick-select buttons for supported states and a streamlined "I'm in a different state" option that opens the integrated email waitlist form.
 - **UI Enhancements**: Consistent pointer interactions, standardized branding colours, and a personalized clinician avatar with active availability indicators.
   - Buttons across the site feature subtle, elegant box shadows and smooth lift animations on hover.
