@@ -5,6 +5,7 @@ import {
   ChevronLeft,
 } from 'lucide-react';
 import Cal, { getCalApi } from "@calcom/embed-react";
+import kathrynImage from '@/assets/hero-kathryn.jpg';
 
 interface BookingWidgetProps {
   step: number;
@@ -197,9 +198,26 @@ export default function BookingVariantA({
                 starts here
               </h2>
 
-              <p className="text-white/50 text-sm leading-relaxed max-w-xs font-sans">
-                A private conversation about your health goals — no cost, no commitment, just clarity.
+              <p className="text-white/50 text-sm leading-relaxed max-w-xs font-sans mb-8">
+                A private conversation about your health goals no cost, no commitment, just clarity.
               </p>
+
+              <div className="flex items-center gap-4">
+                <div className="relative shrink-0">
+                  <img 
+                    src={kathrynImage} 
+                    alt="Kathryn Long" 
+                    className="w-16 h-16 rounded-full border-[3px] border-white object-cover shadow-2xl" 
+                  />
+                  <span className="absolute bottom-0.5 right-0.5 w-3.5 h-3.5 rounded-full bg-green-400 border-2 border-[#1E2738] shadow-sm">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-60"></span>
+                  </span>
+                </div>
+                <div>
+                  <p className="text-white/95 font-medium font-sans">Kathryn Long, NP-C</p>
+                  <p className="text-white/60 text-xs mt-0.5 font-sans">Currently taking new patients</p>
+                </div>
+              </div>
 
               {/* Step indicators removed for Cal.com integration */}
             </div>
