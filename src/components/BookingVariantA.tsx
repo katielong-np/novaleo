@@ -127,7 +127,7 @@ export default function BookingVariantA({
 
         <div className="flex flex-col lg:flex-row min-h-[520px]">
           {/* Left decorative panel */}
-          <div className={`relative lg:w-[42%] overflow-hidden bg-gradient-to-br from-primary via-[oklch(0.25_0.08_230)] to-[oklch(0.22_0.07_200)] px-8 py-10 lg:py-14 flex-col justify-center ${step >= 1 ? 'hidden lg:flex' : 'flex'}`}>
+          <div className="relative lg:w-[42%] overflow-hidden bg-gradient-to-br from-primary via-[oklch(0.25_0.08_230)] to-[oklch(0.22_0.07_200)] px-8 py-10 lg:py-14 flex-col justify-center hidden lg:flex">
             {/* Organic shapes */}
             <div
               className="absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-[0.06]"
