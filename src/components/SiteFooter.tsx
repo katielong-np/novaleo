@@ -19,7 +19,7 @@ export function SiteFooter() {
           </p>
           <div className="mt-5 flex items-center gap-4">
             <a
-              href="https://www.tiktok.com/@novaleo.wellness"
+              href="https://www.tiktok.com/@katielong.np"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="TikTok"
@@ -36,7 +36,7 @@ export function SiteFooter() {
               </svg>
             </a>
             <a
-              href="https://www.facebook.com/novaleoweightandwellnessmichigan"
+              href="https://www.facebook.com/katielong.np"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -53,7 +53,7 @@ export function SiteFooter() {
               </svg>
             </a>
             <a
-              href="https://www.instagram.com/novaleo_weight_and_wellness"
+              href="https://www.instagram.com/katielong.np"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
