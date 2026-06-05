@@ -138,7 +138,7 @@ export default function BookingVariantA({
 
         <div className="flex flex-col lg:flex-row min-h-[520px]">
           {/* Left decorative panel */}
-          <div className={`relative lg:w-[42%] overflow-hidden bg-gradient-to-br from-primary via-[oklch(0.25_0.08_230)] to-[oklch(0.22_0.07_200)] px-8 py-10 lg:py-14 flex flex-col justify-center ${step >= 1 ? 'order-2 lg:order-1' : 'order-1'}`}>
+          <div className={`relative lg:w-[42%] overflow-hidden bg-gradient-to-br from-primary via-[oklch(0.25_0.08_230)] to-[oklch(0.22_0.07_200)] px-8 py-10 lg:py-14 flex-col justify-center ${step >= 1 ? 'hidden lg:flex' : 'flex'}`}>
             {/* Organic shapes */}
             <div
               className="absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-[0.06]"
@@ -206,7 +206,7 @@ export default function BookingVariantA({
           </div>
 
           {/* Right booking form panel */}
-          <div className={`flex-1 bg-white/60 backdrop-blur-xl relative overflow-hidden ${step === 0 ? 'px-6 py-8 md:px-10 md:py-10 lg:px-12' : 'p-0'} ${step >= 1 ? 'order-1 lg:order-2' : 'order-2'}`}>
+          <div className={`flex-1 bg-white/60 backdrop-blur-xl relative overflow-hidden ${step === 0 ? 'px-6 py-8 md:px-10 md:py-10 lg:px-12' : 'p-0'}`}>
             {/* Subtle glass texture */}
             <div
               className="absolute inset-0 opacity-30"
