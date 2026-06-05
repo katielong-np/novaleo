@@ -58,7 +58,8 @@ npm run build
 - **Global Booking Modal**: A seamless unified pop-up experience for discovery calls across all pages.
   - Features instantaneous scheduling powered by a hidden preloaded **Cal.com** embed.
   - Optimised mobile layout hides the decorative panel entirely and scales the modal to take up the full screen across all pages, maximizing space for the scheduling widget. The Cal.com embed fills the entire popup viewport on mobile with no residual top/bottom spacing — the container switches to a solid white background when the embed is active, the decorative glass overlay and dark backdrop are hidden, and `cssVarsPerTheme` overrides ensure the Cal.com iframe's internal background matches seamlessly.
-  - Simplified location step with quick-select buttons for supported states and a streamlined "I'm in a different state" option that opens the integrated email waitlist form.
+  - Simplified location step with quick-select buttons for supported states and a streamlined "I'm in a different state" option that asks for an email and shows a simple confirmation message.
+  - Consistent global popup integration, including the Discovery Call buttons on the contact page.
 - **UI Enhancements**: Consistent pointer interactions, standardized branding colours, and a personalized clinician avatar with active availability indicators.
   - Buttons across the site feature subtle, elegant box shadows and smooth lift animations on hover.
   - Social media links in the footer have been updated to reflect the `katielong.np` handles across TikTok, Facebook, and Instagram.

@@ -283,41 +283,30 @@ export default function BookingVariantA({
                   {/* Ineligible message */}
                   {showIneligible && (
                     <div className="spa-animate-in rounded-2xl bg-amber-50/80 border border-amber-200/60 p-5 mb-4" style={{ opacity: 0 }}>
-                      <div className="flex items-start gap-3">
-                        <AlertCircle size={20} className="text-amber-500 shrink-0 mt-0.5" />
-                        <div className="w-full">
-                          <p className="text-sm font-semibold text-amber-800 mb-1 font-sans">
-                            We're not available in your state yet
+                      <div className="w-full">
+                        {!waitlistSubmitted ? (
+                          <div className="flex gap-2 w-full">
+                            <input 
+                              type="email" 
+                              value={waitlistEmail}
+                              onChange={(e) => setWaitlistEmail(e.target.value)}
+                              placeholder="Enter your email" 
+                              className="flex-1 min-w-0 px-3 py-2 text-sm bg-white border border-amber-200 rounded-lg focus:outline-none focus:border-amber-400 font-sans"
+                            />
+                            <button 
+                              onClick={() => {
+                                if(waitlistEmail) setWaitlistSubmitted(true);
+                              }}
+                              className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-medium rounded-lg transition-colors font-sans whitespace-nowrap"
+                            >
+                              Notify Me
+                            </button>
+                          </div>
+                        ) : (
+                          <p className="text-sm font-semibold text-amber-800 font-sans text-center">
+                            We will get in touch soon!
                           </p>
-                          {!waitlistSubmitted ? (
-                            <>
-                              <p className="text-xs text-amber-700/80 leading-relaxed font-sans mb-3">
-                                Novaleo currently provides telehealth services exclusively in Michigan and Wisconsin. Enter your email and we'll notify you when we expand to your state.
-                              </p>
-                              <div className="flex gap-2 w-full">
-                                <input 
-                                  type="email" 
-                                  value={waitlistEmail}
-                                  onChange={(e) => setWaitlistEmail(e.target.value)}
-                                  placeholder="Enter your email" 
-                                  className="flex-1 min-w-0 px-3 py-2 text-sm bg-white border border-amber-200 rounded-lg focus:outline-none focus:border-amber-400 font-sans"
-                                />
-                                <button 
-                                  onClick={() => {
-                                    if(waitlistEmail) setWaitlistSubmitted(true);
-                                  }}
-                                  className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-medium rounded-lg transition-colors font-sans whitespace-nowrap"
-                                >
-                                  Notify Me
-                                </button>
-                              </div>
-                            </>
-                          ) : (
-                            <p className="text-xs text-amber-700/80 leading-relaxed font-sans mt-1">
-                              Thanks! We've added <strong>{waitlistEmail}</strong> to our waitlist. We'll be in touch as soon as we expand to your area.
-                            </p>
-                          )}
-                        </div>
+                        )}
                       </div>
                     </div>
                   )}
