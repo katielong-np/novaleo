@@ -47,8 +47,6 @@ export function BookingModal() {
     return () => window.removeEventListener('keydown', handler);
   }, [isOpen, close, isDiscoveryPage]);
 
-  if (!isOpen) return null;
-
   const dates = [
     { day: 'Mon', date: '15', month: 'Jun', full: 'June 15, 2026' },
     { day: 'Tue', date: '16', month: 'Jun', full: 'June 16, 2026' },
@@ -69,47 +67,52 @@ export function BookingModal() {
   };
 
   return (
-    <div className={`fixed inset-0 z-50 flex items-center justify-center p-0 md:p-6 ${isDiscoveryPage ? 'bg-white' : ''}`}>
-      {/* Backdrop */}
-      <div
-        className={`absolute inset-0 bg-primary/40 backdrop-blur-sm transition-opacity duration-300 ${
-          visible ? 'opacity-100' : 'opacity-0'
-        } ${isDiscoveryPage ? 'hidden md:block' : ''}`}
-        onClick={isDiscoveryPage ? undefined : close}
-      />
-
-      {/* Modal container */}
-      <div
-        className={`relative w-full max-w-4xl overflow-y-auto transition-all duration-500 h-[100dvh] max-h-[100dvh] md:h-auto md:max-h-[90vh] rounded-none md:rounded-3xl bg-white md:bg-transparent ${
-          visible
-            ? 'opacity-100 scale-100 translate-y-0'
-            : 'opacity-0 scale-95 translate-y-4'
-        }`}
-      >
-        {/* Close button */}
-        {!isDiscoveryPage && (
-          <button
-            onClick={close}
-            className="absolute top-4 right-4 z-40 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 flex items-center justify-center text-primary/60 hover:text-primary hover:bg-white hover:shadow-md transition-all duration-300 hover:scale-110"
-            aria-label="Close booking modal"
-          >
-            <X size={20} />
-          </button>
-        )}
-
-        <BookingVariantA
-          step={step}
-          setStep={setStep}
-          selectedDate={selectedDate}
-          setSelectedDate={handleDateSelect}
-          selectedTime={selectedTime}
-          setSelectedTime={setSelectedTime}
-          formData={formData}
-          setFormData={setFormData}
-          dates={dates}
-          times={times}
-          submitBooking={submitBooking}
+    <div
+      className={`${isOpen ? 'visible pointer-events-auto' : 'invisible pointer-events-none'}`}
+      aria-hidden={!isOpen}
+    >
+      <div className={`fixed inset-0 z-50 flex items-center justify-center p-0 md:p-6 ${isDiscoveryPage ? 'bg-white' : ''}`}>
+        {/* Backdrop */}
+        <div
+          className={`absolute inset-0 bg-primary/40 backdrop-blur-sm transition-opacity duration-300 ${
+            visible ? 'opacity-100' : 'opacity-0'
+          } ${isDiscoveryPage ? 'hidden md:block' : ''}`}
+          onClick={isDiscoveryPage ? undefined : close}
         />
+
+        {/* Modal container */}
+        <div
+          className={`relative w-full max-w-4xl overflow-y-auto transition-all duration-500 h-[100dvh] max-h-[100dvh] md:h-auto md:max-h-[90vh] rounded-none md:rounded-3xl bg-white md:bg-transparent ${
+            visible
+              ? 'opacity-100 scale-100 translate-y-0'
+              : 'opacity-0 scale-95 translate-y-4'
+          }`}
+        >
+          {/* Close button */}
+          {!isDiscoveryPage && (
+            <button
+              onClick={close}
+              className="absolute top-4 right-4 z-40 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 flex items-center justify-center text-primary/60 hover:text-primary hover:bg-white hover:shadow-md transition-all duration-300 hover:scale-110"
+              aria-label="Close booking modal"
+            >
+              <X size={20} />
+            </button>
+          )}
+
+          <BookingVariantA
+            step={step}
+            setStep={setStep}
+            selectedDate={selectedDate}
+            setSelectedDate={handleDateSelect}
+            selectedTime={selectedTime}
+            setSelectedTime={setSelectedTime}
+            formData={formData}
+            setFormData={setFormData}
+            dates={dates}
+            times={times}
+            submitBooking={submitBooking}
+          />
+        </div>
       </div>
     </div>
   );
