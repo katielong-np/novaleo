@@ -104,23 +104,23 @@ function Home() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden">
-        <div className="container-prose pt-8 pb-20 md:pt-8 md:pb-28 grid lg:grid-cols-12 gap-10 items-center">
+        <div className="container-prose pt-4 pb-12 md:pt-8 md:pb-28 grid lg:grid-cols-12 gap-8 md:gap-10 items-center">
           <div className="lg:col-span-7">
-            <div className="eyebrow mb-5">Finally, someone who listens.</div>
-            <h1 className="text-5xl md:text-[62px] leading-[65px]">
+            <div className="eyebrow mb-3 md:mb-5 text-sm md:text-base">Finally, someone who listens.</div>
+            <h1 className="text-[36px] leading-[1.15] sm:text-5xl md:text-[62px] md:leading-[65px]">
               You're exhausted. Your labs are{" "}
-              <em className="not-italic text-secondary bg-primary px-4 py-1 rounded-full inline-block my-1 leading-tight">
+              <em className="not-italic text-secondary bg-primary px-3 py-0.5 md:px-4 md:py-1 rounded-full inline-block my-1 leading-tight">
                 "normal."
               </em>
               <br />
               But something is still wrong?
             </h1>
-            <p className="mt-7 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
+            <p className="mt-4 md:mt-7 text-base md:text-xl text-muted-foreground max-w-xl leading-relaxed">
               We help professional women in their 40s &amp; 50s break free from chronic fatigue,
               brain fog, and hormonal chaos using functional medicine that actually finds the root
               cause.
             </p>
-            <div className="mt-9 flex flex-wrap gap-3">
+            <div className="mt-6 md:mt-9 flex flex-wrap gap-3">
               <button onClick={openBooking} className="btn-gold">
                 Book Discovery Call <ArrowRight className="ml-2 h-4 w-4" />
               </button>

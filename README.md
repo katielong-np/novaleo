@@ -59,3 +59,4 @@ npm run build
   - Features instantaneous scheduling powered by a hidden preloaded **Cal.com** embed.
   - Optimised mobile layout hides the decorative panel after state selection to maximize screen space for the scheduling widget.
 - **UI Enhancements**: Consistent pointer interactions, standardized branding colours, and a personalized clinician avatar with active availability indicators.
+  - Mobile-first refinements ensure the primary "Book Discovery Call" button stays visible above the fold on the homepage hero section.
