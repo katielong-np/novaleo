@@ -2,7 +2,7 @@ import { createFileRoute } from '@tanstack/react-router';
 import React, { useEffect } from 'react';
 import { useBookingModal } from '@/components/BookingModalContext';
 
-export const Route = createFileRoute('/discovery')({
+export const Route = createFileRoute('/free-15-min-call-with-katie')({
   head: () => ({
     meta: [
       { title: 'Book a Free Discovery Call — Novaleo Weight & Wellness' },
