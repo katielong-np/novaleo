@@ -126,7 +126,7 @@ function Approach() {
           The process begins with a single 15-minute conversation. No cost. No commitment.
         </p>
         <button onClick={openBooking} className="btn-gold mt-8 inline-flex">
-          Book discovery call
+          Free 15 min call with Katie
         </button>
       </section>
     </>

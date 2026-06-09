@@ -48,7 +48,7 @@ function Contact() {
               onClick={openBooking}
               className="btn-gold"
             >
-              Book Discovery Call
+              Free 15 min call with Katie
             </button>
             <a
               href="https://www.optimantra.com/optimus/patient/patientaccess/practsNslots?sid=OFREc0ROeWQyL0kvdE9OaU5GRlVOQT09&pid=ZW1nazRycGdvZWxwQjA2eEpiOE5kQT09&lid=UlNxTzY0a0dyR1hJNGJsSkR2NDF5UT09"

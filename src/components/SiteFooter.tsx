@@ -99,6 +99,11 @@ export function SiteFooter() {
                 What We Treat
               </Link>
             </li>
+            <li>
+              <Link to="/discovery" className="hover:text-gold">
+                Free 15 min call with Katie
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
@@ -124,7 +129,7 @@ export function SiteFooter() {
 
             <li>
               <button onClick={openBooking} className="hover:text-gold text-left">
-                Book a free discovery call
+                Free 15 min call with Katie
               </button>
             </li>
           </ul>

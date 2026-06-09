@@ -34,7 +34,7 @@ const programs = [
       "Program guidance and next steps",
       "Answers to your questions",
     ],
-    cta: "Book Discovery Call",
+    cta: "Free 15 min call with Katie",
     note: "Or skip the discovery call and schedule the Root Cause Intake to start feeling like yourself again.",
   },
   {
@@ -139,7 +139,7 @@ function Services() {
                 {p.note}
               </p>
             )}
-            {p.cta === "Book Discovery Call" ? (
+            {p.cta === "Free 15 min call with Katie" ? (
               <button onClick={openBooking} className="btn-gold mt-8 self-start text-sm">
                 {p.cta}
               </button>
@@ -226,7 +226,7 @@ function Services() {
           />
           <div className="mt-8 flex justify-center">
             <button onClick={openBooking} className="btn-gold">
-              Book Discovery Call
+              Free 15 min call with Katie
             </button>
           </div>
         </div>
