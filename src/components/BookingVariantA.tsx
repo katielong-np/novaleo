@@ -301,8 +301,21 @@ export default function BookingVariantA({
                               className="flex-1 min-w-0 px-3 py-2 text-sm bg-white border border-amber-200 rounded-lg focus:outline-none focus:border-amber-400 font-sans"
                             />
                             <button 
-                              onClick={() => {
-                                if(waitlistEmail) setWaitlistSubmitted(true);
+                              onClick={async () => {
+                                if(waitlistEmail) {
+                                  setWaitlistSubmitted(true);
+                                  try {
+                                    await fetch('https://formspree.io/f/mlgklyvk', {
+                                      method: 'POST',
+                                      headers: {
+                                        'Content-Type': 'application/json'
+                                      },
+                                      body: JSON.stringify({ email: waitlistEmail })
+                                    });
+                                  } catch(e) {
+                                    console.error("Formspree submission error:", e);
+                                  }
+                                }
                               }}
                               className="w-full sm:w-auto px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-medium rounded-lg transition-colors font-sans whitespace-nowrap"
                             >
