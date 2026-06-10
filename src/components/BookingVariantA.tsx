@@ -54,6 +54,14 @@ export default function BookingVariantA({
     (async function () {
       const cal = await getCalApi({"namespace":"15min"});
       cal("ui", {"theme":"light","hideEventTypeDetails":false,"layout":"month_view"});
+      cal("on", {
+        action: "bookingSuccessful",
+        callback: (e) => {
+          if (typeof window !== 'undefined' && (window as any).fbq) {
+            (window as any).fbq('track', 'Schedule');
+          }
+        }
+      });
     })();
   }, []);
 
