@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 import Cal, { getCalApi } from "@calcom/embed-react";
 import kathrynImage from '@/assets/hero-kathryn.webp';
-import { useRouterState } from '@tanstack/react-router';
+
 
 interface BookingWidgetProps {
   step: number;
@@ -38,8 +38,7 @@ export default function BookingVariantA({
   submitBooking,
 }: BookingWidgetProps) {
   const [mounted, setMounted] = useState(false);
-  const routerState = useRouterState();
-  const isDiscoveryPage = routerState.location.pathname === '/discovery';
+
   const [successAnim, setSuccessAnim] = useState(false);
   const [selectedState, setSelectedState] = useState<string | null>(null);
   const [showIneligible, setShowIneligible] = useState(false);
