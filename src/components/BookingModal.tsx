@@ -82,7 +82,7 @@ export function BookingModal() {
 
         {/* Modal container */}
         <div
-          className={`relative w-full max-w-4xl overflow-y-auto transition-all duration-500 h-[100dvh] max-h-[100dvh] md:h-auto md:max-h-[90vh] rounded-none md:rounded-3xl bg-white md:bg-transparent ${
+          className={`relative w-full max-w-2xl overflow-y-auto transition-all duration-500 h-[100dvh] max-h-[100dvh] md:h-auto md:max-h-[90vh] rounded-none md:rounded-3xl bg-white md:bg-transparent ${
             visible
               ? 'opacity-100 scale-100 translate-y-0'
               : 'opacity-0 scale-95 translate-y-4'

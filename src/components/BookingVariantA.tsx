@@ -8,7 +8,6 @@ import {
 } from 'lucide-react';
 import Cal, { getCalApi } from "@calcom/embed-react";
 import kathrynImage from '@/assets/hero-kathryn.webp';
-import { useRouterState } from '@tanstack/react-router';
 
 
 interface BookingWidgetProps {
@@ -41,8 +40,6 @@ export default function BookingVariantA({
   submitBooking,
 }: BookingWidgetProps) {
   const [mounted, setMounted] = useState(false);
-  const routerState = useRouterState();
-  const isDiscoveryPage = routerState.location.pathname.includes('/free-15-min-call-with-katie');
   const [successAnim, setSuccessAnim] = useState(false);
   const [reviewIndex, setReviewIndex] = useState(0);
 
@@ -53,17 +50,11 @@ export default function BookingVariantA({
   ];
 
   useEffect(() => {
-    if (!isDiscoveryPage) return;
     const interval = setInterval(() => {
       setReviewIndex((prev) => (prev + 1) % reviews.length);
     }, 3500);
     return () => clearInterval(interval);
-  }, [isDiscoveryPage, reviews.length]);
-
-  const [selectedState, setSelectedState] = useState<string | null>(null);
-  const [showIneligible, setShowIneligible] = useState(false);
-  const [waitlistEmail, setWaitlistEmail] = useState('');
-  const [waitlistSubmitted, setWaitlistSubmitted] = useState(false);
+  }, [reviews.length]);
 
   useEffect(() => {
     setMounted(true);
@@ -157,93 +148,8 @@ export default function BookingVariantA({
         style={{ animation: mounted ? 'spa-pulse-glow 6s ease-in-out infinite' : 'none' }}
       >
 
-        <div className="flex flex-col lg:flex-row flex-1 min-h-0 md:min-h-[520px]">
-          {/* Left decorative panel */}
-          <div className="relative lg:w-[42%] overflow-hidden bg-gradient-to-br from-primary via-[oklch(0.25_0.08_230)] to-[oklch(0.22_0.07_200)] px-8 py-10 lg:py-14 flex-col justify-center hidden lg:flex">
-            {/* Organic shapes */}
-            <div
-              className="absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-[0.06]"
-              style={{
-                background: 'radial-gradient(circle, rgba(212,175,55,0.8), transparent 70%)',
-                animation: 'spa-float 16s ease-in-out infinite',
-              }}
-            />
-            <div
-              className="absolute -bottom-16 -left-16 w-48 h-48 rounded-full opacity-[0.05]"
-              style={{
-                background: 'radial-gradient(circle, rgba(255,255,255,0.9), transparent 70%)',
-                animation: 'spa-float-2 20s ease-in-out infinite',
-              }}
-            />
-            <div
-              className="absolute top-1/2 right-0 w-32 h-32 rounded-full opacity-[0.04]"
-              style={{
-                background: 'radial-gradient(circle, rgba(212,175,55,0.6), transparent 70%)',
-                animation: 'spa-float 14s ease-in-out infinite 3s',
-              }}
-            />
-            {/* Subtle grid pattern */}
-            <div
-              className="absolute inset-0 opacity-[0.03]"
-              style={{
-                backgroundImage:
-                  'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
-                backgroundSize: '40px 40px',
-              }}
-            />
-
-            <div className="relative z-10">
-              <div className="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.08] border border-white/[0.1] mb-6 backdrop-blur-sm">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-60" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary" />
-                </span>
-                <span className="text-xs font-medium tracking-wider uppercase text-white/70 font-sans">
-                  Complimentary · 15 min
-                </span>
-              </div>
-
-              <h2 className="font-display text-3xl lg:text-4xl font-normal text-white/95 leading-[1.15] mb-5 tracking-tight">
-                Your journey to{' '}
-                <span
-                  className="italic"
-                  style={{
-                    background: 'linear-gradient(135deg, #D4AF37, #F0D060)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                  }}
-                >
-                  wellness
-                </span>{' '}
-                starts here
-              </h2>
-
-              <p className="text-white/50 text-sm leading-relaxed max-w-xs font-sans mb-8">
-                A private conversation about your health goals no cost, no commitment, just clarity.
-              </p>
-
-              <div className="flex items-center gap-4">
-                <div className="relative shrink-0">
-                  <img 
-                    src={kathrynImage} 
-                    alt="Kathryn Long" 
-                    className="w-16 h-16 rounded-full border-[3px] border-white object-cover shadow-2xl" 
-                  />
-                  <span className="absolute bottom-0.5 right-0.5 w-3.5 h-3.5 rounded-full bg-green-400 border-2 border-[#1E2738] shadow-sm">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-60"></span>
-                  </span>
-                </div>
-                <div>
-                  <p className="text-white/95 font-medium font-sans">Kathryn Long, NP-C</p>
-                  <p className="text-white/60 text-xs mt-0.5 font-sans">Currently taking new patients</p>
-                </div>
-              </div>
-
-              {/* Step indicators removed for Cal.com integration */}
-            </div>
-          </div>
-
-          {/* Right booking form panel */}
+        <div className="flex flex-col flex-1 min-h-0 md:min-h-[520px]">
+          {/* Booking form panel */}
           <div className={`flex-1 min-h-0 relative overflow-hidden flex flex-col ${step === 0 ? 'bg-white/60 backdrop-blur-xl px-6 py-8 md:px-10 md:py-10 lg:px-12' : 'bg-white p-0'}`}>
             {/* Subtle glass texture - only on state gate step */}
             {step === 0 && (
@@ -258,13 +164,11 @@ export default function BookingVariantA({
 
             <div className="relative z-10 flex flex-col flex-1 min-h-0 h-full">
 
-              {/* STEP 0: State Gate */}
+              {/* STEP 0: Bio Layout */}
               {step === 0 && (
                 <div className="spa-animate-in" style={{ opacity: 0 }}>
-                  {/* Bio layout (Mobile only, Discovery Page only) */}
-                  {isDiscoveryPage && (
-                    <div className="md:hidden flex flex-col items-center text-center pb-4">
-                      <div className="relative mb-5 mt-2 inline-block">
+                  <div className="flex flex-col items-center text-center pb-4 max-w-lg mx-auto">
+                    <div className="relative mb-5 mt-2 inline-block">
                         <img 
                           src={kathrynImage} 
                           alt="Kathryn Long, NP-C" 
@@ -330,102 +234,7 @@ export default function BookingVariantA({
                             </div>
                           </div>
                         </div>
-                      </div>
                     </div>
-                  )}
-
-                  {/* Standard State Gate (Hidden on mobile if on Discovery Page) */}
-                  <div className={isDiscoveryPage ? "hidden md:block" : "block"}>
-                    <div className="flex items-center gap-2 mb-1">
-                      <MapPin size={16} className="text-primary/50" />
-                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/40 font-sans">
-                      Before we begin
-                    </span>
-                  </div>
-                  <h3 className="font-display text-2xl md:text-3xl text-primary mb-2 tracking-tight font-normal">
-                    Where are you located?
-                  </h3>
-                  <p className="text-sm text-primary/40 mb-6 font-sans">
-                    We currently serve patients in Michigan and Wisconsin via telehealth.
-                  </p>
-
-                  {/* Quick select for MI & WI */}
-                  <div className="grid grid-cols-2 gap-3 mb-4">
-                    {allowedStates.map((state) => (
-                      <button
-                        key={state}
-                        onClick={() => handleStateSelect(state)}
-                        className={`group relative flex items-center gap-3 py-4 px-5 rounded-2xl border-2 transition-all duration-300 font-sans
-                          ${selectedState === state && !showIneligible
-                            ? 'bg-primary border-primary text-white shadow-lg shadow-primary/20'
-                            : 'bg-white/70 border-primary/[0.06] hover:border-primary/20 hover:shadow-md hover:-translate-y-1 text-primary'}`}
-                      >
-                        <MapPin size={18} className={selectedState === state && !showIneligible ? 'text-secondary' : 'text-primary/30'} />
-                        <span className="text-base font-medium">{state}</span>
-                      </button>
-                    ))}
-                  </div>
-
-                  {/* Different state button */}
-                  <div className="relative mb-6">
-                    <button
-                      onClick={() => {
-                        setSelectedState('another state');
-                        setShowIneligible(true);
-                        setWaitlistSubmitted(false);
-                        setWaitlistEmail('');
-                      }}
-                      className={`w-full px-4 py-3 bg-white/70 border rounded-xl text-sm transition-all font-sans text-left
-                        ${showIneligible ? 'border-primary/20 text-primary shadow-sm' : 'border-primary/[0.06] text-primary/60 hover:text-primary hover:border-primary/20'}`}
-                    >
-                      I'm in a different state...
-                    </button>
-                  </div>
-
-                  {/* Ineligible message */}
-                  {showIneligible && (
-                    <div className="spa-animate-in rounded-2xl bg-amber-50/80 border border-amber-200/60 p-5 mb-4" style={{ opacity: 0 }}>
-                      <div className="w-full">
-                        {!waitlistSubmitted ? (
-                          <div className="flex flex-col sm:flex-row gap-2 w-full">
-                            <input 
-                              type="email" 
-                              value={waitlistEmail}
-                              onChange={(e) => setWaitlistEmail(e.target.value)}
-                              placeholder="Enter your email" 
-                              className="flex-1 min-w-0 px-3 py-2 text-sm bg-white border border-amber-200 rounded-lg focus:outline-none focus:border-amber-400 font-sans"
-                            />
-                            <button 
-                              onClick={async () => {
-                                if(waitlistEmail) {
-                                  setWaitlistSubmitted(true);
-                                  try {
-                                    await fetch('https://formspree.io/f/mlgklyvk', {
-                                      method: 'POST',
-                                      headers: {
-                                        'Content-Type': 'application/json'
-                                      },
-                                      body: JSON.stringify({ email: waitlistEmail })
-                                    });
-                                  } catch(e) {
-                                    console.error("Formspree submission error:", e);
-                                  }
-                                }
-                              }}
-                              className="w-full sm:w-auto px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-medium rounded-lg transition-colors font-sans whitespace-nowrap"
-                            >
-                              Notify Me
-                            </button>
-                          </div>
-                        ) : (
-                          <p className="text-sm font-semibold text-amber-800 font-sans text-center">
-                            We will get in touch soon!
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                  )}
-                  </div>
                 </div>
               )}
 
