@@ -202,8 +202,8 @@ export default function BookingVariantA({
                         <span className="text-[15px] tracking-wide relative z-10">Book Your Free 15-Min Call</span>
                       </button>
 
-                      <div className="w-full bg-gradient-to-br from-[#1E2738] to-[#2A374F] rounded-2xl p-6 text-left relative overflow-hidden min-h-[180px] flex items-center shadow-2xl shadow-primary/30 border border-white/10">
-                        <div className="absolute -top-6 -left-2 text-8xl text-white/5 font-serif leading-none">"</div>
+                      <div className="w-full bg-white rounded-2xl p-6 text-left relative overflow-hidden min-h-[180px] flex items-center shadow-xl shadow-primary/5 border border-primary/[0.08]">
+                        <div className="absolute -top-6 -left-2 text-8xl text-primary/[0.03] font-serif leading-none">"</div>
                         <div 
                           key={reviewIndex} 
                           className="spa-animate-in relative z-10 w-full"
@@ -211,32 +211,33 @@ export default function BookingVariantA({
                         >
                           <div className="flex items-center gap-1 mb-3 pl-1">
                             {[...Array(5)].map((_, i) => (
-                              <svg key={i} className="w-4 h-4 text-[#F0D060]" fill="currentColor" viewBox="0 0 20 20">
+                              <svg key={i} className="w-4 h-4 text-[#D4AF37]" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                               </svg>
                             ))}
                           </div>
-                          <p className="text-sm text-white/95 italic font-sans pl-1 leading-relaxed mb-5">
+                          <p className="text-sm text-primary/80 italic font-sans pl-1 leading-relaxed mb-5">
                             "{reviews[reviewIndex].text}"
                           </p>
                           <div className="flex items-center gap-3 pl-1">
-                            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#F0D060] flex items-center justify-center text-[#1E2738] font-bold text-sm shadow-md">
+                            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#F0D060] flex items-center justify-center text-[#1E2738] font-bold text-sm shadow-md">
                               {reviews[reviewIndex].name.charAt(0)}
                             </div>
                             <div>
-                              <p className="text-sm font-bold text-white font-sans">{reviews[reviewIndex].name}</p>
+                              <p className="text-sm font-bold text-primary font-sans">{reviews[reviewIndex].name}</p>
                               <div className="flex items-center gap-1">
-                                <svg className="w-3 h-3 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg className="w-3 h-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path>
                                 </svg>
-                                <p className="text-[10px] text-white/70 uppercase tracking-wider font-semibold">Verified Patient</p>
+                                <p className="text-[10px] text-primary/50 uppercase tracking-wider font-semibold">Verified Patient</p>
                               </div>
                             </div>
                           </div>
                         </div>
+                      </div>
                     </div>
-                </div>
-              )}
+                  </div>
+                )}
 
               {/* Cal.com Embed - always mounted at full size; opacity-only transition eliminates flicker */}
               <div 
