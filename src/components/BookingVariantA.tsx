@@ -3,9 +3,12 @@ import {
   MapPin,
   AlertCircle,
   ChevronLeft,
+  CalendarDays,
+  BadgeCheck
 } from 'lucide-react';
 import Cal, { getCalApi } from "@calcom/embed-react";
 import kathrynImage from '@/assets/hero-kathryn.webp';
+import { useRouterState } from '@tanstack/react-router';
 
 
 interface BookingWidgetProps {
@@ -38,8 +41,25 @@ export default function BookingVariantA({
   submitBooking,
 }: BookingWidgetProps) {
   const [mounted, setMounted] = useState(false);
-
+  const routerState = useRouterState();
+  const isDiscoveryPage = routerState.location.pathname.includes('/free-15-min-call-with-katie');
   const [successAnim, setSuccessAnim] = useState(false);
+  const [reviewIndex, setReviewIndex] = useState(0);
+
+  const reviews = [
+    { text: "Katie genuinely listens. For the first time in years, I feel heard and I'm finally seeing results with my fatigue and weight.", name: "Sarah M." },
+    { text: "A life-changing experience! Katie helped me balance my hormones when everyone else said my labs were 'normal'.", name: "Jessica R." },
+    { text: "Professional, deeply knowledgeable, and incredibly compassionate. I finally have my energy back and feel like myself again!", name: "Emily T." }
+  ];
+
+  useEffect(() => {
+    if (!isDiscoveryPage) return;
+    const interval = setInterval(() => {
+      setReviewIndex((prev) => (prev + 1) % reviews.length);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, [isDiscoveryPage, reviews.length]);
+
   const [selectedState, setSelectedState] = useState<string | null>(null);
   const [showIneligible, setShowIneligible] = useState(false);
   const [waitlistEmail, setWaitlistEmail] = useState('');
@@ -241,8 +261,83 @@ export default function BookingVariantA({
               {/* STEP 0: State Gate */}
               {step === 0 && (
                 <div className="spa-animate-in" style={{ opacity: 0 }}>
-                  <div className="flex items-center gap-2 mb-1">
-                    <MapPin size={16} className="text-primary/50" />
+                  {/* Bio layout (Mobile only, Discovery Page only) */}
+                  {isDiscoveryPage && (
+                    <div className="md:hidden flex flex-col items-center text-center pb-4">
+                      <div className="relative mb-5 mt-2 inline-block">
+                        <img 
+                          src={kathrynImage} 
+                          alt="Kathryn Long, NP-C" 
+                          className="w-28 h-28 rounded-full border-[3px] border-white object-cover shadow-lg" 
+                        />
+                        <div className="absolute bottom-1.5 right-1.5 bg-white rounded-full shadow-sm" style={{ padding: '1px' }}>
+                          <BadgeCheck className="w-6 h-6 text-[#0095F6]" fill="currentColor" stroke="white" strokeWidth={1.5} />
+                        </div>
+                      </div>
+                      
+                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 mb-4">
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-primary/70 font-sans">
+                          Taking New Patients
+                        </span>
+                      </div>
+
+                      <h3 className="font-display text-2xl text-primary mb-3 tracking-tight font-normal leading-tight">
+                        Stop Guessing. Let's Find the Root Cause of Your Symptoms
+                      </h3>
+                      
+                      <p className="text-sm text-primary/70 leading-relaxed font-sans mb-8 px-2">
+                        Hi, I'm Katie Long, NP-C! I specialize in root-cause functional medicine, women's wellness, perimenopause, and medical weight loss for patients in Michigan and Wisconsin. Let's find real solutions tailored to your body.
+                      </p>
+
+                      <button
+                        onClick={() => setStep(1)}
+                        className="group relative w-full flex items-center justify-center gap-2.5 py-4 px-6 bg-primary text-white rounded-2xl font-semibold font-sans shadow-xl shadow-primary/20 transition-all hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0 mb-8 border border-white/10 overflow-hidden"
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
+                        <CalendarDays size={20} className="text-[#F0D060] relative z-10" />
+                        <span className="text-[15px] tracking-wide relative z-10">Book Your Free 15-Min Call</span>
+                      </button>
+
+                      <div className="w-full bg-gradient-to-br from-[#1E2738] to-[#2A374F] rounded-2xl p-6 text-left relative overflow-hidden min-h-[180px] flex items-center shadow-2xl shadow-primary/30 border border-white/10">
+                        <div className="absolute -top-6 -left-2 text-8xl text-white/5 font-serif leading-none">"</div>
+                        <div 
+                          key={reviewIndex} 
+                          className="spa-animate-in relative z-10 w-full"
+                          style={{ animation: 'spa-fade-up 0.5s ease-out forwards' }}
+                        >
+                          <div className="flex items-center gap-1 mb-3 pl-1">
+                            {[...Array(5)].map((_, i) => (
+                              <svg key={i} className="w-4 h-4 text-[#F0D060]" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            ))}
+                          </div>
+                          <p className="text-sm text-white/95 italic font-sans pl-1 leading-relaxed mb-5">
+                            "{reviews[reviewIndex].text}"
+                          </p>
+                          <div className="flex items-center gap-3 pl-1">
+                            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#F0D060] flex items-center justify-center text-[#1E2738] font-bold text-sm shadow-md">
+                              {reviews[reviewIndex].name.charAt(0)}
+                            </div>
+                            <div>
+                              <p className="text-sm font-bold text-white font-sans">{reviews[reviewIndex].name}</p>
+                              <div className="flex items-center gap-1">
+                                <svg className="w-3 h-3 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <p className="text-[10px] text-white/70 uppercase tracking-wider font-semibold">Verified Patient</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Standard State Gate (Hidden on mobile if on Discovery Page) */}
+                  <div className={isDiscoveryPage ? "hidden md:block" : "block"}>
+                    <div className="flex items-center gap-2 mb-1">
+                      <MapPin size={16} className="text-primary/50" />
                     <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/40 font-sans">
                       Before we begin
                     </span>
@@ -330,6 +425,7 @@ export default function BookingVariantA({
                       </div>
                     </div>
                   )}
+                  </div>
                 </div>
               )}
 
