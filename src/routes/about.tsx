@@ -151,7 +151,7 @@ function About() {
             pressure.
           </p>
           <button onClick={openBooking} className="btn-gold mt-7 inline-flex">
-            Free 15 min call with Katie
+            Book My $47 Clarity Session
           </button>
         </div>
       </section>

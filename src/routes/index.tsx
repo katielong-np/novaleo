@@ -122,7 +122,7 @@ function Home() {
             </p>
             <div className="mt-6 md:mt-9 flex flex-wrap gap-3">
               <button onClick={openBooking} className="btn-gold">
-                Free 15 min call with Katie <ArrowRight className="ml-2 h-4 w-4" />
+                Book My $47 Clarity Session <ArrowRight className="ml-2 h-4 w-4" />
               </button>
               <Link to="/approach" className="btn-ghost">
                 How it works
@@ -152,9 +152,9 @@ function Home() {
               className="relative rounded-3xl shadow-2xl object-cover aspect-[4/5] w-full"
             />
             <div className="absolute -bottom-6 -right-4 bg-card border border-border rounded-2xl shadow-xl p-5 max-w-[16rem]">
-              <div className="text-3xl font-display text-primary">15 min</div>
+              <div className="text-3xl font-display text-primary">$47</div>
               <p className="text-sm text-muted-foreground mt-1">
-                Free Google Meet call. Zero cost, zero pressure.
+                Clarity Session. Let's find out what's really going on.
               </p>
             </div>
           </div>
@@ -312,7 +312,7 @@ function Home() {
         </Carousel>
         <div className="mt-12 flex justify-center">
           <button onClick={openBooking} className="btn-primary">
-            Free 15 min call with Katie
+            Book My $47 Clarity Session
           </button>
         </div>
       </section>
@@ -368,7 +368,7 @@ function Home() {
           </div>
           <div className="mt-12 flex flex-wrap gap-3">
             <button onClick={openBooking} className="btn-gold">
-              Free 15 min call with Katie
+              Book My $47 Clarity Session
             </button>
           </div>
         </div>
@@ -439,7 +439,7 @@ function Home() {
         </p>
         <div className="mt-8 flex justify-center gap-3 flex-wrap">
           <button onClick={openBooking} className="btn-gold">
-            Free 15 min call with Katie
+            Book My $47 Clarity Session
           </button>
           <Link to="/scheduler" className="btn-ghost">
             Book $97 Root-Cause Intake

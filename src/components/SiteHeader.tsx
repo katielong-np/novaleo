@@ -46,7 +46,7 @@ export function SiteHeader() {
             1-616-801-4648
           </a>
           <button onClick={openBooking} className="btn-gold text-sm">
-            Free 15 min call with Katie
+            Book My $47 Clarity Session
           </button>
         </div>
         <button
@@ -79,7 +79,7 @@ export function SiteHeader() {
               <Phone className="h-4 w-4" /> 1-616-801-4648
             </a>
             <button onClick={() => { setOpen(false); openBooking(); }} className="btn-gold text-sm w-fit">
-              Free 15 min call with Katie
+              Book My $47 Clarity Session
             </button>
           </div>
         </div>

@@ -44,9 +44,8 @@ export default function BookingVariantA({
   const [reviewIndex, setReviewIndex] = useState(0);
 
   const reviews = [
-    { text: "Katie genuinely listens. For the first time in years, I feel heard and I'm finally seeing results with my fatigue and weight.", name: "Sarah M." },
     { text: "A life-changing experience! Katie helped me balance my hormones when everyone else said my labs were 'normal'.", name: "Jessica R." },
-    { text: "Professional, deeply knowledgeable, and incredibly compassionate. I finally have my energy back and feel like myself again!", name: "Emily T." }
+    { text: "Your drafted testimonial will go here once ready!", name: "A/B Test Variant" }
   ];
 
   useEffect(() => {
@@ -167,8 +166,8 @@ export default function BookingVariantA({
               {/* STEP 0: Bio Layout */}
               {step === 0 && (
                 <div className="spa-animate-in" style={{ opacity: 0 }}>
-                  <div className="flex flex-col items-center text-center pb-4 max-w-lg mx-auto">
-                    <div className="relative mb-5 mt-2 inline-block">
+                    <div className="flex flex-col items-center text-center pb-4 max-w-lg mx-auto">
+                      <div className="relative mb-5 mt-2 inline-block">
                         <img 
                           src={kathrynImage} 
                           alt="Kathryn Long, NP-C" 
@@ -181,26 +180,51 @@ export default function BookingVariantA({
                       
                       <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 mb-4">
                         <span className="text-[10px] font-bold uppercase tracking-widest text-primary/70 font-sans">
-                          Currently taking new patients
+                          A FEW SPOTS OPEN THIS MONTH
                         </span>
                       </div>
 
                       <h3 className="font-display text-2xl text-primary mb-3 tracking-tight font-normal leading-tight">
-                        Stop Guessing. Let's Find the Root Cause of Your Symptoms
+                        Your Labs Are "Normal." But You Don't Feel Normal.
                       </h3>
                       
-                      <p className="text-sm text-primary/70 leading-relaxed font-sans mb-8 px-2">
-                        Hi, I'm Katie Long, NP-C! I specialize in root-cause functional medicine, women's wellness, perimenopause, and medical weight loss for patients in Michigan and Wisconsin. Let's find real solutions tailored to your body.
+                      <p className="text-sm text-primary/70 leading-relaxed font-sans mb-4 px-2">
+                        Exhausted, foggy, gaining weight, and tired of being told everything looks fine? It's not in your head, and it's not your fault. Let's find out what your hormones are actually doing.
+                      </p>
+                      
+                      <p className="text-sm text-primary/70 leading-relaxed font-sans mb-6 px-2 text-left">
+                        Hi, I'm Katie Long, NP-C, board-certified and focused on root-cause functional medicine for Michigan women. I help women who've been brushed off with "your labs are fine" finally understand what's driving their symptoms, and exactly what to do about it.
                       </p>
 
-                      <button
-                        onClick={() => setStep(1)}
-                        className="group relative w-full flex items-center justify-center gap-2.5 py-4 px-6 bg-primary text-white rounded-2xl font-semibold font-sans shadow-xl shadow-primary/20 transition-all hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0 mb-8 border border-white/10 overflow-hidden"
-                      >
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
-                        <CalendarDays size={20} className="text-[#F0D060] relative z-10" />
-                        <span className="text-[15px] tracking-wide relative z-10">Book Your Free 15-Min Call</span>
-                      </button>
+                      <div className="w-full text-left mb-8 px-4">
+                        <p className="text-sm font-bold text-primary mb-3">What the session is:</p>
+                        <ul className="space-y-2">
+                          {[
+                            "Fully virtual, a secure Google Meet from home",
+                            "A comprehensive review of your symptoms and health history",
+                            "Personalized hormonal guidance and clear next steps",
+                          ].map((item, idx) => (
+                            <li key={idx} className="flex gap-2 items-start text-sm text-primary/80">
+                              <span className="text-[#D4AF37] mt-0.5 font-bold">✓</span>
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="w-full mb-8">
+                        <button
+                          onClick={() => setStep(1)}
+                          className="group relative w-full flex items-center justify-center gap-2.5 py-4 px-6 bg-primary text-white rounded-2xl font-semibold font-sans shadow-xl shadow-primary/20 transition-all hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0 border border-white/10 overflow-hidden"
+                        >
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
+                          <CalendarDays size={20} className="text-[#F0D060] relative z-10" />
+                          <span className="text-[15px] tracking-wide relative z-10">Book My $47 Clarity Session</span>
+                        </button>
+                        <p className="text-xs text-primary/60 mt-3 font-sans">
+                          A few virtual sessions open each month • Secure Google Meet
+                        </p>
+                      </div>
 
                       <div className="w-full bg-white rounded-2xl p-6 text-left relative overflow-hidden min-h-[180px] flex items-center shadow-xl shadow-primary/5 border border-primary/[0.08]">
                         <div className="absolute -top-6 -left-2 text-8xl text-primary/[0.03] font-serif leading-none">"</div>

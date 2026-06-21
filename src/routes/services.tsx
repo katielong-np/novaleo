@@ -10,7 +10,7 @@ export const Route = createFileRoute("/services")({
       {
         name: "description",
         content:
-          "Root Cause Discovery Call, Root Cause Lab Panel, Executive Longevity Partnership, and follow-up care  functional medicine telehealth for women in MI & WI.",
+          "Clarity Session, Root Cause Lab Panel, Executive Longevity Partnership, and follow-up care  functional medicine telehealth for women in MI & WI.",
       },
       { property: "og:title", content: "Services | Novaleo Weight & Wellness" },
       {
@@ -25,17 +25,17 @@ export const Route = createFileRoute("/services")({
 const programs = [
   {
     name: "Root Cause Discovery Call",
-    tag: "Start here · FREE",
-    price: "15 minutes",
-    desc: "A short no-cost consult  a space to ask questions, get clarity, and determine your next step. For new and current clients alike.",
+    tag: "Start here · $47",
+    price: "$47",
+    desc: "A 30-minute virtual session to review your symptoms and health history, and get personalized hormonal guidance and clear next steps.",
     bullets: [
       "Support in deciding which service is right for you",
       "Clarity before you book your intake or continue care",
       "Program guidance and next steps",
       "Answers to your questions",
     ],
-    cta: "Free 15 min call with Katie",
-    note: "Or skip the discovery call and schedule the Root Cause Intake to start feeling like yourself again.",
+    cta: "Book My $47 Clarity Session",
+    note: "Or skip the clarity session and schedule the Root Cause Intake to start feeling like yourself again.",
   },
   {
     name: "Root Cause Lab Panel",
@@ -139,7 +139,7 @@ function Services() {
                 {p.note}
               </p>
             )}
-            {p.cta === "Free 15 min call with Katie" ? (
+            {p.cta === "Book My $47 Clarity Session" ? (
               <button onClick={openBooking} className="btn-gold mt-8 self-start text-sm">
                 {p.cta}
               </button>
@@ -226,7 +226,7 @@ function Services() {
           />
           <div className="mt-8 flex justify-center">
             <button onClick={openBooking} className="btn-gold">
-              Free 15 min call with Katie
+              Book My $47 Clarity Session
             </button>
           </div>
         </div>
