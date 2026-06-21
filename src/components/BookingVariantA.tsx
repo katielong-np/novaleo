@@ -45,7 +45,8 @@ export default function BookingVariantA({
 
   const reviews = [
     { text: "A life-changing experience! Katie helped me balance my hormones when everyone else said my labs were 'normal'.", name: "Jessica R." },
-    { text: "Your drafted testimonial will go here once ready!", name: "A/B Test Variant" }
+    { text: "For years I was told my exhaustion and brain fog were just part of getting older. Katie was the first provider to actually dig deeper and find the root cause. I finally have my energy back.", name: "Michelle T." },
+    { text: "I was eating right, but the scale wouldn't budge and my doctor said everything looked fine. After one session with Katie, we found out exactly what my hormones were doing. I'm finally losing the stubborn weight!", name: "Lauren M." }
   ];
 
   useEffect(() => {
