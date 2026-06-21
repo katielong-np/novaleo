@@ -167,7 +167,7 @@ export default function BookingVariantA({
               {step === 0 && (
                 <div className="spa-animate-in" style={{ opacity: 0 }}>
                     <div className="flex flex-col items-center text-center pb-4 max-w-lg mx-auto">
-                      <div className="relative mb-5 mt-2 inline-block">
+                      <div className="relative mb-3 mt-2 inline-block">
                         <img 
                           src={kathrynImage} 
                           alt="Kathryn Long, NP-C" 
@@ -177,6 +177,10 @@ export default function BookingVariantA({
                           <BadgeCheck className="w-6 h-6 text-[#0095F6]" fill="currentColor" stroke="white" strokeWidth={1.5} />
                         </div>
                       </div>
+
+                      <p className="text-[13px] font-bold text-primary/80 font-sans mb-4 tracking-wide">
+                        Katie Long NP-C ~ Board Certified
+                      </p>
                       
                       <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 mb-4">
                         <span className="text-[10px] font-bold uppercase tracking-widest text-primary/70 font-sans">
@@ -256,16 +260,7 @@ export default function BookingVariantA({
                         </div>
                       </div>
 
-                      <div className="w-full mt-6">
-                        <button
-                          onClick={() => setStep(1)}
-                          className="group relative w-full flex items-center justify-center gap-2.5 py-4 px-6 bg-primary text-white rounded-2xl font-semibold font-sans shadow-xl shadow-primary/20 transition-all hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0 border border-white/10 overflow-hidden"
-                        >
-                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
-                          <CalendarDays size={20} className="text-[#F0D060] relative z-10" />
-                          <span className="text-[15px] tracking-wide relative z-10">Book My $47 Clarity Session</span>
-                        </button>
-                      </div>
+
                     </div>
                   </div>
                 )}
