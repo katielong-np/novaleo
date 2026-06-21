@@ -185,7 +185,7 @@ export default function BookingVariantA({
                       </div>
 
                       <h3 className="font-display text-2xl text-primary mb-3 tracking-tight font-normal leading-tight">
-                        Your Labs Are "Normal." But You Don't Feel Normal.
+                        Your Labs Are “Normal.” But You Don't Feel Normal.
                       </h3>
                       
                       <p className="text-sm text-primary/70 leading-relaxed font-sans mb-4 px-2">
@@ -222,7 +222,7 @@ export default function BookingVariantA({
                           <span className="text-[15px] tracking-wide relative z-10">Book My $47 Clarity Session</span>
                         </button>
                         <p className="text-xs text-primary/60 mt-3 font-sans">
-                          A few virtual sessions open each month • Secure Google Meet
+                          100% virtual • Secure Google Meet • MI & WI women only.
                         </p>
                       </div>
 
@@ -258,6 +258,17 @@ export default function BookingVariantA({
                             </div>
                           </div>
                         </div>
+                      </div>
+
+                      <div className="w-full mt-6">
+                        <button
+                          onClick={() => setStep(1)}
+                          className="group relative w-full flex items-center justify-center gap-2.5 py-4 px-6 bg-primary text-white rounded-2xl font-semibold font-sans shadow-xl shadow-primary/20 transition-all hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0 border border-white/10 overflow-hidden"
+                        >
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
+                          <CalendarDays size={20} className="text-[#F0D060] relative z-10" />
+                          <span className="text-[15px] tracking-wide relative z-10">Book My $47 Clarity Session</span>
+                        </button>
                       </div>
                     </div>
                   </div>
