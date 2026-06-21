@@ -62,6 +62,7 @@ npm run build
     - Features intelligent dynamic scrolling (`overflow-y-auto`) that allows the bio to scroll smoothly on small mobile screens, but snaps to `overflow-hidden` precisely when the Cal.com embed is active to prevent double-scrollbars.
     - Includes tightened mobile-specific padding above the clinician headshot to maximize above-the-fold real estate.
     - Includes a secondary CTA button below the testimonials to capture conversions without requiring users to scroll back up.
+    - Features condensed, punchy intro copy modeled directly after the ad creative to reinforce message-match and improve speed-to-book.
 - **UI Enhancements**: Consistent pointer interactions, standardized branding colours, and a personalized clinician avatar with active availability indicators.
   - Buttons across the site feature subtle, elegant box shadows and smooth lift animations on hover.
   - Social media links in the footer have been updated to reflect the `katielong.np` handles across TikTok, Facebook, and Instagram.

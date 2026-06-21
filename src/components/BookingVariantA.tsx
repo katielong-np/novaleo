@@ -184,16 +184,12 @@ export default function BookingVariantA({
                         </span>
                       </div>
 
-                      <h3 className="font-display text-2xl text-primary mb-3 tracking-tight font-normal leading-tight">
-                        Your Labs Are “Normal.” But You Don't Feel Normal.
+                      <h3 className="font-display text-2xl text-primary mb-3 tracking-tight font-normal leading-tight px-2">
+                        Tired, Foggy, and Gaining Weight But Your Labs Are “Normal”?
                       </h3>
                       
-                      <p className="text-sm text-primary/70 leading-relaxed font-sans mb-4 px-2">
-                        Exhausted, foggy, gaining weight, and tired of being told everything looks fine? It's not in your head, and it's not your fault. Let's find out what your hormones are actually doing.
-                      </p>
-                      
-                      <p className="text-sm text-primary/70 leading-relaxed font-sans mb-6 px-2 text-left">
-                        Hi, I'm Katie Long, NP-C, board-certified and focused on root-cause functional medicine for Michigan women. I help women who've been brushed off with "your labs are fine" finally understand what's driving their symptoms, and exactly what to do about it.
+                      <p className="text-[15px] text-primary/80 leading-relaxed font-sans mb-6 px-4 font-medium">
+                        There's a reason you feel this way, and it's not in your head. Let's find out what your hormones are actually doing!
                       </p>
 
                       <div className="w-full text-left mb-8 px-4">
