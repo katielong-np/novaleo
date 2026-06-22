@@ -4,6 +4,8 @@ import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
 import { WhopCheckoutEmbed } from "@whop/checkout/react";
 import kathrynImage from '@/assets/hero-kathryn.webp';
+import { useServerFn } from '@tanstack/react-start';
+import { getAvailableSlots } from '../lib/cal';
 
 interface BookingWidgetProps {
   step: number;
@@ -47,8 +49,37 @@ export default function BookingVariantA({
     setMounted(true);
   }, []);
 
-  // Mock available times
-  const availableTimes = ['9:00 AM', '10:30 AM', '1:00 PM', '2:45 PM', '4:00 PM'];
+  const [calSlots, setCalSlots] = useState<Record<string, { time: string }[]>>({});
+  const [isLoadingSlots, setIsLoadingSlots] = useState(false);
+  const fetchSlots = useServerFn(getAvailableSlots);
+
+  useEffect(() => {
+    async function loadSlots() {
+      setIsLoadingSlots(true);
+      const today = new Date();
+      // Fetch 60 days of availability
+      const futureDate = new Date();
+      futureDate.setDate(today.getDate() + 60);
+      
+      const slots = await fetchSlots({
+        data: {
+          startDate: today.toISOString().split('T')[0],
+          endDate: futureDate.toISOString().split('T')[0],
+        }
+      });
+      setCalSlots(slots);
+      setIsLoadingSlots(false);
+    }
+    loadSlots();
+  }, [fetchSlots]);
+
+  const selectedDateStr = selectedDate ? new Date(selectedDate.getTime() - (selectedDate.getTimezoneOffset() * 60000)).toISOString().split('T')[0] : '';
+  const availableTimesForDate = calSlots[selectedDateStr] || [];
+  
+  const availableTimes = availableTimesForDate.map(slot => {
+    const d = new Date(slot.time);
+    return d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+  });
 
   const handleTimeSelect = (time: string) => {
     setSelectedTime(time);
@@ -216,7 +247,13 @@ export default function BookingVariantA({
                         setSelectedDate(date || null);
                         setSelectedTime(null);
                       }}
-                      disabled={[{ before: new Date() }]}
+                      disabled={[
+                        { before: new Date() },
+                        (date) => {
+                          const dateStr = new Date(date.getTime() - (date.getTimezoneOffset() * 60000)).toISOString().split('T')[0];
+                          return !calSlots[dateStr] || calSlots[dateStr].length === 0;
+                        }
+                      ]}
                       className="border border-primary/10 rounded-2xl p-4 shadow-sm"
                     />
                   </div>
@@ -228,25 +265,31 @@ export default function BookingVariantA({
                           <p className="text-sm font-semibold text-primary mb-4">
                             Available on {selectedDate.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}
                           </p>
-                          <div className="grid grid-cols-2 gap-3">
-                            {availableTimes.map((time) => (
-                              <button
-                                key={time}
-                                onClick={() => handleTimeSelect(time)}
-                                className={`py-3 px-4 rounded-xl text-sm font-medium transition-all ${
-                                  selectedTime === time 
-                                    ? 'bg-primary text-white shadow-md border border-primary' 
-                                    : 'bg-white border border-primary/15 text-primary hover:border-primary/40 hover:bg-primary/5'
-                                }`}
-                              >
-                                {time}
-                              </button>
-                            ))}
-                          </div>
+                          {availableTimes.length > 0 ? (
+                            <div className="grid grid-cols-2 gap-3">
+                              {availableTimes.map((time) => (
+                                <button
+                                  key={time}
+                                  onClick={() => handleTimeSelect(time)}
+                                  className={`py-3 px-4 rounded-xl text-sm font-medium transition-all ${
+                                    selectedTime === time 
+                                      ? 'bg-primary text-white shadow-md border border-primary' 
+                                      : 'bg-white border border-primary/15 text-primary hover:border-primary/40 hover:bg-primary/5'
+                                  }`}
+                                >
+                                  {time}
+                                </button>
+                              ))}
+                            </div>
+                          ) : (
+                            <div className="text-primary/60 text-sm italic">
+                              No slots available on this date.
+                            </div>
+                          )}
                         </div>
                       ) : (
                         <div className="h-full flex items-center justify-center text-primary/40 text-sm italic border border-dashed border-primary/15 rounded-2xl p-8 text-center bg-primary/[0.02]">
-                          Please select a date from the calendar to see available times.
+                          {isLoadingSlots ? "Loading availability..." : "Please select a date from the calendar to see available times."}
                         </div>
                       )}
                     </div>
