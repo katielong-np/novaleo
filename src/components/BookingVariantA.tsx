@@ -51,6 +51,7 @@ export default function BookingVariantA({
   }, []);
 
   const [checkoutPrefill, setCheckoutPrefill] = useState({ name: '', email: '' });
+  const isFormValid = formData.name.length > 0 && formData.email.includes('@');
 
   useEffect(() => {
     // Preload checkout in background when form is valid
@@ -105,7 +106,6 @@ export default function BookingVariantA({
     setSelectedTime(time);
   };
 
-  const isFormValid = formData.name.length > 0 && formData.email.includes('@');
 
   return (
     <>
