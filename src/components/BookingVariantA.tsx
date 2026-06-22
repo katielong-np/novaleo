@@ -453,11 +453,6 @@ export default function BookingVariantA({
                   </button>
                 )}
                 <div className="flex-1 w-full relative min-h-[500px]">
-                  {step === 3 && (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-white z-0 gap-3">
-                      <div className="w-5 h-5 border-2 border-primary/20 border-t-primary/60 rounded-full animate-spin"></div>
-                    </div>
-                  )}
                   <div className="relative z-10 h-full w-full">
                     <WhopCheckoutEmbed
                       planId="plan_rSPJSTRuimIXt"
