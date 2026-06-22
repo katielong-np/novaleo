@@ -30,6 +30,16 @@ export const getAvailableSlots = createServerFn({ method: 'GET' })
 export const createBooking = createServerFn({ method: 'POST' })
   .handler(async ({ data }: { data: { start: string; name: string; email: string; phone: string; timeZone: string } }) => {
     try {
+      let formattedPhone = data.phone || undefined;
+      if (formattedPhone) {
+        // Strip everything except digits and leading plus
+        formattedPhone = formattedPhone.replace(/(?!^\+)[^\d]/g, '');
+        // Default to US country code if missing
+        if (!formattedPhone.startsWith('+')) {
+          formattedPhone = '+1' + formattedPhone;
+        }
+      }
+
       const url = `https://api.cal.com/v2/bookings`;
       const payload = {
         start: data.start,
@@ -38,7 +48,7 @@ export const createBooking = createServerFn({ method: 'POST' })
           name: data.name,
           email: data.email,
           timeZone: data.timeZone,
-          phoneNumber: data.phone || undefined,
+          phoneNumber: formattedPhone,
           language: "en"
         }
       };
