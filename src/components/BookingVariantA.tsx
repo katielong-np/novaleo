@@ -462,6 +462,7 @@ export default function BookingVariantA({
                   <div className="relative z-10 h-full w-full">
                     <WhopCheckoutEmbed
                       planId="plan_rSPJSTRuimIXt"
+                      environment="sandbox"
                       theme="light"
                       prefill={checkoutPrefill}
                       themeOptions={{ 
