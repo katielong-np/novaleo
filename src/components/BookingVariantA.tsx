@@ -410,12 +410,16 @@ export default function BookingVariantA({
 
                     <div>
                       <label className="block text-sm font-bold text-primary mb-2">Phone number *</label>
-                      <input
-                        type="tel"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-primary/20 bg-white text-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all font-medium"
-                      />
+                      <div className="relative">
+                        <span className="absolute left-4 top-1/2 -translate-y-1/2 text-primary/60 font-medium">+1</span>
+                        <input
+                          type="tel"
+                          placeholder="(555) 000-0000"
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                          className="w-full pl-10 pr-4 py-3 rounded-xl border border-primary/20 bg-white text-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all font-medium"
+                        />
+                      </div>
                     </div>
                   </div>
                   
