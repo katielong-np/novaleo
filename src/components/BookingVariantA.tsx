@@ -5,7 +5,7 @@ import 'react-day-picker/dist/style.css';
 import { WhopCheckoutEmbed } from "@whop/checkout/react";
 import kathrynImage from '@/assets/hero-kathryn.webp';
 import { useServerFn } from '@tanstack/react-start';
-import { getAvailableSlots } from '../lib/cal';
+import { getAvailableSlots, createBooking } from '../lib/cal';
 
 interface BookingWidgetProps {
   step: number;
@@ -14,7 +14,7 @@ interface BookingWidgetProps {
   setSelectedDate: (date: Date | null) => void;
   selectedTime: string | null;
   setSelectedTime: (time: string | null) => void;
-  formData: { name: string; email: string; goal: string };
+  formData: { name: string; email: string; phone: string; goal: string };
   setFormData: (data: any) => void;
   submitBooking: () => void;
 }
@@ -51,7 +51,7 @@ export default function BookingVariantA({
   }, []);
 
   const [checkoutPrefill, setCheckoutPrefill] = useState({ name: '', email: '' });
-  const isFormValid = formData.name.length > 0 && formData.email.includes('@');
+  const isFormValid = formData.name.length > 0 && formData.email.includes('@') && formData.phone.length > 0;
 
   useEffect(() => {
     // Preload checkout in background when form is valid
@@ -73,6 +73,7 @@ export default function BookingVariantA({
   const [calSlots, setCalSlots] = useState<Record<string, { time: string }[]>>({});
   const [isLoadingSlots, setIsLoadingSlots] = useState(false);
   const fetchSlots = useServerFn(getAvailableSlots);
+  const bookSlot = useServerFn(createBooking);
 
   useEffect(() => {
     async function loadSlots() {
@@ -406,6 +407,16 @@ export default function BookingVariantA({
                         className="w-full px-4 py-3 rounded-xl border border-primary/20 bg-white text-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all font-medium"
                       />
                     </div>
+
+                    <div>
+                      <label className="block text-sm font-bold text-primary mb-2">Phone number *</label>
+                      <input
+                        type="tel"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        className="w-full px-4 py-3 rounded-xl border border-primary/20 bg-white text-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all font-medium"
+                      />
+                    </div>
                   </div>
                   
                   <div className="mt-8 flex flex-col gap-4">
@@ -458,7 +469,25 @@ export default function BookingVariantA({
                         borderRadius: 16,
                         backgroundColor: "#ffffff"
                       }}
-                      onComplete={() => {
+                      onComplete={async () => {
+                        if (selectedDate && selectedTime) {
+                          const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+                          const [hours, minutes] = selectedTime.match(/(\d+):(\d+) (AM|PM)/)!.slice(1);
+                          const isPM = selectedTime.includes('PM');
+                          const dateObj = new Date(selectedDate);
+                          dateObj.setHours(isPM && hours !== '12' ? parseInt(hours) + 12 : (hours === '12' && !isPM ? 0 : parseInt(hours)));
+                          dateObj.setMinutes(parseInt(minutes));
+                          
+                          await bookSlot({
+                            data: {
+                              start: dateObj.toISOString(),
+                              name: formData.name,
+                              email: formData.email,
+                              phone: formData.phone,
+                              timeZone: tz
+                            }
+                          });
+                        }
                         setStep(4);
                       }}
                     />

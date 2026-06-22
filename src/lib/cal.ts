@@ -1,15 +1,17 @@
 import { createServerFn } from '@tanstack/react-start';
 
 const CAL_API_KEY = "cal_live_ad25597eb1b5d86451ff91803b49dc96";
-const EVENT_TYPE_ID = "5912238"; // Free 15 min call with Katie
+const USERNAME = "katie-long-np";
+const EVENT_TYPE_SLUG = "30min";
 
 export const getAvailableSlots = createServerFn({ method: 'GET' })
-  .handler(async ({ data }) => {
+  .handler(async ({ data }: { data: { startDate: string; endDate: string } }) => {
     try {
-      const url = `https://api.cal.com/v2/slots/available?eventTypeId=${EVENT_TYPE_ID}&startTime=${data.startDate}&endTime=${data.endDate}`;
+      const url = `https://api.cal.com/v2/slots/available?username=${USERNAME}&eventTypeSlug=${EVENT_TYPE_SLUG}&startTime=${data.startDate}&endTime=${data.endDate}`;
       const response = await fetch(url, {
         headers: {
           Authorization: `Bearer ${CAL_API_KEY}`,
+          'cal-api-version': '2024-08-13'
         },
       });
 
@@ -23,5 +25,49 @@ export const getAvailableSlots = createServerFn({ method: 'GET' })
     } catch (error) {
       console.error('Error fetching Cal.com slots:', error);
       return {};
+    }
+  });
+
+export const createBooking = createServerFn({ method: 'POST' })
+  .handler(async ({ data }: { data: { start: string; name: string; email: string; phone: string; timeZone: string } }) => {
+    try {
+      const url = `https://api.cal.com/v2/bookings`;
+      const payload = {
+        start: data.start,
+        eventTypeId: null, // Optional if we use slug and username, but v2 booking might require eventTypeId. Let's provide slug and username instead, if possible.
+        // Wait, the v2/bookings API documentation in the search result says:
+        // "You can use eventTypeId directly. Alternatively, you can provide eventTypeSlug combined with a username"
+        eventTypeSlug: EVENT_TYPE_SLUG,
+        username: USERNAME,
+        attendee: {
+          name: data.name,
+          email: data.email,
+          timeZone: data.timeZone,
+          phoneNumber: data.phone || undefined,
+          language: "en"
+        }
+      };
+
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${CAL_API_KEY}`,
+          'cal-api-version': '2024-08-13',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error(`Cal.com Booking API error: ${response.status} ${errorText}`);
+        return { success: false, error: errorText };
+      }
+
+      const json = await response.json();
+      return { success: true, data: json.data };
+    } catch (error) {
+      console.error('Error creating Cal.com booking:', error);
+      return { success: false, error: 'Internal server error' };
     }
   });
