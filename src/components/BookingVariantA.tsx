@@ -51,23 +51,9 @@ export default function BookingVariantA({
     setMounted(true);
   }, []);
 
-  const [checkoutPrefill, setCheckoutPrefill] = useState({ name: '', email: '' });
   const isFormValid = formData.name.length > 0 && formData.email.includes('@') && formData.phone.length > 0;
 
-  useEffect(() => {
-    // Preload checkout in background when form is valid
-    if (step === 2 && isFormValid) {
-      const timer = setTimeout(() => {
-        setCheckoutPrefill({ name: formData.name, email: formData.email });
-      }, 800);
-      return () => clearTimeout(timer);
-    }
-  }, [formData.name, formData.email, step, isFormValid]);
-
   const handleContinueToPayment = () => {
-    if (checkoutPrefill.name !== formData.name || checkoutPrefill.email !== formData.email) {
-      setCheckoutPrefill({ name: formData.name, email: formData.email });
-    }
     submitBooking();
   };
 
@@ -476,7 +462,7 @@ export default function BookingVariantA({
                     <WhopCheckoutEmbed
                       planId="plan_rSPJSTRuimIXt"
                       theme="light"
-                      prefill={checkoutPrefill}
+                      prefill={{ name: formData.name, email: formData.email }}
                       themeOptions={{ 
                         accentColor: "#2D6A64", 
                         borderRadius: 16,
