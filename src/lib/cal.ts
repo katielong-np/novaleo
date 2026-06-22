@@ -1,13 +1,12 @@
 import { createServerFn } from '@tanstack/react-start';
 
 const CAL_API_KEY = "cal_live_ad25597eb1b5d86451ff91803b49dc96";
-const USERNAME = "katie-long-np";
-const EVENT_TYPE_SLUG = "30min";
+const EVENT_TYPE_ID = 5912238; // Free 30 min call with Katie
 
 export const getAvailableSlots = createServerFn({ method: 'GET' })
   .handler(async ({ data }: { data: { startDate: string; endDate: string } }) => {
     try {
-      const url = `https://api.cal.com/v2/slots/available?username=${USERNAME}&eventTypeSlug=${EVENT_TYPE_SLUG}&startTime=${data.startDate}&endTime=${data.endDate}`;
+      const url = `https://api.cal.com/v2/slots/available?eventTypeId=${EVENT_TYPE_ID}&startTime=${data.startDate}&endTime=${data.endDate}`;
       const response = await fetch(url, {
         headers: {
           Authorization: `Bearer ${CAL_API_KEY}`,
@@ -34,11 +33,7 @@ export const createBooking = createServerFn({ method: 'POST' })
       const url = `https://api.cal.com/v2/bookings`;
       const payload = {
         start: data.start,
-        eventTypeId: null, // Optional if we use slug and username, but v2 booking might require eventTypeId. Let's provide slug and username instead, if possible.
-        // Wait, the v2/bookings API documentation in the search result says:
-        // "You can use eventTypeId directly. Alternatively, you can provide eventTypeSlug combined with a username"
-        eventTypeSlug: EVENT_TYPE_SLUG,
-        username: USERNAME,
+        eventTypeId: EVENT_TYPE_ID,
         attendee: {
           name: data.name,
           email: data.email,
