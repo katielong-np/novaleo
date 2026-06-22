@@ -50,6 +50,25 @@ export default function BookingVariantA({
     setMounted(true);
   }, []);
 
+  const [checkoutPrefill, setCheckoutPrefill] = useState({ name: '', email: '' });
+
+  useEffect(() => {
+    // Preload checkout in background when form is valid
+    if (step === 2 && isFormValid) {
+      const timer = setTimeout(() => {
+        setCheckoutPrefill({ name: formData.name, email: formData.email });
+      }, 800);
+      return () => clearTimeout(timer);
+    }
+  }, [formData.name, formData.email, step, isFormValid]);
+
+  const handleContinueToPayment = () => {
+    if (checkoutPrefill.name !== formData.name || checkoutPrefill.email !== formData.email) {
+      setCheckoutPrefill({ name: formData.name, email: formData.email });
+    }
+    submitBooking();
+  };
+
   const [calSlots, setCalSlots] = useState<Record<string, { time: string }[]>>({});
   const [isLoadingSlots, setIsLoadingSlots] = useState(false);
   const fetchSlots = useServerFn(getAvailableSlots);
@@ -391,7 +410,7 @@ export default function BookingVariantA({
                   
                   <div className="mt-8 flex flex-col gap-4">
                     <button
-                      onClick={submitBooking}
+                      onClick={handleContinueToPayment}
                       disabled={!isFormValid}
                       className={`w-full py-3.5 rounded-2xl font-semibold text-[15px] transition-all ${
                         isFormValid
@@ -414,26 +433,36 @@ export default function BookingVariantA({
               </div>
             )}
 
-            {/* STEP 3: Whop Checkout */}
-            {step === 3 && (
-              <div className="spa-animate-in h-full flex flex-col w-full" style={{ opacity: 0 }}>
-                <button onClick={() => setStep(2)} className="self-start flex items-center gap-1 text-sm text-primary/60 hover:text-primary mb-4 transition-colors">
-                  <ChevronLeft size={16} /> Back
-                </button>
+            {/* STEP 3 & Hidden Preload: Whop Checkout */}
+            {(step === 2 || step === 3) && (
+              <div className={`h-full flex flex-col w-full ${step === 3 ? 'spa-animate-in relative z-10' : 'absolute opacity-0 pointer-events-none -z-10'}`} style={step === 3 ? { opacity: 0 } : {}}>
+                {step === 3 && (
+                  <button onClick={() => setStep(2)} className="self-start flex items-center gap-1 text-sm text-primary/60 hover:text-primary mb-4 transition-colors relative z-20">
+                    <ChevronLeft size={16} /> Back
+                  </button>
+                )}
                 <div className="flex-1 w-full relative min-h-[500px]">
-                  <WhopCheckoutEmbed
-                    planId="plan_rSPJSTRuimIXt"
-                    theme="light"
-                    prefill={{ email: formData.email, name: formData.name }}
-                    themeOptions={{ 
-                      accentColor: "#2D6A64", 
-                      borderRadius: 16,
-                      backgroundColor: "#ffffff"
-                    }}
-                    onComplete={() => {
-                      setStep(4);
-                    }}
-                  />
+                  {step === 3 && (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-white z-0 gap-3">
+                      <div className="w-5 h-5 border-2 border-primary/20 border-t-primary/60 rounded-full animate-spin"></div>
+                      <p className="text-sm text-primary/40 font-medium">Secure checkout loading...</p>
+                    </div>
+                  )}
+                  <div className="relative z-10 h-full w-full">
+                    <WhopCheckoutEmbed
+                      planId="plan_rSPJSTRuimIXt"
+                      theme="light"
+                      prefill={checkoutPrefill}
+                      themeOptions={{ 
+                        accentColor: "#2D6A64", 
+                        borderRadius: 16,
+                        backgroundColor: "#ffffff"
+                      }}
+                      onComplete={() => {
+                        setStep(4);
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             )}
