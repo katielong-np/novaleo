@@ -31,6 +31,7 @@ export default function BookingVariantA({
   submitBooking,
 }: BookingWidgetProps) {
   const [emailFinished, setEmailFinished] = React.useState(false);
+  const [isBooking, setIsBooking] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [reviewIndex, setReviewIndex] = useState(0);
 
@@ -453,6 +454,13 @@ export default function BookingVariantA({
                   </button>
                 )}
                 <div className="flex-1 w-full relative min-h-[500px]">
+                  {isBooking && (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-white/80 backdrop-blur-sm z-50 gap-3 rounded-2xl animate-in fade-in">
+                      <div className="w-8 h-8 border-4 border-primary/20 border-t-primary rounded-full animate-spin"></div>
+                      <p className="text-primary font-semibold">Finalizing your booking...</p>
+                      <p className="text-primary/60 text-sm">Please don't close this window.</p>
+                    </div>
+                  )}
                   <div className="relative z-10 h-full w-full">
                     <WhopCheckoutEmbed
                       planId="plan_rSPJSTRuimIXt"
@@ -465,6 +473,7 @@ export default function BookingVariantA({
                       }}
                       onComplete={async () => {
                         if (selectedDate && selectedTime) {
+                          setIsBooking(true);
                           try {
                             const result = await bookSlot({
                               data: {
@@ -481,6 +490,8 @@ export default function BookingVariantA({
                             }
                           } catch (e) {
                             alert('An error occurred while booking.');
+                          } finally {
+                            setIsBooking(false);
                           }
                         }
                         setStep(4);
