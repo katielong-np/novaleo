@@ -34,7 +34,7 @@ const programs = [
       "Program guidance and next steps",
       "Answers to your questions",
     ],
-    cta: "Book My $47 Clarity Session",
+    cta: "Book Free 15-Min Call",
     note: "Or skip the clarity session and schedule the Root Cause Intake to start feeling like yourself again.",
   },
   {
@@ -139,7 +139,7 @@ function Services() {
                 {p.note}
               </p>
             )}
-            {p.cta === "Book My $47 Clarity Session" ? (
+            {p.cta === "Book Free 15-Min Call" ? (
               <button onClick={openBooking} className="btn-gold mt-8 self-start text-sm">
                 {p.cta}
               </button>
@@ -226,7 +226,7 @@ function Services() {
           />
           <div className="mt-8 flex justify-center">
             <button onClick={openBooking} className="btn-gold">
-              Book My $47 Clarity Session
+              Book Free 15-Min Call
             </button>
           </div>
         </div>

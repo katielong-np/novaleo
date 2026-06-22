@@ -184,12 +184,15 @@ fbq('track', 'PageView');`,
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const routerState = useRouterState();
+  const isClaritySessionPage = routerState.location.pathname.includes('/clarity-session');
+
   return (
     <QueryClientProvider client={queryClient}>
       <BookingModalProvider>
         <div className="flex min-h-screen flex-col">
           <RouterSpinner />
-          <SiteHeader />
+          {!isClaritySessionPage && <SiteHeader />}
           <main className="flex-1">
             <Outlet />
           </main>

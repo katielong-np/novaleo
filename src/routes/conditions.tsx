@@ -125,7 +125,7 @@ function Conditions() {
             We'll tell you honestly whether functional medicine is the right path for your case.
           </p>
           <button onClick={openBooking} className="btn-primary mt-7 inline-flex">
-            Book My $47 Clarity Session
+            Book Free 15-Min Call
           </button>
         </div>
       </section>

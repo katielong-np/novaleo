@@ -126,7 +126,7 @@ function Approach() {
           The process begins with a single 15-minute conversation. No cost. No commitment.
         </p>
         <button onClick={openBooking} className="btn-gold mt-8 inline-flex">
-          Book My $47 Clarity Session
+          Book Free 15-Min Call
         </button>
       </section>
     </>

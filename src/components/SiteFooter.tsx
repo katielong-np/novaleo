@@ -101,7 +101,7 @@ export function SiteFooter() {
             </li>
             <li>
               <Link to="/free-15-min-call-with-katie" className="hover:text-gold">
-                Book My $47 Clarity Session
+                Book Free 15-Min Call
               </Link>
             </li>
           </ul>
@@ -129,7 +129,7 @@ export function SiteFooter() {
 
             <li>
               <button onClick={openBooking} className="hover:text-gold text-left">
-                Book My $47 Clarity Session
+                Book Free 15-Min Call
               </button>
             </li>
           </ul>
