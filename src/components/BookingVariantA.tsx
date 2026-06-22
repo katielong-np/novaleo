@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { BadgeCheck, CalendarDays, ChevronLeft, ArrowRight, User, Mail, MessageSquare, CheckCircle2, Clock, Video, Globe2 } from 'lucide-react';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
@@ -101,18 +101,6 @@ export default function BookingVariantA({
           from { opacity: 0; transform: translateY(20px); }
           to { opacity: 1; transform: translateY(0); }
         }
-        
-        /* Custom styles for DayPicker */
-        .rdp {
-          --rdp-cell-size: 40px;
-          --rdp-accent-color: #2D6A64;
-          --rdp-background-color: #E8F0EF;
-          margin: 0 !important;
-        }
-        .rdp-day_selected, .rdp-day_selected:focus-visible, .rdp-day_selected:hover {
-          color: white;
-          background-color: var(--rdp-accent-color);
-        }
       `}</style>
 
       <div
@@ -130,7 +118,7 @@ export default function BookingVariantA({
             />
           )}
 
-          <div className="relative z-10 flex flex-col flex-1 h-full px-6 py-8 md:px-10">
+          <div className={`relative z-10 flex flex-col flex-1 h-full ${step === 0 ? 'px-6 py-8 md:px-10' : 'px-2 py-3 md:px-10 md:py-8'}`}>
             
             {/* STEP 0: Bio */}
             {step === 0 && (
@@ -228,39 +216,54 @@ export default function BookingVariantA({
               </div>
             )}
 
-            {/* STEP 1: Custom Calendar & Time Selection (Cal.com Style) */}
+            {/* STEP 1: Calendar & Time Selection */}
             {step === 1 && (
               <div className="spa-animate-in h-full flex flex-col md:flex-row bg-white rounded-2xl w-full text-left" style={{ opacity: 0 }}>
                 {/* Left Sidebar (Event Details) */}
-                <div className="md:w-[280px] p-6 md:p-8 md:border-r border-b md:border-b-0 border-primary/10">
-                  <button onClick={() => setStep(0)} className="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary/60 hover:text-primary hover:bg-primary/5 transition-colors mb-6">
-                    <ChevronLeft size={20} />
+                <div className="shrink-0 md:w-[260px] px-5 py-5 md:px-7 md:py-6 md:border-r border-b md:border-b-0 border-primary/10">
+                  <button onClick={() => setStep(0)} className="w-9 h-9 rounded-full border border-primary/10 flex items-center justify-center text-primary/60 hover:text-primary hover:bg-primary/5 transition-colors mb-4 md:mb-5">
+                    <ChevronLeft size={18} />
                   </button>
                   
-                  <div className="flex flex-col gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#1E2738] text-white flex items-center justify-center text-xl font-bold shadow-sm">
+                  <div className="flex md:flex-col gap-4 items-center md:items-start">
+                    <div className="w-12 h-12 md:w-12 md:h-12 rounded-full bg-[#1E2738] text-white flex items-center justify-center text-xl font-bold shadow-sm shrink-0">
                       K
                     </div>
-                    <p className="text-primary/60 font-semibold text-sm">Katie Long NP-C ~ Board Certified</p>
-                    <h3 className="font-display text-2xl text-primary tracking-tight font-bold">$47 Clarity Session</h3>
-                    
-                    <div className="flex flex-col gap-3 mt-2 text-primary/70 font-medium text-sm">
-                      <div className="flex items-center gap-3"><Clock size={16} /> 15m</div>
-                      <div className="flex items-center gap-3"><Video size={16} /> Google Meet</div>
-                      <div className="flex items-center gap-3"><Globe2 size={16} /> {Intl.DateTimeFormat().resolvedOptions().timeZone}</div>
+                    <div className="flex flex-col gap-1.5 md:gap-3 min-w-0">
+                      <p className="text-primary/50 font-semibold text-xs md:text-sm">Katie Long NP-C ~ Board Certified</p>
+                      <h3 className="font-sans text-[22px] md:text-2xl text-primary tracking-tight font-bold leading-tight">$47 Clarity Session</h3>
                     </div>
+                  </div>
+                  
+                  <div className="hidden md:flex flex-col gap-3 mt-5 text-primary/70 font-medium text-sm">
+                    <div className="flex items-center gap-3"><Clock size={16} /> 30m</div>
+                    <div className="flex items-center gap-3"><Video size={16} /> Google Meet</div>
+                    <div className="flex items-center gap-3"><Globe2 size={16} /> {Intl.DateTimeFormat().resolvedOptions().timeZone}</div>
+                  </div>
+                  
+                  {/* Mobile info row */}
+                  <div className="flex md:hidden gap-5 mt-4 text-primary/50 font-medium text-[13px]">
+                    <div className="flex items-center gap-1.5"><Clock size={14} /> 30 min</div>
+                    <div className="flex items-center gap-1.5"><Video size={14} /> Google Meet</div>
                   </div>
                 </div>
 
-                {/* Right Content (Calendar + Times) */}
-                <div className="flex-1 p-6 md:p-8 flex flex-col lg:flex-row gap-8">
-                  <div className="flex-1 flex justify-center lg:justify-start">
+                {/* Right Content — Calendar always visible, times appear below */}
+                <div className="flex-1 px-3 py-3 md:p-6 flex flex-col overflow-y-auto" id="booking-scroll-area">
+                  {/* Calendar */}
+                  <div className="w-full">
                     <DayPicker
                       mode="single"
                       selected={selectedDate || undefined}
                       onSelect={(date) => {
                         setSelectedDate(date || null);
                         setSelectedTime(null);
+                        // Auto-scroll to time slots after a short delay
+                        if (date) {
+                          setTimeout(() => {
+                            document.getElementById('time-slots-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                          }, 100);
+                        }
                       }}
                       disabled={[
                         { before: new Date() },
@@ -280,56 +283,65 @@ export default function BookingVariantA({
                         hasSlots: 'has-slots'
                       }}
                     />
+                    {isLoadingSlots && (
+                      <div className="flex items-center gap-2 mt-4 text-primary/40 text-sm">
+                        <div className="w-4 h-4 border-2 border-primary/20 border-t-primary/60 rounded-full animate-spin"></div>
+                        <span>Loading availability...</span>
+                      </div>
+                    )}
                   </div>
 
-                  <div className="w-full lg:w-[220px]">
-                    <div className="h-full flex flex-col">
-                      {selectedDate ? (
-                        <div className="space-y-4">
-                          <p className="text-base font-semibold text-primary mb-2 flex items-center">
-                            {selectedDate.toLocaleDateString('en-US', { weekday: 'short', day: 'numeric' })}
-                          </p>
-                          {availableTimes.length > 0 ? (
-                            <div className="flex flex-col gap-2 max-h-[350px] overflow-y-auto pr-2 custom-scrollbar">
-                              {availableTimes.map((time) => (
-                                <div key={time} className="flex gap-2 w-full transition-all">
-                                  <button
-                                    onClick={() => handleTimeSelect(time)}
-                                    className={`py-3 px-4 rounded-md font-medium text-sm transition-all flex-1 border ${
-                                      selectedTime === time 
-                                        ? 'bg-[#1E2738] text-white border-[#1E2738] shadow-inner' 
-                                        : 'bg-white border-primary/20 text-primary hover:border-primary'
-                                    }`}
-                                  >
-                                    <div className="flex items-center justify-center gap-2">
-                                      <span className={`w-1.5 h-1.5 rounded-full ${selectedTime === time ? 'bg-white' : 'bg-green-500'}`}></span>
-                                      <span>{time}</span>
-                                    </div>
-                                  </button>
-                                  {selectedTime === time && (
-                                    <button
-                                      onClick={() => setStep(2)}
-                                      className="py-3 px-6 rounded-md font-semibold text-sm bg-primary text-white hover:bg-primary/90 transition-all flex-1 animate-in slide-in-from-left-2 fade-in duration-200"
-                                    >
-                                      Next
-                                    </button>
-                                  )}
+                  {/* Time Slots (appear below calendar when date selected) */}
+                  {selectedDate && (
+                    <div id="time-slots-section" className="mt-5 pt-5 border-t border-primary/10 spa-animate-in" style={{ opacity: 0 }}>
+                      <div className="flex items-center justify-between mb-4">
+                        <p className="text-sm font-bold text-primary flex items-center gap-2">
+                          <CalendarDays size={15} className="text-primary/40" />
+                          {selectedDate.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}
+                        </p>
+                        <button
+                          onClick={() => { setSelectedDate(null); setSelectedTime(null); }}
+                          className="text-xs font-semibold text-primary/40 hover:text-primary transition-colors"
+                        >
+                          Change date
+                        </button>
+                      </div>
+
+                      {availableTimes.length > 0 ? (
+                        <div className="flex flex-col gap-2 pb-4">
+                          {availableTimes.map((time) => (
+                            <div key={time} className="flex gap-2 w-full transition-all">
+                              <button
+                                onClick={() => handleTimeSelect(time)}
+                                className={`py-3 px-5 rounded-xl font-medium text-[15px] transition-all flex-1 border ${
+                                  selectedTime === time 
+                                    ? 'bg-[#1E2738] text-white border-[#1E2738] shadow-md' 
+                                    : 'bg-white border-primary/12 text-primary hover:border-primary/30 hover:bg-primary/[0.02]'
+                                }`}
+                              >
+                                <div className="flex items-center justify-center gap-2.5">
+                                  <span className={`w-2 h-2 rounded-full shrink-0 ${selectedTime === time ? 'bg-white' : 'bg-green-500'}`}></span>
+                                  <span>{time}</span>
                                 </div>
-                              ))}
+                              </button>
+                              {selectedTime === time && (
+                                <button
+                                  onClick={() => setStep(2)}
+                                  className="py-3 px-6 rounded-xl font-semibold text-[15px] bg-primary text-white hover:bg-primary/90 transition-all flex-1 animate-in slide-in-from-left-2 fade-in duration-200"
+                                >
+                                  Next
+                                </button>
+                              )}
                             </div>
-                          ) : (
-                            <div className="text-primary/60 text-sm italic">
-                              No slots available on this date.
-                            </div>
-                          )}
+                          ))}
                         </div>
                       ) : (
-                        <div className="h-full flex items-center justify-center text-primary/40 text-sm italic rounded-2xl p-4 text-center">
-                          {isLoadingSlots ? "Loading availability..." : ""}
+                        <div className="text-primary/50 text-sm py-6 text-center rounded-xl bg-primary/[0.02] border border-dashed border-primary/10">
+                          No slots available on this date.
                         </div>
                       )}
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
             )}
@@ -342,7 +354,7 @@ export default function BookingVariantA({
                     <ChevronLeft size={18} /> Back
                   </button>
                   
-                  <h3 className="text-2xl font-bold text-primary tracking-tight mb-6">Confirm your details</h3>
+                  <h3 className="font-sans text-2xl font-bold text-primary tracking-tight mb-6">Confirm your details</h3>
                   
                   <div className="flex flex-wrap gap-2 mb-8">
                     <div className="px-3 py-1.5 rounded-full border border-primary/10 bg-primary/[0.02] text-sm font-medium text-primary flex items-center gap-2">
@@ -351,11 +363,11 @@ export default function BookingVariantA({
                     </div>
                     <div className="px-3 py-1.5 rounded-full border border-primary/10 bg-primary/[0.02] text-sm font-medium text-primary flex items-center gap-2">
                       <Clock size={14} className="text-primary/60" />
-                      15m
+                      30m
                     </div>
                   </div>
 
-                  <div className="space-y-6 flex-1 max-w-lg">
+                  <div className="space-y-5">
                     <div>
                       <label className="block text-sm font-bold text-primary mb-2">Full Name *</label>
                       <input
@@ -375,36 +387,26 @@ export default function BookingVariantA({
                         className="w-full px-4 py-3 rounded-xl border border-primary/20 bg-white text-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all font-medium"
                       />
                     </div>
-
-                    <div>
-                      <label className="block text-sm font-bold text-primary mb-2">What is your #1 health goal? <span className="text-primary/40 font-normal">(Optional)</span></label>
-                      <textarea
-                        value={formData.goal}
-                        onChange={(e) => setFormData({ ...formData, goal: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-primary/20 bg-white text-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all font-medium min-h-[100px] resize-none"
-                        placeholder="Tell us what you're looking to achieve..."
-                      />
-                    </div>
                   </div>
                   
-                  <div className="mt-8 pt-6 border-t border-primary/10 flex items-center justify-between gap-4">
-                    <p className="text-xs text-primary/50 max-w-[250px]">
-                      By proceeding, you agree to the $47 session fee and our terms.
-                    </p>
-                    <div className="flex gap-3">
-                      <button onClick={() => setStep(1)} className="px-5 py-2.5 rounded-full font-semibold text-primary hover:bg-primary/5 transition-colors text-sm">
-                        Back
-                      </button>
-                      <button
-                        onClick={submitBooking}
-                        disabled={!isFormValid}
-                        className={`px-6 py-2.5 rounded-full font-semibold text-sm transition-all ${
-                          isFormValid
-                            ? 'bg-[#1E2738] text-white hover:bg-primary/90 shadow-md'
-                            : 'bg-primary/10 text-primary/40 cursor-not-allowed'
-                        }`}
-                      >
-                        Continue to Payment
+                  <div className="mt-8 flex flex-col gap-4">
+                    <button
+                      onClick={submitBooking}
+                      disabled={!isFormValid}
+                      className={`w-full py-3.5 rounded-2xl font-semibold text-[15px] transition-all ${
+                        isFormValid
+                          ? 'bg-[#1E2738] text-white hover:bg-primary/90 shadow-lg shadow-primary/15'
+                          : 'bg-primary/10 text-primary/40 cursor-not-allowed'
+                      }`}
+                    >
+                      Continue to Payment
+                    </button>
+                    <div className="flex items-center justify-between">
+                      <p className="text-xs text-primary/40">
+                        By proceeding, you agree to the $47 fee and our terms.
+                      </p>
+                      <button onClick={() => setStep(1)} className="text-xs font-semibold text-primary/50 hover:text-primary transition-colors shrink-0 ml-4">
+                        ← Back
                       </button>
                     </div>
                   </div>
@@ -421,10 +423,12 @@ export default function BookingVariantA({
                 <div className="flex-1 w-full relative min-h-[500px]">
                   <WhopCheckoutEmbed
                     planId="plan_Gt9JH0LYs0KpR"
+                    theme="light"
                     prefill={{ email: formData.email, name: formData.name }}
                     themeOptions={{ 
                       accentColor: "#2D6A64", 
-                      borderRadius: 16 
+                      borderRadius: 16,
+                      backgroundColor: "#ffffff"
                     }}
                     onComplete={() => {
                       setStep(4);

@@ -196,49 +196,179 @@
   box-shadow: 0 0 10px var(--color-gold), 0 0 5px var(--color-gold) !important;
 }
 
-/* Custom React Day Picker (Cal.com Style) */
-.rdp {
-  --rdp-cell-size: 44px;
+/* ─── Custom React Day Picker v9 (Cal.com Style) ─── */
+
+.rdp-root {
   --rdp-accent-color: var(--color-primary);
-  --rdp-background-color: transparent;
+  --rdp-accent-background-color: rgba(30, 39, 56, 0.06);
+  --rdp-today-color: var(--color-primary);
+  --rdp-day-height: 44px;
+  --rdp-day-width: 44px;
+  --rdp-day_button-height: 40px;
+  --rdp-day_button-width: 40px;
+  --rdp-day_button-border-radius: 10px;
+  --rdp-day_button-border: 2px solid transparent;
+  --rdp-selected-border: 2px solid var(--rdp-accent-color);
+  --rdp-nav-height: 2.75rem;
+  --rdp-nav_button-height: 2.25rem;
+  --rdp-nav_button-width: 2.25rem;
+  --rdp-outside-opacity: 0.35;
+  --rdp-disabled-opacity: 0.3;
   margin: 0 !important;
 }
 
-.rdp-day_selected, .rdp-day_selected:focus-visible, .rdp-day_selected:hover {
-  color: white !important;
-  background-color: var(--rdp-accent-color) !important;
-  font-weight: 600;
+/* ── Month caption ── */
+.rdp-month_caption {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-primary);
+  letter-spacing: -0.01em;
 }
 
+/* ── Nav arrows ── */
+.rdp-button_previous,
+.rdp-button_next {
+  border-radius: 10px;
+  color: var(--color-primary);
+  border: 1px solid rgba(30, 39, 56, 0.12);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.rdp-button_previous:hover,
+.rdp-button_next:hover {
+  background: rgba(30, 39, 56, 0.06);
+  border-color: rgba(30, 39, 56, 0.25);
+}
+
+.rdp-chevron {
+  fill: var(--color-primary) !important;
+}
+
+/* ── Weekday headers ── */
+.rdp-weekday {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-primary);
+  opacity: 0.45;
+  padding: 0.5rem 0 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+/* ── Day cells ── */
 .rdp-day {
   position: relative;
-  border-radius: 8px !important;
+}
+
+.rdp-day_button {
+  border-radius: 10px !important;
   font-weight: 500;
-  transition: all 0.2s;
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  transition: background 0.2s, color 0.2s, transform 0.15s;
 }
 
-.rdp-day:not(.rdp-day_selected):hover {
-  background-color: rgba(0,0,0,0.05);
+.rdp-day:not(.rdp-selected):not(.rdp-disabled) .rdp-day_button:hover {
+  background: rgba(30, 39, 56, 0.06);
+  transform: scale(1.05);
 }
 
-.rdp-day.has-slots:not(.rdp-day_selected)::after {
+/* ── Selected state ── */
+.rdp-selected .rdp-day_button {
+  background-color: var(--color-primary) !important;
+  color: white !important;
+  border-color: var(--color-primary) !important;
+  font-weight: 700;
+  font-size: 0.875rem;
+  box-shadow: 0 2px 8px rgba(30, 39, 56, 0.25);
+}
+
+/* Override the default v9 selected which sets font-size: large */
+.rdp-selected {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/* ── Today ── */
+.rdp-today:not(.rdp-outside):not(.rdp-selected) .rdp-day_button {
+  color: var(--color-primary);
+  font-weight: 700;
+  background: rgba(30, 39, 56, 0.04);
+  border: 2px solid rgba(30, 39, 56, 0.15);
+}
+
+/* ── Disabled days ── */
+.rdp-disabled .rdp-day_button {
+  color: var(--color-muted-foreground);
+  cursor: not-allowed;
+}
+
+/* ── Availability dot indicator ── */
+.rdp-day.has-slots:not(.rdp-selected) .rdp-day_button::after {
   content: '';
   position: absolute;
-  bottom: 8px;
+  bottom: 4px;
   left: 50%;
   transform: translateX(-50%);
   width: 4px;
   height: 4px;
-  background-color: var(--color-primary);
-  opacity: 0.5;
+  background-color: #2D6A64;
   border-radius: 50%;
+  opacity: 0.6;
 }
 
-.rdp-head_cell {
-  font-size: 11px;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: var(--color-primary);
-  opacity: 0.6;
-  padding-bottom: 12px;
+/* ── Custom scrollbar for time slots ── */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(30, 39, 56, 0.15);
+  border-radius: 999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(30, 39, 56, 0.3);
+}
+
+/* ── Mobile calendar sizing ── */
+@media (max-width: 767px) {
+  .rdp-root {
+    --rdp-day-height: auto;
+    --rdp-day-width: auto;
+    --rdp-day_button-height: 46px;
+    --rdp-day_button-width: 46px;
+    width: 100%;
+  }
+  .rdp-months {
+    width: 100%;
+    max-width: 100% !important;
+  }
+  .rdp-month {
+    width: 100%;
+  }
+  .rdp-month_grid {
+    width: 100%;
+    table-layout: fixed;
+  }
+  .rdp-weekday {
+    text-align: center;
+    padding: 0.5rem 0 0.6rem;
+  }
+  .rdp-day {
+    text-align: center;
+    padding: 2px 0;
+  }
+  .rdp-day_button {
+    width: 42px !important;
+    height: 42px !important;
+    margin: 0 auto;
+  }
+  .rdp-month_caption {
+    font-size: 1.2rem;
+    padding-bottom: 0.25rem;
+  }
+  .rdp-nav {
+    top: 0;
+  }
 }
