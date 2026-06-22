@@ -100,7 +100,10 @@ export default function BookingVariantA({
   
   const availableTimes = availableTimesForDate.map(slot => {
     const d = new Date(slot.time);
-    return d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+    return {
+      utc: slot.time,
+      formatted: d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'America/Detroit' })
+    };
   });
 
   const handleTimeSelect = (time: string) => {
@@ -258,7 +261,7 @@ export default function BookingVariantA({
                   <div className="hidden md:flex flex-col gap-3 mt-5 text-primary/70 font-medium text-sm">
                     <div className="flex items-center gap-3"><Clock size={16} /> 30m</div>
                     <div className="flex items-center gap-3"><Video size={16} /> Google Meet</div>
-                    <div className="flex items-center gap-3"><Globe2 size={16} /> {Intl.DateTimeFormat().resolvedOptions().timeZone}</div>
+                    <div className="flex items-center gap-3"><Globe2 size={16} /> America/Detroit (Eastern Time)</div>
                   </div>
                   
                   {/* Mobile info row */}
@@ -329,27 +332,27 @@ export default function BookingVariantA({
 
                       {availableTimes.length > 0 ? (
                         <div className="flex flex-col gap-2 pb-4">
-                          {availableTimes.map((time) => (
-                            <div key={time} className="flex gap-2 w-full transition-all">
+                          {availableTimes.map((slot) => (
+                            <div key={slot.utc} className="flex gap-2 w-full transition-all">
                               <button
-                                onClick={() => handleTimeSelect(time)}
+                                onClick={() => handleTimeSelect(slot.utc)}
                                 className={`py-3 px-5 rounded-xl font-medium text-[15px] transition-all flex-1 border ${
-                                  selectedTime === time 
+                                  selectedTime === slot.utc 
                                     ? 'bg-[#1E2738] text-white border-[#1E2738] shadow-md' 
                                     : 'bg-white border-primary/12 text-primary hover:border-primary/30 hover:bg-primary/[0.02]'
                                 }`}
                               >
                                 <div className="flex items-center justify-center gap-2.5">
-                                  <span className={`w-2 h-2 rounded-full shrink-0 ${selectedTime === time ? 'bg-white' : 'bg-green-500'}`}></span>
-                                  <span>{time}</span>
+                                  <span className={`w-2 h-2 rounded-full shrink-0 ${selectedTime === slot.utc ? 'bg-white' : 'bg-green-500'}`}></span>
+                                  <span>{slot.formatted}</span>
                                 </div>
                               </button>
-                              {selectedTime === time && (
+                              {selectedTime === slot.utc && (
                                 <button
                                   onClick={() => setStep(2)}
                                   className="py-3 px-6 rounded-xl font-semibold text-[15px] bg-primary text-white hover:bg-primary/90 transition-all flex-1 animate-in slide-in-from-left-2 fade-in duration-200"
                                 >
-                                  Next
+                                  Continue
                                 </button>
                               )}
                             </div>
@@ -475,20 +478,13 @@ export default function BookingVariantA({
                       }}
                       onComplete={async () => {
                         if (selectedDate && selectedTime) {
-                          const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-                          const [hours, minutes] = selectedTime.match(/(\d+):(\d+) (AM|PM)/)!.slice(1);
-                          const isPM = selectedTime.includes('PM');
-                          const dateObj = new Date(selectedDate);
-                          dateObj.setHours(isPM && hours !== '12' ? parseInt(hours) + 12 : (hours === '12' && !isPM ? 0 : parseInt(hours)));
-                          dateObj.setMinutes(parseInt(minutes));
-                          
                           await bookSlot({
                             data: {
-                              start: dateObj.toISOString(),
+                              start: selectedTime,
                               name: formData.name,
                               email: formData.email,
                               phone: formData.phone,
-                              timeZone: tz
+                              timeZone: 'America/Detroit'
                             }
                           });
                         }
