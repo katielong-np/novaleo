@@ -1,7 +1,7 @@
 import { createServerFn } from '@tanstack/react-start';
 
 const CAL_API_KEY = "cal_live_ad25597eb1b5d86451ff91803b49dc96";
-const EVENT_TYPE_ID = 5912238; // Free 30 min call with Katie
+const EVENT_TYPE_ID = 6088992; // Free 30 min call with Katie
 
 export const getAvailableSlots = createServerFn({ method: 'GET' })
   .handler(async ({ data }: { data: { startDate: string; endDate: string } }) => {
