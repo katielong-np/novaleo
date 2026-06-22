@@ -382,7 +382,7 @@ export default function BookingVariantA({
                   <div className="flex flex-wrap gap-2 mb-8">
                     <div className="px-3 py-1.5 rounded-full border border-primary/10 bg-primary/[0.02] text-sm font-medium text-primary flex items-center gap-2">
                       <CalendarDays size={14} className="text-primary/60" />
-                      {selectedDate?.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}, {selectedTime}
+                      {selectedDate?.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}, {selectedTime ? new Date(selectedTime).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'America/Detroit' }) : ''}
                     </div>
                     <div className="px-3 py-1.5 rounded-full border border-primary/10 bg-primary/[0.02] text-sm font-medium text-primary flex items-center gap-2">
                       <Clock size={14} className="text-primary/60" />
@@ -504,7 +504,7 @@ export default function BookingVariantA({
                 </div>
                 <h3 className="font-display text-3xl text-primary tracking-tight mb-3">You're Booked!</h3>
                 <p className="text-primary/80 mb-6 max-w-sm">
-                  Your payment was successful and your session is confirmed for <strong>{selectedDate?.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} at {selectedTime}</strong>.
+                  Your payment was successful and your session is confirmed for <strong>{selectedDate?.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} at {selectedTime ? new Date(selectedTime).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'America/Detroit' }) : ''}</strong>.
                 </p>
                 <p className="text-primary/60 text-sm mb-8 max-w-sm">
                   We've sent a calendar invitation and a Google Meet link to <strong>{formData.email}</strong>.
