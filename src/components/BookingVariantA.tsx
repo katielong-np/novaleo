@@ -465,15 +465,23 @@ export default function BookingVariantA({
                       }}
                       onComplete={async () => {
                         if (selectedDate && selectedTime) {
-                          await bookSlot({
-                            data: {
-                              start: selectedTime,
-                              name: formData.name,
-                              email: formData.email,
-                              phone: formData.phone,
-                              timeZone: 'America/Detroit'
+                          try {
+                            const result = await bookSlot({
+                              data: {
+                                start: selectedTime,
+                                name: formData.name,
+                                email: formData.email,
+                                phone: formData.phone,
+                                timeZone: 'America/Detroit'
+                              }
+                            });
+                            
+                            if (result?.success === false) {
+                              alert(`Booking failed to save to calendar: ${result.error}`);
                             }
-                          });
+                          } catch (e) {
+                            alert('An error occurred while booking.');
+                          }
                         }
                         setStep(4);
                       }}
