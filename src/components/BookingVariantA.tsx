@@ -366,7 +366,7 @@ export default function BookingVariantA({
                 </button>
                 <div className="flex-1 w-full relative min-h-[500px]">
                   <WhopCheckoutEmbed
-                    planId="plan_XXXXXXXXX"
+                    planId="plan_Gt9JH0LYs0KpR"
                     prefill={{ email: formData.email, name: formData.name }}
                     themeOptions={{ 
                       accentColor: "#2D6A64", 
