@@ -56,10 +56,11 @@ npm run build
 - **Dynamic Elements**: Auto-scrolling reviews and quotes carousel powered by Embla Carousel, seamlessly bleeding to screen edges for a modern feel.
 - **Telehealth Focus**: Clear call-to-actions (CTAs) for clarity sessions, intake forms, and service information.
 - **Global Booking Modal**: A seamless unified pop-up experience for clarity sessions across all pages.
-  - Features instantaneous scheduling powered by a hidden preloaded **Cal.com** embed.
-  - Optimised mobile layout hides the decorative panel entirely and scales the modal to take up the full screen across all pages, maximizing space for the scheduling widget. The Cal.com embed fills the entire popup viewport on mobile with no residual top/bottom spacing — the container switches to a solid white background when the embed is active, the decorative glass overlay and dark backdrop are hidden, and `cssVarsPerTheme` overrides ensure the Cal.com iframe's internal background matches seamlessly.
+  - Replaces the standard Cal.com popup with a **100% Native React UI** (built with `react-day-picker`) for selecting dates and times.
+  - Collects user intake details and primary health goals before proceeding to payment.
+  - Seamlessly integrates the **Whop Checkout React SDK** directly into the modal for an uninterrupted "Check Availability First -> Pay" flow.
   - **Global Bio Layout**: The standard location gate has been completely replaced site-wide with a high-converting, trust-building clinician bio. This unified layout includes an Instagram-style verified badge, a rotating carousel of verified 5-star patient reviews in a clean light-theme card, and a highly polished CTA button with a shimmer animation, optimized specifically for Meta Ads traffic.
-    - Features intelligent dynamic scrolling (`overflow-y-auto`) that allows the bio to scroll smoothly on small mobile screens, but snaps to `overflow-hidden` precisely when the Cal.com embed is active to prevent double-scrollbars.
+    - Features intelligent dynamic scrolling (`overflow-y-auto`) that allows the bio to scroll smoothly on small mobile screens.
     - Includes tightened mobile-specific padding above the clinician headshot to maximize above-the-fold real estate.
     - Includes a secondary CTA button below the testimonials to capture conversions without requiring users to scroll back up.
     - Features condensed, punchy intro copy modeled directly after the ad creative to reinforce message-match and improve speed-to-book.
