@@ -31,7 +31,6 @@ export default function BookingVariantA({
   submitBooking,
 }: BookingWidgetProps) {
   const [emailFinished, setEmailFinished] = React.useState(false);
-  const { mutateAsync: bookSlot } = useServerFn(createBooking);
   const [mounted, setMounted] = useState(false);
   const [reviewIndex, setReviewIndex] = useState(0);
 
