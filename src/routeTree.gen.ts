@@ -15,6 +15,7 @@ import { Route as SchedulerRouteImport } from './routes/scheduler'
 import { Route as Free15MinCallWithKatieRouteImport } from './routes/free-15-min-call-with-katie'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ConditionsRouteImport } from './routes/conditions'
+import { Route as ClaritySessionRouteImport } from './routes/clarity-session'
 import { Route as ApproachRouteImport } from './routes/approach'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -49,6 +50,11 @@ const ConditionsRoute = ConditionsRouteImport.update({
   path: '/conditions',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ClaritySessionRoute = ClaritySessionRouteImport.update({
+  id: '/clarity-session',
+  path: '/clarity-session',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApproachRoute = ApproachRouteImport.update({
   id: '/approach',
   path: '/approach',
@@ -69,6 +75,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/approach': typeof ApproachRoute
+  '/clarity-session': typeof ClaritySessionRoute
   '/conditions': typeof ConditionsRoute
   '/contact': typeof ContactRoute
   '/free-15-min-call-with-katie': typeof Free15MinCallWithKatieRoute
@@ -80,6 +87,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/approach': typeof ApproachRoute
+  '/clarity-session': typeof ClaritySessionRoute
   '/conditions': typeof ConditionsRoute
   '/contact': typeof ContactRoute
   '/free-15-min-call-with-katie': typeof Free15MinCallWithKatieRoute
@@ -92,6 +100,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/approach': typeof ApproachRoute
+  '/clarity-session': typeof ClaritySessionRoute
   '/conditions': typeof ConditionsRoute
   '/contact': typeof ContactRoute
   '/free-15-min-call-with-katie': typeof Free15MinCallWithKatieRoute
@@ -105,6 +114,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/approach'
+    | '/clarity-session'
     | '/conditions'
     | '/contact'
     | '/free-15-min-call-with-katie'
@@ -116,6 +126,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/approach'
+    | '/clarity-session'
     | '/conditions'
     | '/contact'
     | '/free-15-min-call-with-katie'
@@ -127,6 +138,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/approach'
+    | '/clarity-session'
     | '/conditions'
     | '/contact'
     | '/free-15-min-call-with-katie'
@@ -139,6 +151,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ApproachRoute: typeof ApproachRoute
+  ClaritySessionRoute: typeof ClaritySessionRoute
   ConditionsRoute: typeof ConditionsRoute
   ContactRoute: typeof ContactRoute
   Free15MinCallWithKatieRoute: typeof Free15MinCallWithKatieRoute
@@ -191,6 +204,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConditionsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/clarity-session': {
+      id: '/clarity-session'
+      path: '/clarity-session'
+      fullPath: '/clarity-session'
+      preLoaderRoute: typeof ClaritySessionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/approach': {
       id: '/approach'
       path: '/approach'
@@ -219,6 +239,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ApproachRoute: ApproachRoute,
+  ClaritySessionRoute: ClaritySessionRoute,
   ConditionsRoute: ConditionsRoute,
   ContactRoute: ContactRoute,
   Free15MinCallWithKatieRoute: Free15MinCallWithKatieRoute,
