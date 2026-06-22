@@ -28,6 +28,7 @@ export default function BookingVariantA({
   setSelectedTime,
   formData,
   setFormData,
+  submitBooking,
 }: BookingWidgetProps) {
   const [mounted, setMounted] = useState(false);
   const [reviewIndex, setReviewIndex] = useState(0);
