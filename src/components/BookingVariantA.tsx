@@ -30,6 +30,8 @@ export default function BookingVariantA({
   setFormData,
   submitBooking,
 }: BookingWidgetProps) {
+  const [emailFinished, setEmailFinished] = React.useState(false);
+  const { mutateAsync: bookSlot } = useServerFn(createBooking);
   const [mounted, setMounted] = useState(false);
   const [reviewIndex, setReviewIndex] = useState(0);
 
@@ -406,7 +408,13 @@ export default function BookingVariantA({
                       <input
                         type="email"
                         value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        onChange={(e) => {
+                          setFormData({ ...formData, email: e.target.value });
+                          setEmailFinished(false);
+                        }}
+                        onBlur={() => {
+                          if (formData.email.includes('@')) setEmailFinished(true);
+                        }}
                         className="w-full px-4 py-3 rounded-xl border border-primary/20 bg-white text-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all font-medium"
                       />
                     </div>
@@ -452,7 +460,7 @@ export default function BookingVariantA({
             )}
 
             {/* STEP 3 & Hidden Preload: Whop Checkout */}
-            {(step === 2 || step === 3) && (
+            {(step === 3 || (step === 2 && emailFinished)) && (
               <div className={`h-full flex flex-col w-full ${step === 3 ? 'spa-animate-in relative z-10' : 'absolute opacity-0 pointer-events-none -z-10'}`} style={step === 3 ? { opacity: 0 } : {}}>
                 {step === 3 && (
                   <button onClick={() => setStep(2)} className="self-start flex items-center gap-1 text-sm text-primary/60 hover:text-primary mb-4 transition-colors relative z-20">
@@ -463,7 +471,6 @@ export default function BookingVariantA({
                   {step === 3 && (
                     <div className="absolute inset-0 flex flex-col items-center justify-center bg-white z-0 gap-3">
                       <div className="w-5 h-5 border-2 border-primary/20 border-t-primary/60 rounded-full animate-spin"></div>
-                      <p className="text-sm text-primary/40 font-medium">Secure checkout loading...</p>
                     </div>
                   )}
                   <div className="relative z-10 h-full w-full">
