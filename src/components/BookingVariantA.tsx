@@ -239,7 +239,7 @@ export default function BookingVariantA({
                 </div>
 
                 <div className="flex flex-col md:flex-row gap-8 lg:gap-12 flex-1">
-                  <div className="flex justify-center md:justify-start">
+                  <div className="flex justify-center md:justify-start pt-2">
                     <DayPicker
                       mode="single"
                       selected={selectedDate || undefined}
@@ -254,31 +254,40 @@ export default function BookingVariantA({
                           return !calSlots[dateStr] || calSlots[dateStr].length === 0;
                         }
                       ]}
-                      className="border border-primary/10 rounded-2xl p-4 shadow-sm"
+                      className="border-none bg-transparent"
                     />
                   </div>
 
-                  <div className="flex-1 flex flex-col">
+                  <div className="flex-1 flex flex-col md:max-w-[280px]">
                     <div className="flex-1">
                       {selectedDate ? (
-                        <div className="space-y-3">
-                          <p className="text-sm font-semibold text-primary mb-4">
-                            Available on {selectedDate.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}
+                        <div className="space-y-4">
+                          <p className="text-sm font-semibold text-primary mb-2">
+                            {selectedDate.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}
                           </p>
                           {availableTimes.length > 0 ? (
-                            <div className="grid grid-cols-2 gap-3">
+                            <div className="flex flex-col gap-2 max-h-[350px] overflow-y-auto pr-2 custom-scrollbar">
                               {availableTimes.map((time) => (
-                                <button
-                                  key={time}
-                                  onClick={() => handleTimeSelect(time)}
-                                  className={`py-3 px-4 rounded-xl text-sm font-medium transition-all ${
-                                    selectedTime === time 
-                                      ? 'bg-primary text-white shadow-md border border-primary' 
-                                      : 'bg-white border border-primary/15 text-primary hover:border-primary/40 hover:bg-primary/5'
-                                  }`}
-                                >
-                                  {time}
-                                </button>
+                                <div key={time} className="flex gap-2 w-full transition-all">
+                                  <button
+                                    onClick={() => handleTimeSelect(time)}
+                                    className={`py-3 px-4 rounded-md font-medium text-sm transition-all flex-1 ${
+                                      selectedTime === time 
+                                        ? 'bg-gray-600 text-white border-gray-600 shadow-inner' 
+                                        : 'bg-white border border-primary/20 text-primary hover:border-primary hover:border-2 hover:-m-[1px]'
+                                    }`}
+                                  >
+                                    {time}
+                                  </button>
+                                  {selectedTime === time && (
+                                    <button
+                                      onClick={() => setStep(2)}
+                                      className="py-3 px-6 rounded-md font-semibold text-sm bg-primary text-white hover:bg-primary/90 transition-all flex-1 animate-in slide-in-from-left-2 fade-in duration-200"
+                                    >
+                                      Next
+                                    </button>
+                                  )}
+                                </div>
                               ))}
                             </div>
                           ) : (
@@ -288,25 +297,12 @@ export default function BookingVariantA({
                           )}
                         </div>
                       ) : (
-                        <div className="h-full flex items-center justify-center text-primary/40 text-sm italic border border-dashed border-primary/15 rounded-2xl p-8 text-center bg-primary/[0.02]">
-                          {isLoadingSlots ? "Loading availability..." : "Please select a date from the calendar to see available times."}
+                        <div className="h-full flex items-center justify-center text-primary/40 text-sm italic rounded-2xl p-4 text-center">
+                          {isLoadingSlots ? "Loading availability..." : ""}
                         </div>
                       )}
                     </div>
-
-                    <div className="mt-8 pt-6 border-t border-primary/10">
-                      <button
-                        onClick={() => setStep(2)}
-                        disabled={!selectedDate || !selectedTime}
-                        className={`w-full flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-semibold transition-all ${
-                          selectedDate && selectedTime
-                            ? 'bg-primary text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5'
-                            : 'bg-primary/10 text-primary/40 cursor-not-allowed'
-                        }`}
-                      >
-                        Continue <ArrowRight size={18} />
-                      </button>
-                    </div>
+                    {/* The Continue button is removed, moved inline next to time slot */}
                   </div>
                 </div>
               </div>
