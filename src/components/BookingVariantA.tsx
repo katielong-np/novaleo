@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BadgeCheck, CalendarDays, ChevronLeft, ArrowRight, User, Mail, MessageSquare, CheckCircle2 } from 'lucide-react';
+import { BadgeCheck, CalendarDays, ChevronLeft, ArrowRight, User, Mail, MessageSquare, CheckCircle2, Clock, Video, Globe2 } from 'lucide-react';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
 import { WhopCheckoutEmbed } from "@whop/checkout/react";
@@ -227,19 +227,33 @@ export default function BookingVariantA({
               </div>
             )}
 
-            {/* STEP 1: Custom Calendar & Time Selection */}
+            {/* STEP 1: Custom Calendar & Time Selection (Cal.com Style) */}
             {step === 1 && (
-              <div className="spa-animate-in h-full flex flex-col" style={{ opacity: 0 }}>
-                <button onClick={() => setStep(0)} className="self-start flex items-center gap-1 text-sm text-primary/60 hover:text-primary mb-6 transition-colors">
-                  <ChevronLeft size={16} /> Back
-                </button>
-                <div className="mb-6">
-                  <h3 className="font-display text-2xl text-primary tracking-tight mb-2">Select a Time</h3>
-                  <p className="text-primary/60 text-sm">Pick a 15-minute slot that works for you.</p>
+              <div className="spa-animate-in h-full flex flex-col md:flex-row bg-white rounded-2xl w-full text-left" style={{ opacity: 0 }}>
+                {/* Left Sidebar (Event Details) */}
+                <div className="md:w-[280px] p-6 md:p-8 md:border-r border-b md:border-b-0 border-primary/10">
+                  <button onClick={() => setStep(0)} className="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary/60 hover:text-primary hover:bg-primary/5 transition-colors mb-6">
+                    <ChevronLeft size={20} />
+                  </button>
+                  
+                  <div className="flex flex-col gap-4">
+                    <div className="w-12 h-12 rounded-full bg-[#1E2738] text-white flex items-center justify-center text-xl font-bold shadow-sm">
+                      K
+                    </div>
+                    <p className="text-primary/60 font-semibold text-sm">Katie Long NP-C ~ Board Certified</p>
+                    <h3 className="font-display text-2xl text-primary tracking-tight font-bold">$47 Clarity Session</h3>
+                    
+                    <div className="flex flex-col gap-3 mt-2 text-primary/70 font-medium text-sm">
+                      <div className="flex items-center gap-3"><Clock size={16} /> 15m</div>
+                      <div className="flex items-center gap-3"><Video size={16} /> Google Meet</div>
+                      <div className="flex items-center gap-3"><Globe2 size={16} /> {Intl.DateTimeFormat().resolvedOptions().timeZone}</div>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row gap-8 lg:gap-12 flex-1">
-                  <div className="flex justify-center md:justify-start pt-2">
+                {/* Right Content (Calendar + Times) */}
+                <div className="flex-1 p-6 md:p-8 flex flex-col lg:flex-row gap-8">
+                  <div className="flex-1 flex justify-center lg:justify-start">
                     <DayPicker
                       mode="single"
                       selected={selectedDate || undefined}
@@ -255,15 +269,24 @@ export default function BookingVariantA({
                         }
                       ]}
                       className="border-none bg-transparent"
+                      modifiers={{
+                        hasSlots: (date) => {
+                          const dateStr = new Date(date.getTime() - (date.getTimezoneOffset() * 60000)).toISOString().split('T')[0];
+                          return !!calSlots[dateStr] && calSlots[dateStr].length > 0;
+                        }
+                      }}
+                      modifiersClassNames={{
+                        hasSlots: 'has-slots'
+                      }}
                     />
                   </div>
 
-                  <div className="flex-1 flex flex-col md:max-w-[280px]">
-                    <div className="flex-1">
+                  <div className="w-full lg:w-[220px]">
+                    <div className="h-full flex flex-col">
                       {selectedDate ? (
                         <div className="space-y-4">
-                          <p className="text-sm font-semibold text-primary mb-2">
-                            {selectedDate.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}
+                          <p className="text-base font-semibold text-primary mb-2 flex items-center">
+                            {selectedDate.toLocaleDateString('en-US', { weekday: 'short', day: 'numeric' })}
                           </p>
                           {availableTimes.length > 0 ? (
                             <div className="flex flex-col gap-2 max-h-[350px] overflow-y-auto pr-2 custom-scrollbar">
@@ -271,13 +294,16 @@ export default function BookingVariantA({
                                 <div key={time} className="flex gap-2 w-full transition-all">
                                   <button
                                     onClick={() => handleTimeSelect(time)}
-                                    className={`py-3 px-4 rounded-md font-medium text-sm transition-all flex-1 ${
+                                    className={`py-3 px-4 rounded-md font-medium text-sm transition-all flex-1 border ${
                                       selectedTime === time 
-                                        ? 'bg-gray-600 text-white border-gray-600 shadow-inner' 
-                                        : 'bg-white border border-primary/20 text-primary hover:border-primary hover:border-2 hover:-m-[1px]'
+                                        ? 'bg-[#1E2738] text-white border-[#1E2738] shadow-inner' 
+                                        : 'bg-white border-primary/20 text-primary hover:border-primary'
                                     }`}
                                   >
-                                    {time}
+                                    <div className="flex items-center justify-center gap-2">
+                                      <span className={`w-1.5 h-1.5 rounded-full ${selectedTime === time ? 'bg-white' : 'bg-green-500'}`}></span>
+                                      <span>{time}</span>
+                                    </div>
                                   </button>
                                   {selectedTime === time && (
                                     <button
@@ -302,97 +328,85 @@ export default function BookingVariantA({
                         </div>
                       )}
                     </div>
-                    {/* The Continue button is removed, moved inline next to time slot */}
                   </div>
                 </div>
               </div>
             )}
 
-            {/* STEP 2: Intake Details */}
+            {/* STEP 2: Intake Details (Cal.com Style) */}
             {step === 2 && (
-              <div className="spa-animate-in h-full flex flex-col max-w-md mx-auto w-full" style={{ opacity: 0 }}>
-                <button onClick={() => setStep(1)} className="self-start flex items-center gap-1 text-sm text-primary/60 hover:text-primary mb-6 transition-colors">
-                  <ChevronLeft size={16} /> Back
-                </button>
-                <div className="mb-8 text-center">
-                  <h3 className="font-display text-2xl text-primary tracking-tight mb-2">Your Details</h3>
-                  <p className="text-primary/60 text-sm">Almost there! We just need a few details to finalize your booking.</p>
-                </div>
+              <div className="spa-animate-in h-full flex flex-col bg-white rounded-2xl w-full text-left" style={{ opacity: 0 }}>
+                <div className="p-6 md:p-8 flex-1 flex flex-col">
+                  <button onClick={() => setStep(1)} className="self-start flex items-center gap-1 text-sm font-semibold text-primary hover:text-primary/70 mb-6 transition-colors">
+                    <ChevronLeft size={18} /> Back
+                  </button>
+                  
+                  <h3 className="text-2xl font-bold text-primary tracking-tight mb-6">Confirm your details</h3>
+                  
+                  <div className="flex flex-wrap gap-2 mb-8">
+                    <div className="px-3 py-1.5 rounded-full border border-primary/10 bg-primary/[0.02] text-sm font-medium text-primary flex items-center gap-2">
+                      <CalendarDays size={14} className="text-primary/60" />
+                      {selectedDate?.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}, {selectedTime}
+                    </div>
+                    <div className="px-3 py-1.5 rounded-full border border-primary/10 bg-primary/[0.02] text-sm font-medium text-primary flex items-center gap-2">
+                      <Clock size={14} className="text-primary/60" />
+                      15m
+                    </div>
+                  </div>
 
-                <div className="space-y-5 flex-1">
-                  <div>
-                    <label className="block text-sm font-semibold text-primary mb-2">Full Name</label>
-                    <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
-                        <User size={18} className="text-primary/40" />
-                      </div>
+                  <div className="space-y-6 flex-1 max-w-lg">
+                    <div>
+                      <label className="block text-sm font-bold text-primary mb-2">Full Name *</label>
                       <input
                         type="text"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full pl-10 pr-4 py-3.5 rounded-xl border border-primary/15 bg-white text-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
-                        placeholder="Jane Doe"
+                        className="w-full px-4 py-3 rounded-xl border border-primary/20 bg-white text-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all font-medium"
                       />
                     </div>
-                  </div>
 
-                  <div>
-                    <label className="block text-sm font-semibold text-primary mb-2">Email Address</label>
-                    <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
-                        <Mail size={18} className="text-primary/40" />
-                      </div>
+                    <div>
+                      <label className="block text-sm font-bold text-primary mb-2">Email address *</label>
                       <input
                         type="email"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full pl-10 pr-4 py-3.5 rounded-xl border border-primary/15 bg-white text-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
-                        placeholder="jane@example.com"
+                        className="w-full px-4 py-3 rounded-xl border border-primary/20 bg-white text-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all font-medium"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-bold text-primary mb-2">What is your #1 health goal? <span className="text-primary/40 font-normal">(Optional)</span></label>
+                      <textarea
+                        value={formData.goal}
+                        onChange={(e) => setFormData({ ...formData, goal: e.target.value })}
+                        className="w-full px-4 py-3 rounded-xl border border-primary/20 bg-white text-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all font-medium min-h-[100px] resize-none"
+                        placeholder="Tell us what you're looking to achieve..."
                       />
                     </div>
                   </div>
                   
-                  <div>
-                    <label className="block text-sm font-semibold text-primary mb-2">What is your primary health goal right now?</label>
-                    <div className="relative">
-                      <div className="absolute top-3.5 left-3.5 pointer-events-none">
-                        <MessageSquare size={18} className="text-primary/40" />
-                      </div>
-                      <textarea
-                        value={formData.goal}
-                        onChange={(e) => setFormData({ ...formData, goal: e.target.value })}
-                        rows={3}
-                        className="w-full pl-10 pr-4 py-3.5 rounded-xl border border-primary/15 bg-white text-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all resize-none"
-                        placeholder="E.g., I want to figure out why I'm always exhausted..."
-                      />
+                  <div className="mt-8 pt-6 border-t border-primary/10 flex items-center justify-between gap-4">
+                    <p className="text-xs text-primary/50 max-w-[250px]">
+                      By proceeding, you agree to the $47 session fee and our terms.
+                    </p>
+                    <div className="flex gap-3">
+                      <button onClick={() => setStep(1)} className="px-5 py-2.5 rounded-full font-semibold text-primary hover:bg-primary/5 transition-colors text-sm">
+                        Back
+                      </button>
+                      <button
+                        onClick={submitBooking}
+                        disabled={!isFormValid}
+                        className={`px-6 py-2.5 rounded-full font-semibold text-sm transition-all ${
+                          isFormValid
+                            ? 'bg-[#1E2738] text-white hover:bg-primary/90 shadow-md'
+                            : 'bg-primary/10 text-primary/40 cursor-not-allowed'
+                        }`}
+                      >
+                        Continue to Payment
+                      </button>
                     </div>
                   </div>
-                </div>
-
-                <div className="mt-8 pt-6 border-t border-primary/10">
-                  <div className="bg-primary/5 rounded-xl p-4 mb-6 flex items-start gap-3">
-                    <div className="mt-0.5">
-                      <CalendarDays size={18} className="text-primary/70" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-primary">Session Details</p>
-                      <p className="text-xs text-primary/70 mt-1">
-                        {selectedDate?.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })} at {selectedTime}
-                      </p>
-                    </div>
-                  </div>
-
-                  <button
-                    onClick={() => setStep(3)}
-                    disabled={!isFormValid}
-                    className={`w-full flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-semibold transition-all ${
-                      isFormValid
-                        ? 'bg-primary text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5'
-                        : 'bg-primary/10 text-primary/40 cursor-not-allowed'
-                    }`}
-                  >
-                    Continue to Payment
-                  </button>
                 </div>
               </div>
             )}

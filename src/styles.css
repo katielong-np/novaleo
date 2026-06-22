@@ -195,3 +195,50 @@
 #nprogress .peg {
   box-shadow: 0 0 10px var(--color-gold), 0 0 5px var(--color-gold) !important;
 }
+
+/* Custom React Day Picker (Cal.com Style) */
+.rdp {
+  --rdp-cell-size: 44px;
+  --rdp-accent-color: var(--color-primary);
+  --rdp-background-color: transparent;
+  margin: 0 !important;
+}
+
+.rdp-day_selected, .rdp-day_selected:focus-visible, .rdp-day_selected:hover {
+  color: white !important;
+  background-color: var(--rdp-accent-color) !important;
+  font-weight: 600;
+}
+
+.rdp-day {
+  position: relative;
+  border-radius: 8px !important;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.rdp-day:not(.rdp-day_selected):hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.rdp-day.has-slots:not(.rdp-day_selected)::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-primary);
+  opacity: 0.5;
+  border-radius: 50%;
+}
+
+.rdp-head_cell {
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-primary);
+  opacity: 0.6;
+  padding-bottom: 12px;
+}
