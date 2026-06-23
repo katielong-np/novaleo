@@ -46,7 +46,7 @@ export default function BookingVariantA({
   const reviews = [
     { text: "Katie genuinely listens. For the first time in years, I feel heard and I'm finally seeing results with my fatigue and weight.", name: "Sarah M." },
     { text: "A life-changing experience! Katie helped me balance my hormones when everyone else said my labs were 'normal'.", name: "Jessica R." },
-    { text: "She's not playing whack-a-mole with my symptoms — we're actually getting to the root of it. I may have menopause, but it doesn't have me.", name: "Terri V." }
+    { text: "She's not playing whack-a-mole with my symptoms - we're actually getting to the root of it. I may have menopause, but it doesn't have me.", name: "Terri V." }
   ];
 
   useEffect(() => {
@@ -190,14 +190,14 @@ export default function BookingVariantA({
                           ))}
                         </ul>
                         <p className="text-sm text-primary/80 font-medium leading-relaxed">
-                          If you're nodding, that's not in your head — and it's not your fault. Let's figure out what's actually going on.
+                          If you're nodding, that's not in your head - and it's not your fault. Let's figure out what's actually going on.
                         </p>
                       </div>
 
                       {/* 3. Light reassurance */}
                       <div className="w-full text-left mb-6 px-4">
                         <p className="text-sm text-primary/80 leading-relaxed font-sans mb-2">
-                          You're tired in a way sleep doesn't fix. The weight won't move. Some days you don't feel like yourself anymore — and every time you bring it up, you hear "your labs are normal."
+                          You're tired in a way sleep doesn't fix. The weight won't move. Some days you don't feel like yourself anymore - and every time you bring it up, you hear "your labs are normal."
                         </p>
                         <p className="text-sm text-primary/80 leading-relaxed font-sans font-medium">
                           There's usually a reason.
@@ -226,7 +226,7 @@ export default function BookingVariantA({
                           </div>
                           
                           <p className="text-sm text-primary/80 leading-relaxed font-sans mt-1 sm:mt-2">
-                            I'm Katie Long, NP-C, and I help women in Michigan and Wisconsin find what standard labs miss — across hormones, perimenopause, metabolism, and energy. Real answers, built around your body.
+                            I'm Katie Long, NP-C, and I help women in Michigan and Wisconsin find what standard labs miss - across hormones, perimenopause, metabolism, and energy. Real answers, built around your body.
                           </p>
                         </div>
                       </div>
@@ -267,14 +267,16 @@ export default function BookingVariantA({
                       </div>
 
                       {/* 6. Button */}
-                      <button
-                        onClick={() => setStep(1)}
-                        className="group relative w-full flex items-center justify-center gap-2.5 py-4 px-6 bg-primary text-white rounded-2xl font-semibold font-sans shadow-xl shadow-primary/20 transition-all hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0 border border-white/10 overflow-hidden"
-                      >
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
-                        <CalendarDays size={20} className="text-[#F0D060] relative z-10" />
-                        <span className="text-[15px] tracking-wide relative z-10">Book Your Free 15-Min Discovery Call</span>
-                      </button>
+                      <div className="sticky bottom-0 z-30 w-full pt-4 pb-2 mt-auto" style={{ background: 'linear-gradient(to top, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%)' }}>
+                        <button
+                          onClick={() => setStep(1)}
+                          className="group relative w-full flex items-center justify-center gap-2.5 py-4 px-6 bg-primary text-white rounded-2xl font-semibold font-sans shadow-xl shadow-primary/20 transition-all hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0 border border-white/10 overflow-hidden"
+                        >
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
+                          <CalendarDays size={20} className="text-[#F0D060] relative z-10" />
+                          <span className="text-[15px] tracking-wide relative z-10">Book Your Free 15-Min Discovery Call</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 )}
