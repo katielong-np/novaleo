@@ -124,9 +124,9 @@ function Conditions() {
           <p className="mt-4 text-primary/80 max-w-xl mx-auto">
             We'll tell you honestly whether functional medicine is the right path for your case.
           </p>
-          <button onClick={openBooking} className="btn-primary mt-7 inline-flex">
+          <Link to="/free-15-min-call-with-katie"  className="btn-primary mt-7 inline-flex">
             Book Free 15-Min Call
-          </button>
+          </Link>
         </div>
       </section>
     </>

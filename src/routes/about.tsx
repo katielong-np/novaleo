@@ -150,9 +150,9 @@ function About() {
             A relaxed, judgment-free 15-minute Google Meet call with Kathryn. Zero cost, zero
             pressure.
           </p>
-          <button onClick={openBooking} className="btn-gold mt-7 inline-flex">
+          <Link to="/free-15-min-call-with-katie"  className="btn-gold mt-7 inline-flex">
             Book Free 15-Min Call
-          </button>
+          </Link>
         </div>
       </section>
     </>

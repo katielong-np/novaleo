@@ -121,9 +121,9 @@ function Home() {
               cause.
             </p>
             <div className="mt-6 md:mt-9 flex flex-wrap gap-3">
-              <button onClick={openBooking} className="btn-gold">
+              <Link to="/free-15-min-call-with-katie"  className="btn-gold">
                 Book Free 15-Min Call <ArrowRight className="ml-2 h-4 w-4" />
-              </button>
+              </Link>
               <Link to="/approach" className="btn-ghost">
                 How it works
               </Link>
@@ -311,9 +311,9 @@ function Home() {
           </CarouselContent>
         </Carousel>
         <div className="mt-12 flex justify-center">
-          <button onClick={openBooking} className="btn-primary">
+          <Link to="/free-15-min-call-with-katie"  className="btn-primary">
             Book Free 15-Min Call
-          </button>
+          </Link>
         </div>
       </section>
 
@@ -367,9 +367,9 @@ function Home() {
             ))}
           </div>
           <div className="mt-12 flex flex-wrap gap-3">
-            <button onClick={openBooking} className="btn-gold">
+            <Link to="/free-15-min-call-with-katie"  className="btn-gold">
               Book Free 15-Min Call
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -438,9 +438,9 @@ function Home() {
           want to talk first or dive straight in, I'm here for you.
         </p>
         <div className="mt-8 flex justify-center gap-3 flex-wrap">
-          <button onClick={openBooking} className="btn-gold">
+          <Link to="/free-15-min-call-with-katie"  className="btn-gold">
             Book Free 15-Min Call
-          </button>
+          </Link>
           <Link to="/scheduler" className="btn-ghost">
             Book $97 Root-Cause Intake
           </Link>

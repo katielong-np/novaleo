@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import { useBookingModal } from "@/components/BookingModalContext";
 import {
   Accordion,
@@ -44,12 +44,12 @@ function Contact() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <button
-              onClick={openBooking}
+            <Link to="/free-15-min-call-with-katie"
+              
               className="btn-gold"
             >
               Book Free 15-Min Call
-            </button>
+            </Link>
             <a
               href="https://www.optimantra.com/optimus/patient/patientaccess/practsNslots?sid=OFREc0ROeWQyL0kvdE9OaU5GRlVOQT09&pid=ZW1nazRycGdvZWxwQjA2eEpiOE5kQT09&lid=UlNxTzY0a0dyR1hJNGJsSkR2NDF5UT09"
               target="_blank"

@@ -140,9 +140,9 @@ function Services() {
               </p>
             )}
             {p.cta === "Book Free 15-Min Call" ? (
-              <button onClick={openBooking} className="btn-gold mt-8 self-start text-sm">
+              <Link to="/free-15-min-call-with-katie"  className="btn-gold mt-8 self-start text-sm">
                 {p.cta}
-              </button>
+              </Link>
             ) : (
               <Link to="/contact" className="btn-gold mt-8 self-start text-sm">
                 {p.cta}
@@ -225,9 +225,9 @@ function Services() {
             intro="A relaxed 15-minute conversation to help you decide what makes sense  even if it isn't with us. Michigan and Wisconsin only."
           />
           <div className="mt-8 flex justify-center">
-            <button onClick={openBooking} className="btn-gold">
+            <Link to="/free-15-min-call-with-katie"  className="btn-gold">
               Book Free 15-Min Call
-            </button>
+            </Link>
           </div>
         </div>
       </section>

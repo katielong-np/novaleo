@@ -45,9 +45,9 @@ export function SiteHeader() {
             <Phone className="h-4 w-4" />
             1-616-801-4648
           </a>
-          <button onClick={openBooking} className="btn-gold text-sm">
+          <Link to="/free-15-min-call-with-katie"  className="btn-gold text-sm">
             Book Free 15-Min Call
-          </button>
+          </Link>
         </div>
         <button
           aria-label="Toggle menu"
@@ -78,9 +78,9 @@ export function SiteHeader() {
             >
               <Phone className="h-4 w-4" /> 1-616-801-4648
             </a>
-            <button onClick={() => { setOpen(false); openBooking(); }} className="btn-gold text-sm w-fit">
+            <Link to="/free-15-min-call-with-katie" onClick={() => setOpen(false)}} className="btn-gold text-sm w-fit">
               Book Free 15-Min Call
-            </button>
+            </Link>
           </div>
         </div>
       )}
