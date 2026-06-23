@@ -168,8 +168,25 @@ export default function BookingVariantA({
               {step === 0 && (
                 <div className="spa-animate-in" style={{ opacity: 0 }}>
                   <div className="flex flex-col items-center text-center pb-4 max-w-lg mx-auto">
+                      <div className="relative mb-5 mt-2 inline-block">
+                        <img 
+                          src={kathrynImage} 
+                          alt="Kathryn Long, NP-C" 
+                          className="w-28 h-28 rounded-full border-[3px] border-white object-cover shadow-lg" 
+                        />
+                        <div className="absolute bottom-1.5 right-1.5 bg-white rounded-full shadow-sm" style={{ padding: '1px' }}>
+                          <BadgeCheck className="w-6 h-6 text-[#0095F6]" fill="currentColor" stroke="white" strokeWidth={1.5} />
+                        </div>
+                      </div>
+                      
+                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 mb-4">
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-primary/70 font-sans">
+                          Taking New Patients
+                        </span>
+                      </div>
+
                       {/* 1. Headline */}
-                      <h3 className="font-display text-2xl text-primary mb-6 tracking-tight font-normal leading-tight px-2 mt-2">
+                      <h3 className="font-display text-2xl text-primary mb-6 tracking-tight font-normal leading-tight px-2">
                         Feeling Off, and No One Can Explain It? Let's Find What's Being Missed.
                       </h3>
 
@@ -205,30 +222,10 @@ export default function BookingVariantA({
                       </div>
 
                       {/* 4. Who you are */}
-                      <div className="w-full mb-8 px-4 pt-6 border-t border-primary/10">
-                        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left">
-                          <div className="shrink-0 flex flex-col items-center">
-                            <div className="relative mb-2 inline-block">
-                              <img 
-                                src={kathrynImage} 
-                                alt="Kathryn Long, NP-C" 
-                                className="w-20 h-20 rounded-full border-[3px] border-white object-cover shadow-lg" 
-                              />
-                              <div className="absolute bottom-0 right-0 bg-white rounded-full shadow-sm" style={{ padding: '1px' }}>
-                                <BadgeCheck className="w-5 h-5 text-[#0095F6]" fill="currentColor" stroke="white" strokeWidth={1.5} />
-                              </div>
-                            </div>
-                            <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary/5 border border-primary/10">
-                              <span className="text-[9px] font-bold uppercase tracking-widest text-primary/70 font-sans">
-                                Taking New Patients
-                              </span>
-                            </div>
-                          </div>
-                          
-                          <p className="text-sm text-primary/80 leading-relaxed font-sans mt-1 sm:mt-2">
-                            I'm Katie Long, NP-C, and I help women in Michigan and Wisconsin find what standard labs miss - across hormones, perimenopause, metabolism, and energy. Real answers, built around your body.
-                          </p>
-                        </div>
+                      <div className="w-full mb-8 px-4 pt-6 border-t border-primary/10 text-left">
+                        <p className="text-sm text-primary/80 leading-relaxed font-sans">
+                          I'm Katie Long, NP-C, and I help women in Michigan and Wisconsin find what standard labs miss - across hormones, perimenopause, metabolism, and energy. Real answers, built around your body.
+                        </p>
                       </div>
 
                       {/* 5. Proof */}
