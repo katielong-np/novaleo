@@ -155,7 +155,7 @@ export default function BookingVariantA({
 
         <div className="flex flex-col flex-1 min-h-0 md:min-h-[520px]">
           {/* Booking form panel */}
-          <div className={`flex-1 min-h-0 relative flex flex-col ${step === 0 ? 'overflow-y-auto overflow-x-hidden bg-white/60 backdrop-blur-xl px-6 py-8 md:px-10 md:py-10 lg:px-12' : 'overflow-hidden bg-white p-0'}`}>
+          <div className={`flex-1 min-h-0 relative flex flex-col ${step === 0 ? `overflow-y-auto overflow-x-hidden ${isMichiganPage ? 'bg-white px-4 pt-4 pb-8 md:px-10 md:py-10' : 'bg-white/60 backdrop-blur-xl px-6 py-8 md:px-10 md:py-10 lg:px-12'}` : 'overflow-hidden bg-white p-0'}`}>
             {/* Subtle glass texture - only on state gate step */}
             {step === 0 && (
               <div
