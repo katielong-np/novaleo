@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SchedulerRouteImport } from './routes/scheduler'
+import { Route as MichiganDiscoveryCallRouteImport } from './routes/michigan-discovery-call'
 import { Route as Free15MinCallWithKatieRouteImport } from './routes/free-15-min-call-with-katie'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ConditionsRouteImport } from './routes/conditions'
@@ -33,6 +34,11 @@ const ServicesRoute = ServicesRouteImport.update({
 const SchedulerRoute = SchedulerRouteImport.update({
   id: '/scheduler',
   path: '/scheduler',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MichiganDiscoveryCallRoute = MichiganDiscoveryCallRouteImport.update({
+  id: '/michigan-discovery-call',
+  path: '/michigan-discovery-call',
   getParentRoute: () => rootRouteImport,
 } as any)
 const Free15MinCallWithKatieRoute = Free15MinCallWithKatieRouteImport.update({
@@ -79,6 +85,7 @@ export interface FileRoutesByFullPath {
   '/conditions': typeof ConditionsRoute
   '/contact': typeof ContactRoute
   '/free-15-min-call-with-katie': typeof Free15MinCallWithKatieRoute
+  '/michigan-discovery-call': typeof MichiganDiscoveryCallRoute
   '/scheduler': typeof SchedulerRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -91,6 +98,7 @@ export interface FileRoutesByTo {
   '/conditions': typeof ConditionsRoute
   '/contact': typeof ContactRoute
   '/free-15-min-call-with-katie': typeof Free15MinCallWithKatieRoute
+  '/michigan-discovery-call': typeof MichiganDiscoveryCallRoute
   '/scheduler': typeof SchedulerRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -104,6 +112,7 @@ export interface FileRoutesById {
   '/conditions': typeof ConditionsRoute
   '/contact': typeof ContactRoute
   '/free-15-min-call-with-katie': typeof Free15MinCallWithKatieRoute
+  '/michigan-discovery-call': typeof MichiganDiscoveryCallRoute
   '/scheduler': typeof SchedulerRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -118,6 +127,7 @@ export interface FileRouteTypes {
     | '/conditions'
     | '/contact'
     | '/free-15-min-call-with-katie'
+    | '/michigan-discovery-call'
     | '/scheduler'
     | '/services'
     | '/sitemap.xml'
@@ -130,6 +140,7 @@ export interface FileRouteTypes {
     | '/conditions'
     | '/contact'
     | '/free-15-min-call-with-katie'
+    | '/michigan-discovery-call'
     | '/scheduler'
     | '/services'
     | '/sitemap.xml'
@@ -142,6 +153,7 @@ export interface FileRouteTypes {
     | '/conditions'
     | '/contact'
     | '/free-15-min-call-with-katie'
+    | '/michigan-discovery-call'
     | '/scheduler'
     | '/services'
     | '/sitemap.xml'
@@ -155,6 +167,7 @@ export interface RootRouteChildren {
   ConditionsRoute: typeof ConditionsRoute
   ContactRoute: typeof ContactRoute
   Free15MinCallWithKatieRoute: typeof Free15MinCallWithKatieRoute
+  MichiganDiscoveryCallRoute: typeof MichiganDiscoveryCallRoute
   SchedulerRoute: typeof SchedulerRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -181,6 +194,13 @@ declare module '@tanstack/react-router' {
       path: '/scheduler'
       fullPath: '/scheduler'
       preLoaderRoute: typeof SchedulerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/michigan-discovery-call': {
+      id: '/michigan-discovery-call'
+      path: '/michigan-discovery-call'
+      fullPath: '/michigan-discovery-call'
+      preLoaderRoute: typeof MichiganDiscoveryCallRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/free-15-min-call-with-katie': {
@@ -243,6 +263,7 @@ const rootRouteChildren: RootRouteChildren = {
   ConditionsRoute: ConditionsRoute,
   ContactRoute: ContactRoute,
   Free15MinCallWithKatieRoute: Free15MinCallWithKatieRoute,
+  MichiganDiscoveryCallRoute: MichiganDiscoveryCallRoute,
   SchedulerRoute: SchedulerRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,

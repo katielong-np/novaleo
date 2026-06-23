@@ -7,7 +7,7 @@ import BookingVariantA from './BookingVariantA';
 export function BookingModal() {
   const { isOpen, close } = useBookingModal();
   const routerState = useRouterState();
-  const isDiscoveryPage = routerState.location.pathname.includes('/free-15-min-call-with-katie');
+  const isDiscoveryPage = routerState.location.pathname.includes('/free-15-min-call-with-katie') || routerState.location.pathname.includes('/michigan-discovery-call');
   const [step, setStep] = useState(0);
   const [selectedDate, setSelectedDate] = useState<any>(null);
   const [selectedTime, setSelectedTime] = useState<any>(null);
