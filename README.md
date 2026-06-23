@@ -68,6 +68,7 @@ npm run build
     - Includes tightened mobile-specific padding above the clinician headshot to maximize above-the-fold real estate.
     - Includes a secondary CTA button below the testimonials to capture conversions without requiring users to scroll back up.
     - Features condensed, punchy intro copy modeled directly after the ad creative to reinforce message-match and improve speed-to-book.
+    - Hides the global site header and footer on the dedicated clarity page to minimize distractions and keep the user focused entirely on the booking funnel.
 - **UI Enhancements**: Consistent pointer interactions, standardized branding colours, and a personalized clinician avatar with active availability indicators.
   - Buttons across the site feature subtle, elegant box shadows and smooth lift animations on hover.
   - Social media links in the footer have been updated to reflect the `katielong.np` handles across TikTok, Facebook, and Instagram.
