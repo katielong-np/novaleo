@@ -128,9 +128,9 @@ export function SiteFooter() {
             <li>Mon – Fri · 7 AM – 6 PM</li>
 
             <li>
-              <button onClick={openBooking} className="hover:text-gold text-left">
+              <Link to="/free-15-min-call-with-katie" className="hover:text-gold text-left">
                 Book Free 15-Min Call
-              </button>
+              </Link>
             </li>
           </ul>
         </div>
