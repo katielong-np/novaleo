@@ -46,7 +46,7 @@ export default function BookingVariantA({
   const reviews = [
     { text: "Katie genuinely listens. For the first time in years, I feel heard and I'm finally seeing results with my fatigue and weight.", name: "Sarah M." },
     { text: "A life-changing experience! Katie helped me balance my hormones when everyone else said my labs were 'normal'.", name: "Jessica R." },
-    { text: "Professional, deeply knowledgeable, and incredibly compassionate. I finally have my energy back and feel like myself again!", name: "Emily T." }
+    { text: "She's not playing whack-a-mole with my symptoms — we're actually getting to the root of it. I may have menopause, but it doesn't have me.", name: "Terri V." }
   ];
 
   useEffect(() => {
@@ -168,41 +168,71 @@ export default function BookingVariantA({
               {step === 0 && (
                 <div className="spa-animate-in" style={{ opacity: 0 }}>
                   <div className="flex flex-col items-center text-center pb-4 max-w-lg mx-auto">
-                    <div className="relative mb-5 mt-2 inline-block">
-                        <img 
-                          src={kathrynImage} 
-                          alt="Kathryn Long, NP-C" 
-                          className="w-28 h-28 rounded-full border-[3px] border-white object-cover shadow-lg" 
-                        />
-                        <div className="absolute bottom-1.5 right-1.5 bg-white rounded-full shadow-sm" style={{ padding: '1px' }}>
-                          <BadgeCheck className="w-6 h-6 text-[#0095F6]" fill="currentColor" stroke="white" strokeWidth={1.5} />
+                      {/* 1. Headline */}
+                      <h3 className="font-display text-2xl text-primary mb-6 tracking-tight font-normal leading-tight px-2 mt-2">
+                        Feeling Off, and No One Can Explain It? Let's Find What's Being Missed.
+                      </h3>
+
+                      {/* 2. Her Symptoms */}
+                      <div className="w-full text-left mb-6 px-4">
+                        <p className="text-sm font-bold text-primary mb-3">Does this sound like you?</p>
+                        <ul className="space-y-2 mb-4">
+                          {[
+                            "Can't keep up with the kids the way you used to",
+                            "Running on empty by the time work's done",
+                            "Look in the mirror and don't quite recognize yourself",
+                            "Quietly avoiding photos",
+                          ].map((item, idx) => (
+                            <li key={idx} className="flex gap-2 items-start text-sm text-primary/80">
+                              <span className="text-[#D4AF37] mt-0.5 font-bold shrink-0">✓</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <p className="text-sm text-primary/80 font-medium leading-relaxed">
+                          If you're nodding, that's not in your head — and it's not your fault. Let's figure out what's actually going on.
+                        </p>
+                      </div>
+
+                      {/* 3. Light reassurance */}
+                      <div className="w-full text-left mb-6 px-4">
+                        <p className="text-sm text-primary/80 leading-relaxed font-sans mb-2">
+                          You're tired in a way sleep doesn't fix. The weight won't move. Some days you don't feel like yourself anymore — and every time you bring it up, you hear "your labs are normal."
+                        </p>
+                        <p className="text-sm text-primary/80 leading-relaxed font-sans font-medium">
+                          There's usually a reason.
+                        </p>
+                      </div>
+
+                      {/* 4. Who you are */}
+                      <div className="w-full mb-8 px-4 pt-6 border-t border-primary/10">
+                        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left">
+                          <div className="shrink-0 flex flex-col items-center">
+                            <div className="relative mb-2 inline-block">
+                              <img 
+                                src={kathrynImage} 
+                                alt="Kathryn Long, NP-C" 
+                                className="w-20 h-20 rounded-full border-[3px] border-white object-cover shadow-lg" 
+                              />
+                              <div className="absolute bottom-0 right-0 bg-white rounded-full shadow-sm" style={{ padding: '1px' }}>
+                                <BadgeCheck className="w-5 h-5 text-[#0095F6]" fill="currentColor" stroke="white" strokeWidth={1.5} />
+                              </div>
+                            </div>
+                            <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary/5 border border-primary/10">
+                              <span className="text-[9px] font-bold uppercase tracking-widest text-primary/70 font-sans">
+                                Taking New Patients
+                              </span>
+                            </div>
+                          </div>
+                          
+                          <p className="text-sm text-primary/80 leading-relaxed font-sans mt-1 sm:mt-2">
+                            I'm Katie Long, NP-C, and I help women in Michigan and Wisconsin find what standard labs miss — across hormones, perimenopause, metabolism, and energy. Real answers, built around your body.
+                          </p>
                         </div>
                       </div>
-                      
-                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 mb-4">
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-primary/70 font-sans">
-                          Taking New Patients
-                        </span>
-                      </div>
 
-                      <h3 className="font-display text-2xl text-primary mb-3 tracking-tight font-normal leading-tight">
-                        Stop Guessing. Let's Find the Root Cause of Your Symptoms
-                      </h3>
-                      
-                      <p className="text-sm text-primary/70 leading-relaxed font-sans mb-8 px-2">
-                        Hi, I'm Katie Long, NP-C! I specialize in root-cause functional medicine, women's wellness, perimenopause, and medical weight loss for patients in Michigan and Wisconsin. Let's find real solutions tailored to your body.
-                      </p>
-
-                      <button
-                        onClick={() => setStep(1)}
-                        className="group relative w-full flex items-center justify-center gap-2.5 py-4 px-6 bg-primary text-white rounded-2xl font-semibold font-sans shadow-xl shadow-primary/20 transition-all hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0 mb-8 border border-white/10 overflow-hidden"
-                      >
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
-                        <CalendarDays size={20} className="text-[#F0D060] relative z-10" />
-                        <span className="text-[15px] tracking-wide relative z-10">Book Your Free 15-Min Call</span>
-                      </button>
-
-                      <div className="w-full bg-white rounded-2xl p-6 text-left relative overflow-hidden min-h-[180px] flex items-center shadow-xl shadow-primary/5 border border-primary/[0.08]">
+                      {/* 5. Proof */}
+                      <div className="w-full bg-white rounded-2xl p-6 text-left relative overflow-hidden min-h-[180px] flex items-center shadow-xl shadow-primary/5 border border-primary/[0.08] mb-8">
                         <div className="absolute -top-6 -left-2 text-8xl text-primary/[0.03] font-serif leading-none">"</div>
                         <div 
                           key={reviewIndex} 
@@ -235,6 +265,16 @@ export default function BookingVariantA({
                           </div>
                         </div>
                       </div>
+
+                      {/* 6. Button */}
+                      <button
+                        onClick={() => setStep(1)}
+                        className="group relative w-full flex items-center justify-center gap-2.5 py-4 px-6 bg-primary text-white rounded-2xl font-semibold font-sans shadow-xl shadow-primary/20 transition-all hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0 border border-white/10 overflow-hidden"
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
+                        <CalendarDays size={20} className="text-[#F0D060] relative z-10" />
+                        <span className="text-[15px] tracking-wide relative z-10">Book Your Free 15-Min Discovery Call</span>
+                      </button>
                     </div>
                   </div>
                 )}
