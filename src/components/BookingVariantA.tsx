@@ -145,10 +145,12 @@ export default function BookingVariantA({
       `}</style>
 
       <div
-        className={`relative overflow-hidden shadow-2xl transition-all duration-700 h-full min-h-[100dvh] md:min-h-0 rounded-none md:rounded-3xl flex flex-col ${
+        className={`relative overflow-hidden transition-all duration-700 h-full min-h-[100dvh] md:min-h-0 flex flex-col ${
+          !isMichiganPage ? 'shadow-2xl rounded-none md:rounded-3xl' : ''
+        } ${
           mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
         }`}
-        style={{ animation: mounted ? 'spa-pulse-glow 6s ease-in-out infinite' : 'none' }}
+        style={{ animation: mounted && !isMichiganPage ? 'spa-pulse-glow 6s ease-in-out infinite' : 'none' }}
       >
 
         <div className="flex flex-col flex-1 min-h-0 md:min-h-[520px]">
