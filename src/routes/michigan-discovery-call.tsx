@@ -16,12 +16,6 @@ export const Route = createFileRoute('/michigan-discovery-call')({
   component: DiscoveryPage,
 });
 
-const OrganicBackground = () => (
-  <div className="fixed inset-0 overflow-hidden pointer-events-none z-[-1] bg-[#FAFAFA]">
-    <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-primary/10 rounded-full mix-blend-multiply filter blur-3xl opacity-70 blob-shape" />
-    <div className="absolute bottom-[-20%] left-[-10%] w-[700px] h-[700px] bg-primary/5 rounded-full mix-blend-multiply filter blur-3xl opacity-60 blob-shape" style={{animationDelay: '2s'}} />
-  </div>
-);
 
 function DiscoveryPage() {
   const [step, setStep] = useState(0);
@@ -44,10 +38,8 @@ function DiscoveryPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center relative p-0 md:p-8">
-      <OrganicBackground />
-      
-      <div className="w-full max-w-2xl mx-auto relative z-10 flex flex-col h-[100dvh] md:h-auto md:min-h-0">
+    <div className="min-h-screen flex flex-col items-center justify-center relative p-0 md:p-8 bg-white">
+      <div className="w-full max-w-2xl mx-auto relative z-10 flex flex-col h-[100dvh] md:h-auto md:min-h-0 bg-white">
         <BookingVariantA
           step={step}
           setStep={setStep}
