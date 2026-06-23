@@ -223,15 +223,7 @@ export default function BookingVariantA({
                         </button>
                       </div>
 
-                      {/* 3. Light reassurance */}
-                      <div className="w-full text-left mb-6 px-4">
-                        <p className="text-sm text-primary/80 leading-relaxed font-sans mb-2">
-                          You're tired in a way sleep doesn't fix. The weight won't move. Some days you don't feel like yourself anymore - and every time you bring it up, you hear "your labs are normal."
-                        </p>
-                        <p className="text-sm text-primary/80 leading-relaxed font-sans font-medium">
-                          There's usually a reason.
-                        </p>
-                      </div>
+
 
 
 
