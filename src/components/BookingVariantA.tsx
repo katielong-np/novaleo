@@ -171,7 +171,7 @@ export default function BookingVariantA({
               {step === 0 && (
                 <div className="spa-animate-in" style={{ opacity: 0 }}>
                   <div className="flex flex-col items-center text-center pb-4 max-w-lg mx-auto">
-                      <div className="relative mb-2 mt-2 inline-block">
+                      <div className="relative mb-2 mt-0 inline-block">
                         <img 
                           src={kathrynImage} 
                           alt="Kathryn Long, NP-C" 
@@ -193,7 +193,7 @@ export default function BookingVariantA({
 
                       {/* 1. Headline */}
                       <h3 className="font-display text-2xl text-primary mb-6 tracking-tight font-normal leading-tight px-2">
-                        Feeling Off, and No One Can Explain It? Let's Find What's Being Missed.
+                        Feeling Off, and No One Can Explain It?
                       </h3>
 
                       {/* 2. Her Symptoms */}

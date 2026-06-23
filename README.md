@@ -61,6 +61,7 @@ npm run build
   - **Optimized Copy & Sequence**: The pre-booking flow uses a specific sequence (Photo/Badge -> Headline -> Symptoms Checklist -> CTA -> Testimonials) perfectly mirrored from high-performing ad copy to maximize conversions and message-match.
 - **Dedicated Ad Landing Pages (`/michigan-discovery-call`)**: 
   - Special landing pages designed purely for ad traffic. Features identical high-converting components but perfectly tracks conversions using distinct Meta Pixel IDs dynamically.
+  - **Inline Native Rendering**: Decoupled from the global modal architecture, rendering the scheduling flow natively inline as an embedded landing page rather than a pop-up overlay.
 - **Dynamic Meta Pixel Tracking**:
   - Automatically initializes and tracks Facebook `PageView` and `Schedule` events natively through the React Router.
   - Conditionally fires separate pixels based on the route to prevent double-tracking and isolate campaign data.

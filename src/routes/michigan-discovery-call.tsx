@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
-import React, { useEffect } from 'react';
-import { useBookingModal } from '@/components/BookingModalContext';
+import React, { useState } from 'react';
+import BookingVariantA from '@/components/BookingVariantA';
 
 export const Route = createFileRoute('/michigan-discovery-call')({
   head: () => ({
@@ -16,44 +16,52 @@ export const Route = createFileRoute('/michigan-discovery-call')({
   component: DiscoveryPage,
 });
 
-const PageStyles = () => (
-  <style dangerouslySetInnerHTML={{__html: `
-    .blob-shape {
-      animation: float 12s ease-in-out infinite;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
-      50% { transform: translateY(-20px) scale(1.05) rotate(2deg); }
-    }
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(15px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .slide-up {
-      animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-  `}} />
-);
-
 const OrganicBackground = () => (
-  <div className="fixed inset-0 overflow-hidden pointer-events-none z-[-1]">
+  <div className="fixed inset-0 overflow-hidden pointer-events-none z-[-1] bg-[#FAFAFA]">
     <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-primary/10 rounded-full mix-blend-multiply filter blur-3xl opacity-70 blob-shape" />
     <div className="absolute bottom-[-20%] left-[-10%] w-[700px] h-[700px] bg-primary/5 rounded-full mix-blend-multiply filter blur-3xl opacity-60 blob-shape" style={{animationDelay: '2s'}} />
   </div>
 );
 
 function DiscoveryPage() {
-  const { open: openBooking } = useBookingModal();
+  const [step, setStep] = useState(0);
+  const [selectedDate, setSelectedDate] = useState<any>(null);
+  const [selectedTime, setSelectedTime] = useState<any>(null);
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', goal: '' });
 
-  useEffect(() => {
-    // Automatically open the booking modal when the user navigates to the discovery page
-    openBooking();
-  }, [openBooking]);
+  const dates = [
+    { day: 'Mon', date: '15', month: 'Jun', full: 'June 15, 2026' },
+    { day: 'Tue', date: '16', month: 'Jun', full: 'June 16, 2026' },
+    { day: 'Wed', date: '17', month: 'Jun', full: 'June 17, 2026' },
+    { day: 'Thu', date: '18', month: 'Jun', full: 'June 18, 2026' },
+    { day: 'Fri', date: '19', month: 'Jun', full: 'June 19, 2026' },
+  ];
+
+  const times = ['9:00 AM', '10:30 AM', '1:00 PM', '2:45 PM', '4:00 PM'];
+
+  const submitBooking = () => {
+    setStep(3);
+  };
 
   return (
-    <div className="min-h-[calc(100vh-6rem)] flex flex-col items-center justify-center relative p-4 md:p-6 text-center">
-      <PageStyles />
+    <div className="min-h-screen flex flex-col items-center justify-center relative p-0 md:p-8">
       <OrganicBackground />
+      
+      <div className="w-full max-w-2xl mx-auto relative z-10 flex flex-col h-[100dvh] md:h-auto md:min-h-0">
+        <BookingVariantA
+          step={step}
+          setStep={setStep}
+          selectedDate={selectedDate}
+          setSelectedDate={(d) => { setSelectedDate(d); setSelectedTime(null); }}
+          selectedTime={selectedTime}
+          setSelectedTime={setSelectedTime}
+          formData={formData}
+          setFormData={setFormData}
+          dates={dates}
+          times={times}
+          submitBooking={submitBooking}
+        />
+      </div>
     </div>
   );
 }
