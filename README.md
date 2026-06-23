@@ -59,6 +59,11 @@ npm run build
   - Features the standard Cal.com popup UI integrated seamlessly into the page.
   - **High-Converting Bio Layout**: The standard location gate has been completely replaced with a high-converting, trust-building clinician bio. This layout includes an Instagram-style verified badge and a rotating carousel of verified 5-star patient reviews.
   - **Optimized Copy & Sequence**: The pre-booking flow uses a specific sequence (Photo/Badge -> Headline -> Symptoms Checklist -> CTA -> Testimonials) perfectly mirrored from high-performing ad copy to maximize conversions and message-match.
+- **Dedicated Ad Landing Pages (`/michigan-discovery-call`)**: 
+  - Special landing pages designed purely for ad traffic. Features identical high-converting components but perfectly tracks conversions using distinct Meta Pixel IDs dynamically.
+- **Dynamic Meta Pixel Tracking**:
+  - Automatically initializes and tracks Facebook `PageView` and `Schedule` events natively through the React Router.
+  - Conditionally fires separate pixels based on the route to prevent double-tracking and isolate campaign data.
 - **Dedicated Paid Booking Flow (`/clarity-session`)**:
   - Replaces the standard Cal.com popup with a **100% Native React UI** (built with `react-day-picker` v9) for selecting dates and times.
   - **Polished Calendar UI**: Full-width responsive calendar with properly styled day cells, navy-themed selected states, availability dot indicators, and subtle hover/today highlights. Nav arrows styled as bordered icon buttons matching the site's design language.

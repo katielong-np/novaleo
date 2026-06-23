@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import Cal, { getCalApi } from "@calcom/embed-react";
 import kathrynImage from '@/assets/hero-kathryn.webp';
+import { useRouterState } from '@tanstack/react-router';
 
 
 interface BookingWidgetProps {
@@ -42,6 +43,8 @@ export default function BookingVariantA({
   const [mounted, setMounted] = useState(false);
   const [successAnim, setSuccessAnim] = useState(false);
   const [reviewIndex, setReviewIndex] = useState(0);
+  const routerState = useRouterState();
+  const isMichiganPage = routerState.location.pathname.includes('/michigan-discovery-call');
 
   const reviews = [
     { text: "Katie genuinely listens. For the first time in years, I feel heard and I'm finally seeing results with my fatigue and weight.", name: "Sarah M." },
@@ -168,7 +171,7 @@ export default function BookingVariantA({
               {step === 0 && (
                 <div className="spa-animate-in" style={{ opacity: 0 }}>
                   <div className="flex flex-col items-center text-center pb-4 max-w-lg mx-auto">
-                      <div className="relative mb-5 mt-2 inline-block">
+                      <div className="relative mb-2 mt-2 inline-block">
                         <img 
                           src={kathrynImage} 
                           alt="Kathryn Long, NP-C" 
@@ -179,10 +182,13 @@ export default function BookingVariantA({
                         </div>
                       </div>
                       
-                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 mb-4">
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-primary/70 font-sans">
-                          Katie Long NP-C Board Certified
-                        </span>
+                      <div className="flex flex-col items-center justify-center mb-5">
+                        <p className="text-base font-bold text-primary mb-2">Katie Long, NP-C</p>
+                        <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/5 border border-primary/10">
+                          <span className="text-[10px] font-bold uppercase tracking-widest text-primary/70 font-sans">
+                            Board Certified &bull; 20+ Years in Healthcare
+                          </span>
+                        </div>
                       </div>
 
                       {/* 1. Headline */}
@@ -223,9 +229,16 @@ export default function BookingVariantA({
                         </button>
                       </div>
 
-
-
-
+                      {/* Michigan specific bio block right below the button so the button stays high */}
+                      {isMichiganPage && (
+                        <div className="w-full text-left mb-8 px-4">
+                          <div className="bg-primary/[0.03] rounded-2xl p-5 border border-primary/10">
+                            <p className="text-sm text-primary/80 leading-relaxed font-sans italic">
+                              As a Board-Certified Nurse Practitioner, I saw too many women being told their exhaustion was just a "normal" part of aging. I created this practice to look past the basic labs, uncover the root causes of your fatigue, and help you finally feel like yourself again.
+                            </p>
+                          </div>
+                        </div>
+                      )}
 
                       {/* 5. Proof */}
                       <div className="w-full bg-white rounded-2xl p-6 text-left relative overflow-hidden min-h-[180px] flex items-center shadow-xl shadow-primary/5 border border-primary/[0.08] mb-8">
