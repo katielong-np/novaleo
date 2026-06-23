@@ -181,7 +181,7 @@ export default function BookingVariantA({
                       
                       <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 mb-4">
                         <span className="text-[10px] font-bold uppercase tracking-widest text-primary/70 font-sans">
-                          Taking New Patients
+                          Katie Long NP-C Board Certified
                         </span>
                       </div>
 
@@ -221,12 +221,7 @@ export default function BookingVariantA({
                         </p>
                       </div>
 
-                      {/* 4. Who you are */}
-                      <div className="w-full mb-8 px-4 pt-6 border-t border-primary/10 text-left">
-                        <p className="text-sm text-primary/80 leading-relaxed font-sans">
-                          I'm Katie Long, NP-C, and I help women in Michigan and Wisconsin find what standard labs miss - across hormones, perimenopause, metabolism, and energy. Real answers, built around your body.
-                        </p>
-                      </div>
+
 
                       {/* 5. Proof */}
                       <div className="w-full bg-white rounded-2xl p-6 text-left relative overflow-hidden min-h-[180px] flex items-center shadow-xl shadow-primary/5 border border-primary/[0.08] mb-8">
