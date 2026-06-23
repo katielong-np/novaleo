@@ -179,10 +179,10 @@ function RootComponent() {
   React.useEffect(() => {
     if (typeof window !== 'undefined' && (window as any).fbq) {
       const isMichiganPage = window.location.pathname.includes('/michigan-discovery-call');
-      const pixelId = isMichiganPage ? '3180422178824404' : '1304200011797995';
-      
-      (window as any).fbq('init', pixelId);
-      (window as any).fbq('track', 'PageView');
+      if (isMichiganPage) {
+        (window as any).fbq('init', '3180422178824404');
+        (window as any).fbq('track', 'PageView');
+      }
     }
   }, [routerState.location.pathname]);
 
