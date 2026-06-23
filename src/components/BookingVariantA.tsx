@@ -211,6 +211,18 @@ export default function BookingVariantA({
                         </p>
                       </div>
 
+                      {/* 6. Button */}
+                      <div className="w-full mb-8 px-4">
+                        <button
+                          onClick={() => setStep(1)}
+                          className="group relative w-full flex items-center justify-center gap-2.5 py-4 px-6 bg-primary text-white rounded-2xl font-semibold font-sans shadow-xl shadow-primary/20 transition-all hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0 border border-white/10 overflow-hidden"
+                        >
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
+                          <CalendarDays size={20} className="text-[#F0D060] relative z-10" />
+                          <span className="text-[15px] tracking-wide relative z-10">Book Your Free 15-Min Discovery Call</span>
+                        </button>
+                      </div>
+
                       {/* 3. Light reassurance */}
                       <div className="w-full text-left mb-6 px-4">
                         <p className="text-sm text-primary/80 leading-relaxed font-sans mb-2">
@@ -258,17 +270,7 @@ export default function BookingVariantA({
                         </div>
                       </div>
 
-                      {/* 6. Button */}
-                      <div className="sticky bottom-0 z-30 w-full pt-4 pb-2 mt-auto" style={{ background: 'linear-gradient(to top, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%)' }}>
-                        <button
-                          onClick={() => setStep(1)}
-                          className="group relative w-full flex items-center justify-center gap-2.5 py-4 px-6 bg-primary text-white rounded-2xl font-semibold font-sans shadow-xl shadow-primary/20 transition-all hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0 border border-white/10 overflow-hidden"
-                        >
-                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
-                          <CalendarDays size={20} className="text-[#F0D060] relative z-10" />
-                          <span className="text-[15px] tracking-wide relative z-10">Book Your Free 15-Min Discovery Call</span>
-                        </button>
-                      </div>
+
                     </div>
                   </div>
                 )}
