@@ -175,6 +175,8 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const routerState = useRouterState();
   const isClaritySessionPage = routerState.location.pathname.includes('/clarity-session');
+  const isMichiganPage = routerState.location.pathname.includes('/michigan-discovery-call');
+  const hideHeaderFooter = isClaritySessionPage || isMichiganPage;
 
   React.useEffect(() => {
     if (typeof window !== 'undefined' && (window as any).fbq) {
@@ -191,11 +193,11 @@ function RootComponent() {
       <BookingModalProvider>
         <div className="flex min-h-screen flex-col">
           <RouterSpinner />
-          {!isClaritySessionPage && <SiteHeader />}
+          {!hideHeaderFooter && <SiteHeader />}
           <main className="flex-1">
             <Outlet />
           </main>
-          {!isClaritySessionPage && <SiteFooter />}
+          {!hideHeaderFooter && <SiteFooter />}
         </div>
         <BookingModal />
       </BookingModalProvider>
