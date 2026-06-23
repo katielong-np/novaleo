@@ -145,17 +145,17 @@ export default function BookingVariantA({
       `}</style>
 
       <div
-        className={`relative overflow-hidden transition-all duration-700 h-full min-h-[100dvh] md:min-h-0 flex flex-col ${
-          !isMichiganPage ? 'shadow-2xl rounded-none md:rounded-3xl' : ''
+        className={`relative transition-all duration-700 flex flex-col ${
+          !isMichiganPage ? 'overflow-hidden shadow-2xl rounded-none md:rounded-3xl h-full min-h-[100dvh] md:min-h-0' : 'w-full h-full'
         } ${
           mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
         }`}
         style={{ animation: mounted && !isMichiganPage ? 'spa-pulse-glow 6s ease-in-out infinite' : 'none' }}
       >
 
-        <div className="flex flex-col flex-1 min-h-0 md:min-h-[520px]">
+        <div className={`flex flex-col ${!isMichiganPage ? 'flex-1 min-h-0 md:min-h-[520px]' : 'h-full w-full'}`}>
           {/* Booking form panel */}
-          <div className={`flex-1 min-h-0 relative flex flex-col ${step === 0 ? `overflow-y-auto overflow-x-hidden ${isMichiganPage ? 'bg-white px-4 pt-4 pb-8 md:px-10 md:py-10' : 'bg-white/60 backdrop-blur-xl px-6 py-8 md:px-10 md:py-10 lg:px-12'}` : 'overflow-hidden bg-white p-0'}`}>
+          <div className={`relative flex flex-col ${step === 0 ? `${!isMichiganPage ? 'flex-1 min-h-0 overflow-y-auto' : 'w-full h-full'} overflow-x-hidden ${isMichiganPage ? 'bg-white px-4 pt-4 pb-8 md:px-10 md:py-10' : 'bg-white/60 backdrop-blur-xl px-6 py-8 md:px-10 md:py-10 lg:px-12'}` : 'flex-1 min-h-0 overflow-hidden bg-white p-0'}`}>
             {/* Subtle glass texture - only on state gate step */}
             {step === 0 && (
               <div
