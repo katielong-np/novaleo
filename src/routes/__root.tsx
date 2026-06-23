@@ -159,20 +159,9 @@ if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '3180422178824404');
-fbq('track', 'PageView');`,
+'https://connect.facebook.net/en_US/fbevents.js');`,
           }}
         />
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=3180422178824404&ev=PageView&noscript=1"
-            alt=""
-          />
-        </noscript>
       </head>
       <body>
         {children}
@@ -186,6 +175,16 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const routerState = useRouterState();
   const isClaritySessionPage = routerState.location.pathname.includes('/clarity-session');
+
+  React.useEffect(() => {
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      const isMichiganPage = window.location.pathname.includes('/michigan-discovery-call');
+      const pixelId = isMichiganPage ? '3180422178824404' : '1304200011797995';
+      
+      (window as any).fbq('init', pixelId);
+      (window as any).fbq('track', 'PageView');
+    }
+  }, [routerState.location.pathname]);
 
   return (
     <QueryClientProvider client={queryClient}>
