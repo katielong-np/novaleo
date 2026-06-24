@@ -204,7 +204,7 @@ export default function BookingVariantA({
                         <ul className="space-y-2 mb-4">
                           {[
                             "Can't keep up with the kids the way you used to",
-                            "Running on empty by the time work's done",
+                            "Feeling completely exhausted by the time work is done",
                             "Look in the mirror and don't quite recognize yourself",
                             "Quietly avoiding photos",
                           ].map((item, idx) => (
