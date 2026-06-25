@@ -64,17 +64,21 @@ export default function BookingVariantA({
   }, []);
 
   useEffect(() => {
-    // Load GoHighLevel embed script for resizing and iframe management
-    const script = document.createElement("script");
-    script.src = "https://link.msgsndr.com/js/form_embed.js";
-    script.type = "text/javascript";
-    script.async = true;
-    document.body.appendChild(script);
+    if (step >= 1) {
+      // Load GoHighLevel embed script for resizing and iframe management only when calendar is shown
+      const script = document.createElement("script");
+      script.src = "https://link.msgsndr.com/js/form_embed.js";
+      script.type = "text/javascript";
+      script.async = true;
+      document.body.appendChild(script);
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+      return () => {
+        if (document.body.contains(script)) {
+          document.body.removeChild(script);
+        }
+      };
+    }
+  }, [step]);
 
   const allowedStates = ['Michigan', 'Wisconsin'];
   const allStates = [
@@ -280,21 +284,17 @@ export default function BookingVariantA({
                   </div>
                 )}
 
-              {/* Cal.com Embed - always mounted at full size; opacity-only transition eliminates flicker */}
-              <div 
-                className={`transition-opacity duration-300 ${
-                  step >= 1
-                    ? `relative z-10 w-full opacity-100 ${!isMichiganPage ? 'flex-1 min-h-0 flex flex-col' : ''}`
-                    : 'absolute inset-0 z-0 opacity-0 pointer-events-none'
-                }`}
-              >
-                <iframe 
-                  src="https://api.leadconnectorhq.com/widget/booking/anAnbnSPBviBP5NziJy0" 
-                  style={{ width: "100%", border: "none", overflow: "hidden", height: "100%" }} 
-                  scrolling="no" 
-                  id="anAnbnSPBviBP5NziJy0_1782397016762"
-                />
-              </div>
+              {/* GoHighLevel Embed */}
+              {step >= 1 && (
+                <div className={`relative z-10 w-full opacity-100 ${!isMichiganPage ? 'flex-1 min-h-0 flex flex-col' : ''}`}>
+                  <iframe 
+                    src="https://api.leadconnectorhq.com/widget/booking/anAnbnSPBviBP5NziJy0" 
+                    style={{ width: "100%", border: "none", overflow: "hidden", minHeight: "800px" }} 
+                    scrolling="no" 
+                    id="anAnbnSPBviBP5NziJy0_1782397016762"
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>
