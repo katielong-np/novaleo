@@ -153,7 +153,7 @@ export default function BookingVariantA({
 
         <div className={`flex flex-col ${!isMichiganPage ? 'flex-1 min-h-0 md:min-h-[520px]' : 'h-full w-full'}`}>
           {/* Booking form panel */}
-          <div className={`relative flex flex-col ${step === 0 ? `${!isMichiganPage ? 'flex-1 min-h-0 overflow-y-auto' : 'w-full h-full'} overflow-x-hidden ${isMichiganPage ? 'bg-white px-4 pt-4 pb-8 md:px-10 md:py-10' : 'bg-white/60 backdrop-blur-xl px-6 py-8 md:px-10 md:py-10 lg:px-12'}` : 'flex-1 min-h-0 overflow-hidden bg-white p-0'}`}>
+          <div className={`relative flex flex-col ${step === 0 ? `${!isMichiganPage ? 'flex-1 min-h-0 overflow-y-auto' : 'w-full h-full'} overflow-x-hidden ${isMichiganPage ? 'bg-white px-4 pt-4 pb-8 md:px-10 md:py-10' : 'bg-white/60 backdrop-blur-xl px-6 py-8 md:px-10 md:py-10 lg:px-12'}` : `${!isMichiganPage ? 'flex-1 min-h-0 overflow-hidden' : 'w-full'} bg-white p-0`}`}>
             {/* Subtle glass texture - only on state gate step */}
             {step === 0 && (
               <div
@@ -284,7 +284,7 @@ export default function BookingVariantA({
               <div 
                 className={`transition-opacity duration-300 ${
                   step >= 1
-                    ? 'relative z-10 flex-1 min-h-0 flex flex-col w-full opacity-100'
+                    ? `relative z-10 w-full opacity-100 ${!isMichiganPage ? 'flex-1 min-h-0 flex flex-col' : ''}`
                     : 'absolute inset-0 z-0 opacity-0 pointer-events-none'
                 }`}
               >

@@ -39,7 +39,7 @@ function DiscoveryPage() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-start md:justify-center relative p-0 md:p-8 bg-white">
-      <div className={`w-full max-w-2xl mx-auto relative z-10 flex flex-col ${step >= 1 ? 'h-[100dvh] md:h-auto' : 'min-h-screen md:min-h-0'} bg-white`}>
+      <div className={`w-full max-w-2xl mx-auto relative z-10 flex flex-col min-h-screen md:min-h-0 bg-white`}>
         <BookingVariantA
           step={step}
           setStep={setStep}
