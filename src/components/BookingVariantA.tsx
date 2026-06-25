@@ -6,7 +6,7 @@ import {
   CalendarDays,
   BadgeCheck
 } from 'lucide-react';
-import Cal, { getCalApi } from "@calcom/embed-react";
+
 import kathrynImage from '@/assets/hero-kathryn.webp';
 import { useRouterState } from '@tanstack/react-router';
 
@@ -64,18 +64,16 @@ export default function BookingVariantA({
   }, []);
 
   useEffect(() => {
-    (async function () {
-      const cal = await getCalApi({"namespace":"15-min"});
-      cal("ui", {"theme":"light","hideEventTypeDetails":false,"layout":"month_view"});
-      cal("on", {
-        action: "bookingSuccessful",
-        callback: (e) => {
-          if (typeof window !== 'undefined' && (window as any).fbq) {
-            (window as any).fbq('track', 'Schedule');
-          }
-        }
-      });
-    })();
+    // Load GoHighLevel embed script for resizing and iframe management
+    const script = document.createElement("script");
+    script.src = "https://link.msgsndr.com/js/form_embed.js";
+    script.type = "text/javascript";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
 
   const allowedStates = ['Michigan', 'Wisconsin'];
@@ -290,11 +288,11 @@ export default function BookingVariantA({
                     : 'absolute inset-0 z-0 opacity-0 pointer-events-none'
                 }`}
               >
-                <Cal 
-                  namespace="15-min"
-                  calLink="katie-long-np/15-min"
-                  style={{width:"100%",height:"100%",overflow:"scroll"}}
-                  config={{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"}}
+                <iframe 
+                  src="https://api.leadconnectorhq.com/widget/booking/anAnbnSPBviBP5NziJy0" 
+                  style={{ width: "100%", border: "none", overflow: "hidden", height: "100%" }} 
+                  scrolling="no" 
+                  id="anAnbnSPBviBP5NziJy0_1782397016762"
                 />
               </div>
             </div>
