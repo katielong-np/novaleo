@@ -41,6 +41,7 @@ export default function BookingVariantA({
   submitBooking,
 }: BookingWidgetProps) {
   const [mounted, setMounted] = useState(false);
+  const [calendarLoaded, setCalendarLoaded] = useState(false);
   const [successAnim, setSuccessAnim] = useState(false);
   const [reviewIndex, setReviewIndex] = useState(0);
   const routerState = useRouterState();
@@ -60,7 +61,8 @@ export default function BookingVariantA({
   }, [reviews.length]);
 
   useEffect(() => {
-    setMounted(true);
+    const timer = setTimeout(() => setMounted(true), 500);
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -144,7 +146,32 @@ export default function BookingVariantA({
         .spa-stagger-2 { animation-delay: 120ms; }
         .spa-stagger-3 { animation-delay: 200ms; }
         .spa-stagger-4 { animation-delay: 280ms; }
+        @keyframes spa-loader-spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        @keyframes spa-loader-fade-out {
+          0% { opacity: 1; }
+          100% { opacity: 0; pointer-events: none; }
+        }
       `}</style>
+
+      {/* Initial page load overlay — rendered OUTSIDE the opacity-controlled container */}
+      {isMichiganPage && !mounted && (
+        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white">
+          <div
+            style={{
+              width: 36,
+              height: 36,
+              border: '3px solid rgba(0, 0, 0, 0.1)',
+              borderTopColor: '#000',
+              borderRadius: '50%',
+              animation: 'spa-loader-spin 0.8s linear infinite',
+            }}
+          />
+          <p className="mt-4 text-sm text-black/60 font-medium font-sans tracking-wide">Almost there, beautiful...</p>
+        </div>
+      )}
 
       <div
         className={`relative transition-all duration-700 flex flex-col ${
@@ -286,12 +313,43 @@ export default function BookingVariantA({
 
               {/* GoHighLevel Embed */}
               {step >= 1 && (
-                <div className={`relative z-10 w-full opacity-100 ${!isMichiganPage ? 'flex-1 min-h-0 flex flex-col' : ''}`}>
+                <div className={`relative z-10 w-full ${!isMichiganPage ? 'flex-1 min-h-0 flex flex-col' : ''}`}>
+                  {/* Loading spinner — fades out when calendar is ready */}
+                    <div 
+                      className="flex flex-col items-center justify-center bg-white"
+                      style={{ 
+                        height: calendarLoaded ? 0 : '100dvh', 
+                        overflow: 'hidden',
+                        opacity: calendarLoaded ? 0 : 1, 
+                        transition: 'opacity 0.3s ease, height 0.3s ease',
+                      }}
+                    >
+                    <div
+                      style={{
+                        width: 36,
+                        height: 36,
+                        border: '3px solid rgba(0, 0, 0, 0.1)',
+                        borderTopColor: '#000',
+                        borderRadius: '50%',
+                        animation: 'spa-loader-spin 0.8s linear infinite',
+                      }}
+                    />
+                    <p className="mt-4 text-sm text-black/60 font-medium font-sans tracking-wide">Almost there, beautiful...</p>
+                  </div>
                   <iframe 
                     src="https://api.leadconnectorhq.com/widget/booking/anAnbnSPBviBP5NziJy0" 
-                    style={{ width: "100%", border: "none", overflow: "hidden", minHeight: "800px" }} 
+                    style={{ 
+                      width: "100%", 
+                      border: "none", 
+                      overflow: "hidden", 
+                      minHeight: "800px",
+                      ...(calendarLoaded 
+                        ? { position: 'relative' as const, opacity: 1, transition: 'opacity 0.4s ease' } 
+                        : { position: 'absolute' as const, left: '-9999px', opacity: 0 })
+                    }} 
                     scrolling="no" 
                     id="anAnbnSPBviBP5NziJy0_1782397016762"
+                    onLoad={() => setCalendarLoaded(true)}
                   />
                 </div>
               )}
