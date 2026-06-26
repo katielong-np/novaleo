@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect } from "react";
 import hero from "@/assets/hero-kathryn.webp";
 import labs from "@/assets/approach-labs.webp";
 import telehealth from "@/assets/telehealth.webp";
@@ -30,14 +31,6 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content: "Root-cause functional medicine via telehealth for women in their 40s & 50s.",
-      },
-    ],
-    scripts: [
-      {
-        src: "https://widgets.leadconnectorhq.com/loader.js",
-        "data-resources-url": "https://widgets.leadconnectorhq.com/chat-widget/loader.js",
-        "data-widget-id": "6a3e5ac600578e71d1021311",
-        "data-source": "WEB_USER",
       },
     ],
   }),
@@ -107,6 +100,26 @@ const testimonials = [
 
 function Home() {
   const { open: openBooking } = useBookingModal();
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://widgets.leadconnectorhq.com/loader.js";
+    script.setAttribute("data-resources-url", "https://widgets.leadconnectorhq.com/chat-widget/loader.js");
+    script.setAttribute("data-widget-id", "6a3e5ac600578e71d1021311");
+    script.setAttribute("data-source", "WEB_USER");
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+      const chatWidget = document.querySelector("chat-widget");
+      if (chatWidget) {
+        chatWidget.remove();
+      }
+    };
+  }, []);
 
   return (
     <>
