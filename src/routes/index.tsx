@@ -32,6 +32,14 @@ export const Route = createFileRoute("/")({
         content: "Root-cause functional medicine via telehealth for women in their 40s & 50s.",
       },
     ],
+    scripts: [
+      {
+        src: "https://widgets.leadconnectorhq.com/loader.js",
+        "data-resources-url": "https://widgets.leadconnectorhq.com/chat-widget/loader.js",
+        "data-widget-id": "6a3e5ac600578e71d1021311",
+        "data-source": "WEB_USER",
+      },
+    ],
   }),
   component: Home,
 });
@@ -152,9 +160,9 @@ function Home() {
               className="relative rounded-3xl shadow-2xl object-cover aspect-[4/5] w-full"
             />
             <div className="absolute -bottom-6 -right-4 bg-card border border-border rounded-2xl shadow-xl p-5 max-w-[16rem]">
-              <div className="text-3xl font-display text-primary">$47</div>
+              <div className="text-3xl font-display text-primary">Free</div>
               <p className="text-sm text-muted-foreground mt-1">
-                Clarity Session. Let's find out what's really going on.
+                Discovery Call. Let's find out what's really going on.
               </p>
             </div>
           </div>

@@ -80,8 +80,8 @@ function Contact() {
             <div>
               <dt className="eyebrow mb-1">Call or text</dt>
               <dd>
-                <a href="tel:16168014648" className="text-primary hover:text-secondary font-medium">
-                  1-616-801-4648
+                <a href="tel:16164606337" className="text-primary hover:text-secondary font-medium">
+                  616-460-6337
                 </a>
               </dd>
             </div>
@@ -89,11 +89,18 @@ function Contact() {
               <dt className="eyebrow mb-1">Email</dt>
               <dd>
                 <a
-                  href="mailto:katie@novaweightandwellness.com"
+                  href="mailto:Katie@novaweightandwellness.com"
                   className="text-primary hover:text-secondary font-medium"
                 >
-                  katie@novaweightandwellness.com
+                  Katie@novaweightandwellness.com
                 </a>
+              </dd>
+            </div>
+            <div>
+              <dt className="eyebrow mb-1">Location</dt>
+              <dd className="text-foreground/85">
+                1805 Leonard st NE<br />
+                Grand Rapids, Mi 49505
               </dd>
             </div>
             <div>

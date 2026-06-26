@@ -116,18 +116,22 @@ export function SiteFooter() {
           <ul className="space-y-2 text-sm text-primary-foreground/75">
             <li>Telehealth · MI &amp; WI</li>
             <li>
-              <a href="tel:16168014648" className="hover:text-gold">
-                1-616-801-4648
+              1805 Leonard st NE<br />
+              Grand Rapids, Mi 49505
+            </li>
+            <li>
+              <a href="tel:16164606337" className="hover:text-gold">
+                616-460-6337
               </a>
             </li>
             <li>
-              <a href="mailto:katie@novaweightandwellness.com" className="hover:text-gold">
-                katie@novaweightandwellness.com
+              <a href="mailto:Katie@novaweightandwellness.com" className="hover:text-gold">
+                Katie@novaweightandwellness.com
               </a>
             </li>
             <li>Mon – Fri · 7 AM – 6 PM</li>
 
-            <li>
+            <li className="pt-2">
               <Link to="/free-15-min-call-with-katie" className="hover:text-gold text-left">
                 Book Free 15-Min Call
               </Link>
@@ -137,10 +141,18 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-primary-foreground/15">
         <div className="container-prose py-6 text-xs text-primary-foreground/60">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <span>
-              © {new Date().getFullYear()} Novaleo Weight &amp; Wellness. All rights reserved.
-            </span>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:text-left text-center">
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+              <span>
+                © {new Date().getFullYear()} Novaleo Weight &amp; Wellness. All rights reserved.
+              </span>
+              <div className="flex items-center gap-3">
+                <span className="hidden md:inline text-primary-foreground/30">|</span>
+                <Link to="/privacy-policy" className="hover:text-gold transition-colors">Privacy Policy</Link>
+                <span className="text-primary-foreground/30">|</span>
+                <Link to="/terms-of-service" className="hover:text-gold transition-colors">Terms of Service</Link>
+              </div>
+            </div>
             <span>
               This site is for informational purposes and does not constitute medical advice.
             </span>
