@@ -1,0 +1,23 @@
+{
+  "name": "Novaleo Weight & Wellness",
+  "description": "Functional medicine telehealth platform specializing in hormones and metabolic health for women in MI & WI.",
+  "url": "https://novaweightandwellness.com",
+  "type": "MedicalBusiness",
+  "founder": {
+    "name": "Kathryn Long, NP-C",
+    "role": "Nurse Practitioner"
+  },
+  "contact": {
+    "email": "Katie@novaweightandwellness.com",
+    "phone": "616-460-6337",
+    "address": "1805 Leonard st NE, Grand Rapids, MI 49505"
+  },
+  "services": [
+    "Functional Medicine",
+    "Hormone Optimization",
+    "Metabolic Health",
+    "Weight Resistance Treatment",
+    "Telehealth Consultations"
+  ],
+  "areaServed": ["Michigan", "Wisconsin"]
+}

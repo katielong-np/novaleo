@@ -1,0 +1,10 @@
+/* TEAM */
+Founder: Kathryn Long, NP-C
+Role: Clinical Director & Nurse Practitioner
+Contact: Katie@novaweightandwellness.com
+Location: Grand Rapids, MI
+
+/* SITE */
+Purpose: Functional medicine telehealth platform for women in MI & WI.
+Tech: React, TanStack Start, Tailwind CSS, Vite
+Language: English

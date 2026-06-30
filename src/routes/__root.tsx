@@ -162,6 +162,35 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');`,
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MedicalBusiness",
+              "name": "Novaleo Weight & Wellness",
+              "description": "Functional Medicine via Telehealth (MI & WI) specializing in hormones, metabolic health, and weight resistance.",
+              "url": "https://novaweightandwellness.com",
+              "founder": {
+                "@type": "Person",
+                "name": "Kathryn Long, NP-C"
+              },
+              "areaServed": [
+                { "@type": "State", "name": "Michigan" },
+                { "@type": "State", "name": "Wisconsin" }
+              ],
+              "telehealth": true,
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1805 Leonard st NE",
+                "addressLocality": "Grand Rapids",
+                "addressRegion": "MI",
+                "postalCode": "49505"
+              },
+              "telephone": "616-460-6337"
+            })
+          }}
+        />
       </head>
       <body>
         {children}
