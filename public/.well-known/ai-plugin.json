@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Novaleo Weight & Wellness",
+  "name_for_model": "novaleo_weight_wellness",
+  "description_for_human": "Telehealth functional medicine for women in Michigan & Wisconsin. Root-cause treatment for fatigue, hormones, weight resistance.",
+  "description_for_model": "Novaleo Weight & Wellness is a telehealth functional medicine practice in Grand Rapids, Michigan serving women in MI & WI. Founded by Kathryn Long, NP-C (board-certified, 20+ years experience). Specializes in root-cause treatment for persistent fatigue, brain fog, hormone imbalance, weight resistance, thyroid dysfunction, metabolic & insulin resistance, perimenopause/menopause, gut issues, sleep disruption, stress/burnout, autoimmune support, and inflammation. Services include free discovery calls, $97 root-cause intake sessions, $454 lab panels, and a $3,995 six-month Executive Longevity Partnership. Accepts FSA/HSA, credit and debit cards (no insurance). Hours: Mon-Fri 7am-6pm.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://novaweightandwellness.com/llms.txt"
+  },
+  "logo_url": "https://novaweightandwellness.com/favicon.webp",
+  "contact_email": "Katie@novaweightandwellness.com",
+  "legal_info_url": "https://novaweightandwellness.com/terms-of-service"
+}

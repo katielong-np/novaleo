@@ -108,11 +108,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         name: "twitter:title",
         content: "Novaleo Weight & Wellness  Functional Medicine via Telehealth (MI & WI)",
       },
-      {
-        name: "description",
-        content:
-          "Novaleo Wellness Hub is a telehealth practice for functional medicine and metabolic health.",
-      },
+
       {
         name: "twitter:description",
         content:
@@ -120,11 +116,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         property: "og:image",
-        content: "/og-image.webp",
+        content: "https://novaweightandwellness.com/og-image.webp",
       },
       {
         name: "twitter:image",
-        content: "/og-image.webp",
+        content: "https://novaweightandwellness.com/og-image.webp",
       },
     ],
     links: [
@@ -169,25 +165,104 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
               "@context": "https://schema.org",
               "@type": "MedicalBusiness",
               "name": "Novaleo Weight & Wellness",
-              "description": "Functional Medicine via Telehealth (MI & WI) specializing in hormones, metabolic health, and weight resistance.",
+              "description": "Telehealth functional medicine practice specializing in root-cause treatment for fatigue, brain fog, hormone imbalance, weight resistance, and metabolic dysfunction for professional women in Michigan and Wisconsin.",
               "url": "https://novaweightandwellness.com",
+              "logo": "https://novaweightandwellness.com/favicon.webp",
+              "image": "https://novaweightandwellness.com/og-image.webp",
               "founder": {
                 "@type": "Person",
-                "name": "Kathryn Long, NP-C"
+                "name": "Kathryn Long, NP-C",
+                "jobTitle": "Nurse Practitioner",
+                "description": "Board-certified nurse practitioner with 20+ years in healthcare, specializing in hormones, metabolic health, and weight resistance."
               },
               "areaServed": [
                 { "@type": "State", "name": "Michigan" },
                 { "@type": "State", "name": "Wisconsin" }
               ],
-              "telehealth": true,
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "1805 Leonard st NE",
+                "streetAddress": "1805 Leonard St NE",
                 "addressLocality": "Grand Rapids",
                 "addressRegion": "MI",
-                "postalCode": "49505"
+                "postalCode": "49505",
+                "addressCountry": "US"
               },
-              "telephone": "616-460-6337"
+              "telephone": "+1-616-460-6337",
+              "email": "Katie@novaweightandwellness.com",
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "07:00",
+                "closes": "18:00"
+              },
+              "priceRange": "$0–$3,995",
+              "paymentAccepted": "FSA, HSA, Credit Card, Debit Card",
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Functional Medicine Services",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "MedicalProcedure",
+                      "name": "Root Cause Discovery Call",
+                      "description": "Free 10-minute consultation to determine next steps."
+                    },
+                    "price": "0",
+                    "priceCurrency": "USD"
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "MedicalProcedure",
+                      "name": "Root Cause Intake — 60-Minute Clarity Session",
+                      "description": "Comprehensive clinical assessment with personalized starting plan."
+                    },
+                    "price": "97",
+                    "priceCurrency": "USD"
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "MedicalTest",
+                      "name": "Root Cause Lab Panel",
+                      "description": "Signature biomarker panel testing nutrients, thyroid, lipids, blood sugar, liver, and inflammation markers."
+                    },
+                    "price": "454",
+                    "priceCurrency": "USD"
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "MedicalProcedure",
+                      "name": "The Executive Longevity Partnership",
+                      "description": "Six-month executive-level functional medicine program limited to 4 clients."
+                    },
+                    "price": "3995",
+                    "priceCurrency": "USD"
+                  }
+                ]
+              },
+              "knowsAbout": [
+                "Functional Medicine",
+                "Hormone Optimization",
+                "Metabolic Health",
+                "Weight Resistance",
+                "Thyroid Dysfunction",
+                "Perimenopause",
+                "Menopause",
+                "Brain Fog",
+                "Chronic Fatigue",
+                "Insulin Resistance",
+                "Root Cause Medicine",
+                "Telehealth"
+              ],
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "6",
+                "bestRating": "5"
+              }
             })
           }}
         />

@@ -1,0 +1,7 @@
+# Novaleo Weight & Wellness — Security Contact
+# https://novaweightandwellness.com
+
+Contact: mailto:Katie@novaweightandwellness.com
+Preferred-Languages: en
+Canonical: https://novaweightandwellness.com/security.txt
+Expires: 2027-06-30T00:00:00.000Z

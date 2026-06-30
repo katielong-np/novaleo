@@ -1,23 +1,78 @@
 {
   "name": "Novaleo Weight & Wellness",
-  "description": "Functional medicine telehealth platform specializing in hormones and metabolic health for women in MI & WI.",
+  "description": "Telehealth functional medicine practice specializing in root-cause treatment for fatigue, brain fog, hormone imbalance, weight resistance, and metabolic dysfunction for professional women in Michigan and Wisconsin.",
   "url": "https://novaweightandwellness.com",
   "type": "MedicalBusiness",
   "founder": {
     "name": "Kathryn Long, NP-C",
-    "role": "Nurse Practitioner"
+    "role": "Nurse Practitioner",
+    "credentials": ["Board-Certified Nurse Practitioner (NP-C)", "Certified in Medical Weight Management"],
+    "experience": "20+ years in clinical healthcare"
   },
   "contact": {
     "email": "Katie@novaweightandwellness.com",
     "phone": "616-460-6337",
-    "address": "1805 Leonard st NE, Grand Rapids, MI 49505"
+    "address": "1805 Leonard St NE, Grand Rapids, MI 49505"
   },
+  "openingHours": "Mo-Fr 07:00-18:00",
+  "paymentAccepted": ["FSA", "HSA", "Credit Card", "Debit Card"],
+  "priceRange": "$0–$3,995",
   "services": [
-    "Functional Medicine",
-    "Hormone Optimization",
-    "Metabolic Health",
-    "Weight Resistance Treatment",
-    "Telehealth Consultations"
+    {
+      "name": "Root Cause Discovery Call",
+      "price": "Free",
+      "duration": "10 minutes"
+    },
+    {
+      "name": "Root Cause Intake — 60-Minute Clarity Session",
+      "price": "$97",
+      "duration": "60 minutes"
+    },
+    {
+      "name": "Root Cause Lab Panel",
+      "price": "$454",
+      "duration": "10 minutes"
+    },
+    {
+      "name": "The Executive Longevity Partnership",
+      "price": "$3,995",
+      "duration": "6-month program"
+    },
+    {
+      "name": "Root Cause Follow-up",
+      "price": "Included",
+      "duration": "30–60 minutes"
+    }
   ],
-  "areaServed": ["Michigan", "Wisconsin"]
+  "conditionsTreated": [
+    "Persistent fatigue",
+    "Brain fog & focus loss",
+    "Weight resistance",
+    "Perimenopause & menopause",
+    "Thyroid dysfunction",
+    "Hormone imbalance",
+    "Metabolic & insulin resistance",
+    "Gut & digestive issues",
+    "Sleep disruption",
+    "Stress, burnout & mood",
+    "Autoimmune support",
+    "Inflammation"
+  ],
+  "areaServed": ["Michigan", "Wisconsin"],
+  "llms_txt": "https://novaweightandwellness.com/llms.txt",
+  "llms_full_txt": "https://novaweightandwellness.com/llms-full.txt",
+  "faq": [
+    {
+      "question": "How is this different from seeing my regular doctor?",
+      "answer": "Conventional medicine is designed to diagnose and treat disease. Functional medicine is designed to find and fix the root cause before it becomes disease."
+    },
+    {
+      "question": "My labs always come back normal. Can you still help me?",
+      "answer": "Absolutely. 'Normal' ranges are based on averages, not optimal health. Functional lab analysis identifies patterns that standard testing often misses."
+    },
+    {
+      "question": "Do you take insurance?",
+      "answer": "No, we accept FSA/HSA, credit, and debit card only."
+    }
+  ]
 }

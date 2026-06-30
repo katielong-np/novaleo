@@ -5,6 +5,9 @@ import { useBookingModal } from "@/components/BookingModalContext";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
+    links: [
+      { rel: "canonical", href: "https://novaweightandwellness.com/about" },
+    ],
     meta: [
       { title: "About Kathryn Long, NP-C  Novaleo Weight & Wellness" },
       {
@@ -28,6 +31,46 @@ function About() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Kathryn Long",
+            "honorificSuffix": "NP-C",
+            "jobTitle": "Board-Certified Nurse Practitioner",
+            "description": "Board-certified nurse practitioner with 20+ years in healthcare, specializing in hormones, metabolic health, and weight resistance for women in midlife.",
+            "url": "https://novaweightandwellness.com/about",
+            "worksFor": {
+              "@type": "MedicalBusiness",
+              "name": "Novaleo Weight & Wellness",
+              "url": "https://novaweightandwellness.com"
+            },
+            "knowsAbout": [
+              "Functional Medicine",
+              "Hormone Optimization",
+              "Metabolic Health",
+              "Weight Management",
+              "Thyroid Dysfunction",
+              "Perimenopause",
+              "Menopause"
+            ],
+            "hasCredential": [
+              {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "Professional Certification",
+                "name": "Board-Certified Nurse Practitioner (NP-C)"
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "Professional Certification",
+                "name": "Certified in Medical Weight Management"
+              }
+            ]
+          })
+        }}
+      />
       <section className="container-prose pt-8 pb-12">
         <div className="eyebrow mb-5">About the Provider</div>
         <h1 className="text-5xl md:text-7xl max-w-3xl leading-[1.02]">

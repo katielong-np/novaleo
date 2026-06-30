@@ -9,6 +9,9 @@ import {
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
+    links: [
+      { rel: "canonical", href: "https://novaweightandwellness.com/contact" },
+    ],
     meta: [
       { title: "Book a Free Discovery Call  Novaleo Weight & Wellness" },
       {
@@ -31,6 +34,81 @@ function Contact() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How is this different from seeing my regular doctor?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Conventional medicine is designed to diagnose and treat disease. Functional medicine is designed to find and fix the root cause before it becomes disease. Where your doctor may say 'everything is normal' — I look at patterns, connections, and the full picture of your hormones, metabolism, nutrition, stress, and sleep."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "My labs always come back normal. Can you still help me?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Absolutely — this is the most common situation I see. 'Normal' ranges are based on averages, not optimal health. There's a big difference between 'not sick' and 'thriving.' Functional lab analysis identifies patterns that standard testing often misses."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens after the free discovery call?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You'll have a clear understanding of how my process works and whether it's the right fit for you. If you decide to move forward, the next step is the Root-Cause Intake & Clinical Strategy session at $97. Zero pressure — you decide what happens next."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens during the $97 Root-Cause Intake?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A comprehensive 60-minute clinical assessment where we go deep — full health history, current symptoms, lifestyle, nutrition, stress, sleep patterns, and any prior labs. You'll leave with clarity on what's driving your symptoms and a personalized starting plan."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "I've tried everything. Why would this be any different?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Because most approaches treat symptoms — not causes. Functional medicine starts by asking why and works backwards from there. When you address the actual root cause, the results are sustainable instead of temporary."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is the free call really free? What's the catch?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "There is no catch. The 15-minute discovery call is completely free with no obligation to book anything after. I only work with clients I genuinely believe I can help."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you take insurance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No, we take FSA/HSA, credit, and debit card only."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is your refund policy?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Due to the digital and service-based nature of our programs, consultations, educational materials, and wellness services, all sales are final and no refunds will be issued."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <section className="container-prose pt-8 pb-16">
         <div className="max-w-2xl">
           <div className="eyebrow mb-5">Contact · No cost. No commitment.</div>

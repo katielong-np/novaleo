@@ -5,6 +5,9 @@ import { useBookingModal } from "@/components/BookingModalContext";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
+    links: [
+      { rel: "canonical", href: "https://novaweightandwellness.com/services" },
+    ],
     meta: [
       { title: "Services & Pricing  Novaleo Weight & Wellness" },
       {

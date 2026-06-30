@@ -2,6 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/scheduler")({
   head: () => ({
+    links: [
+      { rel: "canonical", href: "https://novaweightandwellness.com/scheduler" },
+    ],
     meta: [
       { title: "Book a Visit  Novaleo Weight & Wellness Scheduler" },
       {

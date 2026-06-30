@@ -20,6 +20,9 @@ import AutoScroll from "embla-carousel-auto-scroll";
 
 export const Route = createFileRoute("/")({
   head: () => ({
+    links: [
+      { rel: "canonical", href: "https://novaweightandwellness.com/" },
+    ],
     meta: [
       { title: "Novaleo Weight & Wellness  Functional Medicine for Women in MI & WI" },
       {

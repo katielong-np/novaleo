@@ -5,6 +5,9 @@ import { useBookingModal } from "@/components/BookingModalContext";
 
 export const Route = createFileRoute("/approach")({
   head: () => ({
+    links: [
+      { rel: "canonical", href: "https://novaweightandwellness.com/approach" },
+    ],
     meta: [
       { title: "Our Approach  From Exhausted to Energized | Novaleo" },
       {
