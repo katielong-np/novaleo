@@ -86,3 +86,13 @@ npm run build
     - **Timezone Safety**: Hardcoded to `America/Detroit` across the entire stack (both UI and API payload) to completely prevent browser timezone drift and ensure the underlying slot timestamp perfectly matches the clinician's real availability.
     - **Strict Phone Validation**: Integrates a robust regex phone formatter to guarantee all numbers correctly resolve to a `+1` prefix before hitting the Cal.com API, preventing silent booking failures triggered by SMS reminder validations.
   - **Smart Checkout Preloading**: Intelligently delays the background rendering of the Whop checkout iframe until the exact moment the user blurs from the email field, enabling flawless email prefilling while still maintaining an ultra-fast, invisible load during the final form step.
+
+## AI Acknowledgements
+
+This project was developed with the assistance of various AI models and developer tools:
+
+- **OpenAI (ChatGPT & GPT-4)**: Used for code generation, problem-solving, and copywriting assistance.
+- **Anthropic (Claude)**: Used for architectural design, code review, and complex refactoring.
+- **Google (Gemini)**: Used for analytical tasks, planning, and codebase exploration.
+- **Lovable**: Utilized as an AI-powered development platform for rapid UI prototyping and scaffolding.
+- **Cursor / GitHub Copilot**: Used for inline code generation, autocomplete, and debugging.
