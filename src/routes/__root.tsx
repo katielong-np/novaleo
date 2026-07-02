@@ -126,6 +126,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     links: [
       { rel: "icon", type: "image/webp", href: "/favicon.webp" },
       { rel: "shortcut icon", href: "/favicon.ico" },
+      { rel: "alternate", type: "application/json", href: "/ai.json", title: "AI Manifest" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
