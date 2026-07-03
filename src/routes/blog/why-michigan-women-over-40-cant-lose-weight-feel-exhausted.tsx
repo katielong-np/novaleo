@@ -17,7 +17,7 @@ export const Route = createFileRoute(
     meta: [
       {
         title:
-          "Why Can't I Lose Weight in My 40s? The Hidden Causes of Fatigue | Novaleo",
+          "Why Can't I Lose Weight in My 40s? (And Why You're Always Tired) | Novaleo",
       },
       {
         name: 'description',
@@ -27,7 +27,7 @@ export const Route = createFileRoute(
       {
         property: 'og:title',
         content:
-          "Why Can't I Lose Weight in My 40s? The Hidden Causes of Fatigue",
+          "Why Can't I Lose Weight in My 40s? (And Why You're Always Tired)",
       },
       {
         property: 'og:description',
@@ -88,7 +88,7 @@ const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline:
-    "Why Can't I Lose Weight in My 40s? The Hidden Causes of Fatigue",
+    "Why Can't I Lose Weight in My 40s? (And Why You're Always Tired)",
   author: {
     '@type': 'Person',
     name: 'Kathryn Long, NP-C',
@@ -174,7 +174,7 @@ function ArticlePage() {
           Functional Medicine
         </span>
         <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary leading-tight mb-6">
-          Why Can't I Lose Weight in My 40s? The Hidden Causes of Fatigue
+          Why Can't I Lose Weight in My 40s? (And Why You're Always Tired)
         </h1>
         <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">

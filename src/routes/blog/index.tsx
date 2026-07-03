@@ -41,7 +41,7 @@ const articles = [
   {
     slug: "why-michigan-women-over-40-cant-lose-weight-feel-exhausted",
     title:
-      "Why Can't I Lose Weight in My 40s? The Hidden Causes of Fatigue",
+      "Why Can't I Lose Weight in My 40s? (And Why You're Always Tired)",
     excerpt:
       "Struggling with weight gain, fatigue, and brain fog in your 40s or 50s? Learn why your doctor's 'normal' labs might be missing the real problem, and what functional medicine can do about it.",
     image: heroImg,
