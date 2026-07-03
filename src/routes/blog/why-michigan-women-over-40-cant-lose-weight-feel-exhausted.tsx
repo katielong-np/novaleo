@@ -4,6 +4,8 @@ import heroImg from '@/assets/blog/hero-fatigued-woman.jpg';
 import labImg from '@/assets/blog/lab-comparison.jpg';
 import wellnessImg from '@/assets/blog/michigan-wellness.jpg';
 import telehealthImg from '@/assets/blog/telehealth-consultation.jpg';
+import nutritionImg from '@/assets/blog/nutrition-balance.jpg';
+import labsImg from '@/assets/blog/comprehensive-labs.jpg';
 import { Facebook, Twitter, Linkedin, Link2 } from 'lucide-react';
 
 export const Route = createFileRoute(
@@ -13,7 +15,7 @@ export const Route = createFileRoute(
     meta: [
       {
         title:
-          "Why Can't I Lose Weight in My 40s? Functional Medicine Answers | Novaleo",
+          "Why Can't I Lose Weight in My 40s? The Hidden Causes of Fatigue | Novaleo",
       },
       {
         name: 'description',
@@ -23,7 +25,7 @@ export const Route = createFileRoute(
       {
         property: 'og:title',
         content:
-          "Why Can't I Lose Weight in My 40s? Functional Medicine Answers",
+          "Why Can't I Lose Weight in My 40s? The Hidden Causes of Fatigue",
       },
       {
         property: 'og:description',
@@ -84,7 +86,7 @@ const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline:
-    "Why Can't I Lose Weight in My 40s? Functional Medicine Answers",
+    "Why Can't I Lose Weight in My 40s? The Hidden Causes of Fatigue",
   author: {
     '@type': 'Person',
     name: 'Kathryn Long, NP-C',
@@ -170,7 +172,7 @@ function ArticlePage() {
           Functional Medicine
         </span>
         <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary leading-tight mb-6">
-          Why Can't I Lose Weight in My 40s? Functional Medicine Answers for Fatigue
+          Why Can't I Lose Weight in My 40s? The Hidden Causes of Fatigue
         </h1>
         <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
@@ -536,6 +538,12 @@ function ArticlePage() {
                 symptoms, your hormones may have been shifting for years.
               </p>
 
+              <img
+                src={nutritionImg}
+                alt="A beautifully styled breakfast bowl representing healthy nutrition for hormone balance"
+                className="rounded-2xl shadow-lg w-full my-8"
+              />
+
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
                 During perimenopause, progesterone is usually the first hormone
                 to decline. Progesterone is your calming hormone. It helps you
@@ -861,6 +869,12 @@ function ArticlePage() {
                 Comprehensive Lab Testing
               </h3>
 
+              <img
+                src={labsImg}
+                alt="Healthcare provider carefully reviewing detailed lab results"
+                className="rounded-2xl shadow-lg w-full my-8"
+              />
+
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
                 At Novaleo, we run labs that most conventional doctors never
                 order. Our comprehensive panel typically includes:
@@ -992,112 +1006,35 @@ function ArticlePage() {
             {/* ========== Section 8: What to Expect ========== */}
             <section id="what-to-expect-first-visit">
               <h2 className="text-3xl md:text-4xl font-display text-primary mt-16 mb-6">
-                What to Expect at Your First Visit
+                Finding Your Root Cause Starts With a Conversation
               </h2>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
                 One of the biggest barriers to seeking functional medicine
-                care is simply not knowing what to expect. The unfamiliar
+                care is simply not knowing where to start. The unfamiliar
                 creates uncertainty, and uncertainty keeps women stuck in a
-                system that isn't serving them. So let me walk you through
-                exactly how the process works at Novaleo, step by step.
-              </p>
-
-              <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                Step 1: The Free 15-Minute Discovery Call
-              </h3>
-
-              <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-                Everything begins with a conversation, not a commitment. The
-                discovery call is a free, no-pressure phone call where we talk
-                about what you're experiencing, answer your questions, and help
-                you determine if functional medicine is the right fit for your
-                situation.
+                system that isn't serving them. 
               </p>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-                This isn't a sales pitch. It's a genuine consultation. If we
-                don't think we're the right fit for your needs, we'll tell you
-                honestly and point you in a better direction. Our goal is to
-                help, not to sell.
-              </p>
-
-              <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                Step 2: The 60-Minute Root Cause Clarity Session ($97)
-              </h3>
-
-              <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-                If we both agree that moving forward makes sense, the next step
-                is the Root Cause Clarity Session. This is a comprehensive,
-                60-minute telehealth appointment where we dive deep into your
-                health history, symptoms, lifestyle, goals, and concerns.
+                At Novaleo, everything begins with a conversation, not a commitment. 
+                We start with a free, no-pressure 15-minute discovery call where we talk
+                about what you're experiencing. You have the opportunity to share your 
+                symptoms, the frustration of "normal" lab results, and your health goals.
               </p>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-                Unlike a rushed conventional visit, this session gives us time
-                to listen to your complete story. We'll explore the timeline of
-                your symptoms, review your medical history and any previous lab
-                work, discuss your diet, sleep, stress, exercise, and daily
-                routines, and identify patterns that may have been overlooked.
+                This isn't a sales pitch. It's a genuine clinical consultation to 
+                determine if our functional medicine approach is the right fit for your
+                specific situation. We'll answer your questions and help you understand 
+                how a true root-cause investigation differs from the conventional care 
+                you've received in the past.
               </p>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-                At the end of this session, you'll have a clear understanding
-                of what we suspect is driving your symptoms and a plan for
-                the lab testing that will confirm it.
-              </p>
-
-              <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                Step 3: Personalized Protocol Development
-              </h3>
-
-              <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-                Based on your session and the clinical picture that emerges,
-                we develop a personalized protocol designed specifically for
-                your biology, your lifestyle, and your goals. This isn't a
-                generic handout. It's a tailored roadmap built from your
-                unique data.
-              </p>
-
-              <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                Step 4: Comprehensive Root Cause Lab Panel ($454)
-              </h3>
-
-              <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-                Our lab panel is extensive because it needs to be. We test
-                everything listed earlier: thyroid, hormones, metabolic
-                markers, inflammatory markers, nutrients, and more. These labs
-                can be completed at any Quest Diagnostics or Labcorp location,
-                which means you don't need to travel to see us in person.
-                There are Quest and Labcorp locations in virtually every
-                Michigan city and town.
-              </p>
-
-              <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-                Once your results come back, we schedule a follow-up
-                appointment to review every marker in detail, explain what each
-                number means for your health, and refine your protocol based on
-                the actual data.
-              </p>
-
-              <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                Step 5: Ongoing Support and Follow-Up
-              </h3>
-
-              <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-                Healing isn't a single appointment. It's a process. At Novaleo,
-                we provide ongoing support to ensure your protocol is working,
-                adjust it as needed, and celebrate the progress you're making.
-                You're never left to figure things out alone. You have a
-                knowledgeable, caring partner in your corner every step of the
-                way.
-              </p>
-
-              <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-                The entire process is designed to remove friction and fear.
-                Every step is clear, transparent, and focused on your
-                wellbeing. There are no hidden costs, no surprise upsells, and
-                no pressure to commit to anything you're not comfortable with.
+                If we don't think we're the best fit for your needs, we'll tell you
+                honestly and point you in a better direction. Our goal is to help you
+                finally get answers, not to pressure you into a program.
               </p>
             </section>
 
