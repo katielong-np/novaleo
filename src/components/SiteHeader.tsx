@@ -11,7 +11,7 @@ const nav: NavItem[] = [
   { to: "/approach", label: "Our Approach" },
   { to: "/scheduler", label: "Services" },
   { to: "/conditions", label: "What We Treat" },
-  { to: "/contact", hash: "faq", label: "FAQ" },
+  { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
 ];
 

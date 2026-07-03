@@ -100,6 +100,16 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link to="/blog" className="hover:text-gold">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:text-gold">
+                Contact
+              </Link>
+            </li>
+            <li>
               <Link to="/free-15-min-call-with-katie" className="hover:text-gold">
                 Book Free 15-Min Call
               </Link>
