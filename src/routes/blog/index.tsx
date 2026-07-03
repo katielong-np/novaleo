@@ -41,14 +41,14 @@ const articles = [
   {
     slug: "why-michigan-women-over-40-cant-lose-weight-feel-exhausted",
     title:
-      "Why Michigan Women Over 40 Can't Lose Weight, Feel Exhausted, and Keep Getting Told Their Labs Are 'Normal'",
+      "Why Can't I Lose Weight in My 40s? Functional Medicine Answers for Fatigue",
     excerpt:
       "Struggling with weight gain, fatigue, and brain fog in your 40s or 50s? Learn why your doctor's 'normal' labs might be missing the real problem, and what functional medicine can do about it.",
     image: heroImg,
     imageAlt:
       "Professional woman experiencing afternoon fatigue at her desk",
     category: "Functional Medicine",
-    date: "July 2, 2025",
+    date: "July 3, 2025",
     readTime: "22 min read",
     author: "Kathryn Long, NP-C",
   },

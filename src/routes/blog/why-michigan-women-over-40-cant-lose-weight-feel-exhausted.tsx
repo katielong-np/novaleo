@@ -13,7 +13,7 @@ export const Route = createFileRoute(
     meta: [
       {
         title:
-          "Why Michigan Women Over 40 Can't Lose Weight, Feel Exhausted, and Keep Getting Told Their Labs Are 'Normal' | Novaleo Weight & Wellness",
+          "Why Can't I Lose Weight in My 40s? Functional Medicine Answers | Novaleo",
       },
       {
         name: 'description',
@@ -23,7 +23,7 @@ export const Route = createFileRoute(
       {
         property: 'og:title',
         content:
-          "Why Michigan Women Over 40 Can't Lose Weight, Feel Exhausted, and Keep Getting Told Their Labs Are 'Normal'",
+          "Why Can't I Lose Weight in My 40s? Functional Medicine Answers",
       },
       {
         property: 'og:description',
@@ -84,7 +84,7 @@ const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline:
-    "Why Michigan Women Over 40 Can't Lose Weight, Feel Exhausted, and Keep Getting Told Their Labs Are 'Normal'",
+    "Why Can't I Lose Weight in My 40s? Functional Medicine Answers",
   author: {
     '@type': 'Person',
     name: 'Kathryn Long, NP-C',
@@ -93,7 +93,7 @@ const articleSchema = {
     '@type': 'Organization',
     name: 'Novaleo Weight & Wellness',
   },
-  datePublished: '2025-07-02',
+  datePublished: '2025-07-03',
   image: 'https://novaweightandwellness.com/og-image.webp',
 };
 
@@ -116,7 +116,7 @@ const breadcrumbSchema = {
     {
       '@type': 'ListItem',
       position: 3,
-      name: "Why Michigan Women Over 40 Can't Lose Weight and Feel Exhausted",
+      name: "Why Can't I Lose Weight in My 40s?",
       item: 'https://novaweightandwellness.com/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted',
     },
   ],
@@ -159,7 +159,7 @@ function ArticlePage() {
             className="text-foreground/60 truncate max-w-[200px] md:max-w-none"
             aria-current="page"
           >
-            Why Michigan Women Over 40 Can't Lose Weight
+            Why Can't I Lose Weight in My 40s?
           </li>
         </ol>
       </nav>
@@ -170,14 +170,13 @@ function ArticlePage() {
           Functional Medicine
         </span>
         <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary leading-tight mb-6">
-          Why Michigan Women Over 40 Can't Lose Weight, Feel Exhausted, and Keep
-          Getting Told Their Labs Are "Normal"
+          Why Can't I Lose Weight in My 40s? Functional Medicine Answers for Fatigue
         </h1>
         <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
             <span>By Kathryn Long, NP-C</span>
             <span aria-hidden="true">|</span>
-            <time dateTime="2025-07-02">July 2, 2025</time>
+            <time dateTime="2025-07-03">July 3, 2025</time>
             <span aria-hidden="true">|</span>
             <span>22 min read</span>
           </div>
