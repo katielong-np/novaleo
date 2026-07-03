@@ -1,9 +1,11 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { useState } from 'react';
 import heroImg from '@/assets/blog/hero-fatigued-woman.jpg';
-import labImg from '@/assets/blog/lab-comparison.jpg';
 import wellnessImg from '@/assets/blog/michigan-wellness.jpg';
 import telehealthImg from '@/assets/blog/telehealth-consultation.jpg';
+import hormoneImg from '@/assets/blog/hormone-shifts.jpg';
+import labsV2Img from '@/assets/blog/comprehensive-labs-v2.jpg';
+import frustrationImg from '@/assets/blog/appointment-frustration.jpg';
 import nutritionImg from '@/assets/blog/nutrition-balance.jpg';
 import labsImg from '@/assets/blog/comprehensive-labs.jpg';
 import { Facebook, Twitter, Linkedin, Link2 } from 'lucide-react';
@@ -458,7 +460,7 @@ function ArticlePage() {
               </p>
 
               <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                The 15-Minute Appointment Problem
+                The Reality of Standard Medical Visits
               </h3>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -487,8 +489,8 @@ function ArticlePage() {
               </p>
 
               <img
-                src={labImg}
-                alt="Comparison chart showing conventional lab reference ranges versus functional optimal ranges for thyroid, insulin, and inflammatory markers"
+                src={frustrationImg}
+                alt="A relatable woman in her 40s looking exhausted and overwhelmed while reviewing medical paperwork"
                 className="rounded-2xl shadow-lg w-full my-8"
               />
             </section>
@@ -539,8 +541,8 @@ function ArticlePage() {
               </p>
 
               <img
-                src={nutritionImg}
-                alt="A beautifully styled breakfast bowl representing healthy nutrition for hormone balance"
+                src={hormoneImg}
+                alt="A thoughtful woman in her late 40s experiencing the subtle but impactful signs of hormone shifts and perimenopause"
                 className="rounded-2xl shadow-lg w-full my-8"
               />
 
@@ -870,8 +872,8 @@ function ArticlePage() {
               </h3>
 
               <img
-                src={labsImg}
-                alt="Healthcare provider carefully reviewing detailed lab results"
+                src={labsV2Img}
+                alt="Female healthcare provider carefully reviewing detailed lab results on a wooden desk"
                 className="rounded-2xl shadow-lg w-full my-8"
               />
 
