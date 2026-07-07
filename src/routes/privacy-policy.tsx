@@ -2,7 +2,25 @@ import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/privacy-policy")({
   head: () => ({
-    meta: [{ title: "Privacy Policy | Novaleo Weight & Wellness" }],
+    links: [
+      { rel: "canonical", href: "https://novaweightandwellness.com/privacy-policy" },
+    ],
+    meta: [
+      { title: "Privacy Policy | Novaleo Weight & Wellness" },
+      {
+        name: "description",
+        content: "Privacy policy for Novaleo Weight & Wellness. Learn how we collect, use, and protect your information.",
+      },
+      { property: "og:title", content: "Privacy Policy | Novaleo Weight & Wellness" },
+      { property: "og:description", content: "Privacy policy for Novaleo Weight & Wellness. Learn how we collect, use, and protect your information." },
+      { property: "og:url", content: "https://novaweightandwellness.com/privacy-policy" },
+      { property: "og:image", content: "https://novaweightandwellness.com/og-image.webp" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Privacy Policy | Novaleo Weight & Wellness" },
+      { name: "twitter:description", content: "Privacy policy for Novaleo Weight & Wellness. Learn how we collect, use, and protect your information." },
+      { name: "twitter:image", content: "https://novaweightandwellness.com/og-image.webp" },
+    ],
   }),
   component: PrivacyPolicy,
 });

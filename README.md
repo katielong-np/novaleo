@@ -56,8 +56,10 @@ npm run build
 - **Dynamic Elements**: Auto-scrolling reviews and quotes carousel powered by Embla Carousel, seamlessly bleeding to screen edges for a modern feel.
 - **Telehealth Focus**: Clear call-to-actions (CTAs) for clarity sessions, intake forms, and service information.
 - **Blog & SEO Architecture**: Fully functional blog section (`/blog`) optimized for search engines with schema.org structured data (Article, BreadcrumbList), Open Graph tags, canonical URLs, and integrated social sharing icons.
+  - **Comprehensive SEO Audit**: The entire site has been deeply analyzed and optimized for Core Web Vitals, JSON-LD Schema (MedicalWebPage, Person, FAQPage), perfectly mapped H1/H2 tags, precise meta title/description lengths, and explicit image dimensions to prevent Cumulative Layout Shift (CLS).
+  - **Dynamic Permalinks**: Routes are intuitively named (`/services`, `/what-we-treat`) to match navigation items exactly, reinforcing semantic relevance.
 - **Dedicated Free Discovery Call Page (`/free-15-min-call-with-katie`)**: Replaces the global pop-up modal with a dedicated landing page for scheduling the free 15-minute discovery call.
-  - Features a native GoHighLevel calendar embed integrated seamlessly into the page, complete with a custom, branded loading overlay to ensure a premium user experience while the iframe initializes. 
+  - Features a native GoHighLevel calendar embed integrated seamlessly into the page, complete with a custom, branded loading overlay to ensure a premium user experience while the iframe initializes.
   - Supports dynamic iframe height recalculations with native mobile scrolling, breaking out of standard modal constraints for improved accessibility on smaller devices.
   - **High-Converting Bio Layout**: The standard location gate has been completely replaced with a high-converting, trust-building clinician bio. This layout includes an Instagram-style verified badge and a rotating carousel of verified 5-star patient reviews.
   - **Optimized Copy & Sequence**: The pre-booking flow uses a specific sequence (Photo/Badge -> Headline -> Symptoms Checklist -> CTA -> Testimonials) perfectly mirrored from high-performing ad copy to maximize conversions and message-match.

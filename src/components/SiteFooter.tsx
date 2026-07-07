@@ -95,7 +95,7 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
-              <Link to="/conditions" className="hover:text-gold">
+              <Link to="/what-we-treat" className="hover:text-gold">
                 What We Treat
               </Link>
             </li>

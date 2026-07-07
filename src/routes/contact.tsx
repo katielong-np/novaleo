@@ -1,5 +1,6 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { useBookingModal } from "@/components/BookingModalContext";
+import { Check } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -13,17 +14,24 @@ export const Route = createFileRoute("/contact")({
       { rel: "canonical", href: "https://novaweightandwellness.com/contact" },
     ],
     meta: [
-      { title: "Book a Free Discovery Call  Novaleo Weight & Wellness" },
+      { title: "Contact Novaleo Weight & Wellness | Book a Free Call" },
       {
         name: "description",
         content:
           "Book a free 15-minute Google Meet discovery call with Kathryn Long, NP-C. Telehealth functional medicine for women in Michigan & Wisconsin.",
       },
-      { property: "og:title", content: "Contact Novaleo Weight & Wellness" },
+      { property: "og:title", content: "Contact Novaleo Weight & Wellness | Book a Free Call" },
       {
         property: "og:description",
-        content: "Free 15-minute discovery call. No cost, no commitment.",
+        content: "Free 15-minute discovery call. No cost, no commitment. Telehealth functional medicine for women in Michigan & Wisconsin.",
       },
+      { property: "og:url", content: "https://novaweightandwellness.com/contact" },
+      { property: "og:image", content: "https://novaweightandwellness.com/og-image.webp" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Contact Novaleo Weight & Wellness | Book a Free Call" },
+      { name: "twitter:description", content: "Book a free 15-minute Google Meet discovery call with Kathryn Long, NP-C." },
+      { name: "twitter:image", content: "https://novaweightandwellness.com/og-image.webp" },
     ],
   }),
   component: Contact,
@@ -39,8 +47,16 @@ function Contact() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
+            "@graph": [
+              {
+                "@type": "ContactPage",
+                "name": "Contact Novaleo Weight & Wellness",
+                "description": "Book a free 15-minute discovery call.",
+                "url": "https://novaweightandwellness.com/contact"
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": [
               {
                 "@type": "Question",
                 "name": "How is this different from seeing my regular doctor?",
@@ -106,96 +122,93 @@ function Contact() {
                 }
               }
             ]
+              }
+            ]
           })
         }}
       />
       <section className="container-prose pt-8 pb-16">
-        <div className="max-w-2xl">
-          <div className="eyebrow mb-5">Contact · No cost. No commitment.</div>
-          <h1 className="text-5xl md:text-6xl leading-[1.05]">
-            Book your free <em className="text-secondary not-italic">15-minute</em> discovery call.
-          </h1>
-          <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            Not sure if functional medicine is right for you? Let's talk. This call is designed to
-            answer your questions not to sell you anything. A relaxed, judgment-free Google Meet
-            conversation with Kathryn.
-          </p>
+        <div className="grid lg:grid-cols-12 gap-12 items-start">
+          <div className="lg:col-span-7">
+            <div className="eyebrow mb-5">Contact · No cost. No commitment.</div>
+            <h1 className="text-5xl md:text-6xl leading-[1.05]">
+              Book your free <em className="text-secondary not-italic">15-minute</em> discovery call.
+            </h1>
+            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+              Not sure if functional medicine is right for you? Let's talk. This call is designed to
+              answer your questions not to sell you anything. A relaxed, judgment-free Google Meet
+              conversation with Kathryn.
+            </p>
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link to="/free-15-min-call-with-katie"
-              
-              className="btn-gold"
-            >
-              Book Free 15-Min Call
-            </Link>
-            <a
-              href="https://www.optimantra.com/optimus/patient/patientaccess/practsNslots?sid=OFREc0ROeWQyL0kvdE9OaU5GRlVOQT09&pid=ZW1nazRycGdvZWxwQjA2eEpiOE5kQT09&lid=UlNxTzY0a0dyR1hJNGJsSkR2NDF5UT09"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-md border border-primary px-6 py-3 text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-            >
-              Book $97 Root-Cause Intake
-            </a>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link to="/free-15-min-call-with-katie" className="btn-gold">
+                Book Free 15-Min Call
+              </Link>
+              <a
+                href="https://www.optimantra.com/optimus/patient/patientaccess/practsNslots?sid=OFREc0ROeWQyL0kvdE9OaU5GRlVOQT09&pid=ZW1nazRycGdvZWxwQjA2eEpiOE5kQT09&lid=UlNxTzY0a0dyR1hJNGJsSkR2NDF5UT09"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-md border border-primary px-6 py-3 text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+              >
+                Book $97 Root-Cause Intake
+              </a>
+            </div>
+
+            <ul className="mt-8 space-y-3 text-sm text-foreground/85">
+              {[
+                "Review your main health concerns and symptoms",
+                "Discuss what you've tried and why it hasn't worked",
+                "Learn how the functional medicine process works",
+                "Understand what the initial evaluation includes",
+                "Hear pricing and what to expect",
+                "Decide together if this is the right fit",
+              ].map((item) => (
+                <li key={item} className="flex gap-3">
+                  <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-secondary/50 text-primary shrink-0">
+                    <Check className="h-3 w-3" />
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
+          <div className="lg:col-span-5 w-full">
+            <div className="rounded-2xl border border-border bg-card/60 p-8 shadow-sm h-full">
+              <h2 className="text-2xl font-display text-primary mb-6">Get in Touch</h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-2">Phone</h3>
+                  <a href="tel:+116168014648" className="text-lg font-medium text-foreground hover:text-primary transition-colors">
+                    1-616-801-4648
+                  </a>
+                </div>
+                
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-2">Email</h3>
+                  <a href="mailto:Katie@novaweightandwellness.com" className="text-lg font-medium text-foreground hover:text-primary transition-colors break-all">
+                    Katie@novaweightandwellness.com
+                  </a>
+                </div>
 
-          <ul className="mt-8 space-y-3 text-sm text-foreground/85">
-            {[
-              "Review your main health concerns and symptoms",
-              "Discuss what you've tried and why it hasn't worked",
-              "Learn how the functional medicine process works",
-              "Understand what the initial evaluation includes",
-              "Hear pricing and what to expect",
-              "Decide together if this is the right fit",
-            ].map((p) => (
-              <li key={p} className="flex gap-2">
-                <span className="text-secondary">→</span>
-                {p}
-              </li>
-            ))}
-          </ul>
-
-          <dl className="mt-10 grid sm:grid-cols-2 gap-6 text-sm">
-            <div>
-              <dt className="eyebrow mb-1">Call or text</dt>
-              <dd>
-                <a href="tel:16164606337" className="text-primary hover:text-secondary font-medium">
-                  616-460-6337
-                </a>
-              </dd>
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-2">Location</h3>
+                  <p className="text-lg font-medium text-foreground leading-relaxed">
+                    1805 Leonard St NE<br />
+                    Grand Rapids, MI 49505
+                  </p>
+                  <p className="mt-2 text-sm text-muted-foreground italic">
+                    Telehealth services available for all residents of Michigan and Wisconsin.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div>
-              <dt className="eyebrow mb-1">Email</dt>
-              <dd>
-                <a
-                  href="mailto:Katie@novaweightandwellness.com"
-                  className="text-primary hover:text-secondary font-medium"
-                >
-                  Katie@novaweightandwellness.com
-                </a>
-              </dd>
-            </div>
-            <div>
-              <dt className="eyebrow mb-1">Location</dt>
-              <dd className="text-foreground/85">
-                1805 Leonard st NE<br />
-                Grand Rapids, Mi 49505
-              </dd>
-            </div>
-            <div>
-              <dt className="eyebrow mb-1">Care areas</dt>
-              <dd className="text-foreground/85">Telehealth across Michigan &amp; Wisconsin</dd>
-            </div>
-            <div>
-              <dt className="eyebrow mb-1">Hours</dt>
-              <dd className="text-foreground/85">Monday – Friday · 7:00 AM – 6:00 PM</dd>
-            </div>
-          </dl>
-
-          <p className="mt-8 text-xs text-muted-foreground italic">
-            This is an informational, non-clinical conversation. No medical advice is given on this
-            call.
-          </p>
+          </div>
         </div>
+
+        <p className="mt-8 text-xs text-muted-foreground italic max-w-2xl">
+          This is an informational, non-clinical conversation. No medical advice is given on this
+          call.
+        </p>
       </section>
 
       {/* FAQ */}

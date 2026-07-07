@@ -24,17 +24,24 @@ export const Route = createFileRoute("/")({
       { rel: "canonical", href: "https://novaweightandwellness.com/" },
     ],
     meta: [
-      { title: "Novaleo Weight & Wellness  Functional Medicine for Women in MI & WI" },
+      { title: "Functional Medicine for Women in MI & WI | Novaleo" },
       {
         name: "description",
         content:
-          "Exhausted but your labs are 'normal'? Kathryn Long, NP-C helps professional women in MI & WI uncover the root cause of fatigue, brain fog, hormones & weight resistance. Free 15-min discovery call.",
+          "Labs 'normal' but you feel awful? Kathryn Long, NP-C uncovers root causes of fatigue, brain fog & weight resistance for women in MI & WI.",
       },
-      { property: "og:title", content: "Novaleo Weight & Wellness" },
+      { property: "og:title", content: "Functional Medicine for Women in MI & WI | Novaleo" },
       {
         property: "og:description",
-        content: "Root-cause functional medicine via telehealth for women in their 40s & 50s.",
+        content: "Root-cause functional medicine via telehealth for women in their 40s & 50s. Free 15-min discovery call.",
       },
+      { property: "og:url", content: "https://novaweightandwellness.com/" },
+      { property: "og:image", content: "https://novaweightandwellness.com/og-image.webp" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Functional Medicine for Women in MI & WI | Novaleo" },
+      { name: "twitter:description", content: "Root-cause functional medicine via telehealth for women in their 40s & 50s. Free 15-min discovery call." },
+      { name: "twitter:image", content: "https://novaweightandwellness.com/og-image.webp" },
     ],
   }),
   component: Home,

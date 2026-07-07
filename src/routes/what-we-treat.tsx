@@ -1,23 +1,30 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useBookingModal } from "@/components/BookingModalContext";
 
-export const Route = createFileRoute("/conditions")({
+export const Route = createFileRoute("/what-we-treat")({
   head: () => ({
     links: [
-      { rel: "canonical", href: "https://novaweightandwellness.com/conditions" },
+      { rel: "canonical", href: "https://novaweightandwellness.com/what-we-treat" },
     ],
     meta: [
-      { title: "What We Treat  Conditions | Novaleo Functional Medicine" },
+      { title: "Conditions We Treat | Novaleo Weight & Wellness" },
       {
         name: "description",
         content:
-          "Fatigue, brain fog, hormone imbalance, weight resistance, thyroid, gut & metabolic issues  root-cause care via telehealth in MI & WI.",
+          "Fatigue, brain fog, hormone imbalance, weight resistance, thyroid, gut & metabolic issues. Root-cause care via telehealth in MI & WI.",
       },
-      { property: "og:title", content: "What We Treat | Novaleo" },
+      { property: "og:title", content: "Conditions We Treat | Novaleo Weight & Wellness" },
       {
         property: "og:description",
-        content: "Conditions Novaleo's functional medicine practice addresses.",
+        content: "Conditions Novaleo's functional medicine practice addresses, including fatigue, hormones, and weight resistance.",
       },
+      { property: "og:url", content: "https://novaweightandwellness.com/what-we-treat" },
+      { property: "og:image", content: "https://novaweightandwellness.com/og-image.webp" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Conditions We Treat | Novaleo Weight & Wellness" },
+      { name: "twitter:description", content: "Fatigue, brain fog, hormone imbalance, weight resistance, thyroid, gut & metabolic issues." },
+      { name: "twitter:image", content: "https://novaweightandwellness.com/og-image.webp" },
     ],
   }),
   component: Conditions,
@@ -79,6 +86,24 @@ function Conditions() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalWebPage",
+            "name": "What We Treat - Conditions - Novaleo Functional Medicine",
+            "description": "Conditions Novaleo's functional medicine practice addresses, including fatigue, hormones, and weight resistance.",
+            "url": "https://novaweightandwellness.com/what-we-treat",
+            "about": [
+              { "@type": "MedicalCondition", "name": "Persistent fatigue" },
+              { "@type": "MedicalCondition", "name": "Weight resistance" },
+              { "@type": "MedicalCondition", "name": "Thyroid dysfunction" },
+              { "@type": "MedicalCondition", "name": "Hormone imbalance" }
+            ]
+          })
+        }}
+      />
       <section className="container-prose pt-8 pb-12">
         <div className="eyebrow mb-5">What We Treat</div>
         <h1 className="text-5xl md:text-7xl max-w-3xl leading-[1.02]">

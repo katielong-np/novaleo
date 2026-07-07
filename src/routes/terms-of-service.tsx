@@ -2,7 +2,25 @@ import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/terms-of-service")({
   head: () => ({
-    meta: [{ title: "Terms of Service | Novaleo Weight & Wellness" }],
+    links: [
+      { rel: "canonical", href: "https://novaweightandwellness.com/terms-of-service" },
+    ],
+    meta: [
+      { title: "Terms of Service | Novaleo Weight & Wellness" },
+      {
+        name: "description",
+        content: "Terms of service for Novaleo Weight & Wellness. Read the terms and conditions for using our website and services.",
+      },
+      { property: "og:title", content: "Terms of Service | Novaleo Weight & Wellness" },
+      { property: "og:description", content: "Terms of service for Novaleo Weight & Wellness. Read the terms and conditions for using our website and services." },
+      { property: "og:url", content: "https://novaweightandwellness.com/terms-of-service" },
+      { property: "og:image", content: "https://novaweightandwellness.com/og-image.webp" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Terms of Service | Novaleo Weight & Wellness" },
+      { name: "twitter:description", content: "Terms of service for Novaleo Weight & Wellness. Read the terms and conditions for using our website and services." },
+      { name: "twitter:image", content: "https://novaweightandwellness.com/og-image.webp" },
+    ],
   }),
   component: TermsOfService,
 });

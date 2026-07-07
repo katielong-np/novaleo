@@ -4,13 +4,28 @@ import PaidClaritySession from '@/components/PaidClaritySession';
 
 export const Route = createFileRoute('/clarity-session')({
   head: () => ({
+    links: [
+      { rel: "canonical", href: "https://novaweightandwellness.com/clarity-session" },
+    ],
     meta: [
-      { title: 'Book a Clarity Session — Novaleo Weight & Wellness' },
+      { title: "Book a Clarity Session | Novaleo Weight & Wellness" },
       {
-        name: 'description',
+        name: "description",
         content:
-          'Schedule your $47 30-minute Clarity Session with Kathryn Long, NP-C. Available via telehealth in Michigan and Wisconsin.',
+          "Schedule your $47 30-minute Clarity Session with Kathryn Long, NP-C. Available via telehealth in Michigan and Wisconsin.",
       },
+      { property: "og:title", content: "Book a Clarity Session | Novaleo" },
+      {
+        property: "og:description",
+        content: "Schedule your $47 30-minute Clarity Session with Kathryn Long, NP-C. Telehealth in MI & WI.",
+      },
+      { property: "og:url", content: "https://novaweightandwellness.com/clarity-session" },
+      { property: "og:image", content: "https://novaweightandwellness.com/og-image.webp" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Book a Clarity Session | Novaleo" },
+      { name: "twitter:description", content: "Schedule your $47 30-minute Clarity Session with Kathryn Long, NP-C. Telehealth in MI & WI." },
+      { name: "twitter:image", content: "https://novaweightandwellness.com/og-image.webp" },
     ],
   }),
   component: ClaritySessionPage,
@@ -51,7 +66,8 @@ function ClaritySessionPage() {
   };
 
   return (
-    <div className="min-h-[calc(100vh-6rem)] flex flex-col items-center justify-center relative p-0 md:p-6">
+    <main className="min-h-[calc(100vh-6rem)] flex flex-col items-center justify-center relative p-0 md:p-6">
+      <h1 className="sr-only">Book a Clarity Session</h1>
       <PageStyles />
       <OrganicBackground />
       
@@ -70,6 +86,6 @@ function ClaritySessionPage() {
           submitBooking={submitBooking}
         />
       </div>
-    </div>
+    </main>
   );
 }

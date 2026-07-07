@@ -87,32 +87,32 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Novaleo Weight & Wellness  Functional Medicine via Telehealth (MI & WI)" },
+      { title: "Novaleo Weight & Wellness | Functional Medicine (MI & WI)" },
       {
         name: "description",
         content:
-          "Root-cause functional medicine and metabolic health for professionals in Michigan & Wisconsin. Resolve fatigue, brain fog, hormone imbalance & weight resistance  even when labs are 'normal.'",
+          "Root-cause functional medicine for women in Michigan & Wisconsin. Resolve fatigue, brain fog, hormone imbalance & weight resistance.",
       },
       {
         property: "og:title",
-        content: "Novaleo Weight & Wellness  Functional Medicine via Telehealth (MI & WI)",
+        content: "Novaleo Weight & Wellness | Functional Medicine (MI & WI)",
       },
       {
         property: "og:description",
         content:
-          "Novaleo Wellness Hub is a telehealth practice for functional medicine and metabolic health.",
+          "Novaleo Weight & Wellness is a telehealth functional medicine practice for women in Michigan & Wisconsin.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "Novaleo Weight & Wellness  Functional Medicine via Telehealth (MI & WI)",
+        content: "Novaleo Weight & Wellness | Functional Medicine (MI & WI)",
       },
 
       {
         name: "twitter:description",
         content:
-          "Novaleo Wellness Hub is a telehealth practice for functional medicine and metabolic health.",
+          "Novaleo Weight & Wellness is a telehealth functional medicine practice for women in Michigan & Wisconsin.",
       },
       {
         property: "og:image",
@@ -281,7 +281,8 @@ function RootComponent() {
   const routerState = useRouterState();
   const isClaritySessionPage = routerState.location.pathname.includes('/clarity-session');
   const isMichiganPage = routerState.location.pathname.includes('/michigan-discovery-call');
-  const hideHeaderFooter = isClaritySessionPage || isMichiganPage;
+  const isFreeCallPage = routerState.location.pathname.includes('/free-15-min-call-with-katie');
+  const hideHeaderFooter = isClaritySessionPage || isMichiganPage || isFreeCallPage;
 
   React.useEffect(() => {
     if (typeof window !== 'undefined' && (window as any).fbq) {

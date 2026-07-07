@@ -9,7 +9,7 @@ export const Route = createFileRoute("/approach")({
       { rel: "canonical", href: "https://novaweightandwellness.com/approach" },
     ],
     meta: [
-      { title: "Our Approach  From Exhausted to Energized | Novaleo" },
+      { title: "Our Approach | From Exhausted to Energized | Novaleo" },
       {
         name: "description",
         content:
@@ -18,8 +18,15 @@ export const Route = createFileRoute("/approach")({
       { property: "og:title", content: "Our Approach | Novaleo Weight & Wellness" },
       {
         property: "og:description",
-        content: "The simple 4-step path from feeling dismissed to feeling like yourself again.",
+        content: "The simple 4-step path from feeling dismissed to feeling like yourself again. Personalized functional medicine care.",
       },
+      { property: "og:url", content: "https://novaweightandwellness.com/approach" },
+      { property: "og:image", content: "https://novaweightandwellness.com/og-image.webp" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Our Approach | Novaleo Weight & Wellness" },
+      { name: "twitter:description", content: "The simple 4-step path from feeling dismissed to feeling like yourself again." },
+      { name: "twitter:image", content: "https://novaweightandwellness.com/og-image.webp" },
     ],
   }),
   component: Approach,
@@ -53,6 +60,18 @@ function Approach() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Our Approach to Functional Medicine",
+            "description": "How Novaleo Weight & Wellness uses functional medicine to address fatigue, weight resistance, and hormone imbalance.",
+            "url": "https://novaweightandwellness.com/approach"
+          }),
+        }}
+      />
       <section className="container-prose pt-8 pb-12">
         <div className="eyebrow mb-5">Our Approach · Simple Next Steps</div>
         <h1 className="text-5xl md:text-7xl max-w-3xl leading-[1.02]">
@@ -69,7 +88,7 @@ function Approach() {
       <section className="container-prose pb-24">
         <img
           src={labs}
-          alt="Lab analysis"
+          alt="Comprehensive functional medicine lab results being reviewed by a clinician"
           width={1400}
           height={1000}
           loading="lazy"

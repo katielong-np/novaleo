@@ -9,15 +9,14 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WhatWeTreatRouteImport } from './routes/what-we-treat'
 import { Route as TermsOfServiceRouteImport } from './routes/terms-of-service'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
-import { Route as SchedulerRouteImport } from './routes/scheduler'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as MichiganDiscoveryCallRouteImport } from './routes/michigan-discovery-call'
 import { Route as Free15MinCallWithKatieRouteImport } from './routes/free-15-min-call-with-katie'
 import { Route as ContactRouteImport } from './routes/contact'
-import { Route as ConditionsRouteImport } from './routes/conditions'
 import { Route as ClaritySessionRouteImport } from './routes/clarity-session'
 import { Route as ApproachRouteImport } from './routes/approach'
 import { Route as AboutRouteImport } from './routes/about'
@@ -25,6 +24,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRouteImport } from './routes/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted'
 
+const WhatWeTreatRoute = WhatWeTreatRouteImport.update({
+  id: '/what-we-treat',
+  path: '/what-we-treat',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TermsOfServiceRoute = TermsOfServiceRouteImport.update({
   id: '/terms-of-service',
   path: '/terms-of-service',
@@ -38,11 +42,6 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SchedulerRoute = SchedulerRouteImport.update({
-  id: '/scheduler',
-  path: '/scheduler',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
@@ -63,11 +62,6 @@ const Free15MinCallWithKatieRoute = Free15MinCallWithKatieRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ConditionsRoute = ConditionsRouteImport.update({
-  id: '/conditions',
-  path: '/conditions',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ClaritySessionRoute = ClaritySessionRouteImport.update({
@@ -107,15 +101,14 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/approach': typeof ApproachRoute
   '/clarity-session': typeof ClaritySessionRoute
-  '/conditions': typeof ConditionsRoute
   '/contact': typeof ContactRoute
   '/free-15-min-call-with-katie': typeof Free15MinCallWithKatieRoute
   '/michigan-discovery-call': typeof MichiganDiscoveryCallRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
-  '/scheduler': typeof SchedulerRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms-of-service': typeof TermsOfServiceRoute
+  '/what-we-treat': typeof WhatWeTreatRoute
   '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted': typeof BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute
   '/blog/': typeof BlogIndexRoute
 }
@@ -124,15 +117,14 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/approach': typeof ApproachRoute
   '/clarity-session': typeof ClaritySessionRoute
-  '/conditions': typeof ConditionsRoute
   '/contact': typeof ContactRoute
   '/free-15-min-call-with-katie': typeof Free15MinCallWithKatieRoute
   '/michigan-discovery-call': typeof MichiganDiscoveryCallRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
-  '/scheduler': typeof SchedulerRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms-of-service': typeof TermsOfServiceRoute
+  '/what-we-treat': typeof WhatWeTreatRoute
   '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted': typeof BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute
   '/blog': typeof BlogIndexRoute
 }
@@ -142,15 +134,14 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/approach': typeof ApproachRoute
   '/clarity-session': typeof ClaritySessionRoute
-  '/conditions': typeof ConditionsRoute
   '/contact': typeof ContactRoute
   '/free-15-min-call-with-katie': typeof Free15MinCallWithKatieRoute
   '/michigan-discovery-call': typeof MichiganDiscoveryCallRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
-  '/scheduler': typeof SchedulerRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms-of-service': typeof TermsOfServiceRoute
+  '/what-we-treat': typeof WhatWeTreatRoute
   '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted': typeof BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute
   '/blog/': typeof BlogIndexRoute
 }
@@ -161,15 +152,14 @@ export interface FileRouteTypes {
     | '/about'
     | '/approach'
     | '/clarity-session'
-    | '/conditions'
     | '/contact'
     | '/free-15-min-call-with-katie'
     | '/michigan-discovery-call'
     | '/privacy-policy'
-    | '/scheduler'
     | '/services'
     | '/sitemap.xml'
     | '/terms-of-service'
+    | '/what-we-treat'
     | '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted'
     | '/blog/'
   fileRoutesByTo: FileRoutesByTo
@@ -178,15 +168,14 @@ export interface FileRouteTypes {
     | '/about'
     | '/approach'
     | '/clarity-session'
-    | '/conditions'
     | '/contact'
     | '/free-15-min-call-with-katie'
     | '/michigan-discovery-call'
     | '/privacy-policy'
-    | '/scheduler'
     | '/services'
     | '/sitemap.xml'
     | '/terms-of-service'
+    | '/what-we-treat'
     | '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted'
     | '/blog'
   id:
@@ -195,15 +184,14 @@ export interface FileRouteTypes {
     | '/about'
     | '/approach'
     | '/clarity-session'
-    | '/conditions'
     | '/contact'
     | '/free-15-min-call-with-katie'
     | '/michigan-discovery-call'
     | '/privacy-policy'
-    | '/scheduler'
     | '/services'
     | '/sitemap.xml'
     | '/terms-of-service'
+    | '/what-we-treat'
     | '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted'
     | '/blog/'
   fileRoutesById: FileRoutesById
@@ -213,21 +201,27 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ApproachRoute: typeof ApproachRoute
   ClaritySessionRoute: typeof ClaritySessionRoute
-  ConditionsRoute: typeof ConditionsRoute
   ContactRoute: typeof ContactRoute
   Free15MinCallWithKatieRoute: typeof Free15MinCallWithKatieRoute
   MichiganDiscoveryCallRoute: typeof MichiganDiscoveryCallRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
-  SchedulerRoute: typeof SchedulerRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsOfServiceRoute: typeof TermsOfServiceRoute
+  WhatWeTreatRoute: typeof WhatWeTreatRoute
   BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute: typeof BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute
   BlogIndexRoute: typeof BlogIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/what-we-treat': {
+      id: '/what-we-treat'
+      path: '/what-we-treat'
+      fullPath: '/what-we-treat'
+      preLoaderRoute: typeof WhatWeTreatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/terms-of-service': {
       id: '/terms-of-service'
       path: '/terms-of-service'
@@ -247,13 +241,6 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/scheduler': {
-      id: '/scheduler'
-      path: '/scheduler'
-      fullPath: '/scheduler'
-      preLoaderRoute: typeof SchedulerRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy-policy': {
@@ -282,13 +269,6 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/conditions': {
-      id: '/conditions'
-      path: '/conditions'
-      fullPath: '/conditions'
-      preLoaderRoute: typeof ConditionsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/clarity-session': {
@@ -341,15 +321,14 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ApproachRoute: ApproachRoute,
   ClaritySessionRoute: ClaritySessionRoute,
-  ConditionsRoute: ConditionsRoute,
   ContactRoute: ContactRoute,
   Free15MinCallWithKatieRoute: Free15MinCallWithKatieRoute,
   MichiganDiscoveryCallRoute: MichiganDiscoveryCallRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
-  SchedulerRoute: SchedulerRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsOfServiceRoute: TermsOfServiceRoute,
+  WhatWeTreatRoute: WhatWeTreatRoute,
   BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute:
     BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute,
   BlogIndexRoute: BlogIndexRoute,

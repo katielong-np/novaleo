@@ -4,13 +4,28 @@ import BookingVariantA from '@/components/BookingVariantA';
 
 export const Route = createFileRoute('/michigan-discovery-call')({
   head: () => ({
+    links: [
+      { rel: "canonical", href: "https://novaweightandwellness.com/michigan-discovery-call" },
+    ],
     meta: [
-      { title: 'Book a Free Discovery Call — Novaleo Weight & Wellness' },
+      { title: "Book a Free Discovery Call | Michigan | Novaleo" },
       {
-        name: 'description',
+        name: "description",
         content:
-          'Schedule your complimentary 15-minute discovery call with Kathryn Long, NP-C. Available via telehealth in Michigan.',
+          "Schedule your complimentary 15-minute discovery call with Kathryn Long, NP-C. Available via telehealth in Michigan.",
       },
+      { property: "og:title", content: "Book a Free Discovery Call | Michigan | Novaleo" },
+      {
+        property: "og:description",
+        content: "Schedule your complimentary 15-minute discovery call with Kathryn Long, NP-C.",
+      },
+      { property: "og:url", content: "https://novaweightandwellness.com/michigan-discovery-call" },
+      { property: "og:image", content: "https://novaweightandwellness.com/og-image.webp" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Book a Free Discovery Call | Michigan | Novaleo" },
+      { name: "twitter:description", content: "Schedule your complimentary 15-minute discovery call with Kathryn Long, NP-C." },
+      { name: "twitter:image", content: "https://novaweightandwellness.com/og-image.webp" },
     ],
   }),
   component: DiscoveryPage,
@@ -38,7 +53,8 @@ function DiscoveryPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start md:justify-center relative p-0 md:p-8 bg-white">
+    <main className="min-h-screen flex flex-col items-center justify-start md:justify-center relative p-0 md:p-8 bg-white">
+      <h1 className="sr-only">Book a Free Discovery Call in Michigan</h1>
       <div className={`w-full max-w-2xl mx-auto relative z-10 flex flex-col min-h-screen md:min-h-0 bg-white`}>
         <BookingVariantA
           step={step}
@@ -54,6 +70,6 @@ function DiscoveryPage() {
           submitBooking={submitBooking}
         />
       </div>
-    </div>
+    </main>
   );
 }

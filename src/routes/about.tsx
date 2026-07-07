@@ -9,18 +9,25 @@ export const Route = createFileRoute("/about")({
       { rel: "canonical", href: "https://novaweightandwellness.com/about" },
     ],
     meta: [
-      { title: "About Kathryn Long, NP-C  Novaleo Weight & Wellness" },
+      { title: "About Kathryn Long, NP-C | Novaleo Weight & Wellness" },
       {
         name: "description",
         content:
-          "Meet Kathryn Long, NP-C  board-certified nurse practitioner with 20+ years in healthcare, specializing in hormones, metabolic health, and weight resistance for women in midlife.",
+          "Meet Kathryn Long, NP-C — board-certified nurse practitioner specializing in hormones, metabolic health & weight resistance for women over 40.",
       },
       { property: "og:title", content: "About Kathryn Long, NP-C | Novaleo Weight & Wellness" },
       {
         property: "og:description",
         content:
-          "Functional medicine for professional women in MI & WI  led by Kathryn Long, NP-C.",
+          "Functional medicine for professional women in MI & WI, led by Kathryn Long, NP-C. Get to the root cause of your symptoms.",
       },
+      { property: "og:url", content: "https://novaweightandwellness.com/about" },
+      { property: "og:image", content: "https://novaweightandwellness.com/og-image.webp" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "About Kathryn Long, NP-C | Novaleo Weight & Wellness" },
+      { name: "twitter:description", content: "Functional medicine for professional women in MI & WI, led by Kathryn Long, NP-C." },
+      { name: "twitter:image", content: "https://novaweightandwellness.com/og-image.webp" },
     ],
   }),
   component: About,
@@ -42,6 +49,7 @@ function About() {
             "jobTitle": "Board-Certified Nurse Practitioner",
             "description": "Board-certified nurse practitioner with 20+ years in healthcare, specializing in hormones, metabolic health, and weight resistance for women in midlife.",
             "url": "https://novaweightandwellness.com/about",
+            "image": "https://novaweightandwellness.com/og-image.webp",
             "worksFor": {
               "@type": "MedicalBusiness",
               "name": "Novaleo Weight & Wellness",

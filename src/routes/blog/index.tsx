@@ -10,28 +10,33 @@ export const Route = createFileRoute("/blog/")(  {
     meta: [
       {
         title:
-          "Blog | Novaleo Weight & Wellness | Functional Medicine Insights for Michigan Women",
+          "Blog | Functional Medicine Insights | Novaleo",
       },
       {
         name: "description",
         content:
-          "Expert articles on functional medicine, hormone health, weight resistance, and metabolic wellness for women in Michigan and Wisconsin. Written by Kathryn Long, NP-C.",
+          "Expert articles on hormone health, weight resistance & metabolic wellness for women in MI & WI. Written by Kathryn Long, NP-C.",
       },
       {
         property: "og:title",
         content:
-          "Blog | Novaleo Weight & Wellness",
+          "Blog | Functional Medicine Insights | Novaleo",
       },
       {
         property: "og:description",
         content:
           "Expert functional medicine insights for women in their 40s and 50s. Hormone health, metabolic wellness, and root-cause solutions.",
       },
+      { property: "og:url", content: "https://novaweightandwellness.com/blog" },
       { property: "og:type", content: "website" },
       {
         property: "og:image",
         content: "https://novaweightandwellness.com/og-image.webp",
       },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Blog | Functional Medicine Insights | Novaleo" },
+      { name: "twitter:description", content: "Expert articles on hormone health, weight resistance & metabolic wellness for women in MI & WI." },
+      { name: "twitter:image", content: "https://novaweightandwellness.com/og-image.webp" },
     ],
   }),
   component: BlogIndex,
@@ -112,6 +117,8 @@ function BlogIndex() {
                     src={article.image}
                     alt={article.imageAlt}
                     className="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500"
+                    width={800}
+                    height={500}
                     loading="lazy"
                   />
                 </div>

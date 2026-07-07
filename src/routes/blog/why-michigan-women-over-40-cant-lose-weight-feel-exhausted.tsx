@@ -17,12 +17,12 @@ export const Route = createFileRoute(
     meta: [
       {
         title:
-          "Why Can't I Lose Weight in My 40s? (And Why You're Always Tired) | Novaleo",
+          "Why Can't I Lose Weight in My 40s? | Novaleo",
       },
       {
         name: 'description',
         content:
-          "Struggling with weight gain, fatigue, and brain fog in your 40s or 50s? Learn why your Michigan doctor's 'normal' labs might be missing the real problem. Functional medicine solutions from Grand Rapids, MI.",
+          "Struggling with weight gain, fatigue & brain fog in your 40s? Learn why 'normal' labs miss the real problem and how functional medicine helps.",
       },
       {
         property: 'og:title',
@@ -32,13 +32,21 @@ export const Route = createFileRoute(
       {
         property: 'og:description',
         content:
-          "Struggling with weight gain, fatigue, and brain fog in your 40s or 50s? Learn why your Michigan doctor's 'normal' labs might be missing the real problem. Functional medicine solutions from Grand Rapids, MI.",
+          "Struggling with weight gain, fatigue & brain fog in your 40s? Learn why 'normal' labs miss the real problem and how functional medicine helps.",
+      },
+      {
+        property: 'og:url',
+        content: 'https://novaweightandwellness.com/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted',
       },
       {
         property: 'og:image',
         content: 'https://novaweightandwellness.com/og-image.webp',
       },
       { property: 'og:type', content: 'article' },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Why Can't I Lose Weight in My 40s? | Novaleo" },
+      { name: "twitter:description", content: "Struggling with weight gain, fatigue & brain fog in your 40s? Learn why 'normal' labs miss the real problem." },
+      { name: "twitter:image", content: "https://novaweightandwellness.com/og-image.webp" },
     ],
     links: [
       {
@@ -98,6 +106,8 @@ const articleSchema = {
     name: 'Novaleo Weight & Wellness',
   },
   datePublished: '2025-07-03',
+  dateModified: '2025-07-03',
+  url: 'https://novaweightandwellness.com/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted',
   image: 'https://novaweightandwellness.com/og-image.webp',
 };
 
@@ -234,6 +244,8 @@ function ArticlePage() {
           src={heroImg}
           alt="Michigan woman experiencing afternoon fatigue while working at her desk, representing the exhaustion many women over 40 face daily"
           className="rounded-2xl shadow-lg w-full object-cover max-h-[500px]"
+          width={1200}
+          height={500}
         />
       </div>
 
@@ -492,6 +504,9 @@ function ArticlePage() {
                 src={frustrationImg}
                 alt="A relatable woman in her 40s looking exhausted and overwhelmed while reviewing medical paperwork"
                 className="rounded-2xl shadow-lg w-full my-8"
+                width={800}
+                height={533}
+                loading="lazy"
               />
             </section>
 
@@ -544,6 +559,9 @@ function ArticlePage() {
                 src={hormoneImg}
                 alt="A thoughtful woman in her late 40s experiencing the subtle but impactful signs of hormone shifts and perimenopause"
                 className="rounded-2xl shadow-lg w-full my-8"
+                width={800}
+                height={533}
+                loading="lazy"
               />
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -814,6 +832,9 @@ function ArticlePage() {
                 src={wellnessImg}
                 alt="Michigan landscape representing the wellness journey for women across the state, from the Great Lakes shores to bustling metro areas"
                 className="rounded-2xl shadow-lg w-full my-8"
+                width={800}
+                height={533}
+                loading="lazy"
               />
             </section>
 
@@ -875,6 +896,9 @@ function ArticlePage() {
                 src={labsV2Img}
                 alt="Female healthcare provider carefully reviewing detailed lab results on a wooden desk"
                 className="rounded-2xl shadow-lg w-full my-8"
+                width={800}
+                height={533}
+                loading="lazy"
               />
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -1065,6 +1089,9 @@ function ArticlePage() {
                 src={telehealthImg}
                 alt="Woman having a comfortable telehealth consultation from her Michigan home, connecting with her functional medicine provider via video call"
                 className="rounded-2xl shadow-lg w-full my-8"
+                width={800}
+                height={533}
+                loading="lazy"
               />
 
               <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">

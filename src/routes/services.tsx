@@ -1,7 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { Check } from "lucide-react";
-import { SectionHeading } from "@/components/SectionHeading";
-import { useBookingModal } from "@/components/BookingModalContext";
+import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -9,230 +6,225 @@ export const Route = createFileRoute("/services")({
       { rel: "canonical", href: "https://novaweightandwellness.com/services" },
     ],
     meta: [
-      { title: "Services & Pricing  Novaleo Weight & Wellness" },
+      { title: "Book a Visit | Novaleo Weight & Wellness Scheduler" },
       {
         name: "description",
         content:
-          "Clarity Session, Root Cause Lab Panel, Executive Longevity Partnership, and follow-up care  functional medicine telehealth for women in MI & WI.",
+          "Schedule your visit with Novaleo Weight & Wellness. Choose a Discovery Call, Root Cause Intake, Lab Panel, Follow-up, or the Executive Longevity Partnership.",
       },
-      { property: "og:title", content: "Services | Novaleo Weight & Wellness" },
+      { property: "og:title", content: "Book a Visit | Novaleo Weight & Wellness" },
       {
         property: "og:description",
-        content: "Personalized functional medicine programs with Kathryn Long, NP-C.",
+        content: "Choose a Discovery Call, Root Cause Intake, Lab Panel, or Executive Partnership and book online.",
       },
+      { property: "og:url", content: "https://novaweightandwellness.com/services" },
+      { property: "og:image", content: "https://novaweightandwellness.com/og-image.webp" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Book a Visit | Novaleo Weight & Wellness Scheduler" },
+      { name: "twitter:description", content: "Choose a Discovery Call, Root Cause Intake, Lab Panel, or Executive Partnership and book online." },
+      { name: "twitter:image", content: "https://novaweightandwellness.com/og-image.webp" },
     ],
   }),
-  component: Services,
+  component: SchedulerPage,
 });
 
-const programs = [
+type Service = {
+  id: string;
+  name: string;
+  duration: string;
+  price: string;
+  highlight?: string;
+  description: React.ReactNode;
+  bookUrl: string;
+};
+
+const BOOK_BASE =
+  "https://www.optimantra.com/optimus/patient/patientaccess/practsNslots?pid=ZW1nazRycGdvZWxwQjA2eEpiOE5kQT09&lid=UlNxTzY0a0dyR1hJNGJsSkR2NDF5UT09&sid=";
+
+const services: Service[] = [
   {
+    id: "discovery",
     name: "Root Cause Discovery Call",
-    tag: "Start here · $47",
-    price: "$47",
-    desc: "A 30-minute virtual session to review your symptoms and health history, and get personalized hormonal guidance and clear next steps.",
-    bullets: [
-      "Support in deciding which service is right for you",
-      "Clarity before you book your intake or continue care",
-      "Program guidance and next steps",
-      "Answers to your questions",
-    ],
-    cta: "Book Free 15-Min Call",
-    note: "Or skip the clarity session and schedule the Root Cause Intake to start feeling like yourself again.",
+    duration: "15 Min",
+    price: "Free",
+    highlight: "Start here",
+    description: (
+      <>
+        <p>
+          A short no-cost consult a space to ask questions, get clarity, and determine your next
+          step, whether you're a new or current client.
+        </p>
+        <p className="mt-3 font-medium text-foreground">What's included:</p>
+        <ul className="mt-2 list-disc pl-5 space-y-1">
+          <li>Support in deciding which service is right for you</li>
+          <li>Clarity before you book your intake or continue care</li>
+          <li>Program guidance and next steps</li>
+          <li>Answers to your questions</li>
+        </ul>
+        <p className="mt-3 italic">
+          Or skip the Discovery Call and schedule the Root Cause Intake to start feeling like
+          yourself again.
+        </p>
+      </>
+    ),
+    bookUrl: BOOK_BASE + "WER4b0E4SngvZFdtcTdsd1NYek8xZz09",
   },
   {
+    id: "intake",
+    name: "Root Cause Intake | 60-Minute Clarity Session",
+    duration: "60 Min",
+    price: "$97",
+    highlight: "Most booked",
+    description: (
+      <>
+        <p>
+          A comprehensive clinical assessment where we go deep full health history, current
+          symptoms, lifestyle, nutrition, stress, sleep patterns, and any prior labs. You'll leave
+          with clarity on what's driving your symptoms and a personalized starting plan.
+        </p>
+      </>
+    ),
+    bookUrl: BOOK_BASE + "OFREc0ROeWQyL0kvdE9OaU5GRlVOQT09",
+  },
+  {
+    id: "lab-panel",
     name: "Root Cause Lab Panel",
-    tag: "Comprehensive baseline",
-    price: "Written insights included",
-    desc: "Novaleo's signature panel  trusted by our own providers  tests nutrients, inflammation, energy, and metabolism markers to uncover potential root causes and optimize your health. An excellent baseline panel.",
-    bullets: [
-      "Nutrients: Vitamin D, B12, Ferritin, Zinc, RBC Magnesium",
-      "Full Thyroid: TSH, Free T3, Free T4, TPO antibodies",
-      "Lipid panel: Total cholesterol, HDL, LDL, Triglycerides, Lp(a)",
-      "Blood sugar: Fasting Glucose, HbA1c, Fasting Insulin",
-      "Liver: Hepatic Function Panel, GGT",
-      "Inflammation: hs-CRP, Homocysteine",
-      "Labs ordered through Rupa · requires overnight fasting",
-      "Results & practitioner insights in ~2 weeks",
-    ],
-    cta: "Order my lab panel",
-    note: "Enroll in The Executive Longevity Partnership within 30 days and your lab panel investment is applied as credit toward the program.",
+    duration: "10 Min",
+    price: "$454",
+    description: (
+      <>
+        <p>Includes written insights on your results. Novaleo's signature panel.</p>
+        <p className="mt-3 font-medium text-foreground">Markers tested:</p>
+        <ul className="mt-2 list-disc pl-5 space-y-1">
+          <li>Nutrients: Vitamin D, B12, Ferritin, Zinc, RBC Magnesium</li>
+          <li>Full Thyroid: TSH, Free T3, Free T4, TPO Antibodies</li>
+          <li>Lipid panel & Lipoprotein(a)</li>
+          <li>Blood sugar: Fasting Glucose, HbA1c, Fasting Insulin</li>
+          <li>Liver: Hepatic Function Panel, GGT</li>
+          <li>Inflammation: hs-CRP, Homocysteine</li>
+        </ul>
+        <p className="mt-3 text-xs italic">
+          Labs ordered through Rupa. Requires overnight fasting. Results typically ready ~2 weeks
+          post-draw. Credit toward The Executive Longevity Partnership if enrolled within 30 days.
+        </p>
+      </>
+    ),
+    bookUrl: BOOK_BASE + "NnN1aEdEajVUdWpIZTZObUZPN1dNUT09",
   },
   {
+    id: "executive",
     name: "The Executive Longevity Partnership",
-    tag: "Signature program · Limited to 4 clients",
-    price: "6 months",
-    desc: "An executive-level collaboration that enhances metabolic, hormonal, and cognitive performance for high-performing women in their 40s and 50s. Data-informed strategy, not another generic plan.",
-    bullets: [
-      "Bi-monthly consultations with your healthcare provider",
-      "48-hour response time for inquiries",
-      "Comprehensive biomarker analysis and metabolic tracking",
-      "Provider-led strategy, nutrition guidance, and coaching support",
-      "Monthly data reviews and strategy refinements",
-      "Personalized supplement recommendations",
-      "Renewal available with a 25% loyalty discount",
-    ],
-    cta: "Apply for the partnership",
-    note: "Ideal for professionals, executives, entrepreneurs, and busy mothers seeking bespoke health strategy  not standard care.",
+    duration: "60 Min · 6-Month Program",
+    price: "$3,995",
+    highlight: "Limited to 4 clients",
+    description: (
+      <>
+        <p>
+          A six-month executive-level collaboration for high-performing women in their 40s and 50s
+          who feel tired, foggy, inflamed, hormonally off, or metabolically stuck.
+        </p>
+        <p className="mt-3 font-medium text-foreground">Includes:</p>
+        <ul className="mt-2 list-disc pl-5 space-y-1">
+          <li>Bi-monthly consultations with a healthcare provider</li>
+          <li>48-hour response time for inquiries</li>
+          <li>Comprehensive biomarker analysis & metabolic tracking</li>
+          <li>Monthly data reviews and strategy refinements</li>
+          <li>Supplement recommendations and nutrition guidance</li>
+        </ul>
+        <p className="mt-3 text-xs italic">
+          Intentionally limited to four clients at a time. Renew with a 25% loyalty discount.
+        </p>
+      </>
+    ),
+    bookUrl: BOOK_BASE + "dE11cnIweUNZVlh3TlFiaXVnVjJSdz09",
   },
   {
-    name: "Active Client Program Follow-Up Visit",
-    tag: "Enrolled clients only",
-    price: "Included · 30–60 min",
-    desc: "Focused follow-up to review progress, symptom changes, lab interpretation, treatment plan adjustments, and next-step root-cause strategy.",
-    bullets: [
-      "30 min  standard follow-up",
-      "45 min  complex labs or supplement review",
-      "60 min  comprehensive reassessment",
-      "Supplement and nutrition review",
-      "Treatment plan adjustments",
-    ],
-    cta: "Schedule follow-up",
+    id: "follow-up",
+    name: "Root Cause Follow-up",
+    duration: "30 Min",
+    price: "Included",
+    description: (
+      <>
+        <p className="text-xs uppercase tracking-wide text-secondary font-semibold">
+          For enrolled clients only
+        </p>
+        <p className="mt-2">
+          Follow-up visit focused on progress review, symptom changes, lab interpretation, treatment
+          plan adjustments, supplement and nutrition review, and next-step root-cause strategy.
+        </p>
+        <p className="mt-3 font-medium text-foreground">Duration:</p>
+        <ul className="mt-2 list-disc pl-5 space-y-1">
+          <li>30 min standard follow-up</li>
+          <li>45 min complex labs/supplements</li>
+          <li>60 min comprehensive reassessment</li>
+        </ul>
+      </>
+    ),
+    bookUrl: BOOK_BASE + "ZjlKd29HWVpIWEM5ai95S3cvWWdLUT09",
   },
 ];
 
-const objectives = [
-  { t: "Resilience", d: "Faster recovery and sustainable performance under real-life demands." },
-  { t: "Clarity", d: "Boost cognition, focus, and mental sharpness." },
-  { t: "Longevity", d: "Move your biological and metabolic markers in the right direction." },
-  { t: "Customization", d: "A personalized framework for enduring energy and resilience." },
-];
-
-function Services() {
-  const { open: openBooking } = useBookingModal();
-
+function SchedulerPage() {
   return (
     <>
       <section className="container-prose pt-8 pb-12">
-        <div className="eyebrow mb-5">Services & Pricing</div>
-        <h1 className="text-5xl md:text-7xl max-w-3xl leading-[1.02]">
-          Personalized care paths from <em className="text-secondary not-italic">free</em> to fully
-          partnered.
-        </h1>
-        <p className="mt-6 text-lg text-muted-foreground max-w-2xl leading-relaxed">
-          Talk first, test deeply, or partner long-term. Every option is built around finding the
-          root cause not chasing symptoms. Michigan and Wisconsin only.
+        <div className="max-w-3xl">
+          <div className="eyebrow mb-5">Scheduler · Book online</div>
+          <h1 className="text-5xl md:text-6xl leading-[1.05]">
+            Book your visit with <em className="text-secondary not-italic">Novaleo</em>.
+          </h1>
+          <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+            Select the reason that fits your needs weight, hormones, metabolism, energy, or a full
+            root-cause workup. Each option opens our secure Optimantra booking page in a new tab.
+          </p>
+        </div>
+      </section>
+
+      <section className="container-prose pb-24">
+        <div className="grid gap-6">
+          {services.map((s) => (
+            <article
+              key={s.id}
+              className="rounded-2xl border border-border bg-card/60 p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-wrap items-center gap-2">
+                    {s.highlight && <span className="eyebrow text-secondary">{s.highlight}</span>}
+                  </div>
+                  <h2 className="mt-1 font-display text-2xl md:text-3xl text-primary leading-snug">
+                    {s.name}
+                  </h2>
+                  <div className="mt-3 flex flex-wrap items-center gap-2 text-xs">
+                    <span className="inline-flex items-center rounded-full bg-muted px-3 py-1 text-foreground/70">
+                      {s.duration}
+                    </span>
+                  </div>
+                  <div className="mt-5 text-sm text-foreground/80 leading-relaxed">
+                    {s.description}
+                  </div>
+                </div>
+
+                <div className="md:w-fit md:flex-shrink-0">
+                  <a
+                    href={s.bookUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-gold w-full justify-center inline-flex"
+                  >
+                    Book {s.name}
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <p className="mt-10 text-xs text-muted-foreground italic max-w-2xl">
+          Booking is handled securely through Optimantra. Telehealth services are available across
+          Michigan and Wisconsin. No insurance we accept FSA/HSA, credit, and debit card.
         </p>
-      </section>
-
-      <section className="container-prose pb-24 grid md:grid-cols-2 gap-6">
-        {programs.map((p) => (
-          <article
-            key={p.name}
-            className="rounded-2xl bg-card border border-border p-8 flex flex-col"
-          >
-            <div>
-              <div className="eyebrow mb-2">{p.tag}</div>
-              <h2 className="text-3xl leading-tight">{p.name}</h2>
-            </div>
-            <div className="mt-4 text-xl font-display text-primary">{p.price}</div>
-            <p className="mt-4 text-foreground/80 leading-relaxed">{p.desc}</p>
-            <ul className="mt-6 space-y-3 flex-1">
-              {p.bullets.map((b) => (
-                <li key={b} className="flex gap-3 text-sm">
-                  <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-secondary/50 text-primary shrink-0">
-                    <Check className="h-3 w-3" />
-                  </span>
-                  <span>{b}</span>
-                </li>
-              ))}
-            </ul>
-            {p.note && (
-              <p className="mt-6 text-xs italic text-muted-foreground border-l-2 border-secondary pl-3">
-                {p.note}
-              </p>
-            )}
-            {p.cta === "Book Free 15-Min Call" ? (
-              <Link to="/free-15-min-call-with-katie"  className="btn-gold mt-8 self-start text-sm">
-                {p.cta}
-              </Link>
-            ) : (
-              <Link to="/contact" className="btn-gold mt-8 self-start text-sm">
-                {p.cta}
-              </Link>
-            )}
-          </article>
-        ))}
-      </section>
-
-      {/* PROGRAM SPOTLIGHT */}
-      <section className="bg-primary text-primary-foreground">
-        <div className="container-prose py-24 grid lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-5">
-            <div className="eyebrow text-secondary mb-3" style={{ opacity: 1 }}>
-              Program spotlight
-            </div>
-            <h2 className="text-4xl md:text-5xl text-primary-foreground leading-tight">
-              The Executive Longevity Partnership.
-            </h2>
-            <p className="mt-5 text-primary-foreground/75 leading-relaxed">
-              A six-month executive-level collaboration for high-performing women who are tired of
-              feeling foggy, fatigued, bloated, hormonally off, or metabolically stuck and want a
-              deeper, data-informed strategy instead of another generic plan.
-            </p>
-            <p className="mt-5 text-primary-foreground/75 leading-relaxed">
-              Intentionally limited to{" "}
-              <span className="text-secondary font-semibold">four clients at a time</span> so each
-              one receives the level of attention, review, and strategy required for true
-              personalization.
-            </p>
-            <a href="https://www.optimantra.com/optimus/patient/patientaccess/practsNslots?pid=ZW1nazRycGdvZWxwQjA2eEpiOE5kQT09&lid=UlNxTzY0a0dyR1hJNGJsSkR2NDF5UT09&sid=dE11cnIweUNZVlh3TlFiaXVnVjJSdz09" target="_blank" rel="noopener noreferrer" className="btn-gold mt-8 inline-flex">
-              Apply for the partnership
-            </a>
-          </div>
-          <div className="lg:col-span-7 grid sm:grid-cols-2 gap-5">
-            {objectives.map((o) => (
-              <div
-                key={o.t}
-                className="rounded-2xl bg-primary-foreground/[0.04] border border-primary-foreground/10 p-6"
-              >
-                <div className="h-1 w-8 bg-secondary rounded-full mb-4" />
-                <h3 className="text-xl text-primary-foreground">{o.t}</h3>
-                <p className="mt-2 text-sm text-primary-foreground/75 leading-relaxed">{o.d}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* IDEAL FOR */}
-      <section className="container-prose py-20">
-        <div className="grid lg:grid-cols-12 gap-12 items-start">
-          <div className="lg:col-span-5">
-            <SectionHeading eyebrow="Ideal for" title="Women who want strategy, not a script." />
-          </div>
-          <div className="lg:col-span-7 space-y-4">
-            {[
-              "Professionals, executives, and entrepreneurs",
-              "Busy mothers balancing multiple roles",
-              "Individuals seeking bespoke health strategy  not standard care",
-              "Anyone tired of feeling foggy, fatigued, bloated, or metabolically stuck",
-            ].map((p) => (
-              <div
-                key={p}
-                className="flex gap-3 text-lg text-foreground/85 border-l-2 border-secondary pl-4"
-              >
-                {p}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-muted/60 border-y border-border">
-        <div className="container-prose py-20">
-          <SectionHeading
-            align="center"
-            eyebrow="Not sure which fits?"
-            title="That's exactly what the free Discovery Call is for."
-            intro="A relaxed 15-minute conversation to help you decide what makes sense  even if it isn't with us. Michigan and Wisconsin only."
-          />
-          <div className="mt-8 flex justify-center">
-            <Link to="/free-15-min-call-with-katie"  className="btn-gold">
-              Book Free 15-Min Call
-            </Link>
-          </div>
-        </div>
       </section>
     </>
   );
