@@ -6,7 +6,7 @@ export const Route = createFileRoute("/services")({
       { rel: "canonical", href: "https://novaweightandwellness.com/services" },
     ],
     meta: [
-      { title: "Book a Visit | Novaleo Weight & Wellness Scheduler" },
+      { title: "Book a Visit | Novaleo Weight & Wellness Services" },
       {
         name: "description",
         content:
@@ -21,7 +21,7 @@ export const Route = createFileRoute("/services")({
       { property: "og:image", content: "https://novaweightandwellness.com/og-image.webp" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Book a Visit | Novaleo Weight & Wellness Scheduler" },
+      { name: "twitter:title", content: "Book a Visit | Novaleo Weight & Wellness Services" },
       { name: "twitter:description", content: "Choose a Discovery Call, Root Cause Intake, Lab Panel, or Executive Partnership and book online." },
       { name: "twitter:image", content: "https://novaweightandwellness.com/og-image.webp" },
     ],
@@ -170,7 +170,7 @@ function SchedulerPage() {
     <>
       <section className="container-prose pt-8 pb-12">
         <div className="max-w-3xl">
-          <div className="eyebrow mb-5">Scheduler · Book online</div>
+          <div className="eyebrow mb-5">Services & Pricing</div>
           <h1 className="text-5xl md:text-6xl leading-[1.05]">
             Book your visit with <em className="text-secondary not-italic">Novaleo</em>.
           </h1>
