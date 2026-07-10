@@ -17,6 +17,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/contact", priority: "0.9", changefreq: "monthly" },
           { path: "/blog", priority: "0.8", changefreq: "weekly" },
           { path: "/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted", priority: "0.9", changefreq: "monthly" },
+          { path: "/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time", priority: "0.9", changefreq: "monthly" },
           { path: "/free-15-min-call-with-katie", priority: "0.9", changefreq: "monthly" },
           { path: "/privacy-policy", priority: "0.3", changefreq: "yearly" },
           { path: "/terms-of-service", priority: "0.3", changefreq: "yearly" },

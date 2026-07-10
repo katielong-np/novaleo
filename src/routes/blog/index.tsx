@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/blog/hero-fatigued-woman.jpg";
+import wiHeroImg from "@/assets/blog/wisconsin-hero-fatigue.jpg";
 import { Clock, ArrowRight, Calendar } from "lucide-react";
 
 export const Route = createFileRoute("/blog/")(  {
@@ -43,6 +44,20 @@ export const Route = createFileRoute("/blog/")(  {
 });
 
 const articles = [
+  {
+    slug: "why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time",
+    title:
+      "Why Am I So Tired and Gaining Weight After 40? A Wisconsin Woman's Guide",
+    excerpt:
+      "Wisconsin women over 40: struggling with exhaustion, stubborn weight, and brain fog? Discover why your labs say 'normal' but you feel terrible, and what functional medicine can do about it.",
+    image: wiHeroImg,
+    imageAlt:
+      "Wisconsin woman experiencing fatigue and brain fog at her home desk during a grey winter day",
+    category: "Functional Medicine",
+    date: "July 11, 2025",
+    readTime: "24 min read",
+    author: "Kathryn Long, NP-C",
+  },
   {
     slug: "why-michigan-women-over-40-cant-lose-weight-feel-exhausted",
     title:
