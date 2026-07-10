@@ -16,7 +16,7 @@ export const Route = createFileRoute(
     meta: [
       {
         title:
-          'Why Am I So Tired and Gaining Weight After 40? Wisconsin Women | Novaleo',
+          'Gaining Weight and Exhausted After 40? What Wisconsin Women Need to Know | Novaleo',
       },
       {
         name: 'description',
@@ -26,7 +26,7 @@ export const Route = createFileRoute(
       {
         property: 'og:title',
         content:
-          'Why Am I So Tired and Gaining Weight After 40? A Wisconsin Woman\'s Guide',
+          'Gaining Weight and Exhausted After 40? What Every Wisconsin Woman Needs to Know',
       },
       {
         property: 'og:description',
@@ -43,7 +43,7 @@ export const Route = createFileRoute(
       },
       { property: 'og:type', content: 'article' },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Why Am I So Tired and Gaining Weight After 40? Wisconsin Women | Novaleo" },
+      { name: "twitter:title", content: "Gaining Weight and Exhausted After 40? What Wisconsin Women Need to Know | Novaleo" },
       { name: "twitter:description", content: "Wisconsin women over 40: learn why your labs say 'normal' but you feel terrible, and what functional medicine can do." },
       { name: "twitter:image", content: "https://novaweightandwellness.com/og-image.webp" },
     ],
@@ -58,44 +58,44 @@ export const Route = createFileRoute(
 });
 
 const tocItems = [
-  { id: 'the-january-morning', label: 'The January Morning That Breaks You' },
-  { id: 'this-is-not-in-your-head', label: 'This Is Not in Your Head' },
+  { id: 'another-grey-morning', label: 'Another Grey Morning, Running on Empty' },
+  { id: 'your-body-is-sending-a-signal', label: 'Your Body Is Sending You a Signal' },
   {
-    id: 'why-normal-labs-miss-everything',
-    label: "Why 'Normal' Labs Miss Everything",
+    id: 'what-standard-bloodwork-misses',
+    label: 'What Standard Bloodwork Cannot Tell You',
   },
   {
-    id: 'five-root-causes-wisconsin-women',
-    label: '5 Root Causes Wisconsin Women Overlook',
+    id: 'whats-going-on-inside-your-body',
+    label: "What's Actually Going On After 40",
   },
   {
-    id: 'why-wisconsin-makes-it-harder',
-    label: 'Why Living in Wisconsin Makes It Harder',
+    id: 'the-wisconsin-factor',
+    label: 'The Wisconsin Factor',
   },
   {
-    id: 'functional-medicine-different-approach',
-    label: 'How Functional Medicine Works Differently',
+    id: 'a-different-kind-of-investigation',
+    label: 'A Different Kind of Health Investigation',
   },
   {
-    id: 'what-wisconsin-women-experience',
-    label: 'What Wisconsin Women Experience with Us',
+    id: 'when-someone-finally-listens',
+    label: 'What Happens When Someone Listens',
   },
   {
-    id: 'your-first-conversation',
-    label: 'Your First Conversation',
+    id: 'fifteen-minutes-that-change-everything',
+    label: '15 Minutes That Could Change Everything',
   },
   {
-    id: 'telehealth-across-wisconsin',
-    label: 'Telehealth Across All of Wisconsin',
+    id: 'milwaukee-to-minocqua',
+    label: 'From Milwaukee to Minocqua',
   },
-  { id: 'your-next-step', label: 'Your Next Step' },
+  { id: 'you-deserve-better', label: 'You Deserve Better Than "Normal"' },
 ];
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline:
-    'Why Am I So Tired and Gaining Weight After 40? A Wisconsin Woman\'s Guide',
+    'Gaining Weight and Exhausted After 40? What Every Wisconsin Woman Needs to Know',
   author: {
     '@type': 'Person',
     name: 'Kathryn Long, NP-C',
@@ -129,7 +129,7 @@ const breadcrumbSchema = {
     {
       '@type': 'ListItem',
       position: 3,
-      name: 'Why Am I So Tired and Gaining Weight After 40?',
+      name: 'Gaining Weight and Exhausted After 40?',
       item: 'https://novaweightandwellness.com/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time',
     },
   ],
@@ -207,7 +207,7 @@ function WisconsinArticlePage() {
             className="text-foreground/60 truncate max-w-[200px] md:max-w-none"
             aria-current="page"
           >
-            Why Am I So Tired and Gaining Weight After 40?
+            Gaining Weight and Exhausted After 40?
           </li>
         </ol>
       </nav>
@@ -218,7 +218,7 @@ function WisconsinArticlePage() {
           Functional Medicine for Wisconsin Women
         </span>
         <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary leading-tight mb-6">
-          Why Am I So Tired and Gaining Weight After 40? A Wisconsin Woman's Guide to Getting Real Answers
+          Gaining Weight and Exhausted After 40? What Every Wisconsin Woman Needs to Know
         </h1>
         <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
@@ -339,9 +339,9 @@ function WisconsinArticlePage() {
           {/* Main Article Content */}
           <article className="min-w-0">
             {/* ========== Section 1: The January Morning ========== */}
-            <section id="the-january-morning">
+            <section id="another-grey-morning">
               <h2 className="text-3xl md:text-4xl font-display text-primary mt-16 mb-6">
-                The January Morning That Breaks You
+                Another Grey Morning in Wisconsin, Another Day Running on Empty
               </h2>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -393,9 +393,9 @@ function WisconsinArticlePage() {
             </section>
 
             {/* ========== Section 2: This Is Not in Your Head ========== */}
-            <section id="this-is-not-in-your-head">
+            <section id="your-body-is-sending-a-signal">
               <h2 className="text-3xl md:text-4xl font-display text-primary mt-16 mb-6">
-                This Is Not in Your Head
+                Your Body Is Sending You a Signal. Here Is What It Means.
               </h2>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -474,9 +474,9 @@ function WisconsinArticlePage() {
             </section>
 
             {/* ========== Section 3: Why Normal Labs Miss Everything ========== */}
-            <section id="why-normal-labs-miss-everything">
+            <section id="what-standard-bloodwork-misses">
               <h2 className="text-3xl md:text-4xl font-display text-primary mt-16 mb-6">
-                Why Your Doctor's "Normal" Labs Miss Everything
+                What Standard Bloodwork Cannot Tell You (and Why It Matters)
               </h2>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -489,7 +489,7 @@ function WisconsinArticlePage() {
               </p>
 
               <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                The TSH Problem
+                A Thyroid Number That Lies to You
               </h3>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -528,7 +528,7 @@ function WisconsinArticlePage() {
               />
 
               <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                The 13-Minute Appointment
+                Why 13 Minutes Will Never Be Enough
               </h3>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -576,9 +576,9 @@ function WisconsinArticlePage() {
             </div>
 
             {/* ========== Section 4: 5 Root Causes ========== */}
-            <section id="five-root-causes-wisconsin-women">
+            <section id="whats-going-on-inside-your-body">
               <h2 className="text-3xl md:text-4xl font-display text-primary mt-16 mb-6">
-                The 5 Root Causes Wisconsin Women Over 40 Keep Missing
+                What Is Actually Going On Inside Your Body After 40
               </h2>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -592,7 +592,7 @@ function WisconsinArticlePage() {
 
               {/* Root Cause 1 */}
               <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                1. Perimenopause Starting Earlier Than You Expected
+                1. Your Hormones Started Shifting Years Ago
               </h3>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -632,7 +632,7 @@ function WisconsinArticlePage() {
 
               {/* Root Cause 2 */}
               <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                2. Thyroid Dysfunction Hiding Behind "Normal" Results
+                2. A Sluggish Thyroid That Nobody Caught
               </h3>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -664,7 +664,7 @@ function WisconsinArticlePage() {
 
               {/* Root Cause 3 */}
               <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                3. Insulin Resistance Running Silently
+                3. Blood Sugar Chaos Behind the Belly Fat
               </h3>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -708,7 +708,7 @@ function WisconsinArticlePage() {
 
               {/* Root Cause 4 */}
               <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                4. Chronic Inflammation You Can't See or Feel
+                4. Invisible Inflammation Quietly Wrecking Everything
               </h3>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -741,7 +741,7 @@ function WisconsinArticlePage() {
 
               {/* Root Cause 5 */}
               <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                5. Nutrient Deficiencies That Amplify Everything
+                5. Running on Empty at the Cellular Level
               </h3>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -786,9 +786,9 @@ function WisconsinArticlePage() {
             </section>
 
             {/* ========== Section 5: Why Wisconsin Makes It Harder ========== */}
-            <section id="why-wisconsin-makes-it-harder">
+            <section id="the-wisconsin-factor">
               <h2 className="text-3xl md:text-4xl font-display text-primary mt-16 mb-6">
-                Why Living in Wisconsin Makes It Harder
+                The Wisconsin Factor: How Climate, Culture, and Geography Stack the Deck
               </h2>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -801,7 +801,7 @@ function WisconsinArticlePage() {
               </p>
 
               <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                The Vitamin D Drought
+                176 Cloudy Days and a Vitamin D Crisis
               </h3>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -834,7 +834,7 @@ function WisconsinArticlePage() {
               />
 
               <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                Seasonal Affective Disorder and Mood
+                When Winter Takes Your Mood Along with the Sunlight
               </h3>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -856,7 +856,7 @@ function WisconsinArticlePage() {
               </p>
 
               <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                The Dairy State Diet
+                America's Dairyland and the Comfort Food Trap
               </h3>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -880,7 +880,7 @@ function WisconsinArticlePage() {
               </p>
 
               <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                High-Stress Professional Life
+                The Cortisol Cost of Being a Wisconsin Professional
               </h3>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -902,7 +902,7 @@ function WisconsinArticlePage() {
               </p>
 
               <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                Limited Access to Specialized Care
+                The Specialist Desert Outside Milwaukee and Madison
               </h3>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -942,9 +942,9 @@ function WisconsinArticlePage() {
             </div>
 
             {/* ========== Section 6: Functional Medicine ========== */}
-            <section id="functional-medicine-different-approach">
+            <section id="a-different-kind-of-investigation">
               <h2 className="text-3xl md:text-4xl font-display text-primary mt-16 mb-6">
-                How Functional Medicine Works Differently
+                A Different Kind of Health Investigation
               </h2>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -957,7 +957,7 @@ function WisconsinArticlePage() {
               </p>
 
               <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                Root Cause vs. Symptom Management
+                Asking "Why" Instead of "What"
               </h3>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -979,7 +979,7 @@ function WisconsinArticlePage() {
               </p>
 
               <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                Comprehensive Lab Testing
+                The Labs Your Doctor Never Ordered
               </h3>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -1024,7 +1024,7 @@ function WisconsinArticlePage() {
               </p>
 
               <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                Personalized Protocols Built for You
+                A Plan Built Around Your Life, Not a Template
               </h3>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -1057,9 +1057,9 @@ function WisconsinArticlePage() {
             </section>
 
             {/* ========== Section 7: What Wisconsin Women Experience ========== */}
-            <section id="what-wisconsin-women-experience">
+            <section id="when-someone-finally-listens">
               <h2 className="text-3xl md:text-4xl font-display text-primary mt-16 mb-6">
-                What Wisconsin Women Experience with Us
+                What Happens When Someone Finally Listens
               </h2>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -1120,9 +1120,9 @@ function WisconsinArticlePage() {
             </section>
 
             {/* ========== Section 8: Your First Conversation ========== */}
-            <section id="your-first-conversation">
+            <section id="fifteen-minutes-that-change-everything">
               <h2 className="text-3xl md:text-4xl font-display text-primary mt-16 mb-6">
-                Your First Conversation Starts Everything
+                15 Minutes That Could Change Everything
               </h2>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -1159,9 +1159,9 @@ function WisconsinArticlePage() {
             </section>
 
             {/* ========== Section 9: Telehealth ========== */}
-            <section id="telehealth-across-wisconsin">
+            <section id="milwaukee-to-minocqua">
               <h2 className="text-3xl md:text-4xl font-display text-primary mt-16 mb-6">
-                Telehealth Makes Expert Care Accessible Across All of Wisconsin
+                From Milwaukee to Minocqua: Expert Care Without the Drive
               </h2>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -1190,7 +1190,7 @@ function WisconsinArticlePage() {
               />
 
               <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                No More Driving Hours for Specialized Care
+                Your Couch Is the New Waiting Room
               </h3>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -1211,7 +1211,7 @@ function WisconsinArticlePage() {
               </p>
 
               <h3 className="text-xl md:text-2xl font-display text-primary mt-10 mb-4">
-                Labs at Your Local Lab, Results Reviewed Together
+                Blood Draw Down the Street, Deep Review on Screen
               </h3>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -1262,9 +1262,9 @@ function WisconsinArticlePage() {
             </div>
 
             {/* ========== Section 10: Your Next Step ========== */}
-            <section id="your-next-step">
+            <section id="you-deserve-better">
               <h2 className="text-3xl md:text-4xl font-display text-primary mt-16 mb-6">
-                Your Next Step
+                You Deserve Better Than "Normal"
               </h2>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -1371,7 +1371,7 @@ function WisconsinArticlePage() {
             {/* ========== Final CTA Section ========== */}
             <section className="bg-primary rounded-2xl p-8 md:p-12 text-center mb-16">
               <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
-                Ready to Stop Guessing and Start Healing?
+                Your Answers Are Closer Than You Think
               </h2>
               <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
                 Join the growing number of Wisconsin women who have discovered

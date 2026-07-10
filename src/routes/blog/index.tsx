@@ -47,7 +47,7 @@ const articles = [
   {
     slug: "why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time",
     title:
-      "Why Am I So Tired and Gaining Weight After 40? A Wisconsin Woman's Guide",
+      "Gaining Weight and Exhausted After 40? What Every Wisconsin Woman Needs to Know",
     excerpt:
       "Wisconsin women over 40: struggling with exhaustion, stubborn weight, and brain fog? Discover why your labs say 'normal' but you feel terrible, and what functional medicine can do about it.",
     image: wiHeroImg,
