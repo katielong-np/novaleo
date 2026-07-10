@@ -22,8 +22,8 @@ import { Route as ApproachRouteImport } from './routes/approach'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
-import { Route as BlogWhyWisconsinWomenOver40GainWeightFeelTiredAllTheTimeRouteImport } from './routes/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time'
 import { Route as BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRouteImport } from './routes/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted'
+import { Route as BlogGainingWeightExhaustedAfter40WisconsinWomenRouteImport } from './routes/blog/gaining-weight-exhausted-after-40-wisconsin-women'
 
 const WhatWeTreatRoute = WhatWeTreatRouteImport.update({
   id: '/what-we-treat',
@@ -90,16 +90,16 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogWhyWisconsinWomenOver40GainWeightFeelTiredAllTheTimeRoute =
-  BlogWhyWisconsinWomenOver40GainWeightFeelTiredAllTheTimeRouteImport.update({
-    id: '/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time',
-    path: '/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute =
   BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRouteImport.update({
     id: '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted',
     path: '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogGainingWeightExhaustedAfter40WisconsinWomenRoute =
+  BlogGainingWeightExhaustedAfter40WisconsinWomenRouteImport.update({
+    id: '/blog/gaining-weight-exhausted-after-40-wisconsin-women',
+    path: '/blog/gaining-weight-exhausted-after-40-wisconsin-women',
     getParentRoute: () => rootRouteImport,
   } as any)
 
@@ -116,8 +116,8 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms-of-service': typeof TermsOfServiceRoute
   '/what-we-treat': typeof WhatWeTreatRoute
+  '/blog/gaining-weight-exhausted-after-40-wisconsin-women': typeof BlogGainingWeightExhaustedAfter40WisconsinWomenRoute
   '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted': typeof BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute
-  '/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time': typeof BlogWhyWisconsinWomenOver40GainWeightFeelTiredAllTheTimeRoute
   '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
@@ -133,8 +133,8 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms-of-service': typeof TermsOfServiceRoute
   '/what-we-treat': typeof WhatWeTreatRoute
+  '/blog/gaining-weight-exhausted-after-40-wisconsin-women': typeof BlogGainingWeightExhaustedAfter40WisconsinWomenRoute
   '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted': typeof BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute
-  '/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time': typeof BlogWhyWisconsinWomenOver40GainWeightFeelTiredAllTheTimeRoute
   '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
@@ -151,8 +151,8 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms-of-service': typeof TermsOfServiceRoute
   '/what-we-treat': typeof WhatWeTreatRoute
+  '/blog/gaining-weight-exhausted-after-40-wisconsin-women': typeof BlogGainingWeightExhaustedAfter40WisconsinWomenRoute
   '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted': typeof BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute
-  '/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time': typeof BlogWhyWisconsinWomenOver40GainWeightFeelTiredAllTheTimeRoute
   '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
@@ -170,8 +170,8 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms-of-service'
     | '/what-we-treat'
+    | '/blog/gaining-weight-exhausted-after-40-wisconsin-women'
     | '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted'
-    | '/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time'
     | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -187,8 +187,8 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms-of-service'
     | '/what-we-treat'
+    | '/blog/gaining-weight-exhausted-after-40-wisconsin-women'
     | '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted'
-    | '/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time'
     | '/blog'
   id:
     | '__root__'
@@ -204,8 +204,8 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms-of-service'
     | '/what-we-treat'
+    | '/blog/gaining-weight-exhausted-after-40-wisconsin-women'
     | '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted'
-    | '/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time'
     | '/blog/'
   fileRoutesById: FileRoutesById
 }
@@ -222,8 +222,8 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsOfServiceRoute: typeof TermsOfServiceRoute
   WhatWeTreatRoute: typeof WhatWeTreatRoute
+  BlogGainingWeightExhaustedAfter40WisconsinWomenRoute: typeof BlogGainingWeightExhaustedAfter40WisconsinWomenRoute
   BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute: typeof BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute
-  BlogWhyWisconsinWomenOver40GainWeightFeelTiredAllTheTimeRoute: typeof BlogWhyWisconsinWomenOver40GainWeightFeelTiredAllTheTimeRoute
   BlogIndexRoute: typeof BlogIndexRoute
 }
 
@@ -320,18 +320,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time': {
-      id: '/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time'
-      path: '/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time'
-      fullPath: '/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time'
-      preLoaderRoute: typeof BlogWhyWisconsinWomenOver40GainWeightFeelTiredAllTheTimeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted': {
       id: '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted'
       path: '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted'
       fullPath: '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted'
       preLoaderRoute: typeof BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/gaining-weight-exhausted-after-40-wisconsin-women': {
+      id: '/blog/gaining-weight-exhausted-after-40-wisconsin-women'
+      path: '/blog/gaining-weight-exhausted-after-40-wisconsin-women'
+      fullPath: '/blog/gaining-weight-exhausted-after-40-wisconsin-women'
+      preLoaderRoute: typeof BlogGainingWeightExhaustedAfter40WisconsinWomenRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -350,10 +350,10 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsOfServiceRoute: TermsOfServiceRoute,
   WhatWeTreatRoute: WhatWeTreatRoute,
+  BlogGainingWeightExhaustedAfter40WisconsinWomenRoute:
+    BlogGainingWeightExhaustedAfter40WisconsinWomenRoute,
   BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute:
     BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute,
-  BlogWhyWisconsinWomenOver40GainWeightFeelTiredAllTheTimeRoute:
-    BlogWhyWisconsinWomenOver40GainWeightFeelTiredAllTheTimeRoute,
   BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport

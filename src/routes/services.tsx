@@ -10,7 +10,7 @@ export const Route = createFileRoute("/services")({
       {
         name: "description",
         content:
-          "Schedule your visit with Novaleo Weight & Wellness. Choose a Discovery Call, Root Cause Intake, Lab Panel, Follow-up, or the Executive Longevity Partnership.",
+          "Schedule your visit with Novaleo Weight & Wellness. Choose a Discovery Call, Root Cause Intake, Lab Panel, Follow-up, or the Root Cause Restoration Program.",
       },
       { property: "og:title", content: "Book a Visit | Novaleo Weight & Wellness" },
       {
@@ -106,7 +106,7 @@ const services: Service[] = [
         </ul>
         <p className="mt-3 text-xs italic">
           Labs ordered through Rupa. Requires overnight fasting. Results typically ready ~2 weeks
-          post-draw. Credit toward The Executive Longevity Partnership if enrolled within 30 days.
+          post-draw. Credit toward The Root Cause Restoration Program if enrolled within 30 days.
         </p>
       </>
     ),
@@ -114,21 +114,37 @@ const services: Service[] = [
   },
   {
     id: "executive",
-    name: "The Executive Longevity Partnership",
-    duration: "60 Min · 6-Month Program",
+    name: "The Root Cause Restoration Program",
+    duration: "6-Month Program",
     price: "$3,995",
-    highlight: "Limited to 4 clients",
+    highlight: "No More Starting Over",
     description: (
       <>
         <p>
-          A six-month executive-level collaboration for high-performing women in their 40s and 50s
-          who feel tired, foggy, inflamed, hormonally off, or metabolically stuck.
+          For women 35 to 55 who feel like their body has changed. Tired even after sleep. Foggy
+          at work. Dealing with hormone shifts, cravings or crashes, and stubborn weight that
+          won't budge. You keep getting told your labs are "normal," and you're left frustrated,
+          wondering why you can't figure it out.
         </p>
+        <p className="mt-3">
+          This 6-month program replaces guessing with clarity. We look at the full picture, your
+          symptoms, patterns, and deeper root causes, then build a personalized plan that helps
+          your body restore steady energy, reduce inflammation, and get your metabolism responding
+          again. The goal isn't perfection. It's understanding your body and never "starting over
+          every Monday" again.
+        </p>
+        <p className="mt-3 font-medium text-foreground">Your care plan focuses on 4 non-negotiables:</p>
+        <ul className="mt-2 list-disc pl-5 space-y-1">
+          <li>Nutrition + blood sugar stability (steady energy, fewer crashes, calmer cravings)</li>
+          <li>Sleep + circadian rhythm (better sleep, clearer thinking, easier mornings)</li>
+          <li>Stress + nervous system regulation (less wired-and-tired, more calm and steady)</li>
+          <li>Movement + metabolic strength (strength and insulin sensitivity without punishing workouts)</li>
+        </ul>
         <p className="mt-3 font-medium text-foreground">Includes:</p>
         <ul className="mt-2 list-disc pl-5 space-y-1">
           <li>Bi-monthly consultations with a healthcare provider</li>
           <li>48-hour response time for inquiries</li>
-          <li>Comprehensive biomarker analysis & metabolic tracking</li>
+          <li>Comprehensive biomarker analysis and metabolic tracking</li>
           <li>Monthly data reviews and strategy refinements</li>
           <li>Supplement recommendations and nutrition guidance</li>
         </ul>

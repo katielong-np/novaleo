@@ -238,8 +238,8 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "MedicalProcedure",
-                      "name": "The Executive Longevity Partnership",
-                      "description": "Six-month executive-level functional medicine program limited to 4 clients."
+                      "name": "The Root Cause Restoration Program",
+                      "description": "Six-month root-cause program for women 35 to 55. Focuses on nutrition, sleep, stress regulation, and metabolic strength."
                     },
                     "price": "3995",
                     "priceCurrency": "USD"

@@ -45,7 +45,7 @@ export const Route = createFileRoute("/blog/")(  {
 
 const articles = [
   {
-    slug: "why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time",
+    slug: "gaining-weight-exhausted-after-40-wisconsin-women",
     title:
       "Gaining Weight and Exhausted After 40? What Every Wisconsin Woman Needs to Know",
     excerpt:

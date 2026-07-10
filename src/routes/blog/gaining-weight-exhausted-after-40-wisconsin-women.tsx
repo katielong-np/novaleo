@@ -10,7 +10,7 @@ import hormoneImg from '@/assets/blog/wisconsin-hormone-symptoms.jpg';
 import { Facebook, Twitter, Linkedin, Link2 } from 'lucide-react';
 
 export const Route = createFileRoute(
-  '/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time',
+  '/blog/gaining-weight-exhausted-after-40-wisconsin-women',
 )({
   head: () => ({
     meta: [
@@ -35,7 +35,7 @@ export const Route = createFileRoute(
       },
       {
         property: 'og:url',
-        content: 'https://novaweightandwellness.com/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time',
+        content: 'https://novaweightandwellness.com/blog/gaining-weight-exhausted-after-40-wisconsin-women',
       },
       {
         property: 'og:image',
@@ -50,7 +50,7 @@ export const Route = createFileRoute(
     links: [
       {
         rel: 'canonical',
-        href: 'https://novaweightandwellness.com/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time',
+        href: 'https://novaweightandwellness.com/blog/gaining-weight-exhausted-after-40-wisconsin-women',
       },
     ],
   }),
@@ -106,7 +106,7 @@ const articleSchema = {
   },
   datePublished: '2025-07-11',
   dateModified: '2025-07-11',
-  url: 'https://novaweightandwellness.com/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time',
+  url: 'https://novaweightandwellness.com/blog/gaining-weight-exhausted-after-40-wisconsin-women',
   image: 'https://novaweightandwellness.com/og-image.webp',
 };
 
@@ -130,7 +130,7 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       position: 3,
       name: 'Gaining Weight and Exhausted After 40?',
-      item: 'https://novaweightandwellness.com/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time',
+      item: 'https://novaweightandwellness.com/blog/gaining-weight-exhausted-after-40-wisconsin-women',
     },
   ],
 };
@@ -232,7 +232,7 @@ function WisconsinArticlePage() {
           <div className="flex items-center gap-3">
             <span className="text-sm font-semibold text-foreground/60 mr-1">Share:</span>
             <a 
-              href="https://www.facebook.com/sharer/sharer.php?u=https://novaweightandwellness.com/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time" 
+              href="https://www.facebook.com/sharer/sharer.php?u=https://novaweightandwellness.com/blog/gaining-weight-exhausted-after-40-wisconsin-women" 
               target="_blank" 
               rel="noopener noreferrer"
               className="h-8 w-8 rounded-full bg-primary/5 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors"
@@ -241,7 +241,7 @@ function WisconsinArticlePage() {
               <Facebook className="h-4 w-4" />
             </a>
             <a 
-              href="https://twitter.com/intent/tweet?url=https://novaweightandwellness.com/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time&text=Why%20Am%20I%20So%20Tired%20and%20Gaining%20Weight%20After%2040?%20A%20Wisconsin%20Woman's%20Guide" 
+              href="https://twitter.com/intent/tweet?url=https://novaweightandwellness.com/blog/gaining-weight-exhausted-after-40-wisconsin-women&text=Why%20Am%20I%20So%20Tired%20and%20Gaining%20Weight%20After%2040?%20A%20Wisconsin%20Woman's%20Guide" 
               target="_blank" 
               rel="noopener noreferrer"
               className="h-8 w-8 rounded-full bg-primary/5 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors"
@@ -250,7 +250,7 @@ function WisconsinArticlePage() {
               <Twitter className="h-4 w-4" />
             </a>
             <a 
-              href="https://www.linkedin.com/shareArticle?mini=true&url=https://novaweightandwellness.com/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time&title=Why%20Am%20I%20So%20Tired%20and%20Gaining%20Weight%20After%2040?" 
+              href="https://www.linkedin.com/shareArticle?mini=true&url=https://novaweightandwellness.com/blog/gaining-weight-exhausted-after-40-wisconsin-women&title=Why%20Am%20I%20So%20Tired%20and%20Gaining%20Weight%20After%2040?" 
               target="_blank" 
               rel="noopener noreferrer"
               className="h-8 w-8 rounded-full bg-primary/5 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors"
@@ -260,7 +260,7 @@ function WisconsinArticlePage() {
             </a>
             <button 
               onClick={() => {
-                navigator.clipboard.writeText('https://novaweightandwellness.com/blog/why-wisconsin-women-over-40-gain-weight-feel-tired-all-the-time');
+                navigator.clipboard.writeText('https://novaweightandwellness.com/blog/gaining-weight-exhausted-after-40-wisconsin-women');
                 alert('Link copied to clipboard!');
               }}
               className="h-8 w-8 rounded-full bg-primary/5 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors"
