@@ -55,9 +55,14 @@ npm run build
 - **Responsive Layout**: Optimised for mobile, tablet, and desktop viewports.
 - **Dynamic Elements**: Auto-scrolling reviews and quotes carousel powered by Embla Carousel, seamlessly bleeding to screen edges for a modern feel.
 - **Telehealth Focus**: Clear call-to-actions (CTAs) for clarity sessions, intake forms, and service information.
-- **Blog & SEO Architecture**: Fully functional blog section (`/blog`) optimized for search engines with schema.org structured data (Article, BreadcrumbList), Open Graph tags, canonical URLs, and integrated social sharing icons.
+- **Blog & SEO Architecture**: Fully functional blog section (`/blog`) optimized for search engines with schema.org structured data (Article, BreadcrumbList, FAQPage), Open Graph tags, canonical URLs, and integrated social sharing icons.
+  - **Location-Targeted Articles**: Two in-depth, 6,000+ word long-form articles targeting women over 40 in specific states, each with unique headings, structure, and locally relevant content:
+    - **Michigan**: `/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted`
+    - **Wisconsin**: `/blog/gaining-weight-exhausted-after-40-wisconsin-women`
+  - **SEO Interlinking**: Both state-specific articles cross-reference each other in their "Also Serving" sections with descriptive anchor text links, strengthening internal link equity and topical relevance.
   - **Comprehensive SEO Audit**: The entire site has been deeply analyzed and optimized for Core Web Vitals, JSON-LD Schema (MedicalWebPage, Person, FAQPage), perfectly mapped H1/H2 tags, precise meta title/description lengths, and explicit image dimensions to prevent Cumulative Layout Shift (CLS).
   - **Dynamic Permalinks**: Routes are intuitively named (`/services`, `/what-we-treat`) to match navigation items exactly, reinforcing semantic relevance.
+- **The Root Cause Restoration Program**: Renamed from "The Executive Longevity Partnership." A 6-month functional medicine program for women 35 to 55, structured around 4 non-negotiables: nutrition + blood sugar stability, sleep + circadian rhythm, stress + nervous system regulation, and movement + metabolic strength.
 - **Dedicated Free Discovery Call Page (`/free-15-min-call-with-katie`)**: Replaces the global pop-up modal with a dedicated landing page for scheduling the free 15-minute discovery call.
   - Features a native GoHighLevel calendar embed integrated seamlessly into the page, complete with a custom, branded loading overlay to ensure a premium user experience while the iframe initializes.
   - Supports dynamic iframe height recalculations with native mobile scrolling, breaking out of standard modal constraints for improved accessibility on smaller devices.
@@ -96,6 +101,7 @@ This project was developed with the assistance of various AI models and develope
 
 - **OpenAI (ChatGPT & GPT-4)**: Used for code generation, problem-solving, and copywriting assistance.
 - **Anthropic (Claude)**: Used for architectural design, code review, and complex refactoring.
-- **Google (Gemini)**: Used for analytical tasks, planning, and codebase exploration.
+- **Google (Gemini / Antigravity)**: Used for analytical tasks, planning, codebase exploration, long-form SEO article generation, image creation, and full-stack feature development.
 - **Lovable**: Utilized as an AI-powered development platform for rapid UI prototyping and scaffolding.
 - **Cursor / GitHub Copilot**: Used for inline code generation, autocomplete, and debugging.
+

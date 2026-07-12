@@ -1243,6 +1243,19 @@ function WisconsinArticlePage() {
                 struggles, we can help them too. Quality functional medicine
                 care should never be limited by state lines or geography.
               </p>
+
+              <p className="text-lg leading-relaxed text-foreground/85 mb-5">
+                We also published a comprehensive guide written specifically
+                for Michigan women navigating these same symptoms. Read it
+                here:{' '}
+                <Link
+                  to="/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted"
+                  className="text-secondary font-semibold hover:underline"
+                >
+                  Why Can't I Lose Weight in My 40s? (And Why You're Always
+                  Tired)
+                </Link>.
+              </p>
             </section>
 
             {/* ===== Inline CTA 3 ===== */}

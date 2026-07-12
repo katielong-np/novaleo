@@ -1149,6 +1149,19 @@ function ArticlePage() {
                 the Badger State, we can help you too. Quality functional
                 medicine care should never be limited by geography.
               </p>
+
+              <p className="text-lg leading-relaxed text-foreground/85 mb-5">
+                We wrote an in-depth guide specifically for Wisconsin women
+                dealing with these same challenges. If that's you, or someone
+                you know, take a look:{' '}
+                <Link
+                  to="/blog/gaining-weight-exhausted-after-40-wisconsin-women"
+                  className="text-secondary font-semibold hover:underline"
+                >
+                  Gaining Weight and Exhausted After 40? What Every Wisconsin
+                  Woman Needs to Know
+                </Link>.
+              </p>
             </section>
 
             {/* ===== Inline CTA 3 ===== */}
