@@ -101,526 +101,89 @@ function BlogComponent() {
       {/* ========== Section 1: The January Morning ========== */}
       <section id="another-grey-morning">
         <h2 className="text-3xl md:text-4xl font-display text-primary mt-2 mb-6">
-          <a
-            href="https://www.mayoclinic.org/tests-procedures/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Another
-          </a>{" "}
-          Grey Morning in{" "}
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Wisconsin
-          </a>
-          , Another Day{" "}
-          <a
-            href="https://my.clevelandclinic.org/health/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Running
-          </a>{" "}
-          on Empty
+          Another Grey Morning in Wisconsin , Another Day Running on Empty
         </h2>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          It's 6:15 AM in{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1074070/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Waukesha
-          </a>
-          . Your alarm went off ten{" "}
-          <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            minutes
-          </a>{" "}
-          ago. You haven't moved. The room is pitch dark{" "}
-          <a
-            href="https://www.menopause.org/for-women/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            because
-          </a>{" "}
-          the sun won't be up for another hour, and even when it does show up, it'll hide behind
-          that flat, grey Wisconsin sky that{" "}
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            settles
-          </a>{" "}
-          in around{" "}
-          <a
-            href="https://www.mayoclinic.org/tests-procedures/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            November
-          </a>{" "}
+          It's 6:15 AM in Waukesha . Your alarm went off ten minutes ago. You haven't moved. The
+          room is pitch dark because the sun won't be up for another hour, and even when it does
+          show up, it'll hide behind that flat, grey Wisconsin sky that settles in around November{" "}
           and doesn't leave until April.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          You slept eight hours. You should feel rested.{" "}
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Instead
-          </a>
-          , you feel like you've been hit by a Kwik Trip semi. Your body aches. Your head feels{" "}
-          <a
-            href="https://my.clevelandclinic.org/health/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            stuffed
-          </a>{" "}
-          with cotton. You're{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1160485/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            already
-          </a>
-          <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            dreading
-          </a>{" "}
-          the day, and it hasn't{" "}
-          <a
-            href="https://www.menopause.org/for-women/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            started
-          </a>{" "}
-          yet.
+          You slept eight hours. You should feel rested. Instead , you feel like you've been hit by
+          a Kwik Trip semi. Your body aches. Your head feels stuffed with cotton. You're already
+          dreading the day, and it hasn't started yet.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          Maybe you're a nurse at{" "}
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Froedtert
-          </a>
-          . Maybe you run a{" "}
-          <a
-            href="https://www.mayoclinic.org/tests-procedures/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            classroom
-          </a>{" "}
-          full of fourth{" "}
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            graders
-          </a>{" "}
-          in
-          <a
-            href="https://my.clevelandclinic.org/health/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Appleton
-          </a>
-          . Maybe you manage{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1246900/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            accounts
-          </a>{" "}
-          at a firm on Water Street in{" "}
-          <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Milwaukee
-          </a>
-          , or you're
-          <a
-            href="https://www.menopause.org/for-women/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            juggling
-          </a>{" "}
-          three kids and a remote job from your dining table in{" "}
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Brookfield
-          </a>
-          .{" "}
-          <a
-            href="https://www.mayoclinic.org/tests-procedures/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Whatever
-          </a>{" "}
-          your life looks like, it has one thing in common with{" "}
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            thousands
-          </a>{" "}
-          of other Wisconsin women over 40: you are bone-tired, your{" "}
-          <a
-            href="https://my.clevelandclinic.org/health/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            clothes
-          </a>{" "}
-          don't fit the way they used to, and no one can tell you why.
+          Maybe you're a nurse at Froedtert . Maybe you run a classroom full of fourth graders in
+          Appleton . Maybe you manage accounts at a firm on Water Street in Milwaukee , or you're
+          juggling three kids and a remote job from your dining table in Brookfield . Whatever your
+          life looks like, it has one thing in common with thousands of other Wisconsin women over
+          40: you are bone-tired, your clothes don't fit the way they used to, and no one can tell
+          you why.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          You've tried{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1333315/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            everything
-          </a>
-          . You did Whole30 after{" "}
-          <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Thanksgiving
-          </a>
-          . You signed up for that gym off{" "}
-          <a
-            href="https://www.menopause.org/for-women/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Highway
-          </a>{" "}
-          41. You{" "}
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            stopped
-          </a>{" "}
-          eating after 7 PM. You walked the Oak Leaf Trail three times a week all summer. And the
-          scale hasn't budged. Or worse, it's{" "}
-          <a
-            href="https://www.mayoclinic.org/tests-procedures/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            actually
-          </a>{" "}
-          gone up.
+          You've tried everything . You did Whole30 after Thanksgiving . You signed up for that gym
+          off Highway 41. You stopped eating after 7 PM. You walked the Oak Leaf Trail three times a
+          week all summer. And the scale hasn't budged. Or worse, it's actually gone up.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          Your doctor ran{" "}
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            bloodwork
-          </a>
-          . Everything came back "normal." And you sat in that exam room,
-          <a
-            href="https://my.clevelandclinic.org/health/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            feeling
-          </a>{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1419730/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            dismissed
-          </a>
-          ,{" "}
-          <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            wondering
-          </a>{" "}
-          if this is just what your 40s are{" "}
-          <a
-            href="https://www.menopause.org/for-women/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            supposed
-          </a>{" "}
-          to feel like.
+          Your doctor ran bloodwork . Everything came back "normal." And you sat in that exam room,
+          feeling dismissed , wondering if this is just what your 40s are supposed to feel like.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          It's not. And I'm going to spend the next twenty minutes{" "}
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            explaining
-          </a>{" "}
-          <a
-            href="https://www.mayoclinic.org/tests-procedures/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            exactly
-          </a>{" "}
-          why your body is doing this, why{" "}
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            conventional
-          </a>{" "}
-          <a
-            href="https://my.clevelandclinic.org/health/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            testing
-          </a>{" "}
-          keeps{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1506145/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            missing
-          </a>{" "}
-          it, and what you can do about it. Right now. From{" "}
-          <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            wherever
-          </a>{" "}
-          you are in Wisconsin.
+          It's not. And I'm going to spend the next twenty minutes explaining exactly why your body
+          is doing this, why conventional testing keeps missing it, and what you can do about it.
+          Right now. From wherever you are in Wisconsin.
         </p>
       </section>
 
       {/* ========== Section 2: This Is Not in Your Head ========== */}
       <section id="your-body-is-sending-a-signal">
         <h2 className="text-3xl md:text-4xl font-display text-primary mt-16 mb-6">
-          Your Body Is{" "}
-          <a
-            href="https://www.menopause.org/for-women/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Sending
-          </a>{" "}
-          You a Signal. Here Is What It Means.
+          Your Body Is Sending You a Signal. Here Is What It Means.
         </h2>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          Let's start with the most{" "}
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            important
-          </a>{" "}
-          thing you need to hear today. What you are feeling is real. It is{" "}
-          <a
-            href="https://www.mayoclinic.org/tests-procedures/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            measurable
-          </a>
-          . It is{" "}
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            physiological
-          </a>
-          . And it is not your fault.
+          Let's start with the most important thing you need to hear today. What you are feeling is
+          real. It is measurable . It is physiological . And it is not your fault.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
           The{" "}
           <a
-            href="https://my.clevelandclinic.org/health/"
+            href="https://www.endocrine.org/news-and-advocacy/news-room/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
           >
             fatigue
           </a>{" "}
-          that makes 2 PM feel like{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1592560/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            midnight
-          </a>
-          . The belly fat that{" "}
-          <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            appeared
-          </a>{" "}
-          out of{" "}
+          that makes 2 PM feel like midnight . The belly fat that appeared out of nowhere and won't
+          leave no matter what you eat. The{" "}
           <a
             href="https://www.menopause.org/for-women/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
           >
-            nowhere
-          </a>
-          and won't leave no matter what you eat. The{" "}
-          <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
             brain fog
           </a>{" "}
-          that makes you lose words in the middle of a{" "}
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            sentence
-          </a>
-          . The mood swings that have you crying in your car after a{" "}
-          <a
-            href="https://www.mayoclinic.org/tests-procedures/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            perfectly
-          </a>
-          normal{" "}
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Tuesday
-          </a>
-          . The sleep that never feels deep enough, even when you get plenty of it.
+          that makes you lose words in the middle of a sentence . The mood swings that have you
+          crying in your car after a perfectly normal Tuesday . The sleep that never feels deep
+          enough, even when you get plenty of it.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          These are not signs of{" "}
-          <a
-            href="https://my.clevelandclinic.org/health/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            weakness
-          </a>
-          . They are not "just stress." They are not the inevitable cost of being a busy woman. They
-          are your body's alarm system telling you that something has shifted at the biochemical
-          level, and that shift needs attention.
+          These are not signs of weakness . They are not "just stress." They are not the inevitable
+          cost of being a busy woman. They are your body's alarm system telling you that something
+          has shifted at the biochemical level, and that shift needs attention.
         </p>
 
         <img
@@ -635,7 +198,7 @@ function BlogComponent() {
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
           Research from the North American{" "}
           <a
-            href="https://www.ifm.org/news-insights/"
+            href="https://www.mayoclinic.org/tests-procedures/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
@@ -644,13 +207,13 @@ function BlogComponent() {
           </a>{" "}
           Society shows that{" "}
           <a
-            href="https://www.menopause.org/for-women/"
+            href="https://www.ifm.org/news-insights/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
           >
             perimenopause
-          </a>
+          </a>{" "}
           , the transitional phase before menopause, can begin as early as age 35 and stretch over
           10 to 15 years. That means a 39-year-old woman in Eau Claire and a 53-year-old woman in
           Kenosha might both be deep in the same hormonal upheaval, just at different stages.
@@ -660,7 +223,7 @@ function BlogComponent() {
           During perimenopause, your hormones don't decline in a nice, clean slope. They spike and
           crash unpredictably, sometimes within the same week. One day your{" "}
           <a
-            href="https://my.clevelandclinic.org/health/"
+            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1074070/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
@@ -669,7 +232,7 @@ function BlogComponent() {
           </a>{" "}
           surges. The next, it plummets. Your{" "}
           <a
-            href="https://www.health.harvard.edu/blog/"
+            href="https://my.clevelandclinic.org/health/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
@@ -679,16 +242,16 @@ function BlogComponent() {
           drops steadily while everything else fluctuates around it. These shifts ripple through
           your{" "}
           <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1074070/"
+            href="https://www.endocrine.org/news-and-advocacy/news-room/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
           >
             thyroid
-          </a>
+          </a>{" "}
           , your{" "}
           <a
-            href="https://www.menopause.org/for-women/"
+            href="https://www.ifm.org/news-insights/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
@@ -697,7 +260,7 @@ function BlogComponent() {
           </a>{" "}
           regulation, your
           <a
-            href="https://www.mayoclinic.org/tests-procedures/"
+            href="https://www.health.harvard.edu/blog/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
@@ -706,29 +269,21 @@ function BlogComponent() {
           </a>{" "}
           levels, your neurotransmitter balance, and your{" "}
           <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
+            href="https://www.menopause.org/for-women/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
           >
             metabolism
-          </a>
+          </a>{" "}
           .
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
           Approximately 1.3 million American women enter menopause every year. That is roughly 6,000
-          women per day. And the vast majority of them will deal with weight gain,{" "}
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            fatigue
-          </a>
-          , brain fog, mood disruption, sleep problems, and joint pain that significantly change the
-          quality of their daily lives.
+          women per day. And the vast majority of them will deal with weight gain, fatigue , brain
+          fog, mood disruption, sleep problems, and joint pain that significantly change the quality
+          of their daily lives.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -910,7 +465,7 @@ function BlogComponent() {
             className="text-secondary font-medium hover:underline"
           >
             hypothyroidism
-          </a>
+          </a>{" "}
           , where your TSH is elevated but still inside the conventional "normal" range, is
           remarkably common. Symptoms include unexplained weight gain (especially weight that won't
           budge no matter what you do), fatigue, brain fog, dry skin, thinning hair, constipation,
@@ -1789,519 +1344,74 @@ function WisconsinArticlePage() {
             {/* ========== Section 1: The January Morning ========== */}
             <section id="another-grey-morning">
               <h2 className="text-3xl md:text-4xl font-display text-primary mt-2 mb-6">
-                <a
-                  href="https://www.mayoclinic.org/tests-procedures/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  Another
-                </a>{" "}
-                Grey Morning in{" "}
-                <a
-                  href="https://www.health.harvard.edu/blog/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  Wisconsin
-                </a>
-                , Another Day{" "}
-                <a
-                  href="https://my.clevelandclinic.org/health/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  Running
-                </a>{" "}
-                on Empty
+                Another Grey Morning in Wisconsin , Another Day Running on Empty
               </h2>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-                It's 6:15 AM in{" "}
-                <a
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1074070/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  Waukesha
-                </a>
-                . Your alarm went off ten{" "}
-                <a
-                  href="https://www.endocrine.org/news-and-advocacy/news-room/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  minutes
-                </a>{" "}
-                ago. You haven't moved. The room is pitch dark{" "}
-                <a
-                  href="https://www.menopause.org/for-women/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  because
-                </a>{" "}
-                the sun won't be up for another hour, and even when it does show up, it'll hide
-                behind that flat, grey Wisconsin sky that{" "}
-                <a
-                  href="https://www.ifm.org/news-insights/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  settles
-                </a>{" "}
-                in around{" "}
-                <a
-                  href="https://www.mayoclinic.org/tests-procedures/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  November
-                </a>{" "}
-                and doesn't leave until April.
+                It's 6:15 AM in Waukesha . Your alarm went off ten minutes ago. You haven't moved.
+                The room is pitch dark because the sun won't be up for another hour, and even when
+                it does show up, it'll hide behind that flat, grey Wisconsin sky that settles in
+                around November and doesn't leave until April.
               </p>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-                You slept eight hours. You should feel rested.{" "}
-                <a
-                  href="https://www.health.harvard.edu/blog/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  Instead
-                </a>
-                , you feel like you've been hit by a Kwik Trip semi. Your body aches. Your head
-                feels{" "}
-                <a
-                  href="https://my.clevelandclinic.org/health/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  stuffed
-                </a>{" "}
-                with cotton. You're{" "}
-                <a
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1160485/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  already
-                </a>{" "}
-                <a
-                  href="https://www.endocrine.org/news-and-advocacy/news-room/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  dreading
-                </a>{" "}
-                the day, and it hasn't{" "}
-                <a
-                  href="https://www.menopause.org/for-women/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  started
-                </a>{" "}
-                yet.
+                You slept eight hours. You should feel rested. Instead , you feel like you've been
+                hit by a Kwik Trip semi. Your body aches. Your head feels stuffed with cotton.
+                You're already dreading the day, and it hasn't started yet.
               </p>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-                Maybe you're a nurse at{" "}
-                <a
-                  href="https://www.ifm.org/news-insights/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  Froedtert
-                </a>
-                . Maybe you run a{" "}
-                <a
-                  href="https://www.mayoclinic.org/tests-procedures/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  classroom
-                </a>{" "}
-                full of fourth{" "}
-                <a
-                  href="https://www.health.harvard.edu/blog/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  graders
-                </a>
-                in{" "}
-                <a
-                  href="https://my.clevelandclinic.org/health/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  Appleton
-                </a>
-                . Maybe you manage{" "}
-                <a
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1246900/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  accounts
-                </a>{" "}
-                at a firm on Water Street in{" "}
-                <a
-                  href="https://www.endocrine.org/news-and-advocacy/news-room/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  Milwaukee
-                </a>
-                , or you're{" "}
-                <a
-                  href="https://www.menopause.org/for-women/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  juggling
-                </a>{" "}
-                three kids and a remote job from your dining table in{" "}
-                <a
-                  href="https://www.ifm.org/news-insights/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  Brookfield
-                </a>
-                .
-                <a
-                  href="https://www.mayoclinic.org/tests-procedures/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  Whatever
-                </a>{" "}
-                your life looks like, it has one thing in common with{" "}
-                <a
-                  href="https://www.health.harvard.edu/blog/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  thousands
-                </a>{" "}
-                of other Wisconsin women over 40: you are bone-tired, your{" "}
-                <a
-                  href="https://my.clevelandclinic.org/health/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  clothes
-                </a>{" "}
-                don't fit the way they used to, and no one can tell you why.
+                Maybe you're a nurse at Froedtert . Maybe you run a classroom full of fourth graders
+                in Appleton . Maybe you manage accounts at a firm on Water Street in Milwaukee , or
+                you're juggling three kids and a remote job from your dining table in Brookfield .
+                Whatever your life looks like, it has one thing in common with thousands of other
+                Wisconsin women over 40: you are bone-tired, your clothes don't fit the way they
+                used to, and no one can tell you why.
               </p>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-                You've tried{" "}
-                <a
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1333315/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  everything
-                </a>
-                . You did Whole30 after{" "}
-                <a
-                  href="https://www.endocrine.org/news-and-advocacy/news-room/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  Thanksgiving
-                </a>
-                . You signed up for that gym off{" "}
-                <a
-                  href="https://www.menopause.org/for-women/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  Highway
-                </a>{" "}
-                41. You{" "}
-                <a
-                  href="https://www.ifm.org/news-insights/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  stopped
-                </a>{" "}
-                eating after 7 PM. You walked the Oak Leaf Trail three times a week all summer. And
-                the scale hasn't budged. Or worse, it's{" "}
-                <a
-                  href="https://www.mayoclinic.org/tests-procedures/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  actually
-                </a>
-                gone up.
+                You've tried everything . You did Whole30 after Thanksgiving . You signed up for
+                that gym off Highway 41. You stopped eating after 7 PM. You walked the Oak Leaf
+                Trail three times a week all summer. And the scale hasn't budged. Or worse, it's{" "}
+                actually gone up.
               </p>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-                Your doctor ran{" "}
-                <a
-                  href="https://www.health.harvard.edu/blog/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  bloodwork
-                </a>
-                . Everything came back "normal." And you sat in that exam room,{" "}
-                <a
-                  href="https://my.clevelandclinic.org/health/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  feeling
-                </a>{" "}
-                <a
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1419730/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  dismissed
-                </a>
-                ,{" "}
-                <a
-                  href="https://www.endocrine.org/news-and-advocacy/news-room/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  wondering
-                </a>{" "}
-                if this is just what your 40s are{" "}
-                <a
-                  href="https://www.menopause.org/for-women/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  supposed
-                </a>{" "}
-                to feel like.
+                Your doctor ran bloodwork . Everything came back "normal." And you sat in that exam
+                room, feeling dismissed , wondering if this is just what your 40s are supposed to
+                feel like.
               </p>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-                It's not. And I'm going to spend the next twenty minutes{" "}
-                <a
-                  href="https://www.ifm.org/news-insights/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  explaining
-                </a>{" "}
-                <a
-                  href="https://www.mayoclinic.org/tests-procedures/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  exactly
-                </a>{" "}
-                why your body is doing this, why{" "}
-                <a
-                  href="https://www.health.harvard.edu/blog/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  conventional
-                </a>{" "}
-                <a
-                  href="https://my.clevelandclinic.org/health/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  testing
-                </a>{" "}
-                keeps{" "}
-                <a
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1506145/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  missing
-                </a>{" "}
-                it, and what you can do about it. Right now. From{" "}
-                <a
-                  href="https://www.endocrine.org/news-and-advocacy/news-room/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  wherever
-                </a>{" "}
-                you are in Wisconsin.
+                It's not. And I'm going to spend the next twenty minutes explaining exactly why your
+                body is doing this, why conventional testing keeps missing it, and what you can do
+                about it. Right now. From wherever you are in Wisconsin.
               </p>
             </section>
 
             {/* ========== Section 2: This Is Not in Your Head ========== */}
             <section id="your-body-is-sending-a-signal">
               <h2 className="text-3xl md:text-4xl font-display text-primary mt-16 mb-6">
-                Your Body Is{" "}
-                <a
-                  href="https://www.menopause.org/for-women/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  Sending
-                </a>{" "}
-                You a Signal. Here Is What It Means.
+                Your Body Is Sending You a Signal. Here Is What It Means.
               </h2>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-                Let's start with the most{" "}
-                <a
-                  href="https://www.ifm.org/news-insights/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  important
-                </a>{" "}
-                thing you need to hear today. What you are feeling is real. It is{" "}
-                <a
-                  href="https://www.mayoclinic.org/tests-procedures/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  measurable
-                </a>
-                . It is{" "}
-                <a
-                  href="https://www.health.harvard.edu/blog/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  physiological
-                </a>
-                . And it is not your fault.
+                Let's start with the most important thing you need to hear today. What you are
+                feeling is real. It is measurable . It is physiological . And it is not your fault.
               </p>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-                The{" "}
-                <a
-                  href="https://my.clevelandclinic.org/health/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  fatigue
-                </a>{" "}
-                that makes 2 PM feel like{" "}
-                <a
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1592560/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  midnight
-                </a>
-                . The belly fat that{" "}
-                <a
-                  href="https://www.endocrine.org/news-and-advocacy/news-room/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  appeared
-                </a>{" "}
-                out of
-                <a
-                  href="https://www.menopause.org/for-women/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  nowhere
-                </a>{" "}
-                and won't leave no matter what you eat. The brain fog that makes you lose words in
-                the middle of a{" "}
-                <a
-                  href="https://www.ifm.org/news-insights/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  sentence
-                </a>
-                . The mood swings that have you crying in your car after a{" "}
-                <a
-                  href="https://www.mayoclinic.org/tests-procedures/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  perfectly
-                </a>{" "}
-                normal{" "}
-                <a
-                  href="https://www.health.harvard.edu/blog/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  Tuesday
-                </a>
-                . The sleep that never feels deep enough, even when you get plenty of it.
+                The fatigue that makes 2 PM feel like midnight . The belly fat that appeared out of
+                nowhere and won't leave no matter what you eat. The brain fog that makes you lose
+                words in the middle of a sentence . The mood swings that have you crying in your car
+                after a perfectly normal Tuesday . The sleep that never feels deep enough, even when
+                you get plenty of it.
               </p>
 
               <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-                These are not signs of{" "}
-                <a
-                  href="https://my.clevelandclinic.org/health/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary font-medium hover:underline"
-                >
-                  weakness
-                </a>
-                . They are not "just stress." They are not the inevitable cost of being a busy
-                woman. They are your body's alarm system telling you that something has shifted at
-                the biochemical level, and that shift needs attention.
+                These are not signs of weakness . They are not "just stress." They are not the
+                inevitable cost of being a busy woman. They are your body's alarm system telling you
+                that something has shifted at the biochemical level, and that shift needs attention.
               </p>
 
               <img

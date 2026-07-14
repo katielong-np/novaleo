@@ -91,101 +91,23 @@ function BlogComponent() {
     >
       <section id="introduction-the-midlife-shift">
         <h2 className="text-3xl md:text-4xl font-display text-primary mt-2 mb-6">
-          1.{" "}
-          <a
-            href="https://my.clevelandclinic.org/health/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Introduction
-          </a>
-          : The{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1592560/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Midlife
-          </a>{" "}
-          Shift
+          1. Introduction : The Midlife Shift
         </h2>
         <p className="mb-5">
-          It{" "}
-          <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            usually
-          </a>{" "}
-          starts with a subtle shift. You might notice that the jeans you have worn
-          <a
-            href="https://www.menopause.org/for-women/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            comfortably
-          </a>{" "}
-          for years{" "}
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            suddenly
-          </a>{" "}
-          feel tight around the waist. Or{" "}
-          <a
-            href="https://www.mayoclinic.org/tests-procedures/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            perhaps
-          </a>{" "}
-          you{" "}
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            realize
-          </a>{" "}
-          that the energy you used to rely on to power{" "}
-          <a
-            href="https://my.clevelandclinic.org/health/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            through
-          </a>{" "}
-          a demanding workday, manage your household, and still have enough reserve for an evening
-          workout is completely gone by 3:00 PM. You go to bed exhausted, desperate for rest, but
-          find yourself staring at the ceiling at 2:00 AM, your mind racing, unable to fall back
-          asleep.
+          It usually starts with a subtle shift. You might notice that the jeans you have worn
+          comfortably for years suddenly feel tight around the waist. Or perhaps you realize that
+          the energy you used to rely on to power through a demanding workday, manage your
+          household, and still have enough reserve for an evening workout is completely gone by 3:00
+          PM. You go to bed exhausted, desperate for rest, but find yourself staring at the ceiling
+          at 2:00 AM, your mind racing, unable to fall back asleep.
         </p>
         <p className="mb-5">
           For many women, crossing the threshold into their late 30s, 40s, and 50s brings about a
           perplexing set of physical and emotional changes that seem to happen almost overnight.
           This phenomenon is often colloquially referred to as the "midlife shift." However,
-          medically speaking, it represents a profound{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5024690/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            neuroendocrine
-          </a>{" "}
-          transition that affects every single system in your body. It is not merely a change in the
-          numbers on the scale; it is a fundamental reorganization of your{" "}
+          medically speaking, it represents a profound neuroendocrine transition that affects every
+          single system in your body. It is not merely a change in the numbers on the scale; it is a
+          fundamental reorganization of your{" "}
           <a
             href="https://www.endocrine.org/news-and-advocacy/news-room/"
             target="_blank"
@@ -193,17 +115,8 @@ function BlogComponent() {
             className="text-secondary font-medium hover:underline"
           >
             metabolism
-          </a>
-          , your stress response, and your{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5012345/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            cellular biology
-          </a>
-          .
+          </a>{" "}
+          , your stress response, and your cellular biology .
         </p>
 
         <div className="my-10">
@@ -369,25 +282,16 @@ function BlogComponent() {
           Another major limitation of standard medicine is the "silo effect." The human body is a
           single, deeply interconnected web of systems. Your{" "}
           <a
-            href="https://my.clevelandclinic.org/health/"
+            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1074070/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
           >
             gut health
           </a>{" "}
-          directly impacts your brain health via the{" "}
+          directly impacts your brain health via the vagus nerve . Your{" "}
           <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5481455/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            vagus nerve
-          </a>
-          . Your{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1074070/"
+            href="https://www.endocrine.org/news-and-advocacy/news-room/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
@@ -396,10 +300,10 @@ function BlogComponent() {
           </a>{" "}
           directly impact your sex hormones via the{" "}
           <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5111105/"
+            href="https://my.clevelandclinic.org/health/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-secondary hover:underline"
+            className="text-secondary font-medium hover:underline"
           >
             pregnenolone
           </a>{" "}
@@ -421,16 +325,16 @@ function BlogComponent() {
           is looking at the whole picture. Nobody is connecting the dots between your chronic
           stress, your suboptimal thyroid function, your underlying{" "}
           <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
+            href="https://www.menopause.org/for-women/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
           >
             insulin resistance
-          </a>
+          </a>{" "}
           , and your worsening{" "}
           <a
-            href="https://www.menopause.org/for-women/"
+            href="https://www.ifm.org/news-insights/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
@@ -441,13 +345,13 @@ function BlogComponent() {
         </p>
         <p className="mb-5">
           <a
-            href="https://www.ifm.org/news-insights/"
+            href="https://www.mayoclinic.org/tests-procedures/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
           >
             Functional medicine
-          </a>
+          </a>{" "}
           , on the other hand, operates from a systems biology perspective. It recognizes that
           symptoms like weight resistance, chronic fatigue, and insomnia are not the root cause of
           the problem; they are the downstream effects of upstream biochemical imbalances.
@@ -489,7 +393,7 @@ function BlogComponent() {
         <p className="mb-5">
           Sub-clinical{" "}
           <a
-            href="https://www.mayoclinic.org/tests-procedures/"
+            href="https://www.health.harvard.edu/blog/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
@@ -585,38 +489,29 @@ function BlogComponent() {
           4. The Role of Cortisol and Adrenal Health
         </h2>
         <p className="mb-5">
-          If the thyroid is the engine of your metabolism, the{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5135795/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            adrenal glands
-          </a>{" "}
-          are the shock absorbers of your entire neuroendocrine system. The adrenal glands, two
-          small, walnut-sized glands sitting squarely on top of your kidneys, produce a hormone
-          called{" "}
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            cortisol
-          </a>
-          . Cortisol is frequently and unfairly vilified in popular health media as the "stress
-          hormone" that makes you fat. The truth is much more nuanced. Cortisol is an absolutely
-          essential survival hormone. You literally need cortisol to wake up in the morning (the
-          cortisol awakening response), to maintain healthy blood pressure, to reduce systemic{" "}
+          If the thyroid is the engine of your metabolism, the adrenal glands are the shock
+          absorbers of your entire neuroendocrine system. The adrenal glands, two small,
+          walnut-sized glands sitting squarely on top of your kidneys, produce a hormone called{" "}
           <a
             href="https://my.clevelandclinic.org/health/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
           >
+            cortisol
+          </a>{" "}
+          . Cortisol is frequently and unfairly vilified in popular health media as the "stress
+          hormone" that makes you fat. The truth is much more nuanced. Cortisol is an absolutely
+          essential survival hormone. You literally need cortisol to wake up in the morning (the
+          cortisol awakening response), to maintain healthy blood pressure, to reduce systemic{" "}
+          <a
+            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1160485/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
             inflammation
-          </a>
+          </a>{" "}
           , and to respond to acute threats in your environment.
         </p>
         <p className="mb-5">
@@ -625,26 +520,9 @@ function BlogComponent() {
           axis. Evolutionary biology designed the cortisol response for acute, severe, short-term
           threats - running from a predator, escaping a fire, or enduring a brief famine. Once the
           immediate threat passes, cortisol levels are supposed to drop rapidly back to baseline.
-          This allows the nervous system to shift from the{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5160485/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            sympathetic
-          </a>{" "}
-          "fight or flight" state back into the
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5172830/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            parasympathetic
-          </a>{" "}
-          "rest and digest" state, where vital processes like cellular healing, reproduction,
-          digestion, and metabolic optimization occur.
+          This allows the nervous system to shift from the sympathetic "fight or flight" state back
+          into the parasympathetic "rest and digest" state, where vital processes like cellular
+          healing, reproduction, digestion, and metabolic optimization occur.
         </p>
         <h3 className="text-2xl font-display text-primary mt-8 mb-4">
           The Never-Ending Predator: Chronic Stress in Midlife
@@ -658,29 +536,12 @@ function BlogComponent() {
           dopamine-draining pinging of smartphones and emails.
         </p>
         <p className="mb-5">
-          The primitive structures of your brain (the{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5185175/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            amygdala
-          </a>{" "}
-          and{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5197520/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            hypothalamus
-          </a>
-          ) cannot distinguish between the stress of being chased by a tiger and the stress of a
-          looming deadline or a difficult conversation with a spouse. The brain perceives this
-          chronic psychological and physiological burden as a continuous, life-threatening
-          situation. Consequently, it signals the adrenal glands to pump out high levels of cortisol
-          day after day, month after month, year after year.
+          The primitive structures of your brain (the amygdala and hypothalamus ) cannot distinguish
+          between the stress of being chased by a tiger and the stress of a looming deadline or a
+          difficult conversation with a spouse. The brain perceives this chronic psychological and
+          physiological burden as a continuous, life-threatening situation. Consequently, it signals
+          the adrenal glands to pump out high levels of cortisol day after day, month after month,
+          year after year.
         </p>
         <h3 className="text-2xl font-display text-primary mt-8 mb-4">
           The Cortisol-Belly Fat Connection
@@ -688,18 +549,9 @@ function BlogComponent() {
         <p className="mb-5">
           When cortisol remains chronically elevated, it wreaks absolute, profound havoc on your
           metabolic pathways. Physiologically, high cortisol triggers the liver to undergo a process
-          called{" "}
+          called gluconeogenesis , where it creates and releases stored{" "}
           <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5209865/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            gluconeogenesis
-          </a>
-          , where it creates and releases stored{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1160485/"
+            href="https://www.endocrine.org/news-and-advocacy/news-room/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
@@ -713,114 +565,63 @@ function BlogComponent() {
           However, because you are not actually running from a physical threat - you are simply
           sitting at your desk answering a highly stressful email - that excess glucose is never
           burned by your muscles for energy. It remains suspended in the blood. To prevent dangerous{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5222210/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            hyperglycemia
-          </a>
-          , the pancreas must then release a massive surge of insulin to sweep that excess glucose
-          out of the blood and store it safely as fat.
+          hyperglycemia , the pancreas must then release a massive surge of insulin to sweep that
+          excess glucose out of the blood and store it safely as fat.
         </p>
         <p className="mb-5">
-          Crucially, cortisol specifically directs the body to store this excess energy as
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5049380/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            visceral fat
-          </a>{" "}
-          deep within the abdominal cavity. This is the dreaded "belly fat" that so many women
-          complain appears seemingly overnight in their 40s. Visceral fat is entirely different from{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5061725/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            subcutaneous fat
-          </a>{" "}
-          (the fat directly under the skin on your hips or thighs). Visceral fat is not just inert
-          energy storage; it is highly active, dangerous endocrine tissue. It literally functions as
-          an independent organ, pumping out highly inflammatory{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5074070/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            cytokines
-          </a>{" "}
-          (like{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5086415/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            Interleukin-6
-          </a>{" "}
-          and{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5098760/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            TNF-alpha
-          </a>
-          ) directly into your portal vein. This localized inflammation further exacerbates the
-          cycle of systemic stress and locks the body even tighter into a state of weight
-          resistance. If you have noticed that your weight gain over 40 is disproportionately
-          concentrated around your midsection, chronic cortisol dysregulation is almost certainly a
-          primary, driving factor.
-        </p>
-        <h3 className="text-2xl font-display text-primary mt-8 mb-4">
-          The Pregnenolone Steal: How Stress Destroys Sex Hormones
-        </h3>
-        <p className="mb-5">
-          The demands of chronic stress also lead to a devastating biochemical phenomenon known as
-          the "
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            pregnenolone
-          </a>{" "}
-          steal" or "cortisol steal." Your body synthesizes all of your steroid hormones (including
-          cortisol,{" "}
-          <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            progesterone
-          </a>
-          , estrogen,{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5123450/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            DHEA
-          </a>
-          , and{" "}
+          Crucially, cortisol specifically directs the body to store this excess energy as visceral
+          fat deep within the abdominal cavity. This is the dreaded "belly fat" that so many women
+          complain appears seemingly overnight in their 40s.{" "}
           <a
             href="https://www.menopause.org/for-women/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
           >
+            Visceral fat
+          </a>{" "}
+          is entirely different from subcutaneous fat (the fat directly under the skin on your hips
+          or thighs). Visceral fat is not just inert energy storage; it is highly active, dangerous
+          endocrine tissue. It literally functions as an independent organ, pumping out highly
+          inflammatory cytokines (like Interleukin-6 and TNF-alpha ) directly into your portal vein.
+          This localized inflammation further exacerbates the cycle of systemic stress and locks the
+          body even tighter into a state of weight resistance. If you have noticed that your weight
+          gain over 40 is disproportionately concentrated around your midsection, chronic cortisol
+          dysregulation is almost certainly a primary, driving factor.
+        </p>
+        <h3 className="text-2xl font-display text-primary mt-8 mb-4">
+          The Pregnenolone Steal: How Stress Destroys Sex Hormones
+        </h3>
+        <p className="mb-5">
+          The demands of chronic stress also lead to a devastating biochemical phenomenon known as
+          the " pregnenolone steal" or "cortisol steal." Your body synthesizes all of your steroid
+          hormones (including cortisol,{" "}
+          <a
+            href="https://www.ifm.org/news-insights/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            progesterone
+          </a>{" "}
+          , estrogen,{" "}
+          <a
+            href="https://www.health.harvard.edu/blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            DHEA
+          </a>{" "}
+          , and{" "}
+          <a
+            href="https://www.mayoclinic.org/tests-procedures/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
             testosterone
-          </a>
+          </a>{" "}
           ) from cholesterol, which is first converted into a common master precursor hormone called
           pregnenolone.
         </p>
@@ -845,41 +646,33 @@ function BlogComponent() {
           Over time, the adrenal glands cannot maintain this relentless, high-volume demand for
           cortisol. Eventually, the communication axis between the brain and the adrenal glands (the{" "}
           <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5148140/"
+            href="https://my.clevelandclinic.org/health/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-secondary hover:underline"
+            className="text-secondary font-medium hover:underline"
           >
             HPA axis
-          </a>
+          </a>{" "}
           ) becomes blunted and down-regulated to protect the body from the toxic effects of endless
-          high cortisol. This advanced state of dysfunction is often referred to functionally as "
+          high cortisol. This advanced state of dysfunction is often referred to functionally as "{" "}
           <a
-            href="https://www.mayoclinic.org/tests-procedures/"
+            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1246900/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
           >
             adrenal fatigue
-          </a>
+          </a>{" "}
           ," HPA axis dysfunction, or hypocortisolism.
         </p>
         <p className="mb-5">
           When you reach this stage, you no longer have enough cortisol to get out of bed in the
           morning. This is characterized by bone-crushing, debilitating exhaustion that no amount of
           sleep or caffeine can resolve. Women in this stage often experience dizziness when
-          standing up quickly (
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5234555/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            orthostatic hypotension
-          </a>
-          ), severe salt cravings, and a complete collapse of their stress tolerance. Reversing
-          weight resistance at this stage requires a highly delicate, protracted protocol of adrenal
-          rebuilding, profound nervous system regulation, and targeted adaptogenic support.
+          standing up quickly ( orthostatic hypotension ), severe salt cravings, and a complete
+          collapse of their stress tolerance. Reversing weight resistance at this stage requires a
+          highly delicate, protracted protocol of adrenal rebuilding, profound nervous system
+          regulation, and targeted adaptogenic support.
         </p>
       </section>
 
@@ -890,22 +683,22 @@ function BlogComponent() {
         <p className="mb-5">
           As women transition into their late 30s and early 40s, they enter{" "}
           <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5246900/"
+            href="https://www.endocrine.org/news-and-advocacy/news-room/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-secondary hover:underline"
+            className="text-secondary font-medium hover:underline"
           >
             perimenopause
           </a>{" "}
           - the transitional, often highly symptomatic phase leading up to{" "}
           <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5259245/"
+            href="https://www.menopause.org/for-women/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-secondary hover:underline"
+            className="text-secondary font-medium hover:underline"
           >
             menopause
-          </a>
+          </a>{" "}
           . (Menopause itself is officially defined as exactly 12 consecutive months without a
           menstrual cycle; everything leading up to that point is perimenopause). Perimenopause is
           not a brief transition; it can last anywhere from 5 to 15 years.
@@ -913,15 +706,8 @@ function BlogComponent() {
         <p className="mb-5">
           Standard medicine often inaccurately treats this phase as a simple, steady, linear decline
           in estrogen, assuming that replacing estrogen alone will fix the problem. The reality of
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            perimenopause
-          </a>{" "}
-          is much more chaotic, turbulent, and problematic for weight management and mental health.
+          perimenopause is much more chaotic, turbulent, and problematic for weight management and
+          mental health.
         </p>
 
         <div className="my-10">
@@ -937,40 +723,16 @@ function BlogComponent() {
           The very first, most critical hormonal shift that occurs in perimenopause is not a drop in
           estrogen, but a precipitous decline in progesterone. Progesterone is often described as
           the body's "natural valium." It is a beautiful, calming, soothing hormone that acts on the{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5283935/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            GABA receptors
-          </a>{" "}
-          in the brain to promote deep, restorative sleep, reduce anxiety, and stabilize mood.
-          Furthermore, progesterone acts as a natural{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5296280/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            diuretic
-          </a>
-          , reducing water retention, and helps maintain a healthy, active metabolic rate by
-          supporting thyroid function.
+          GABA receptors in the brain to promote deep, restorative sleep, reduce anxiety, and
+          stabilize mood. Furthermore, progesterone acts as a natural diuretic , reducing water
+          retention, and helps maintain a healthy, active metabolic rate by supporting thyroid
+          function.
         </p>
         <p className="mb-5">
-          Progesterone is primarily produced by the{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5271590/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            corpus luteum
-          </a>{" "}
-          - the structure left over in the ovary <em>after</em> ovulation occurs. Because ovulation
-          becomes highly erratic, less frequent, and of lower quality as women age, the corpus
-          luteum produces significantly less progesterone.
+          Progesterone is primarily produced by the corpus luteum - the structure left over in the
+          ovary <em>after</em> ovulation occurs. Because ovulation becomes highly erratic, less
+          frequent, and of lower quality as women age, the corpus luteum produces significantly less
+          progesterone.
         </p>
         <p className="mb-5">
           When progesterone levels drop, the effects are immediate and severe. Women suddenly begin
@@ -986,16 +748,8 @@ function BlogComponent() {
         <p className="mb-5">
           While progesterone declines early, rapidly, and steadily, estrogen behaves wildly and
           erratically during perimenopause. It can spike to levels three times higher than normal in
-          a desperate attempt by the brain (via high{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5308625/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            FSH
-          </a>
-          ) to force the aging ovaries to ovulate, and then crash dramatically a week later.
+          a desperate attempt by the brain (via high FSH ) to force the aging ovaries to ovulate,
+          and then crash dramatically a week later.
         </p>
         <p className="mb-5">
           Because progesterone is dropping so rapidly, even if absolute estrogen levels are
@@ -1005,34 +759,17 @@ function BlogComponent() {
         </p>
         <p className="mb-5">
           Estrogen dominance is arguably the most massive driver of weight resistance in women over
-          40. Estrogen is an{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5320970/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            anabolic
-          </a>{" "}
-          (growth-promoting) hormone. It tells the body to build tissue. Excess estrogen relative to
-          progesterone strongly promotes fat storage, particularly in the hips, thighs, and lower
-          abdomen. It causes severe water retention, bloating, breast tenderness, heavy periods, and
-          fibroids.
+          40. Estrogen is an anabolic (growth-promoting) hormone. It tells the body to build tissue.
+          Excess estrogen relative to progesterone strongly promotes fat storage, particularly in
+          the hips, thighs, and lower abdomen. It causes severe water retention, bloating, breast
+          tenderness, heavy periods, and fibroids.
         </p>
         <p className="mb-5">
-          Crucially, high estrogen increases the liver's production of a protein called
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5333315/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            Thyroid Binding Globulin
-          </a>{" "}
-          (TBG). TBG acts like a sponge, soaking up and binding to free thyroid hormone in the
-          blood. When thyroid hormone is bound to TBG, it cannot enter your cells. Therefore,
-          estrogen dominance directly causes secondary, functional cellular hypothyroidism, further
-          destroying your metabolism and ensuring that you cannot burn fat.
+          Crucially, high estrogen increases the liver's production of a protein called Thyroid
+          Binding Globulin (TBG). TBG acts like a sponge, soaking up and binding to free thyroid
+          hormone in the blood. When thyroid hormone is bound to TBG, it cannot enter your cells.
+          Therefore, estrogen dominance directly causes secondary, functional cellular
+          hypothyroidism, further destroying your metabolism and ensuring that you cannot burn fat.
         </p>
         <h3 className="text-2xl font-display text-primary mt-8 mb-4">
           The Often-Forgotten Hormone: Testosterone
@@ -1044,37 +781,20 @@ function BlogComponent() {
           libido, motivation, and cardiovascular health.
         </p>
         <p className="mb-5">
-          Lean muscle mass is the primary, defining driver of your{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5037035/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            basal metabolic rate
-          </a>{" "}
-          (how many calories your body burns at rest just to stay alive). Muscle tissue is
-          metabolically "expensive," meaning it burns a massive amount of energy compared to fat
-          tissue.
+          Lean muscle mass is the primary, defining driver of your basal metabolic rate (how many
+          calories your body burns at rest just to stay alive). Muscle tissue is metabolically
+          "expensive," meaning it burns a massive amount of energy compared to fat tissue.
         </p>
         <p className="mb-5">
           As women age, their testosterone levels decline significantly, often dropping by up to 50%
           by the time they reach age 40. This insidious loss of testosterone leads directly to a
-          rapid, progressive loss of lean muscle tissue (
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5345660/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            sarcopenia
-          </a>
-          ). Less muscle means a significantly slower metabolism. This explains the cruel reality of
-          midlife weight gain: the exact same diet, caloric intake, and exercise routine that kept
-          you lean and toned at 30 will cause rapid, unstoppable weight gain at 45 because your
-          metabolic engine has shrunk. Evaluating and safely optimizing testosterone levels via
-          targeted therapies is often a critical, yet entirely overlooked, component of reversing
-          weight resistance in midlife women.
+          rapid, progressive loss of lean muscle tissue ( sarcopenia ). Less muscle means a
+          significantly slower metabolism. This explains the cruel reality of midlife weight gain:
+          the exact same diet, caloric intake, and exercise routine that kept you lean and toned at
+          30 will cause rapid, unstoppable weight gain at 45 because your metabolic engine has
+          shrunk. Evaluating and safely optimizing testosterone levels via targeted therapies is
+          often a critical, yet entirely overlooked, component of reversing weight resistance in
+          midlife women.
         </p>
       </section>
 
@@ -1106,24 +826,16 @@ function BlogComponent() {
           When the cells resist the insulin, the glucose remains trapped in the bloodstream, causing
           a dangerous spike in{" "}
           <a
-            href="https://my.clevelandclinic.org/health/"
+            href="https://www.ifm.org/news-insights/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
           >
             blood sugar
-          </a>
-          . Panicking, the pancreas pumps out even <em>more</em> insulin to force the stubborn doors
-          open. This leads to a catastrophic state called{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5370350/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            hyperinsulinemia
           </a>{" "}
-          - chronically elevated insulin levels.
+          . Panicking, the pancreas pumps out even <em>more</em> insulin to force the stubborn doors
+          open. This leads to a catastrophic state called hyperinsulinemia - chronically elevated
+          insulin levels.
         </p>
 
         <h3 className="text-2xl font-display text-primary mt-8 mb-4">
@@ -1137,31 +849,15 @@ function BlogComponent() {
         <ul className="space-y-4">
           <li>
             <strong>Fat Storage is Maximized:</strong> Insulin aggressively drives excess glucose
-            directly into your fat cells, converting it into{" "}
-            <a
-              href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5382695/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-secondary hover:underline"
-            >
-              triglycerides
-            </a>
-            . Like cortisol, insulin preferentially stores this fat as visceral belly fat.
+            directly into your fat cells, converting it into triglycerides . Like cortisol, insulin
+            preferentially stores this fat as visceral belly fat.
           </li>
           <li>
             <strong>Fat Burning is Blocked:</strong> Even more devastatingly, high insulin
-            completely shuts down the enzymatic process of{" "}
-            <a
-              href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5358005/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-secondary hover:underline"
-            >
-              lipolysis
-            </a>{" "}
-            (the breakdown of stored fat). Physiologically, it is absolutely impossible for your
-            body to burn stored body fat for energy when insulin is present in the bloodstream. You
-            are metabolically locked out of your own fat stores.
+            completely shuts down the enzymatic process of lipolysis (the breakdown of stored fat).
+            Physiologically, it is absolutely impossible for your body to burn stored body fat for
+            energy when insulin is present in the bloodstream. You are metabolically locked out of
+            your own fat stores.
           </li>
         </ul>
         <p className="mb-5">
@@ -1187,36 +883,19 @@ function BlogComponent() {
           blood sugar is highly toxic to the blood vessels, eyes, and kidneys. Therefore, your
           pancreas will overproduce massive amounts of insulin to force the blood sugar down to
           normal levels. Your fasting glucose and HbA1c will appear perfectly normal for years,
-          sometimes up to a decade, while your{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5395040/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            fasting insulin
-          </a>{" "}
-          levels are secretly sky-high. By the time your fasting glucose finally starts to rise into
-          the pre-diabetic or diabetic range, your pancreas is already exhausted, and the insulin
-          resistance is profoundly advanced.
+          sometimes up to a decade, while your fasting insulin levels are secretly sky-high. By the
+          time your fasting glucose finally starts to rise into the pre-diabetic or diabetic range,
+          your pancreas is already exhausted, and the insulin resistance is profoundly advanced.
         </p>
         <p className="mb-5">
           In functional medicine, we test Fasting Insulin. An optimal Fasting Insulin level is
           generally below 5 uIU/mL. If a patient comes to Novaleo with a "normal" fasting glucose of
           92, but a Fasting Insulin of 18, we know immediately that she is dealing with severe,
           underlying insulin resistance that is actively driving her weight gain and fatigue. We
-          frequently utilize{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6822453/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Continuous Glucose Monitors (CGMs)
-          </a>{" "}
-          to map out exactly how a patient's unique biology responds to specific foods, stress, and
-          sleep deprivation in real-time, allowing us to build highly customized, hyper-targeted
-          nutritional protocols that actually reverse the resistance.
+          frequently utilize Continuous Glucose Monitors (CGMs) to map out exactly how a patient's
+          unique biology responds to specific foods, stress, and sleep deprivation in real-time,
+          allowing us to build highly customized, hyper-targeted nutritional protocols that actually
+          reverse the resistance.
         </p>
       </section>
 
@@ -1257,25 +936,8 @@ function BlogComponent() {
         </p>
         <p className="mb-5">
           Your body's receptors cannot distinguish the difference between the natural estrogen your
-          ovaries produce and the synthetic xenoestrogen from the{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5419730/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            phthalates
-          </a>{" "}
-          in your perfume or the{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5432075/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            BPA
-          </a>{" "}
-          in your plastic water bottle. The cellular response is identical, only much more
+          ovaries produce and the synthetic xenoestrogen from the phthalates in your perfume or the{" "}
+          BPA in your plastic water bottle. The cellular response is identical, only much more
           aggressive: the xenoestrogens send massive, unregulated signals to your body instructing
           it to store fat, retain water, proliferate tissue (leading to fibroids and heavy
           bleeding), and suppress thyroid function.
@@ -1301,46 +963,21 @@ function BlogComponent() {
         <p className="mb-5">
           In regions with heavy agricultural infrastructure like Michigan and Wisconsin, the
           exposure to specific obesogens - particularly atrazine (a widely used herbicide) and
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5444420/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            glyphosate
-          </a>{" "}
-          (the active ingredient in Roundup) - is a significant clinical concern. These chemicals
-          frequently run off into local water supplies. Atrazine is a well-documented endocrine
-          disruptor that has been shown in laboratory studies to act as a powerful chemical
-          castrator and estrogen-mimicker.
+          glyphosate (the active ingredient in Roundup) - is a significant clinical concern. These
+          chemicals frequently run off into local water supplies. Atrazine is a well-documented
+          endocrine disruptor that has been shown in laboratory studies to act as a powerful
+          chemical castrator and estrogen-mimicker.
         </p>
         <p className="mb-5">
           Furthermore, the accumulation of heavy metals (like mercury from large fish or lead from
           older infrastructure) and mold biotoxins (from water-damaged buildings) create massive
-          systemic inflammation and{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5456765/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            oxidative stress
-          </a>
-          . The body, in a desperate attempt to protect vital organs like the brain and heart from
-          these circulating toxins, will actively shunt these fat-soluble toxins into{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5469110/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            adipose
-          </a>{" "}
-          (fat) tissue for safe storage. Your body will aggressively resist burning that fat,
-          because breaking down the fat cells would release a dangerous flood of stored toxins back
-          into the bloodstream. This is a profound evolutionary survival mechanism. You cannot
-          achieve sustainable weight loss until you support the liver's detoxification pathways and
-          safely eliminate the toxic burden.
+          systemic inflammation and oxidative stress . The body, in a desperate attempt to protect
+          vital organs like the brain and heart from these circulating toxins, will actively shunt
+          these fat-soluble toxins into adipose (fat) tissue for safe storage. Your body will
+          aggressively resist burning that fat, because breaking down the fat cells would release a
+          dangerous flood of stored toxins back into the bloodstream. This is a profound
+          evolutionary survival mechanism. You cannot achieve sustainable weight loss until you
+          support the liver's detoxification pathways and safely eliminate the toxic burden.
         </p>
       </section>
 
@@ -1352,7 +989,7 @@ function BlogComponent() {
           Hippocrates famously stated over two millennia ago that "all disease begins in the gut."
           Modern functional medicine and{" "}
           <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1246900/"
+            href="https://www.mayoclinic.org/tests-procedures/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
@@ -1375,47 +1012,15 @@ function BlogComponent() {
           The lining of your small intestine is only one single cell thick. This delicate barrier is
           designed to absorb microscopic nutrients while keeping undigested food particles, toxins,
           and pathogens safely inside the digestive tract so they can be eliminated. However, modern
-          lifestyle factors - including chronic stress, the use of
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5493800/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            NSAIDs
-          </a>{" "}
-          (like ibuprofen), antibiotics, excessive alcohol consumption, and diets high in refined
-          sugars and inflammatory seed oils - can severely damage this lining.
+          lifestyle factors - including chronic stress, the use of NSAIDs (like ibuprofen),
+          antibiotics, excessive alcohol consumption, and diets high in refined sugars and
+          inflammatory seed oils - can severely damage this lining.
         </p>
         <p className="mb-5">
           This damage creates microscopic tears in the barrier, a condition known as increased
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5506145/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            intestinal permeability
-          </a>
-          , or "Leaky Gut." When the gut is leaky, massive, undigested proteins and bacterial{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5518490/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            endotoxins
-          </a>{" "}
-          (like{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5530835/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            LPS
-          </a>
-          ) escape the digestive tract and enter the sterile environment of the bloodstream.
+          intestinal permeability , or "Leaky Gut." When the gut is leaky, massive, undigested
+          proteins and bacterial endotoxins (like LPS ) escape the digestive tract and enter the
+          sterile environment of the bloodstream.
         </p>
         <p className="mb-5">
           The immune system immediately identifies these escaped particles as dangerous foreign
@@ -1445,36 +1050,19 @@ function BlogComponent() {
         <p className="mb-5">
           However, when the microbiome becomes dysbiotic (unbalanced) due to poor diet, antibiotics,
           or chronic stress, the estrobolome becomes compromised. Dysbiotic bacteria produce an
-          enzyme called{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5017946/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            <em>beta-glucuronidase</em>
-          </a>
-          . This destructive enzyme acts like a pair of chemical scissors, snipping the packaging
-          off the estrogen the liver just tried to excrete. The "unpacked", highly active, and often
-          highly toxic estrogen metabolites are then reabsorbed through the intestinal wall and
-          recirculated directly back into the bloodstream.
+          enzyme called <em>beta-glucuronidase</em>. This destructive enzyme acts like a pair of
+          chemical scissors, snipping the packaging off the estrogen the liver just tried to
+          excrete. The "unpacked", highly active, and often highly toxic estrogen metabolites are
+          then reabsorbed through the intestinal wall and recirculated directly back into the
+          bloodstream.
         </p>
         <p className="mb-5">
           This vicious cycle of estrogen reabsorption is a massive, incredibly common driver of
           estrogen dominance, breast tenderness, heavy periods, and relentless weight gain in
           perimenopausal women. Rebalancing the gut microbiome and clearing the beta-glucuronidase
           through targeted functional protocols (using specific prebiotics, probiotics, and
-          compounds like{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5543180/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline"
-          >
-            Calcium D-Glucarate
-          </a>
-          ) is an absolute non-negotiable step in achieving permanent hormonal harmony and weight
-          loss.
+          compounds like Calcium D-Glucarate ) is an absolute non-negotiable step in achieving
+          permanent hormonal harmony and weight loss.
         </p>
       </section>
 
@@ -1537,18 +1125,9 @@ function BlogComponent() {
           </li>
           <li>
             <strong>Advanced Cardiometabolic Panels:</strong> We look far beyond a standard
-            cholesterol test. We test Fasting Insulin,{" "}
-            <a
-              href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5407385/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-secondary hover:underline"
-            >
-              Leptin
-            </a>
-            , advanced lipid particle size (ApoB, sdLDL), and highly sensitive inflammatory markers
-            (hs-CRP, Homocysteine) to build a precise picture of your cardiovascular and metabolic
-            risk profile.
+            cholesterol test. We test Fasting Insulin, Leptin , advanced lipid particle size (ApoB,
+            sdLDL), and highly sensitive inflammatory markers (hs-CRP, Homocysteine) to build a
+            precise picture of your cardiovascular and metabolic risk profile.
           </li>
           <li>
             <strong>Complete Thyroid and Nutrient Panels:</strong> As previously detailed, we run
@@ -1600,7 +1179,7 @@ function BlogComponent() {
           We focus on{" "}
           <strong>
             <a
-              href="https://www.endocrine.org/news-and-advocacy/news-room/"
+              href="https://www.health.harvard.edu/blog/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-secondary font-medium hover:underline"
@@ -1659,13 +1238,13 @@ function BlogComponent() {
           the crippling hot flashes, night sweats, insomnia, brain fog, and relentless anxiety of
           perimenopause. By restoring physiological{" "}
           <a
-            href="https://www.menopause.org/for-women/"
+            href="https://my.clevelandclinic.org/health/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-secondary font-medium hover:underline"
           >
             hormone balance
-          </a>
+          </a>{" "}
           , we turn the metabolic engine back on, finally allowing the body to release the weight it
           has been stubbornly holding onto.
         </p>
@@ -1685,16 +1264,7 @@ function BlogComponent() {
               This is driven by the midlife metabolic trifecta: a sharp decline in progesterone
               (leading to estrogen dominance), chronic elevation of cortisol due to stress, and the
               resulting cellular insulin resistance. This combination specifically signals the body
-              to store energy as{" "}
-              <a
-                href="https://www.ifm.org/news-insights/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-secondary font-medium hover:underline"
-              >
-                visceral fat
-              </a>{" "}
-              around the abdomen.
+              to store energy as visceral fat around the abdomen.
             </p>
           </div>
           <div className="bg-primary/5 p-6 rounded-xl border border-primary/10">
@@ -1707,7 +1277,7 @@ function BlogComponent() {
               pituitary hormone. A complete panel must include Free T3, Free T4, Reverse T3, and
               Thyroid Antibodies (TPO and TGAb) to rule out conversion issues and{" "}
               <a
-                href="https://www.mayoclinic.org/tests-procedures/"
+                href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1333315/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-secondary font-medium hover:underline"

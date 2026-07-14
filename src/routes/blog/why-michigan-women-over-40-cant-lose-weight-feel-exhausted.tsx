@@ -100,452 +100,49 @@ function BlogComponent() {
       {/* ========== Section 1: The 3 PM Wall ========== */}
       <section id="the-3-pm-wall">
         <h2 className="text-3xl md:text-4xl font-display text-primary mt-2 mb-6">
-          The 3 PM Wall: When "
-          <a
-            href="https://www.menopause.org/for-women/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Pushing
-          </a>{" "}
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Through
-          </a>
-          " Stops{" "}
-          <a
-            href="https://www.mayoclinic.org/tests-procedures/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Working
-          </a>
+          The 3 PM Wall: When " Pushing Through " Stops Working
         </h2>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          It starts the same way every{" "}
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            afternoon
-          </a>
-          . You're{" "}
-          <a
-            href="https://my.clevelandclinic.org/health/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            sitting
-          </a>{" "}
-          at your desk, maybe at a law firm in{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1074070/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            downtown
-          </a>{" "}
-          Grand Rapids, or at a{" "}
-          <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            nonprofit
-          </a>{" "}
-          office near the{" "}
-          <a
-            href="https://www.menopause.org/for-women/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Detroit
-          </a>{" "}
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            riverfront
-          </a>
-          , or at your
-          <a
-            href="https://www.mayoclinic.org/tests-procedures/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            kitchen
-          </a>{" "}
-          table in{" "}
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Lansing
-          </a>{" "}
-          trying to finish one more email before school pickup. And then it hits you.
+          It starts the same way every afternoon . You're sitting at your desk, maybe at a law firm
+          in downtown Grand Rapids, or at a nonprofit office near the Detroit riverfront , or at
+          your kitchen table in Lansing trying to finish one more email before school pickup. And
+          then it hits you.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          The fog rolls in. Not Lake{" "}
-          <a
-            href="https://my.clevelandclinic.org/health/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Michigan
-          </a>{" "}
-          fog, though you'd almost prefer that. This fog{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1160485/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            settles
-          </a>
-          behind your eyes, wraps itself around your{" "}
-          <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            thoughts
-          </a>
-          , and makes every word on your screen blur into the next. Your coffee{" "}
-          <a
-            href="https://www.menopause.org/for-women/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            stopped
-          </a>{" "}
-          working two hours ago. Your{" "}
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            willpower
-          </a>{" "}
-          is gone. And that voice in the back of your head{" "}
-          <a
-            href="https://www.mayoclinic.org/tests-procedures/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            whispers
-          </a>{" "}
-          the same thing it said{" "}
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            yesterday
-          </a>
-          : "
-          <a
-            href="https://my.clevelandclinic.org/health/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Something
-          </a>
-          is wrong with me."
+          The fog rolls in. Not Lake Michigan fog, though you'd almost prefer that. This fog settles
+          behind your eyes, wraps itself around your thoughts , and makes every word on your screen
+          blur into the next. Your coffee stopped working two hours ago. Your willpower is gone. And
+          that voice in the back of your head whispers the same thing it said yesterday : "
+          Something is wrong with me."
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          You've been doing{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1246900/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            everything
-          </a>{" "}
-          "right." You meal-
-          <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            prepped
-          </a>{" "}
-          on Sunday. You forced{" "}
-          <a
-            href="https://www.menopause.org/for-women/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            yourself
-          </a>{" "}
-          to the gym at 5:30 AM before your{" "}
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            commute
-          </a>{" "}
-          on I-96. You cut out gluten. You tried keto. You
-          <a
-            href="https://www.mayoclinic.org/tests-procedures/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            downloaded
-          </a>{" "}
-          three apps. And yet the scale hasn't moved in months, or worse, it crept up
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            another
-          </a>{" "}
-          two pounds since last week.
+          You've been doing everything "right." You meal- prepped on Sunday. You forced yourself to
+          the gym at 5:30 AM before your commute on I-96. You cut out gluten. You tried keto. You
+          downloaded three apps. And yet the scale hasn't moved in months, or worse, it crept up
+          another two pounds since last week.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
           Your jeans don't fit the way they did two years ago. Your face looks puffy in photos. You
-          wake up tired after eight hours of sleep. You lose your train of{" "}
-          <a
-            href="https://my.clevelandclinic.org/health/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            thought
-          </a>{" "}
-          mid-
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1333315/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            sentence
-          </a>{" "}
-          in
-          <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            meetings
-          </a>
-          . You snap at your kids over{" "}
-          <a
-            href="https://www.menopause.org/for-women/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            nothing
-          </a>{" "}
-          and then cry in the{" "}
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            bathroom
-          </a>{" "}
-          <a
-            href="https://www.mayoclinic.org/tests-procedures/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            because
-          </a>{" "}
-          you don't{" "}
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            recognize
-          </a>{" "}
-          who you're{" "}
-          <a
-            href="https://my.clevelandclinic.org/health/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            becoming
-          </a>
-          .
+          wake up tired after eight hours of sleep. You lose your train of thought mid- sentence in
+          meetings . You snap at your kids over nothing and then cry in the bathroom because you
+          don't recognize who you're becoming .
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          If this sounds{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1419730/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            familiar
-          </a>
-          , please know this: you are not alone, you are not lazy, and you are not broken. There is
-          a real,{" "}
-          <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            physiological
-          </a>{" "}
-          <a
-            href="https://www.menopause.org/for-women/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            explanation
-          </a>{" "}
-          for everything you're
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            experiencing
-          </a>
-          . And the reason nobody has found it yet has nothing to do with you and everything to do
-          with how the{" "}
-          <a
-            href="https://www.mayoclinic.org/tests-procedures/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            medical
-          </a>{" "}
-          system is{" "}
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            designed
-          </a>
-          .
+          If this sounds familiar , please know this: you are not alone, you are not lazy, and you
+          are not broken. There is a real, physiological explanation for everything you're
+          experiencing . And the reason nobody has found it yet has nothing to do with you and
+          everything to do with how the medical system is designed .
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          This{" "}
-          <a
-            href="https://my.clevelandclinic.org/health/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            article
-          </a>{" "}
-          is going to walk you through{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1506145/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            exactly
-          </a>{" "}
-          why your body seems to be working
-          <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            against
-          </a>{" "}
-          you, why your labs keep coming back "normal"{" "}
-          <a
-            href="https://www.menopause.org/for-women/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            despite
-          </a>{" "}
-          how{" "}
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            terrible
-          </a>{" "}
-          you feel, and what you can{" "}
-          <a
-            href="https://www.mayoclinic.org/tests-procedures/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            actually
-          </a>{" "}
-          do about it,{" "}
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            starting
-          </a>{" "}
-          today, from{" "}
-          <a
-            href="https://my.clevelandclinic.org/health/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            anywhere
-          </a>{" "}
-          in Michigan.
+          This article is going to walk you through exactly why your body seems to be working
+          against you, why your labs keep coming back "normal" despite how terrible you feel, and
+          what you can actually do about it, starting today, from anywhere in Michigan.
         </p>
       </section>
 
@@ -556,61 +153,10 @@ function BlogComponent() {
         </h2>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          Let's get something out of the way right now. What you're{" "}
-          <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            feeling
-          </a>{" "}
-          is not "just part of
-          <a
-            href="https://www.menopause.org/for-women/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            getting
-          </a>{" "}
-          older." It's not "just stress." And it's{" "}
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            definitely
-          </a>{" "}
-          not in your head. The{" "}
-          <a
-            href="https://www.mayoclinic.org/tests-procedures/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            symptoms
-          </a>
-          you are experiencing are your body{" "}
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            sending
-          </a>{" "}
-          you clear, urgent{" "}
-          <a
-            href="https://my.clevelandclinic.org/health/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            signals
-          </a>{" "}
-          that something has shifted at the biochemical level.
+          Let's get something out of the way right now. What you're feeling is not "just part of
+          getting older." It's not "just stress." And it's definitely not in your head. The symptoms
+          you are experiencing are your body sending you clear, urgent signals that something has
+          shifted at the biochemical level.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -622,7 +168,7 @@ function BlogComponent() {
             className="text-secondary font-medium hover:underline"
           >
             perimenopause
-          </a>
+          </a>{" "}
           , the transitional period before{" "}
           <a
             href="https://www.menopause.org/for-women/"
@@ -631,7 +177,7 @@ function BlogComponent() {
             className="text-secondary font-medium hover:underline"
           >
             menopause
-          </a>
+          </a>{" "}
           , can begin as early as age 35 and last for 10 to 15 years. That means a 38-year-old woman
           in Troy and a 52-year-old woman in Marquette could both be dealing with the exact same
           hormonal disruptions, just at different stages of the same process.
@@ -665,7 +211,7 @@ function BlogComponent() {
             className="text-secondary font-medium hover:underline"
           >
             thyroid
-          </a>
+          </a>{" "}
           , your{" "}
           <a
             href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1074070/"
@@ -674,7 +220,7 @@ function BlogComponent() {
             className="text-secondary font-medium hover:underline"
           >
             insulin sensitivity
-          </a>
+          </a>{" "}
           , your{" "}
           <a
             href="https://www.ifm.org/news-insights/"
@@ -699,7 +245,7 @@ function BlogComponent() {
             className="text-secondary font-medium hover:underline"
           >
             fatigue
-          </a>
+          </a>{" "}
           ,{" "}
           <a
             href="https://www.menopause.org/for-women/"
@@ -708,7 +254,7 @@ function BlogComponent() {
             className="text-secondary font-medium hover:underline"
           >
             brain fog
-          </a>
+          </a>{" "}
           , mood swings, sleep disruption, and joint pain, that significantly impact their quality
           of life.
         </p>
@@ -905,7 +451,7 @@ function BlogComponent() {
             className="text-secondary font-medium hover:underline"
           >
             hypothyroidism
-          </a>
+          </a>{" "}
           , where your TSH is elevated but still within the conventional "normal" range, is
           remarkably common. Symptoms include unexplained weight gain (especially resistance to
           losing weight despite effort), fatigue, brain fog, dry skin, thinning hair, constipation,
@@ -990,7 +536,7 @@ function BlogComponent() {
             className="text-secondary font-medium hover:underline"
           >
             metabolism
-          </a>
+          </a>{" "}
           , your hormones, your brain function, your joints, your gut, and your mood.
         </p>
 
