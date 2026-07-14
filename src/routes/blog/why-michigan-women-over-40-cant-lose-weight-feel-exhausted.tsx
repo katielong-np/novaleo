@@ -160,103 +160,26 @@ function BlogComponent() {
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          Research shows that{" "}
-          <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            perimenopause
-          </a>{" "}
-          , the transitional period before{" "}
-          <a
-            href="https://www.menopause.org/for-women/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            menopause
-          </a>{" "}
-          , can begin as early as age 35 and last for 10 to 15 years. That means a 38-year-old woman
-          in Troy and a 52-year-old woman in Marquette could both be dealing with the exact same
-          hormonal disruptions, just at different stages of the same process.
+          Research shows that perimenopause , the transitional period before menopause , can begin
+          as early as age 35 and last for 10 to 15 years. That means a 38-year-old woman in Troy and
+          a 52-year-old woman in Marquette could both be dealing with the exact same hormonal
+          disruptions, just at different stages of the same process.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          During this transition,{" "}
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            estrogen
-          </a>{" "}
-          and{" "}
-          <a
-            href="https://www.mayoclinic.org/tests-procedures/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            progesterone
-          </a>{" "}
-          levels don't decline in a smooth, predictable line. They fluctuate wildly, sometimes
-          spiking, sometimes crashing, often within the same month. These fluctuations affect your{" "}
-          <a
-            href="https://my.clevelandclinic.org/health/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            thyroid
-          </a>{" "}
-          , your{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1074070/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            insulin sensitivity
-          </a>{" "}
-          , your{" "}
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            cortisol
-          </a>{" "}
-          rhythm, your neurotransmitters, your sleep architecture, and yes, your ability to lose
-          weight.
+          During this transition, estrogen and progesterone levels don't decline in a smooth,
+          predictable line. They fluctuate wildly, sometimes spiking, sometimes crashing, often
+          within the same month. These fluctuations affect your thyroid , your insulin sensitivity ,
+          your cortisol rhythm, your neurotransmitters, your sleep architecture, and yes, your
+          ability to lose weight.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
           According to the North American Menopause Society, approximately 1.3 million women in the
           United States enter menopause each year. That's roughly 6,000 women per day. And the vast
-          majority of them will experience symptoms, including weight gain,{" "}
-          <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            fatigue
-          </a>{" "}
-          ,{" "}
-          <a
-            href="https://www.menopause.org/for-women/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            brain fog
-          </a>{" "}
-          , mood swings, sleep disruption, and joint pain, that significantly impact their quality
-          of life.
+          majority of them will experience symptoms, including weight gain, fatigue , brain fog ,
+          mood swings, sleep disruption, and joint pain, that significantly impact their quality of
+          life.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -302,20 +225,11 @@ function BlogComponent() {
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          But here's what{" "}
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            functional medicine
-          </a>{" "}
-          practitioners know: the optimal TSH range, the range where most people actually feel their
-          best, is between 1.0 and 2.0 mIU/L. That means a woman with a TSH of 3.8 will be told
-          she's "fine" by conventional standards, but she may be experiencing significant
-          hypothyroid symptoms, including weight gain, fatigue, cold hands, hair thinning,
-          constipation, and depression.
+          But here's what functional medicine practitioners know: the optimal TSH range, the range
+          where most people actually feel their best, is between 1.0 and 2.0 mIU/L. That means a
+          woman with a TSH of 3.8 will be told she's "fine" by conventional standards, but she may
+          be experiencing significant hypothyroid symptoms, including weight gain, fatigue, cold
+          hands, hair thinning, constipation, and depression.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -443,19 +357,10 @@ function BlogComponent() {
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          Subclinical{" "}
-          <a
-            href="https://www.mayoclinic.org/tests-procedures/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            hypothyroidism
-          </a>{" "}
-          , where your TSH is elevated but still within the conventional "normal" range, is
-          remarkably common. Symptoms include unexplained weight gain (especially resistance to
-          losing weight despite effort), fatigue, brain fog, dry skin, thinning hair, constipation,
-          cold intolerance, and elevated cholesterol.
+          Subclinical hypothyroidism , where your TSH is elevated but still within the conventional
+          "normal" range, is remarkably common. Symptoms include unexplained weight gain (especially
+          resistance to losing weight despite effort), fatigue, brain fog, dry skin, thinning hair,
+          constipation, cold intolerance, and elevated cholesterol.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -472,36 +377,20 @@ function BlogComponent() {
         </h3>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          <a
-            href="https://www.health.harvard.edu/blog/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Insulin resistance
-          </a>{" "}
-          is one of the most underdiagnosed conditions in women over 40, and it's a primary driver
-          of the stubborn belly fat that so many women struggle with. When your cells become
-          resistant to insulin, your body produces more and more insulin to compensate. High insulin
-          levels signal your body to store fat, especially around your midsection, and make it
-          nearly impossible to burn stored fat for energy.
+          Insulin resistance is one of the most underdiagnosed conditions in women over 40, and it's
+          a primary driver of the stubborn belly fat that so many women struggle with. When your
+          cells become resistant to insulin, your body produces more and more insulin to compensate.
+          High insulin levels signal your body to store fat, especially around your midsection, and
+          make it nearly impossible to burn stored fat for energy.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
           The Centers for Disease Control and Prevention estimates that approximately 96 million
           American adults have prediabetes, and more than 80 percent of them don't know it. Standard
-          bloodwork checks fasting{" "}
-          <a
-            href="https://my.clevelandclinic.org/health/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            glucose
-          </a>{" "}
-          and maybe hemoglobin A1c, but these markers can look "normal" while insulin resistance is
-          already well established. A fasting insulin test, which costs very little, is one of the
-          most valuable and most frequently skipped tests in conventional medicine.
+          bloodwork checks fasting glucose and maybe hemoglobin A1c, but these markers can look
+          "normal" while insulin resistance is already well established. A fasting insulin test,
+          which costs very little, is one of the most valuable and most frequently skipped tests in
+          conventional medicine.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -517,27 +406,11 @@ function BlogComponent() {
         </h3>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          Chronic, low-grade{" "}
-          <a
-            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1160485/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            inflammation
-          </a>{" "}
-          is the common thread connecting many of the conditions that plague women over 40. Unlike
-          acute inflammation (a swollen ankle or a sore throat), chronic inflammation operates below
-          the surface. You can't see it or feel it directly, but it affects everything: your{" "}
-          <a
-            href="https://www.endocrine.org/news-and-advocacy/news-room/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            metabolism
-          </a>{" "}
-          , your hormones, your brain function, your joints, your gut, and your mood.
+          Chronic, low-grade inflammation is the common thread connecting many of the conditions
+          that plague women over 40. Unlike acute inflammation (a swollen ankle or a sore throat),
+          chronic inflammation operates below the surface. You can't see it or feel it directly, but
+          it affects everything: your metabolism , your hormones, your brain function, your joints,
+          your gut, and your mood.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -579,15 +452,7 @@ function BlogComponent() {
           <strong>Magnesium</strong> is another critical nutrient that most women are deficient in.
           Magnesium supports over 300 enzymatic reactions in the body, including those involved in
           energy production, muscle function, sleep regulation, and stress response. Low magnesium
-          is associated with anxiety, insomnia, muscle cramps, headaches, and{" "}
-          <a
-            href="https://www.menopause.org/for-women/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            blood sugar
-          </a>
+          is associated with anxiety, insomnia, muscle cramps, headaches, and blood sugar
           dysregulation.
         </p>
 
@@ -793,16 +658,8 @@ function BlogComponent() {
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
           There is no one-size-fits-all plan. A 43-year-old teacher in Ann Arbor with early
           perimenopause and insulin resistance needs a completely different approach than a
-          52-year-old executive in Grand Rapids with{" "}
-          <a
-            href="https://www.ifm.org/news-insights/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary font-medium hover:underline"
-          >
-            Hashimoto's
-          </a>{" "}
-          thyroiditis and vitamin D deficiency. Functional medicine honors that individuality.
+          52-year-old executive in Grand Rapids with Hashimoto's thyroiditis and vitamin D
+          deficiency. Functional medicine honors that individuality.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
