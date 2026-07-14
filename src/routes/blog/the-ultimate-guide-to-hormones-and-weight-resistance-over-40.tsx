@@ -185,8 +185,16 @@ function BlogComponent() {
             neuroendocrine
           </a>{" "}
           transition that affects every single system in your body. It is not merely a change in the
-          numbers on the scale; it is a fundamental reorganization of your metabolism, your stress
-          response, and your{" "}
+          numbers on the scale; it is a fundamental reorganization of your{" "}
+          <a
+            href="https://www.endocrine.org/news-and-advocacy/news-room/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            metabolism
+          </a>
+          , your stress response, and your{" "}
           <a
             href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5012345/"
             target="_blank"
@@ -218,8 +226,17 @@ function BlogComponent() {
           last decade building her career. She eats a predominantly whole-foods diet, limits her
           alcohol intake to the weekends, and religiously attends a spin class three mornings a
           week. Yet, over the last two years, she has gained 18 pounds, almost exclusively around
-          her abdomen. She feels a bone-crushing fatigue that caffeine no longer touches. When she
-          asked her primary care doctor why she feels so terrible,{" "}
+          her abdomen. She feels a bone-crushing{" "}
+          <a
+            href="https://www.menopause.org/for-women/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            fatigue
+          </a>{" "}
+          that caffeine no longer touches. When she asked her primary care doctor why she feels so
+          terrible,{" "}
           <Link
             to="/why-michigan-women-over-40-cant-lose-weight-feel-exhausted"
             className="text-secondary font-medium hover:underline"
@@ -235,8 +252,16 @@ function BlogComponent() {
           year for the last five years. However, her primary struggle is profound sleep disruption
           and joint pain. She wakes up at 3:00 AM drenched in sweat, her heart racing. By the time
           her alarm goes off at 6:00 AM, she feels as though she hasn't slept at all. She
-          experiences massive brain fog by fourth period, making it difficult to recall simple
-          words.{" "}
+          experiences massive{" "}
+          <a
+            href="https://www.ifm.org/news-insights/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            brain fog
+          </a>{" "}
+          by fourth period, making it difficult to recall simple words.{" "}
           <Link
             to="/gaining-weight-exhausted-after-40-wisconsin-women"
             className="text-secondary font-medium hover:underline"
@@ -328,13 +353,30 @@ function BlogComponent() {
           specific symptoms. However, it is fundamentally ill-equipped to handle the nuances of
           chronic, sub-clinical dysfunction. If your lab values have not crossed the arbitrary
           threshold into an explicit, diagnosable disease state (like overt Type 2 Diabetes or
-          advanced autoimmune disease), standard medicine has virtually nothing to offer you other
-          than the advice to "wait and see" until you get worse.
+          advanced{" "}
+          <a
+            href="https://www.mayoclinic.org/tests-procedures/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            autoimmune
+          </a>{" "}
+          disease), standard medicine has virtually nothing to offer you other than the advice to
+          "wait and see" until you get worse.
         </p>
         <p className="mb-5">
           Another major limitation of standard medicine is the "silo effect." The human body is a
-          single, deeply interconnected web of systems. Your gut health directly impacts your brain
-          health via the{" "}
+          single, deeply interconnected web of systems. Your{" "}
+          <a
+            href="https://my.clevelandclinic.org/health/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            gut health
+          </a>{" "}
+          directly impacts your brain health via the{" "}
           <a
             href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5481455/"
             target="_blank"
@@ -343,7 +385,16 @@ function BlogComponent() {
           >
             vagus nerve
           </a>
-          . Your stress hormones directly impact your sex hormones via the{" "}
+          . Your{" "}
+          <a
+            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1074070/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            stress hormones
+          </a>{" "}
+          directly impact your sex hormones via the{" "}
           <a
             href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5111105/"
             target="_blank"
@@ -352,22 +403,55 @@ function BlogComponent() {
           >
             pregnenolone
           </a>{" "}
-          steal pathway. Your thyroid directly impacts your metabolism, your core body temperature,
-          and your mood.
+          steal pathway. Your{" "}
+          <a
+            href="https://www.health.harvard.edu/blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            thyroid
+          </a>{" "}
+          directly impacts your metabolism, your core body temperature, and your mood.
         </p>
         <p className="mb-5">
           Yet, modern medicine divides the body into isolated, non-communicating specialties. The
           endocrinologist looks at your thyroid, the gastroenterologist looks at your gut, the
           gynecologist looks at your sex hormones, and the psychiatrist looks at your mood. Nobody
           is looking at the whole picture. Nobody is connecting the dots between your chronic
-          stress, your suboptimal thyroid function, your underlying insulin resistance, and your
-          worsening estrogen dominance.
+          stress, your suboptimal thyroid function, your underlying{" "}
+          <a
+            href="https://www.endocrine.org/news-and-advocacy/news-room/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            insulin resistance
+          </a>
+          , and your worsening{" "}
+          <a
+            href="https://www.menopause.org/for-women/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            estrogen
+          </a>{" "}
+          dominance.
         </p>
         <p className="mb-5">
-          Functional medicine, on the other hand, operates from a systems biology perspective. It
-          recognizes that symptoms like weight resistance, chronic fatigue, and insomnia are not the
-          root cause of the problem; they are the downstream effects of upstream biochemical
-          imbalances. Functional medicine seeks to answer the fundamental question:{" "}
+          <a
+            href="https://www.ifm.org/news-insights/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            Functional medicine
+          </a>
+          , on the other hand, operates from a systems biology perspective. It recognizes that
+          symptoms like weight resistance, chronic fatigue, and insomnia are not the root cause of
+          the problem; they are the downstream effects of upstream biochemical imbalances.
+          Functional medicine seeks to answer the fundamental question:{" "}
           <em>
             Why is the body expressing this symptom right now, and what underlying physiological
             processes need to be restored to bring the body back into a state of optimal, vibrant
@@ -403,12 +487,21 @@ function BlogComponent() {
           the thyroid is underperforming, everything in the body slows down to conserve energy.
         </p>
         <p className="mb-5">
-          Sub-clinical hypothyroidism (low thyroid function that goes undiagnosed by standard tests)
-          is a massive epidemic among women over 40. The symptoms are classic and devastating:
-          stubborn, unexplainable weight gain, profound fatigue, feeling cold all the time
-          (especially in the hands and feet), hair loss (notably the thinning of the outer third of
-          the eyebrows), dry skin, chronic constipation, brain fog, and depression. Yet, millions of
-          women suffering from these exact symptoms are told their thyroid is functioning perfectly.
+          Sub-clinical{" "}
+          <a
+            href="https://www.mayoclinic.org/tests-procedures/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            hypothyroidism
+          </a>{" "}
+          (low thyroid function that goes undiagnosed by standard tests) is a massive epidemic among
+          women over 40. The symptoms are classic and devastating: stubborn, unexplainable weight
+          gain, profound fatigue, feeling cold all the time (especially in the hands and feet), hair
+          loss (notably the thinning of the outer third of the eyebrows), dry skin, chronic
+          constipation, brain fog, and depression. Yet, millions of women suffering from these exact
+          symptoms are told their thyroid is functioning perfectly.
         </p>
         <h3 className="text-2xl font-display text-primary mt-8 mb-4">
           The TSH Illusion: Why Standard Testing Fails
@@ -503,11 +596,28 @@ function BlogComponent() {
           </a>{" "}
           are the shock absorbers of your entire neuroendocrine system. The adrenal glands, two
           small, walnut-sized glands sitting squarely on top of your kidneys, produce a hormone
-          called cortisol. Cortisol is frequently and unfairly vilified in popular health media as
-          the "stress hormone" that makes you fat. The truth is much more nuanced. Cortisol is an
-          absolutely essential survival hormone. You literally need cortisol to wake up in the
-          morning (the cortisol awakening response), to maintain healthy blood pressure, to reduce
-          systemic inflammation, and to respond to acute threats in your environment.
+          called{" "}
+          <a
+            href="https://www.health.harvard.edu/blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            cortisol
+          </a>
+          . Cortisol is frequently and unfairly vilified in popular health media as the "stress
+          hormone" that makes you fat. The truth is much more nuanced. Cortisol is an absolutely
+          essential survival hormone. You literally need cortisol to wake up in the morning (the
+          cortisol awakening response), to maintain healthy blood pressure, to reduce systemic{" "}
+          <a
+            href="https://my.clevelandclinic.org/health/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            inflammation
+          </a>
+          , and to respond to acute threats in your environment.
         </p>
         <p className="mb-5">
           The fundamental problem is not cortisol itself; the problem is the <em>chronicity</em> of
@@ -587,8 +697,17 @@ function BlogComponent() {
           >
             gluconeogenesis
           </a>
-          , where it creates and releases stored glucose into the bloodstream to provide quick,
-          readily available energy to fight or flee the perceived threat.
+          , where it creates and releases stored{" "}
+          <a
+            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1160485/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            glucose
+          </a>{" "}
+          into the bloodstream to provide quick, readily available energy to fight or flee the
+          perceived threat.
         </p>
         <p className="mb-5">
           However, because you are not actually running from a physical threat - you are simply
@@ -665,8 +784,26 @@ function BlogComponent() {
         </h3>
         <p className="mb-5">
           The demands of chronic stress also lead to a devastating biochemical phenomenon known as
-          the "pregnenolone steal" or "cortisol steal." Your body synthesizes all of your steroid
-          hormones (including cortisol, progesterone, estrogen,{" "}
+          the "
+          <a
+            href="https://www.ifm.org/news-insights/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            pregnenolone
+          </a>{" "}
+          steal" or "cortisol steal." Your body synthesizes all of your steroid hormones (including
+          cortisol,{" "}
+          <a
+            href="https://www.endocrine.org/news-and-advocacy/news-room/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            progesterone
+          </a>
+          , estrogen,{" "}
           <a
             href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5123450/"
             target="_blank"
@@ -675,8 +812,17 @@ function BlogComponent() {
           >
             DHEA
           </a>
-          , and testosterone) from cholesterol, which is first converted into a common master
-          precursor hormone called pregnenolone.
+          , and{" "}
+          <a
+            href="https://www.menopause.org/for-women/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            testosterone
+          </a>
+          ) from cholesterol, which is first converted into a common master precursor hormone called
+          pregnenolone.
         </p>
         <p className="mb-5">
           When the body is under chronic stress, it operates on a strict hierarchy of biological
@@ -707,8 +853,16 @@ function BlogComponent() {
             HPA axis
           </a>
           ) becomes blunted and down-regulated to protect the body from the toxic effects of endless
-          high cortisol. This advanced state of dysfunction is often referred to functionally as
-          "adrenal fatigue," HPA axis dysfunction, or hypocortisolism.
+          high cortisol. This advanced state of dysfunction is often referred to functionally as "
+          <a
+            href="https://www.mayoclinic.org/tests-procedures/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            adrenal fatigue
+          </a>
+          ," HPA axis dysfunction, or hypocortisolism.
         </p>
         <p className="mb-5">
           When you reach this stage, you no longer have enough cortisol to get out of bed in the
@@ -759,8 +913,15 @@ function BlogComponent() {
         <p className="mb-5">
           Standard medicine often inaccurately treats this phase as a simple, steady, linear decline
           in estrogen, assuming that replacing estrogen alone will fix the problem. The reality of
-          perimenopause is much more chaotic, turbulent, and problematic for weight management and
-          mental health.
+          <a
+            href="https://www.health.harvard.edu/blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            perimenopause
+          </a>{" "}
+          is much more chaotic, turbulent, and problematic for weight management and mental health.
         </p>
 
         <div className="my-10">
@@ -943,8 +1104,17 @@ function BlogComponent() {
         </p>
         <p className="mb-5">
           When the cells resist the insulin, the glucose remains trapped in the bloodstream, causing
-          a dangerous spike in blood sugar. Panicking, the pancreas pumps out even <em>more</em>{" "}
-          insulin to force the stubborn doors open. This leads to a catastrophic state called{" "}
+          a dangerous spike in{" "}
+          <a
+            href="https://my.clevelandclinic.org/health/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            blood sugar
+          </a>
+          . Panicking, the pancreas pumps out even <em>more</em> insulin to force the stubborn doors
+          open. This leads to a catastrophic state called{" "}
           <a
             href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5370350/"
             target="_blank"
@@ -1180,13 +1350,22 @@ function BlogComponent() {
         </h2>
         <p className="mb-5">
           Hippocrates famously stated over two millennia ago that "all disease begins in the gut."
-          Modern functional medicine and microbiome research are continually validating this ancient
-          wisdom, particularly concerning weight resistance, mood disorders, and autoimmune
-          conditions in women over 40. The gastrointestinal tract is not merely an inert tube for
-          digesting food and absorbing nutrients; it is the absolute headquarters of your immune
-          system (housing roughly 70% of your immune tissue) and the home of your microbiome - a
-          vast, complex ecosystem of trillions of bacteria, fungi, and viruses that dictate a
-          shocking amount of your biochemistry.
+          Modern functional medicine and{" "}
+          <a
+            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1246900/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            microbiome
+          </a>{" "}
+          research are continually validating this ancient wisdom, particularly concerning weight
+          resistance, mood disorders, and autoimmune conditions in women over 40. The
+          gastrointestinal tract is not merely an inert tube for digesting food and absorbing
+          nutrients; it is the absolute headquarters of your immune system (housing roughly 70% of
+          your immune tissue) and the home of your microbiome - a vast, complex ecosystem of
+          trillions of bacteria, fungi, and viruses that dictate a shocking amount of your
+          biochemistry.
         </p>
 
         <h3 className="text-2xl font-display text-primary mt-8 mb-4">
@@ -1418,15 +1597,26 @@ function BlogComponent() {
           to reverse insulin resistance, heal the leaky gut, and clear out circulating toxins.
         </p>
         <p className="mb-5">
-          We focus on <strong>Metabolic Flexibility</strong> - the ability of your cells to
-          seamlessly switch back and forth between burning glucose (sugar) for quick energy and
-          burning stored fat for sustained energy. Women with weight resistance are almost entirely
-          metabolically inflexible; their bodies are "stuck" in sugar-burning mode and cannot access
-          their fat stores. We utilize targeted, cyclical periods of fasting, strategic carbohydrate
-          timing (never eating naked carbs), massive increases in high-quality protein (to preserve
-          precious muscle mass and boost metabolism), and an abundance of healthy fats (to provide
-          the building blocks for hormones). We meticulously identify and remove your specific
-          dietary inflammatory triggers - whether that is gluten, dairy, or industrial seed oils.
+          We focus on{" "}
+          <strong>
+            <a
+              href="https://www.endocrine.org/news-and-advocacy/news-room/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-secondary font-medium hover:underline"
+            >
+              Metabolic Flexibility
+            </a>
+          </strong>{" "}
+          - the ability of your cells to seamlessly switch back and forth between burning glucose
+          (sugar) for quick energy and burning stored fat for sustained energy. Women with weight
+          resistance are almost entirely metabolically inflexible; their bodies are "stuck" in
+          sugar-burning mode and cannot access their fat stores. We utilize targeted, cyclical
+          periods of fasting, strategic carbohydrate timing (never eating naked carbs), massive
+          increases in high-quality protein (to preserve precious muscle mass and boost metabolism),
+          and an abundance of healthy fats (to provide the building blocks for hormones). We
+          meticulously identify and remove your specific dietary inflammatory triggers - whether
+          that is gluten, dairy, or industrial seed oils.
         </p>
 
         <h3 className="text-2xl font-display text-primary mt-8 mb-4">
@@ -1467,9 +1657,17 @@ function BlogComponent() {
           protects bone density (preventing osteoporosis), and may significantly reduce the risk of
           neurodegenerative diseases like Alzheimer's. More immediately, BHRT can rapidly resolve
           the crippling hot flashes, night sweats, insomnia, brain fog, and relentless anxiety of
-          perimenopause. By restoring physiological hormone balance, we turn the metabolic engine
-          back on, finally allowing the body to release the weight it has been stubbornly holding
-          onto.
+          perimenopause. By restoring physiological{" "}
+          <a
+            href="https://www.menopause.org/for-women/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            hormone balance
+          </a>
+          , we turn the metabolic engine back on, finally allowing the body to release the weight it
+          has been stubbornly holding onto.
         </p>
       </section>
 
@@ -1487,7 +1685,16 @@ function BlogComponent() {
               This is driven by the midlife metabolic trifecta: a sharp decline in progesterone
               (leading to estrogen dominance), chronic elevation of cortisol due to stress, and the
               resulting cellular insulin resistance. This combination specifically signals the body
-              to store energy as visceral fat around the abdomen.
+              to store energy as{" "}
+              <a
+                href="https://www.ifm.org/news-insights/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary font-medium hover:underline"
+              >
+                visceral fat
+              </a>{" "}
+              around the abdomen.
             </p>
           </div>
           <div className="bg-primary/5 p-6 rounded-xl border border-primary/10">
@@ -1498,7 +1705,15 @@ function BlogComponent() {
             <p className="text-foreground/80 mb-0">
               You need a full functional thyroid panel. Standard medicine only tests TSH, which is a
               pituitary hormone. A complete panel must include Free T3, Free T4, Reverse T3, and
-              Thyroid Antibodies (TPO and TGAb) to rule out conversion issues and Hashimoto's
+              Thyroid Antibodies (TPO and TGAb) to rule out conversion issues and{" "}
+              <a
+                href="https://www.mayoclinic.org/tests-procedures/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary font-medium hover:underline"
+              >
+                Hashimoto's
+              </a>
               autoimmune disease.
             </p>
           </div>

@@ -98,7 +98,7 @@ function BlogComponent() {
       breadcrumbTitle="Gaining Weight and Exhausted After 40?"
       faqSchema={faqSchema}
     >
-      {/* ========== <a href="https://www.endocrine.org/news-and-advocacy/news-room/" target="_blank" rel="noopener noreferrer" className="text-secondary font-medium hover:underline">Section</a> 1: The <a href="https://www.menopause.org/for-women/" target="_blank" rel="noopener noreferrer" className="text-secondary font-medium hover:underline">January</a> <a href="https://www.ifm.org/news-insights/" target="_blank" rel="noopener noreferrer" className="text-secondary font-medium hover:underline">Morning</a> ========== */}
+      {/* ========== Section 1: The January Morning ========== */}
       <section id="another-grey-morning">
         <h2 className="text-3xl md:text-4xl font-display text-primary mt-2 mb-6">
           <a
@@ -569,8 +569,16 @@ function BlogComponent() {
           >
             nowhere
           </a>
-          and won't leave no matter what you eat. The brain fog that makes you lose words in the
-          middle of a{" "}
+          and won't leave no matter what you eat. The{" "}
+          <a
+            href="https://www.endocrine.org/news-and-advocacy/news-room/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            brain fog
+          </a>{" "}
+          that makes you lose words in the middle of a{" "}
           <a
             href="https://www.ifm.org/news-insights/"
             target="_blank"
@@ -625,25 +633,102 @@ function BlogComponent() {
         />
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          Research from the North American Menopause Society shows that perimenopause, the
-          transitional phase before menopause, can begin as early as age 35 and stretch over 10 to
-          15 years. That means a 39-year-old woman in Eau Claire and a 53-year-old woman in Kenosha
-          might both be deep in the same hormonal upheaval, just at different stages.
+          Research from the North American{" "}
+          <a
+            href="https://www.ifm.org/news-insights/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            Menopause
+          </a>{" "}
+          Society shows that{" "}
+          <a
+            href="https://www.menopause.org/for-women/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            perimenopause
+          </a>
+          , the transitional phase before menopause, can begin as early as age 35 and stretch over
+          10 to 15 years. That means a 39-year-old woman in Eau Claire and a 53-year-old woman in
+          Kenosha might both be deep in the same hormonal upheaval, just at different stages.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
           During perimenopause, your hormones don't decline in a nice, clean slope. They spike and
-          crash unpredictably, sometimes within the same week. One day your estrogen surges. The
-          next, it plummets. Your progesterone drops steadily while everything else fluctuates
-          around it. These shifts ripple through your thyroid, your blood sugar regulation, your
-          cortisol levels, your neurotransmitter balance, and your metabolism.
+          crash unpredictably, sometimes within the same week. One day your{" "}
+          <a
+            href="https://my.clevelandclinic.org/health/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            estrogen
+          </a>{" "}
+          surges. The next, it plummets. Your{" "}
+          <a
+            href="https://www.health.harvard.edu/blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            progesterone
+          </a>{" "}
+          drops steadily while everything else fluctuates around it. These shifts ripple through
+          your{" "}
+          <a
+            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1074070/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            thyroid
+          </a>
+          , your{" "}
+          <a
+            href="https://www.menopause.org/for-women/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            blood sugar
+          </a>{" "}
+          regulation, your
+          <a
+            href="https://www.mayoclinic.org/tests-procedures/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            cortisol
+          </a>{" "}
+          levels, your neurotransmitter balance, and your{" "}
+          <a
+            href="https://www.endocrine.org/news-and-advocacy/news-room/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            metabolism
+          </a>
+          .
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
           Approximately 1.3 million American women enter menopause every year. That is roughly 6,000
-          women per day. And the vast majority of them will deal with weight gain, fatigue, brain
-          fog, mood disruption, sleep problems, and joint pain that significantly change the quality
-          of their daily lives.
+          women per day. And the vast majority of them will deal with weight gain,{" "}
+          <a
+            href="https://www.ifm.org/news-insights/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            fatigue
+          </a>
+          , brain fog, mood disruption, sleep problems, and joint pain that significantly change the
+          quality of their daily lives.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -684,11 +769,20 @@ function BlogComponent() {
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          But here's what functional medicine practitioners understand: the range where most people
-          actually feel well is between 1.0 and 2.0 mIU/L. A woman sitting at 3.9 will be told she's
-          perfectly fine by conventional standards. Meanwhile, she may be living with textbook
-          hypothyroid symptoms: stubborn weight gain, crushing fatigue, thinning hair, constipation,
-          cold hands, dry skin, and depressed mood.
+          But here's what{" "}
+          <a
+            href="https://www.mayoclinic.org/tests-procedures/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            functional medicine
+          </a>{" "}
+          practitioners understand: the range where most people actually feel well is between 1.0
+          and 2.0 mIU/L. A woman sitting at 3.9 will be told she's perfectly fine by conventional
+          standards. Meanwhile, she may be living with textbook hypothyroid symptoms: stubborn
+          weight gain, crushing fatigue, thinning hair, constipation, cold hands, dry skin, and
+          depressed mood.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -808,10 +902,19 @@ function BlogComponent() {
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          Subclinical hypothyroidism, where your TSH is elevated but still inside the conventional
-          "normal" range, is remarkably common. Symptoms include unexplained weight gain (especially
-          weight that won't budge no matter what you do), fatigue, brain fog, dry skin, thinning
-          hair, constipation, sensitivity to cold, and elevated cholesterol.
+          Subclinical{" "}
+          <a
+            href="https://www.health.harvard.edu/blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            hypothyroidism
+          </a>
+          , where your TSH is elevated but still inside the conventional "normal" range, is
+          remarkably common. Symptoms include unexplained weight gain (especially weight that won't
+          budge no matter what you do), fatigue, brain fog, dry skin, thinning hair, constipation,
+          sensitivity to cold, and elevated cholesterol.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -828,11 +931,19 @@ function BlogComponent() {
         </h3>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          Insulin resistance is one of the most underdiagnosed conditions in women over 40, and it
-          is the primary driver of the stubborn belly fat that so many women fight against. When
-          your cells stop responding properly to insulin, your body compensates by producing more of
-          it. Elevated insulin tells your body to store fat, especially around the midsection, and
-          makes it nearly impossible to burn stored fat for energy.
+          <a
+            href="https://my.clevelandclinic.org/health/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            Insulin resistance
+          </a>{" "}
+          is one of the most underdiagnosed conditions in women over 40, and it is the primary
+          driver of the stubborn belly fat that so many women fight against. When your cells stop
+          responding properly to insulin, your body compensates by producing more of it. Elevated
+          insulin tells your body to store fat, especially around the midsection, and makes it
+          nearly impossible to burn stored fat for energy.
         </p>
 
         <img
@@ -846,10 +957,18 @@ function BlogComponent() {
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
           The CDC estimates that approximately 96 million American adults have prediabetes, and more
-          than 80 percent of them are unaware. Standard bloodwork checks fasting glucose and
-          possibly hemoglobin A1c, but both of those markers can look "normal" long after insulin
-          resistance has already taken hold. A fasting insulin test, which is inexpensive and
-          straightforward, is one of the most valuable and most frequently skipped tests in
+          than 80 percent of them are unaware. Standard bloodwork checks fasting{" "}
+          <a
+            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1160485/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            glucose
+          </a>{" "}
+          and possibly hemoglobin A1c, but both of those markers can look "normal" long after
+          insulin resistance has already taken hold. A fasting insulin test, which is inexpensive
+          and straightforward, is one of the most valuable and most frequently skipped tests in
           conventional medicine.
         </p>
 
@@ -867,11 +986,20 @@ function BlogComponent() {
         </h3>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
-          Chronic, low-grade inflammation is the invisible thread connecting many of the conditions
-          that overwhelm women after 40. Unlike acute inflammation (a swollen knee, a sore throat),
-          chronic inflammation operates below the radar. You can't see it directly or point to a
-          single symptom. But it affects your metabolism, your hormones, your cognitive function,
-          your joints, your gut, and your mood.
+          Chronic, low-grade{" "}
+          <a
+            href="https://www.endocrine.org/news-and-advocacy/news-room/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            inflammation
+          </a>{" "}
+          is the invisible thread connecting many of the conditions that overwhelm women after 40.
+          Unlike acute inflammation (a swollen knee, a sore throat), chronic inflammation operates
+          below the radar. You can't see it directly or point to a single symptom. But it affects
+          your metabolism, your hormones, your cognitive function, your joints, your gut, and your
+          mood.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -1149,8 +1277,17 @@ function BlogComponent() {
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
           No two protocols are the same. A 42-year-old marketing director in Madison with early
           perimenopause and insulin resistance needs a completely different plan than a 54-year-old
-          school administrator in Oshkosh with Hashimoto's thyroiditis and severe vitamin D
-          deficiency. Functional medicine honors that individuality.
+          school administrator in Oshkosh with{" "}
+          <a
+            href="https://www.menopause.org/for-women/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary font-medium hover:underline"
+          >
+            Hashimoto's
+          </a>{" "}
+          thyroiditis and severe vitamin D deficiency. Functional medicine honors that
+          individuality.
         </p>
 
         <p className="text-lg leading-relaxed text-foreground/85 mb-5">
@@ -1649,7 +1786,7 @@ function WisconsinArticlePage() {
         <div className="lg:grid lg:grid-cols-[1fr_280px] lg:gap-12">
           {/* Main Article Content */}
           <article className="min-w-0">
-            {/* ========== <a href="https://www.endocrine.org/news-and-advocacy/news-room/" target="_blank" rel="noopener noreferrer" className="text-secondary font-medium hover:underline">Section</a> 1: The <a href="https://www.menopause.org/for-women/" target="_blank" rel="noopener noreferrer" className="text-secondary font-medium hover:underline">January</a> <a href="https://www.ifm.org/news-insights/" target="_blank" rel="noopener noreferrer" className="text-secondary font-medium hover:underline">Morning</a> ========== */}
+            {/* ========== Section 1: The January Morning ========== */}
             <section id="another-grey-morning">
               <h2 className="text-3xl md:text-4xl font-display text-primary mt-2 mb-6">
                 <a
