@@ -23,6 +23,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRouteImport } from './routes/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted'
+import { Route as BlogTheUltimateGuideToHormonesAndWeightResistanceOver40RouteImport } from './routes/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40'
 import { Route as BlogGainingWeightExhaustedAfter40WisconsinWomenRouteImport } from './routes/blog/gaining-weight-exhausted-after-40-wisconsin-women'
 
 const WhatWeTreatRoute = WhatWeTreatRouteImport.update({
@@ -96,6 +97,12 @@ const BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute =
     path: '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogTheUltimateGuideToHormonesAndWeightResistanceOver40Route =
+  BlogTheUltimateGuideToHormonesAndWeightResistanceOver40RouteImport.update({
+    id: '/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40',
+    path: '/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BlogGainingWeightExhaustedAfter40WisconsinWomenRoute =
   BlogGainingWeightExhaustedAfter40WisconsinWomenRouteImport.update({
     id: '/blog/gaining-weight-exhausted-after-40-wisconsin-women',
@@ -117,6 +124,7 @@ export interface FileRoutesByFullPath {
   '/terms-of-service': typeof TermsOfServiceRoute
   '/what-we-treat': typeof WhatWeTreatRoute
   '/blog/gaining-weight-exhausted-after-40-wisconsin-women': typeof BlogGainingWeightExhaustedAfter40WisconsinWomenRoute
+  '/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40': typeof BlogTheUltimateGuideToHormonesAndWeightResistanceOver40Route
   '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted': typeof BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute
   '/blog/': typeof BlogIndexRoute
 }
@@ -134,6 +142,7 @@ export interface FileRoutesByTo {
   '/terms-of-service': typeof TermsOfServiceRoute
   '/what-we-treat': typeof WhatWeTreatRoute
   '/blog/gaining-weight-exhausted-after-40-wisconsin-women': typeof BlogGainingWeightExhaustedAfter40WisconsinWomenRoute
+  '/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40': typeof BlogTheUltimateGuideToHormonesAndWeightResistanceOver40Route
   '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted': typeof BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute
   '/blog': typeof BlogIndexRoute
 }
@@ -152,6 +161,7 @@ export interface FileRoutesById {
   '/terms-of-service': typeof TermsOfServiceRoute
   '/what-we-treat': typeof WhatWeTreatRoute
   '/blog/gaining-weight-exhausted-after-40-wisconsin-women': typeof BlogGainingWeightExhaustedAfter40WisconsinWomenRoute
+  '/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40': typeof BlogTheUltimateGuideToHormonesAndWeightResistanceOver40Route
   '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted': typeof BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute
   '/blog/': typeof BlogIndexRoute
 }
@@ -171,6 +181,7 @@ export interface FileRouteTypes {
     | '/terms-of-service'
     | '/what-we-treat'
     | '/blog/gaining-weight-exhausted-after-40-wisconsin-women'
+    | '/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40'
     | '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted'
     | '/blog/'
   fileRoutesByTo: FileRoutesByTo
@@ -188,6 +199,7 @@ export interface FileRouteTypes {
     | '/terms-of-service'
     | '/what-we-treat'
     | '/blog/gaining-weight-exhausted-after-40-wisconsin-women'
+    | '/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40'
     | '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted'
     | '/blog'
   id:
@@ -205,6 +217,7 @@ export interface FileRouteTypes {
     | '/terms-of-service'
     | '/what-we-treat'
     | '/blog/gaining-weight-exhausted-after-40-wisconsin-women'
+    | '/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40'
     | '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted'
     | '/blog/'
   fileRoutesById: FileRoutesById
@@ -223,6 +236,7 @@ export interface RootRouteChildren {
   TermsOfServiceRoute: typeof TermsOfServiceRoute
   WhatWeTreatRoute: typeof WhatWeTreatRoute
   BlogGainingWeightExhaustedAfter40WisconsinWomenRoute: typeof BlogGainingWeightExhaustedAfter40WisconsinWomenRoute
+  BlogTheUltimateGuideToHormonesAndWeightResistanceOver40Route: typeof BlogTheUltimateGuideToHormonesAndWeightResistanceOver40Route
   BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute: typeof BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute
   BlogIndexRoute: typeof BlogIndexRoute
 }
@@ -327,6 +341,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40': {
+      id: '/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40'
+      path: '/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40'
+      fullPath: '/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40'
+      preLoaderRoute: typeof BlogTheUltimateGuideToHormonesAndWeightResistanceOver40RouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/gaining-weight-exhausted-after-40-wisconsin-women': {
       id: '/blog/gaining-weight-exhausted-after-40-wisconsin-women'
       path: '/blog/gaining-weight-exhausted-after-40-wisconsin-women'
@@ -352,6 +373,8 @@ const rootRouteChildren: RootRouteChildren = {
   WhatWeTreatRoute: WhatWeTreatRoute,
   BlogGainingWeightExhaustedAfter40WisconsinWomenRoute:
     BlogGainingWeightExhaustedAfter40WisconsinWomenRoute,
+  BlogTheUltimateGuideToHormonesAndWeightResistanceOver40Route:
+    BlogTheUltimateGuideToHormonesAndWeightResistanceOver40Route,
   BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute:
     BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute,
   BlogIndexRoute: BlogIndexRoute,
@@ -359,3 +382,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

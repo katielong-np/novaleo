@@ -3,15 +3,12 @@ import heroImg from "@/assets/blog/hero-fatigued-woman.jpg";
 import wiHeroImg from "@/assets/blog/wisconsin-hero-fatigue.jpg";
 import { Clock, ArrowRight, Calendar } from "lucide-react";
 
-export const Route = createFileRoute("/blog/")(  {
+export const Route = createFileRoute("/blog/")({
   head: () => ({
-    links: [
-      { rel: "canonical", href: "https://novaweightandwellness.com/blog" },
-    ],
+    links: [{ rel: "canonical", href: "https://novaweightandwellness.com/blog" }],
     meta: [
       {
-        title:
-          "Blog | Functional Medicine Insights | Novaleo",
+        title: "Blog | Functional Medicine Insights | Novaleo",
       },
       {
         name: "description",
@@ -20,8 +17,7 @@ export const Route = createFileRoute("/blog/")(  {
       },
       {
         property: "og:title",
-        content:
-          "Blog | Functional Medicine Insights | Novaleo",
+        content: "Blog | Functional Medicine Insights | Novaleo",
       },
       {
         property: "og:description",
@@ -36,7 +32,11 @@ export const Route = createFileRoute("/blog/")(  {
       },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Blog | Functional Medicine Insights | Novaleo" },
-      { name: "twitter:description", content: "Expert articles on hormone health, weight resistance & metabolic wellness for women in MI & WI." },
+      {
+        name: "twitter:description",
+        content:
+          "Expert articles on hormone health, weight resistance & metabolic wellness for women in MI & WI.",
+      },
       { name: "twitter:image", content: "https://novaweightandwellness.com/og-image.webp" },
     ],
   }),
@@ -45,9 +45,20 @@ export const Route = createFileRoute("/blog/")(  {
 
 const articles = [
   {
+    slug: "the-ultimate-guide-to-hormones-and-weight-resistance-over-40",
+    title: "The Ultimate Guide to Hormones and Weight Resistance Over 40",
+    excerpt:
+      "Struggling with weight gain, exhaustion, and brain fog over 40? This comprehensive 6000-word guide breaks down the root causes of weight resistance and how to fix your hormones.",
+    image: heroImg,
+    imageAlt: "Woman over 40 looking thoughtful while holding a cup of tea",
+    category: "Functional Medicine",
+    date: "July 14, 2026",
+    readTime: "25 min read",
+    author: "Kathryn Long, NP-C",
+  },
+  {
     slug: "gaining-weight-exhausted-after-40-wisconsin-women",
-    title:
-      "Gaining Weight and Exhausted After 40? What Every Wisconsin Woman Needs to Know",
+    title: "Gaining Weight and Exhausted After 40? What Every Wisconsin Woman Needs to Know",
     excerpt:
       "Wisconsin women over 40: struggling with exhaustion, stubborn weight, and brain fog? Discover why your labs say 'normal' but you feel terrible, and what functional medicine can do about it.",
     image: wiHeroImg,
@@ -60,13 +71,11 @@ const articles = [
   },
   {
     slug: "why-michigan-women-over-40-cant-lose-weight-feel-exhausted",
-    title:
-      "Why Can't I Lose Weight in My 40s? (And Why You're Always Tired)",
+    title: "Why Can't I Lose Weight in My 40s? (And Why You're Always Tired)",
     excerpt:
       "Struggling with weight gain, fatigue, and brain fog in your 40s or 50s? Learn why your doctor's 'normal' labs might be missing the real problem, and what functional medicine can do about it.",
     image: heroImg,
-    imageAlt:
-      "Professional woman experiencing afternoon fatigue at her desk",
+    imageAlt: "Professional woman experiencing afternoon fatigue at her desk",
     category: "Functional Medicine",
     date: "July 3, 2025",
     readTime: "22 min read",
@@ -99,20 +108,16 @@ function BlogIndex() {
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-20 md:py-28">
         <div className="container-prose text-center">
-          <div
-            className="eyebrow mb-4 text-secondary"
-            style={{ opacity: 1 }}
-          >
+          <div className="eyebrow mb-4 text-secondary" style={{ opacity: 1 }}>
             Novaleo Blog
           </div>
           <h1 className="text-4xl md:text-6xl text-primary-foreground leading-tight">
-            Insights for Women Who Want{" "}
-            <em className="not-italic text-secondary">Real Answers</em>
+            Insights for Women Who Want <em className="not-italic text-secondary">Real Answers</em>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-primary-foreground/75 max-w-2xl mx-auto leading-relaxed">
-            Expert articles on functional medicine, hormones, metabolic health,
-            and root-cause wellness. Written by Kathryn Long, NP-C for
-            professional women in Michigan and Wisconsin.
+            Expert articles on functional medicine, hormones, metabolic health, and root-cause
+            wellness. Written by Kathryn Long, NP-C for professional women in Michigan and
+            Wisconsin.
           </p>
         </div>
       </section>
@@ -144,9 +149,7 @@ function BlogIndex() {
                   <h2 className="mt-4 text-2xl md:text-3xl leading-snug text-primary group-hover:text-secondary transition-colors duration-300">
                     {article.title}
                   </h2>
-                  <p className="mt-4 text-muted-foreground leading-relaxed">
-                    {article.excerpt}
-                  </p>
+                  <p className="mt-4 text-muted-foreground leading-relaxed">{article.excerpt}</p>
                   <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                     <span className="flex items-center gap-1.5">
                       <Calendar className="h-4 w-4" />
@@ -171,21 +174,14 @@ function BlogIndex() {
       {/* CTA Section */}
       <section className="bg-muted/60 border-y border-border py-16 md:py-20">
         <div className="container-prose text-center">
-          <h2 className="text-3xl md:text-4xl text-primary">
-            Ready to Find Real Answers?
-          </h2>
+          <h2 className="text-3xl md:text-4xl text-primary">Ready to Find Real Answers?</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            If you're a Michigan or Wisconsin woman struggling with fatigue,
-            weight resistance, or hormonal symptoms, let's talk. Your free
-            15-minute discovery call is the first step.
+            If you're a Michigan or Wisconsin woman struggling with fatigue, weight resistance, or
+            hormonal symptoms, let's talk. Your free 15-minute discovery call is the first step.
           </p>
           <div className="mt-8">
-            <Link
-              to="/free-15-min-call-with-katie"
-              className="btn-gold text-base"
-            >
-              Book Your Free 15-Min Call{" "}
-              <ArrowRight className="ml-2 h-4 w-4" />
+            <Link to="/free-15-min-call-with-katie" className="btn-gold text-base">
+              Book Your Free 15-Min Call <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </div>
         </div>
