@@ -24,11 +24,11 @@ export const Route = createFileRoute("/free-guide")({
 
 function FreeGuide() {
   const [submitted, setSubmitted] = useState(false);
-  const [formData, setFormData] = useState({ name: "", email: "" });
+  const [formData, setFormData] = useState({ email: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (formData.name && formData.email) {
+    if (formData.email) {
       setSubmitted(true);
     }
   };
@@ -88,14 +88,6 @@ function FreeGuide() {
                 />
               </a>
 
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 rounded-full border border-secondary/40 bg-secondary/10 px-3.5 py-1.5 shadow-sm backdrop-blur-md">
-                <Sparkles className="h-3.5 w-3.5 text-gold fill-gold" />
-                <span className="text-[10px] font-bold tracking-widest text-primary uppercase">
-                  Free Functional Health Guide
-                </span>
-              </div>
-              
               <h1 className="text-5xl md:text-7xl font-display text-primary leading-[1.1] tracking-tight">
                 What Your Labs <br />
                 <em className="text-secondary not-italic bg-gradient-to-r from-secondary via-gold to-secondary bg-[length:200%_auto] bg-clip-text text-transparent">Aren't</em> Telling You
@@ -123,17 +115,6 @@ function FreeGuide() {
               {!submitted ? (
                 <div className="animate-in fade-in duration-500 w-full space-y-4">
                   <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center gap-3 w-full">
-                    <div className="flex-1 w-full relative">
-                       <input
-                         type="text"
-                         id="name"
-                         required
-                         value={formData.name}
-                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                         className="w-full rounded-full border border-border/80 bg-background/80 px-6 py-4 text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-all shadow-sm backdrop-blur-md"
-                         placeholder="First Name"
-                       />
-                    </div>
                     <div className="flex-1 w-full relative">
                        <input
                          type="email"
@@ -168,7 +149,7 @@ function FreeGuide() {
                     <div>
                       <h3 className="text-xl font-display text-primary">Success!</h3>
                       <p className="text-muted-foreground text-sm">
-                        Thank you, {formData.name}. Click below to access your guide.
+                        Thank you! Click below to access your guide.
                       </p>
                     </div>
                   </div>
