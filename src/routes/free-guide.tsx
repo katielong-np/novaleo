@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/SectionHeading";
-import { ArrowRight, FileText, CheckCircle2, Star, Sparkles, Download, AlertCircle, Microscope, ShieldCheck } from "lucide-react";
+import { ArrowRight, FileText, CheckCircle2, Star, Sparkles, Download, AlertCircle, Microscope, ShieldCheck, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import logo from "@/assets/novaleo-logo.webp";
 import ebookMockup from '@/assets/ebook-mockup.jpg';
+import kathrynImage from '@/assets/hero-kathryn.webp';
 
 export const Route = createFileRoute("/free-guide")({
   head: () => ({
@@ -183,6 +184,11 @@ function FreeGuide() {
             </div>
           </div>
         </section>
+
+        {/* Scroll Indicator */}
+        <div className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce items-center justify-center text-muted-foreground/40">
+          <ChevronDown className="h-8 w-8" />
+        </div>
       </main>
 
       {/* Information Sections */}
@@ -223,14 +229,54 @@ function FreeGuide() {
 
           {/* Card 3 */}
           <div className="group relative p-8 rounded-3xl bg-card/60 backdrop-blur-xl border border-white/20 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl" />
-            <div className="h-12 w-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 text-primary border border-primary/20 group-hover:scale-110 transition-transform">
+            <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl" />
+            <div className="h-12 w-12 rounded-2xl bg-gold/20 flex items-center justify-center mb-6 text-gold border border-gold/30 group-hover:scale-110 transition-transform">
               <ShieldCheck className="h-6 w-6" />
             </div>
             <h3 className="text-xl font-display text-primary mb-3">Safety Before Strategy</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Your body cannot heal in a state of physiological alarm. Learn why stabilizing your nervous system and blood sugar must happen before any deep healing work.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Author Section */}
+      <section className="relative z-10 w-full max-w-5xl mx-auto px-6 py-12 md:py-20 mb-12">
+        <div className="relative rounded-[2.5rem] bg-card/60 backdrop-blur-xl border border-white/20 shadow-2xl overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 via-background/50 to-gold/10 pointer-events-none" />
+          <div className="relative grid md:grid-cols-2 gap-8 items-center p-8 md:p-12">
+            <div className="order-2 md:order-1 space-y-6">
+              <div className="inline-flex items-center gap-2 rounded-full border border-secondary/40 bg-secondary/10 px-3.5 py-1.5 shadow-sm backdrop-blur-md">
+                <span className="text-[10px] font-bold tracking-widest text-primary uppercase">
+                  Meet Your Guide
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-display text-primary leading-tight">
+                Hi, I'm Katie L, FNP-C.
+              </h2>
+              <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
+                <p>
+                  I didn't come into this work because wellness felt trendy. I came into it through the back door; sick, exhausted, and out of answers.
+                </p>
+                <p>
+                  In my early 30s, I was running at full speed in the wrong direction. Fifteen years in nursing, navigating a broken medical system. I kept performing capable and fine on the outside while my body absorbed all of it.
+                </p>
+                <p>
+                  I became the practitioner I wish I'd had. Now, I support women who are exhausted from trying to figure it out on their own. You don't need to heal in isolation.
+                </p>
+              </div>
+            </div>
+            <div className="order-1 md:order-2 flex justify-center">
+              <div className="relative">
+                <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-secondary/40 to-gold/30 blur-[40px] opacity-60" />
+                <img 
+                  src={kathrynImage} 
+                  alt="Katie L, FNP-C" 
+                  className="relative h-64 w-64 md:h-80 md:w-80 object-cover rounded-[2rem] border-[6px] border-white/50 shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
