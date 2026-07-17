@@ -284,7 +284,8 @@ function RootComponent() {
   const isClaritySessionPage = routerState.location.pathname.includes('/clarity-session');
   const isMichiganPage = routerState.location.pathname.includes('/michigan-discovery-call');
   const isFreeCallPage = routerState.location.pathname.includes('/free-15-min-call-with-katie');
-  const hideHeaderFooter = isClaritySessionPage || isMichiganPage || isFreeCallPage;
+  const isFreeGuidePage = routerState.location.pathname.includes('/free-guide');
+  const hideHeaderFooter = isClaritySessionPage || isMichiganPage || isFreeCallPage || isFreeGuidePage;
 
   React.useEffect(() => {
     if (typeof window !== 'undefined' && (window as any).fbq) {
