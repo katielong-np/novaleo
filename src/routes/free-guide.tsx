@@ -111,7 +111,7 @@ function FreeGuide() {
             </div>
 
             {/* Seamless Inline Form (No Bulky Card) */}
-            <div className="max-w-2xl w-full pt-4">
+            <div className="max-w-lg w-full pt-2">
               {!submitted ? (
                 <div className="animate-in fade-in duration-500 w-full space-y-4">
                   <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center gap-3 w-full">
@@ -157,10 +157,10 @@ function FreeGuide() {
                   <a 
                     href="/what-your-labs-arent-telling-you.pdf" 
                     download 
-                    className="shimmer-btn relative inline-flex items-center justify-center gap-2 py-3.5 px-8 bg-secondary text-primary rounded-full font-semibold shadow-lg shadow-secondary/20 hover:shadow-xl hover:-translate-y-0.5 border border-white/20 overflow-hidden transition-all duration-300"
+                    className="shimmer-btn relative inline-flex items-center justify-center gap-2 py-4 px-8 bg-primary text-white rounded-full font-semibold shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0 border border-white/10 overflow-hidden transition-all duration-300 group"
                   >
-                    <span className="relative z-10 tracking-wider text-sm">Download PDF Guide</span>
-                    <Download className="relative z-10 h-4 w-4" />
+                    <span className="relative z-10 tracking-wider text-sm font-sans whitespace-nowrap">Download PDF Guide</span>
+                    <Download className="relative z-10 h-4 w-4 group-hover:translate-y-[2px] transition-transform" />
                   </a>
                 </div>
               )}
