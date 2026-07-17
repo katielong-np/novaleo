@@ -15,6 +15,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as MichiganDiscoveryCallRouteImport } from './routes/michigan-discovery-call'
+import { Route as FreeGuideRouteImport } from './routes/free-guide'
 import { Route as Free15MinCallWithKatieRouteImport } from './routes/free-15-min-call-with-katie'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ClaritySessionRouteImport } from './routes/clarity-session'
@@ -54,6 +55,11 @@ const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
 const MichiganDiscoveryCallRoute = MichiganDiscoveryCallRouteImport.update({
   id: '/michigan-discovery-call',
   path: '/michigan-discovery-call',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FreeGuideRoute = FreeGuideRouteImport.update({
+  id: '/free-guide',
+  path: '/free-guide',
   getParentRoute: () => rootRouteImport,
 } as any)
 const Free15MinCallWithKatieRoute = Free15MinCallWithKatieRouteImport.update({
@@ -117,6 +123,7 @@ export interface FileRoutesByFullPath {
   '/clarity-session': typeof ClaritySessionRoute
   '/contact': typeof ContactRoute
   '/free-15-min-call-with-katie': typeof Free15MinCallWithKatieRoute
+  '/free-guide': typeof FreeGuideRoute
   '/michigan-discovery-call': typeof MichiganDiscoveryCallRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
@@ -135,6 +142,7 @@ export interface FileRoutesByTo {
   '/clarity-session': typeof ClaritySessionRoute
   '/contact': typeof ContactRoute
   '/free-15-min-call-with-katie': typeof Free15MinCallWithKatieRoute
+  '/free-guide': typeof FreeGuideRoute
   '/michigan-discovery-call': typeof MichiganDiscoveryCallRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
@@ -154,6 +162,7 @@ export interface FileRoutesById {
   '/clarity-session': typeof ClaritySessionRoute
   '/contact': typeof ContactRoute
   '/free-15-min-call-with-katie': typeof Free15MinCallWithKatieRoute
+  '/free-guide': typeof FreeGuideRoute
   '/michigan-discovery-call': typeof MichiganDiscoveryCallRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
@@ -174,6 +183,7 @@ export interface FileRouteTypes {
     | '/clarity-session'
     | '/contact'
     | '/free-15-min-call-with-katie'
+    | '/free-guide'
     | '/michigan-discovery-call'
     | '/privacy-policy'
     | '/services'
@@ -192,6 +202,7 @@ export interface FileRouteTypes {
     | '/clarity-session'
     | '/contact'
     | '/free-15-min-call-with-katie'
+    | '/free-guide'
     | '/michigan-discovery-call'
     | '/privacy-policy'
     | '/services'
@@ -210,6 +221,7 @@ export interface FileRouteTypes {
     | '/clarity-session'
     | '/contact'
     | '/free-15-min-call-with-katie'
+    | '/free-guide'
     | '/michigan-discovery-call'
     | '/privacy-policy'
     | '/services'
@@ -229,6 +241,7 @@ export interface RootRouteChildren {
   ClaritySessionRoute: typeof ClaritySessionRoute
   ContactRoute: typeof ContactRoute
   Free15MinCallWithKatieRoute: typeof Free15MinCallWithKatieRoute
+  FreeGuideRoute: typeof FreeGuideRoute
   MichiganDiscoveryCallRoute: typeof MichiganDiscoveryCallRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ServicesRoute: typeof ServicesRoute
@@ -283,6 +296,13 @@ declare module '@tanstack/react-router' {
       path: '/michigan-discovery-call'
       fullPath: '/michigan-discovery-call'
       preLoaderRoute: typeof MichiganDiscoveryCallRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/free-guide': {
+      id: '/free-guide'
+      path: '/free-guide'
+      fullPath: '/free-guide'
+      preLoaderRoute: typeof FreeGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/free-15-min-call-with-katie': {
@@ -365,6 +385,7 @@ const rootRouteChildren: RootRouteChildren = {
   ClaritySessionRoute: ClaritySessionRoute,
   ContactRoute: ContactRoute,
   Free15MinCallWithKatieRoute: Free15MinCallWithKatieRoute,
+  FreeGuideRoute: FreeGuideRoute,
   MichiganDiscoveryCallRoute: MichiganDiscoveryCallRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   ServicesRoute: ServicesRoute,
