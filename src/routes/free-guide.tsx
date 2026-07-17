@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/SectionHeading";
-import { ArrowRight, FileText, CheckCircle2, Star, Sparkles, Download } from "lucide-react";
+import { ArrowRight, FileText, CheckCircle2, Star, Sparkles, Download, AlertCircle, Microscope, ShieldCheck } from "lucide-react";
 import { useState } from "react";
 import logo from "@/assets/novaleo-logo.webp";
 import ebookMockup from '@/assets/ebook-mockup.jpg';
@@ -34,7 +34,7 @@ function FreeGuide() {
   };
 
   return (
-    <div className="relative overflow-hidden bg-background min-h-screen flex flex-col justify-center">
+    <div className="relative overflow-hidden bg-background min-h-screen flex flex-col">
       {/* Custom Keyframe Animations */}
       <style>{`
         @keyframes custom-float {
@@ -71,16 +71,16 @@ function FreeGuide() {
       <div className="absolute top-[-10dvh] left-[-10dvw] h-[45dvh] w-[45dvw] rounded-full bg-secondary/15 blur-[100px] pointer-events-none animate-pulse-glow" style={{ animationDelay: '0s' }} />
       <div className="absolute bottom-[-10dvh] right-[-10dvw] h-[40dvh] w-[40dvw] rounded-full bg-gold/10 blur-[110px] pointer-events-none animate-pulse-glow" style={{ animationDelay: '2.5s' }} />
       
-      {/* Main Grid Content */}
-      <main className="relative z-10 flex-1 flex items-center justify-center min-h-screen">
-        <section className="container-prose py-12 px-6 grid lg:grid-cols-12 gap-12 lg:gap-20 items-center w-full max-w-7xl mx-auto">
+      {/* Main Grid Content - Hero */}
+      <main className="relative z-10 w-full pt-16 lg:pt-24 pb-12">
+        <section className="container-prose px-6 grid lg:grid-cols-12 gap-12 lg:gap-20 items-center w-full max-w-7xl mx-auto">
           
           {/* Left Column: Title, Description, and Opt-in Form */}
-          <div className="lg:col-span-7 flex flex-col justify-center space-y-10 animate-in fade-in slide-in-from-left duration-700">
+          <div className="lg:col-span-7 flex flex-col justify-center animate-in fade-in slide-in-from-left duration-700">
             
             <div className="space-y-6">
               {/* Enlarged Logo */}
-              <a href="/" className="inline-block mb-4">
+              <a href="/" className="inline-block mb-2">
                 <img
                   src={logo}
                   alt="Novaleo Weight & Wellness"
@@ -97,73 +97,75 @@ function FreeGuide() {
                 A comprehensive clinical guide for women who keep being told their labs are <span className="font-semibold italic text-primary">"normal"</span> but still feel completely exhausted.
               </p>
 
-              {/* Star Ratings */}
-              <div className="flex items-center gap-2 pt-2 text-sm text-foreground/80">
-                <div className="flex gap-0.5 text-gold">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-current" />
-                  ))}
-                </div>
-                <span className="font-semibold">5/5 rating</span>
-                <span className="text-muted-foreground/40">•</span>
-                <span className="text-muted-foreground">Trusted by 500+ Women</span>
-              </div>
-            </div>
-
-            {/* Seamless Inline Form (No Bulky Card) */}
-            <div className="max-w-lg w-full pt-2">
-              {!submitted ? (
-                <div className="animate-in fade-in duration-500 w-full space-y-4">
-                  <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center gap-3 w-full">
-                    <div className="flex-1 w-full relative">
-                       <input
-                         type="email"
-                         id="email"
-                         required
-                         value={formData.email}
-                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                         className="w-full rounded-full border border-border/80 bg-background/80 px-6 py-4 text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-all shadow-sm backdrop-blur-md"
-                         placeholder="Email Address"
-                       />
-                    </div>
-                    
-                    <button 
-                      type="submit" 
-                      className="shimmer-btn relative w-full sm:w-auto flex items-center justify-center gap-2 py-4 px-8 bg-primary text-white rounded-full font-semibold shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0 border border-white/10 overflow-hidden transition-all duration-300 group"
-                    >
-                      <span className="relative z-10 tracking-wider text-sm font-sans whitespace-nowrap">Download</span>
-                      <Download className="relative z-10 h-4 w-4 group-hover:translate-y-[2px] transition-transform" />
-                    </button>
-                  </form>
-                  <p className="text-[10px] text-muted-foreground/60 ml-2 mt-2 font-medium">Your information is secure and will never be shared.</p>
-                </div>
-              ) : (
-                <div className="flex flex-col items-start py-2 animate-in slide-in-from-bottom-4 fade-in duration-500">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="relative">
-                      <div className="absolute inset-0 bg-green-500 blur-md opacity-30 rounded-full animate-pulse" />
-                      <div className="relative h-10 w-10 rounded-full bg-gradient-to-br from-green-400 to-green-600 text-white flex items-center justify-center shadow-lg border border-white/20">
-                        <CheckCircle2 className="h-5 w-5" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-display text-primary">Success!</h3>
-                      <p className="text-muted-foreground text-sm">
-                        Thank you! Click below to access your guide.
-                      </p>
-                    </div>
+              {/* Star Ratings & Form Container - Tightly Coupled */}
+              <div className="pt-2 space-y-4">
+                <div className="flex items-center gap-2 text-sm text-foreground/80">
+                  <div className="flex gap-0.5 text-gold">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-current" />
+                    ))}
                   </div>
-                  
-                  <a 
-                    href="/what-your-labs-arent-telling-you.pdf" 
-                    download 
-                    className="shimmer-btn relative inline-flex items-center justify-center gap-2 py-4 px-8 bg-primary text-white rounded-full font-semibold shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0 border border-white/10 overflow-hidden transition-all duration-300 group"
-                  >
-                    <span className="relative z-10 tracking-wider text-sm font-sans whitespace-nowrap">Download PDF Guide</span>
-                    <Download className="relative z-10 h-4 w-4 group-hover:translate-y-[2px] transition-transform" />
-                  </a>
+                  <span className="font-semibold">5/5 rating</span>
+                  <span className="text-muted-foreground/40">•</span>
+                  <span className="text-muted-foreground">Trusted by 500+ Women</span>
                 </div>
-              )}
+
+                {/* Seamless Inline Form */}
+                <div className="max-w-lg w-full">
+                  {!submitted ? (
+                    <div className="animate-in fade-in duration-500 w-full space-y-3">
+                      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center gap-3 w-full">
+                        <div className="flex-1 w-full relative">
+                           <input
+                             type="email"
+                             id="email"
+                             required
+                             value={formData.email}
+                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                             className="w-full rounded-full border border-border/80 bg-background/80 px-6 py-4 text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-all shadow-sm backdrop-blur-md"
+                             placeholder="Email Address"
+                           />
+                        </div>
+                        
+                        <button 
+                          type="submit" 
+                          className="shimmer-btn relative w-full sm:w-auto flex items-center justify-center gap-2 py-4 px-8 bg-primary text-white rounded-full font-semibold shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0 border border-white/10 overflow-hidden transition-all duration-300 group"
+                        >
+                          <span className="relative z-10 tracking-wider text-sm font-sans whitespace-nowrap">Download</span>
+                          <Download className="relative z-10 h-4 w-4 group-hover:translate-y-[2px] transition-transform" />
+                        </button>
+                      </form>
+                      <p className="text-[10px] text-muted-foreground/60 ml-3 font-medium">Your information is secure and will never be shared.</p>
+                    </div>
+                  ) : (
+                    <div className="flex flex-col items-start py-2 animate-in slide-in-from-bottom-4 fade-in duration-500">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="relative">
+                          <div className="absolute inset-0 bg-green-500 blur-md opacity-30 rounded-full animate-pulse" />
+                          <div className="relative h-10 w-10 rounded-full bg-gradient-to-br from-green-400 to-green-600 text-white flex items-center justify-center shadow-lg border border-white/20">
+                            <CheckCircle2 className="h-5 w-5" />
+                          </div>
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-display text-primary">Success!</h3>
+                          <p className="text-muted-foreground text-sm">
+                            Thank you! Click below to access your guide.
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <a 
+                        href="/what-your-labs-arent-telling-you.pdf" 
+                        download 
+                        className="shimmer-btn relative inline-flex items-center justify-center gap-2 py-4 px-8 bg-primary text-white rounded-full font-semibold shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0 border border-white/10 overflow-hidden transition-all duration-300 group"
+                      >
+                        <span className="relative z-10 tracking-wider text-sm font-sans whitespace-nowrap">Download PDF Guide</span>
+                        <Download className="relative z-10 h-4 w-4 group-hover:translate-y-[2px] transition-transform" />
+                      </a>
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
 
@@ -182,6 +184,56 @@ function FreeGuide() {
           </div>
         </section>
       </main>
+
+      {/* Information Sections */}
+      <section className="relative z-10 w-full max-w-7xl mx-auto px-6 py-20">
+        <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+          <h2 className="text-3xl md:text-5xl font-display text-primary tracking-tight">
+            Inside the <span className="text-secondary italic">Guide</span>
+          </h2>
+          <p className="text-muted-foreground mt-4 text-lg max-w-2xl mx-auto font-light">
+            Discover why your symptoms are real and what you can do about them.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Card 1 */}
+          <div className="group relative p-8 rounded-3xl bg-card/60 backdrop-blur-xl border border-white/20 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl" />
+            <div className="h-12 w-12 rounded-2xl bg-secondary/20 flex items-center justify-center mb-6 text-secondary border border-secondary/30 group-hover:scale-110 transition-transform">
+              <AlertCircle className="h-6 w-6" />
+            </div>
+            <h3 className="text-xl font-display text-primary mb-3">What Conventional Labs Miss</h3>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Standard bloodwork is designed to ask "Are you sick yet?" It often misses the slow drift of an imbalanced system—the years where you aren't sick, but aren't well either.
+            </p>
+          </div>
+
+          {/* Card 2 */}
+          <div className="group relative p-8 rounded-3xl bg-card/60 backdrop-blur-xl border border-white/20 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+            <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl" />
+            <div className="h-12 w-12 rounded-2xl bg-gold/20 flex items-center justify-center mb-6 text-gold border border-gold/30 group-hover:scale-110 transition-transform">
+              <Microscope className="h-6 w-6" />
+            </div>
+            <h3 className="text-xl font-display text-primary mb-3">A Different Category of Testing</h3>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Functional medicine looks at your body as a single interconnected system. We use advanced testing like the DUTCH test and GI-MAP to uncover hidden dysfunction.
+            </p>
+          </div>
+
+          {/* Card 3 */}
+          <div className="group relative p-8 rounded-3xl bg-card/60 backdrop-blur-xl border border-white/20 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl" />
+            <div className="h-12 w-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 text-primary border border-primary/20 group-hover:scale-110 transition-transform">
+              <ShieldCheck className="h-6 w-6" />
+            </div>
+            <h3 className="text-xl font-display text-primary mb-3">Safety Before Strategy</h3>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Your body cannot heal in a state of physiological alarm. Learn why stabilizing your nervous system and blood sugar must happen before any deep healing work.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
