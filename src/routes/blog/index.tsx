@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/blog/hero-fatigued-woman.jpg";
 import wiHeroImg from "@/assets/blog/wisconsin-hero-fatigue.jpg";
+import ozempicHeroImg from "@/assets/blog/ozempic-hero-michigan-woman.jpg";
 import { Clock, ArrowRight, Calendar } from "lucide-react";
 
 export const Route = createFileRoute("/blog/")({
@@ -44,6 +45,18 @@ export const Route = createFileRoute("/blog/")({
 });
 
 const articles = [
+  {
+    slug: "ozempic-not-working-michigan-wisconsin-women",
+    title: "Why Am I Not Losing Weight on Ozempic? A Functional Medicine Perspective for Michigan and Wisconsin Women",
+    excerpt:
+      "Ozempic plateau? Discover the 6 root causes your doctor isn't checking, including thyroid dysfunction, perimenopause hormones, insulin resistance, muscle loss, and nutrient depletion. A comprehensive functional medicine guide for women in Michigan and Wisconsin.",
+    image: ozempicHeroImg,
+    imageAlt: "Woman in her 40s in Michigan considering weight loss options including Ozempic, sitting contemplatively at her kitchen table",
+    category: "GLP-1 & Weight Loss",
+    date: "July 23, 2026",
+    readTime: "32 min read",
+    author: "Kathryn Long, NP-C",
+  },
   {
     slug: "the-ultimate-guide-to-hormones-and-weight-resistance-over-40",
     title: "The Ultimate Guide to Hormones and Weight Resistance Over 40",

@@ -25,6 +25,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRouteImport } from './routes/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted'
 import { Route as BlogTheUltimateGuideToHormonesAndWeightResistanceOver40RouteImport } from './routes/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40'
+import { Route as BlogOzempicNotWorkingMichiganWisconsinWomenRouteImport } from './routes/blog/ozempic-not-working-michigan-wisconsin-women'
 import { Route as BlogGainingWeightExhaustedAfter40WisconsinWomenRouteImport } from './routes/blog/gaining-weight-exhausted-after-40-wisconsin-women'
 
 const WhatWeTreatRoute = WhatWeTreatRouteImport.update({
@@ -109,6 +110,12 @@ const BlogTheUltimateGuideToHormonesAndWeightResistanceOver40Route =
     path: '/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogOzempicNotWorkingMichiganWisconsinWomenRoute =
+  BlogOzempicNotWorkingMichiganWisconsinWomenRouteImport.update({
+    id: '/blog/ozempic-not-working-michigan-wisconsin-women',
+    path: '/blog/ozempic-not-working-michigan-wisconsin-women',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BlogGainingWeightExhaustedAfter40WisconsinWomenRoute =
   BlogGainingWeightExhaustedAfter40WisconsinWomenRouteImport.update({
     id: '/blog/gaining-weight-exhausted-after-40-wisconsin-women',
@@ -131,6 +138,7 @@ export interface FileRoutesByFullPath {
   '/terms-of-service': typeof TermsOfServiceRoute
   '/what-we-treat': typeof WhatWeTreatRoute
   '/blog/gaining-weight-exhausted-after-40-wisconsin-women': typeof BlogGainingWeightExhaustedAfter40WisconsinWomenRoute
+  '/blog/ozempic-not-working-michigan-wisconsin-women': typeof BlogOzempicNotWorkingMichiganWisconsinWomenRoute
   '/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40': typeof BlogTheUltimateGuideToHormonesAndWeightResistanceOver40Route
   '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted': typeof BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute
   '/blog/': typeof BlogIndexRoute
@@ -150,6 +158,7 @@ export interface FileRoutesByTo {
   '/terms-of-service': typeof TermsOfServiceRoute
   '/what-we-treat': typeof WhatWeTreatRoute
   '/blog/gaining-weight-exhausted-after-40-wisconsin-women': typeof BlogGainingWeightExhaustedAfter40WisconsinWomenRoute
+  '/blog/ozempic-not-working-michigan-wisconsin-women': typeof BlogOzempicNotWorkingMichiganWisconsinWomenRoute
   '/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40': typeof BlogTheUltimateGuideToHormonesAndWeightResistanceOver40Route
   '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted': typeof BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute
   '/blog': typeof BlogIndexRoute
@@ -170,6 +179,7 @@ export interface FileRoutesById {
   '/terms-of-service': typeof TermsOfServiceRoute
   '/what-we-treat': typeof WhatWeTreatRoute
   '/blog/gaining-weight-exhausted-after-40-wisconsin-women': typeof BlogGainingWeightExhaustedAfter40WisconsinWomenRoute
+  '/blog/ozempic-not-working-michigan-wisconsin-women': typeof BlogOzempicNotWorkingMichiganWisconsinWomenRoute
   '/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40': typeof BlogTheUltimateGuideToHormonesAndWeightResistanceOver40Route
   '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted': typeof BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute
   '/blog/': typeof BlogIndexRoute
@@ -191,6 +201,7 @@ export interface FileRouteTypes {
     | '/terms-of-service'
     | '/what-we-treat'
     | '/blog/gaining-weight-exhausted-after-40-wisconsin-women'
+    | '/blog/ozempic-not-working-michigan-wisconsin-women'
     | '/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40'
     | '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted'
     | '/blog/'
@@ -210,6 +221,7 @@ export interface FileRouteTypes {
     | '/terms-of-service'
     | '/what-we-treat'
     | '/blog/gaining-weight-exhausted-after-40-wisconsin-women'
+    | '/blog/ozempic-not-working-michigan-wisconsin-women'
     | '/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40'
     | '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted'
     | '/blog'
@@ -229,6 +241,7 @@ export interface FileRouteTypes {
     | '/terms-of-service'
     | '/what-we-treat'
     | '/blog/gaining-weight-exhausted-after-40-wisconsin-women'
+    | '/blog/ozempic-not-working-michigan-wisconsin-women'
     | '/blog/the-ultimate-guide-to-hormones-and-weight-resistance-over-40'
     | '/blog/why-michigan-women-over-40-cant-lose-weight-feel-exhausted'
     | '/blog/'
@@ -249,6 +262,7 @@ export interface RootRouteChildren {
   TermsOfServiceRoute: typeof TermsOfServiceRoute
   WhatWeTreatRoute: typeof WhatWeTreatRoute
   BlogGainingWeightExhaustedAfter40WisconsinWomenRoute: typeof BlogGainingWeightExhaustedAfter40WisconsinWomenRoute
+  BlogOzempicNotWorkingMichiganWisconsinWomenRoute: typeof BlogOzempicNotWorkingMichiganWisconsinWomenRoute
   BlogTheUltimateGuideToHormonesAndWeightResistanceOver40Route: typeof BlogTheUltimateGuideToHormonesAndWeightResistanceOver40Route
   BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute: typeof BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute
   BlogIndexRoute: typeof BlogIndexRoute
@@ -368,6 +382,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogTheUltimateGuideToHormonesAndWeightResistanceOver40RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/ozempic-not-working-michigan-wisconsin-women': {
+      id: '/blog/ozempic-not-working-michigan-wisconsin-women'
+      path: '/blog/ozempic-not-working-michigan-wisconsin-women'
+      fullPath: '/blog/ozempic-not-working-michigan-wisconsin-women'
+      preLoaderRoute: typeof BlogOzempicNotWorkingMichiganWisconsinWomenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/gaining-weight-exhausted-after-40-wisconsin-women': {
       id: '/blog/gaining-weight-exhausted-after-40-wisconsin-women'
       path: '/blog/gaining-weight-exhausted-after-40-wisconsin-women'
@@ -394,6 +415,8 @@ const rootRouteChildren: RootRouteChildren = {
   WhatWeTreatRoute: WhatWeTreatRoute,
   BlogGainingWeightExhaustedAfter40WisconsinWomenRoute:
     BlogGainingWeightExhaustedAfter40WisconsinWomenRoute,
+  BlogOzempicNotWorkingMichiganWisconsinWomenRoute:
+    BlogOzempicNotWorkingMichiganWisconsinWomenRoute,
   BlogTheUltimateGuideToHormonesAndWeightResistanceOver40Route:
     BlogTheUltimateGuideToHormonesAndWeightResistanceOver40Route,
   BlogWhyMichiganWomenOver40CantLoseWeightFeelExhaustedRoute:
